@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/tech.atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-04-01T18:40:51+08:00</updated><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="我一直觉得红Archer这种近战弓兵不靠谱 So do Arch" src="http://i.minus.com/jzoB05z14cPIr.png" /&gt;&lt;/p&gt;
+&lt;p&gt;古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。&lt;br /&gt;
+Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。&lt;br /&gt;
+经历了各种折磨后，俺最终落脚在Arch。  &lt;/p&gt;
+&lt;p&gt;初恋是甜美的，初识Arch，在尽力了前期苦苦最求的痛苦后，总算是把她调教得有模有样了，那速度，完爆Ubuntu有木有。&lt;br /&gt;
+奈何婚姻是爱情的坟墓，Arch将我拐上贼船后就开始露出本性了，各种问题随着更新扑面而来。起初以为是小打小闹，调调bug也蛮惬意的，哪知后来她却变本加厉。  &lt;/p&gt;
+&lt;p&gt;因为做ImagineCup，我只能回到Windows那，冷落了她许久。后来豆瓣笔试，俺还是屁颠屁颠的滚回娘家接她，为了讨好她，还特意更新了次，换上新内核，新数据库。岂止她还是生气，直接让我的GTK跪了，带着黑眼圈弄了一晚上，才讨好她。本以为已经大事化了了，可到了笔试当天才发现，她尽然拐走了Django，让我直接没法做题。&lt;br /&gt;
+哎，随叫我喜欢折腾呢，悲剧的笔试后，调好了MySQL，救回了Django，就当是个教训吧。  &lt;/p&gt;
+&lt;p&gt;可惜我还是太年轻了，too young， too simple。&lt;br /&gt;
+今天豆瓣的HR姐姐说我报的是移动开发，要再笔试一次，让又我屁颠屁颠的翘课跑回来找Arch。
+开始做得很开心，算法也不是很难（主要是这个比上次的省时间），Android的题算是毫无压力（笑）。再看看那道必做题，一个简单的布局问题，太简单了，最后做吧。&lt;br /&gt;
+就这么心情愉悦的忽略了暴风雨前的平静，我打开Eclipse准备最后一击——我操——ADT呢？？？  &lt;/p&gt;
+&lt;p&gt;试想一下，奥特曼的人间体看到一只鲜肥可爱的小怪兽，准备掏出棒子秒之，哪知发现拿错了，直接被小怪兽一脚拿了First Blood，这是多么惊世骇俗。  &lt;/p&gt;
+&lt;p&gt;你狠，我掏出Emacs，在没有代码提示的情况下，苦逼的回忆着那蛋疼坑爹还特别长的各种属性名。尼玛，忘记单词是件多么蛋疼。。。。  &lt;/p&gt;
+&lt;p&gt;认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  &lt;/p&gt;
+&lt;p&gt;这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  &lt;/p&gt;
+&lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch. douban"></category></entry></feed>
