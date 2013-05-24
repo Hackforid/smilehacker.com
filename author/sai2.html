@@ -31,6 +31,134 @@
         <header class="post-header">
           <h1>
             <a rel="bookmark"
+               href="/hei-li-shi.html"
+               title="Lien permanent vers «黑历史»">
+               黑历史
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-02-07T20:55:16">四 07 二月 2013</time>
+            post «<a href="/category/write.html">write</a>» 
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/.html"></a>                        </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
+<p>在很久很久以前
+有五个茫然年轻人
+他们厌倦了平淡的世界
+有一个人说道
+“该做些什么吧”</p>
+<p>于是五个人变成了十三个人
+用汗水画着0和1
+后来他们站在了高台上 一个带着老式眼镜
+顶着一头乱糟糟头发的人
+为他们带上了桂冠</p>
+<p>他们成了英雄
+他们不希望这里失去他们的意志
+他们坚持在这里建立了自己的主权
+他们让后来者在他们的光环下继续着辉煌</p>
+<p>但继任者也同时继承了先驱不拘的个性
+相对于保护
+他们更期望厮杀
+有一个人说道
+“该做些什么吧”</p>
+<p>于是一场政变发生了
+他们胜利了
+先驱者带着欣慰离开了
+但他们的精神
+依旧留下了</p>
+<p>后来的后来
+新鲜的血液迭代着
+作为他们的继承者
+我们不屈的占据着顶点
+荣誉与血性与我们同在</p>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/hei-li-shi.html">Lire la suite...</a>
+        </footer>
+      </article>
+                        
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
+               href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"
+               title="Lien permanent vers «利用rsync自动同步服务器与本地代码的python脚本»">
+               利用rsync自动同步服务器与本地代码的python脚本
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-02-07T21:27:06">四 07 二月 2013</time>
+            post «<a href="/category/code.html">code</a>» 
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/python.html">Python</a>                        </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
+<p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+用ssh sshfs scp都太慢  小东西又懒得用git<br />
+sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
+<p>于是用linux自带的rsync写了个同步脚本<br />
+可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
+<ol>
+<li>
+<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
+</li>
+<li>
+<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
+   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
+</li>
+<li>
+<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
+    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
+    他会监视改目录的文件 如果新建 修改或删除 都会sync
+    可以用 <code>nohup python rsync.py -auto&amp;</code> 
+    来后台运行</p>
+</li>
+<li>
+<p>只根据emacs优化了 ...</p></li></ol>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">Lire la suite...</a>
+        </footer>
+      </article>
+                        
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
+               href="/mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html"
+               title="Lien permanent vers «每个人都在等待一个人来终结自己的罪恶吧»">
+               每个人都在等待一个人来终结自己的罪恶吧
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-05-16T12:17:50">四 16 五月 2013</time>
+            post «<a href="/category/misc.html">misc</a>» 
+            by <a href="/author/sai.html">Sai</a>          </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
+<p>学校断网一直是学生生产力的阻碍，为了庸才而牺牲天才，值得吗？<br />
+大半夜的，看不了Google IO大会，真是遗憾。通过微博直播，闲暇只能看日剧解渴。断网前下了部《胜利即是正义》，据说是一部会让你觉得快进键是多余的名作，几集之后却是如此，又是一部幽默之余，批判人性的剧作。<br />
+说白了，主角是律师，也可说是“欺诈师”，通过人性的弱点去完成审判。欺诈可以为善，也能为恶，虽未看完，但也能预料他在等着人打败他，阻止自己的“恶行”。</p>
+<p>多年前，我可能会觉得这是《Jump》里才会有的剧情吧，但大学三年后，我已不再认为那是童话。<br />
+三年前，我一直鄙视着自己的父亲，一个同样使用文字和言语的“欺诈师”。父亲负责的工作更多的是帮公司消除负面新闻，应酬、摆平记者、谄媚领导是他的任务。<br />
+我讨厌着这样的父亲，我发誓不为俗世所染，保守自己的清泉。<br />
+直到我在不经意间也使用了这种能力，通过这曾经唾弃，无意继承的能力，简单的便完成了看似困难的任务。起初依旧是排斥，直到多次碰壁后接受了它。<br />
+接触心理学 ...</p>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html">Lire la suite...</a>
+        </footer>
+      </article>
+                        
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
                href="/peng-you-su-sheng-jiu.html"
                title="Lien permanent vers «朋友 • 俗生 • 酒»">
                朋友 • 俗生 • 酒
@@ -62,153 +190,30 @@
         <header class="post-header">
           <h1>
             <a rel="bookmark"
-               href="/qi-yuan.html"
-               title="Lien permanent vers «起源»">
-               起源
+               href="/qi.html"
+               title="Lien permanent vers «器»">
+               器
             </a>
           </h1>
           <div class="meta">
             <!-- includes/article_meta.html -->
-            Le <time datetime="2012-11-16T20:07:03">五 16 十一月 2012</time>
+            Le <time datetime="2013-04-22T00:00:00">一 22 四月 2013</time>
             post «<a href="/category/write.html">write</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/novel.html">novel</a>                        </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
-<p><strong>引子——</strong></p>
-<p>&nbsp;</p>
-<p>你是谁？</p>
-<p>你从何而来？</p>
-<p>你要到哪去？</p>
-<p>&nbsp;</p>
-<p>这不是哲学家的问题，这是我们每个人的问题。</p>
-<p>当你思考自己的起源时，都会陷入无限的循环与苦楚之中。</p>
-<p>&nbsp;</p>
-<p>我来自哪里，我为何而来，谁创造了我？</p>
-<p>如果是上帝，那谁又是上帝，上帝又从何而来？</p>
-<p>如果是宇宙大爆炸的尘埃，那宇宙又从何而来，宇宙外面是什么，外面的外面又是什么？</p>
-<p>&nbsp;</p>
-<p>或者说上帝是永恒的，宇宙是无限的，那永恒与无限又是什么，这不是一个合理的解释</p>
-<p>至少我无法接受。</p>
-<p>&nbsp;</p>
-<p>这个问题让我那难以入眠，每当想起，都焦躁不安</p>
-<p>世界就像魔术师手里的兔子，诞生于诡异的帽子魔法</p>
-<p>我们就诞生于兔子的毛发上，想努力攀爬到顶端去看看魔法师的样子，想看清这不解的魔法。</p>
-<p>&nbsp;</p>
-<p>但我们失败了，年长时，我们接受的“现实”，接受了“真理”</p>
-<p>于是世界变成了：本来就是这样</p>
-<p>我们遗弃了本源，在自己的秩序里生存，在终焉里安眠。</p>
-<p>&nbsp;</p>
-<p>但还有一群人不接受这样的现实，他们保留了那原始的疑惑</p>
-<p>他们在探寻着自己的起源</p>
-<p>他们在宗教、科学、魔法、哲学中挣扎</p>
-<p>我称他们为开辟的使者 ...</p>
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/qi-yuan.html">Lire la suite...</a>
-        </footer>
-      </article>
-                        
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html"
-               title="Lien permanent vers «让代码更规范——匈牙利命名法»">
-               让代码更规范——匈牙利命名法
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:07:22">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
             by <a href="/author/sai.html">Sai</a>          </div>
         </header>
         <div class="post-content"> 
           <hr />
-<p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
-好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
-<p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
-<p><strong>变量名＝属性＋类型＋对象描述</strong></p>
-<p>&nbsp;</p>
-<p>其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。</p>
-<p>&nbsp;</p>
-<p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
-<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p>
+<p>父有一笔 ，钢笔，自行伍以来，伴之数十载。书时，龙飞凤舞，铿锵有力，一气呵成，笔到文成，无不佩服。</p>
+<p>吾亦有笔，铅笔、圆珠笔、钢笔、毛笔。需之时，择一而书。了了几笔，随性着力，横七竖八，旁人捧腹。</p>
+<p>此父子何以差之巨甚？</p>
+<p>君不见，习武者，十八般兵器，择一而使。正可谓术业有专攻，隔行如隔山。吾，使键盘者，岂与笔者相争。</p>
+<p>键盘者，以机械为贵，而机械，有依轴有红黑青黄茶奶白绿之分，犹以黑茶青为甚。<br />
+黑者，直上直下，以速见长，为游戏者之所求。<br />
+青者，段落十足，击之，力声俱全，陶醉其中，为编码之首选，奈何其势过强，犹有扰民之嫌。<br />
+茶者，吾之最爱 ...</p>
         </div>
         <footer class="post-footer">
-          <a class="readmore" href="/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html">Lire la suite...</a>
-        </footer>
-      </article>
-                        
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/rang-yong-hu-ti-yan-gai-bian-linux.html"
-               title="Lien permanent vers «让用户体验改变Linux»">
-               让用户体验改变Linux
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-03-29T10:59:47">五 29 三月 2013</time>
-            post «<a href="/category/tech.html">tech</a>» 
-            by <a href="/author/sai.html">Sai</a>          </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
-<p>不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。<br />
-后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  </p>
-<p>Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  </p>
-<p><img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /></p>
-<p>为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。</p>
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/rang-yong-hu-ti-yan-gai-bian-linux.html">Lire la suite...</a>
-        </footer>
-      </article>
-                        
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/win32bian-cheng-ru-men.html"
-               title="Lien permanent vers «WIN32编程入门»">
-               WIN32编程入门
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:01:55">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/windows.html">windows</a>                        </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
-<p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
-<p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
-<!-- more --></p>
-<div class="highlight"><pre><span class="cp">#include</span>
-<span class="cp">#include</span>
-
-<span class="c1">// 窗口过程函数</span>
-<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span><span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">);</span>
-
-<span class="kt">int</span> <span class="n">WINAPI</span> <span class="nf">WinMain</span><span class="p">(</span>
-<span class="n">HINSTANCE</span> <span class="n">hInstance</span><span class="p">,</span> <span class="c1">// handle to current instance</span>
-<span class="n">HINSTANCE</span> <span class="n">hPrevInstance</span><span class="p">,</span> <span class="c1">// handle to previous instance</span>
-<span class="n">LPSTR</span> <span class="n">lpCmdLine</span><span class="p">,</span> <span class="c1">// command line</span>
-<span class="kt">int</span> <span class="n">nCmdShow</span> <span class="c1">// show state</span>
-<span class="p">)</span>
-
-<span class="p">{</span>
-<span class="c1">// 窗口类</span>
-<span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/win32bian-cheng-ru-men.html">Lire la suite...</a>
+          <a class="readmore" href="/qi.html">Lire la suite...</a>
         </footer>
       </article>
                       <nav id="pagination">        <a id="first_page" href="/author/sai.html">&#60;&#60;</a>
@@ -216,8 +221,10 @@
                 <a href="/author/sai.html">1</a>
                     <span class="a active">2</span>
                     <a href="/author/sai3.html">3</a>
+                    <a href="/author/sai4.html">4</a>
+                    <a href="/author/sai5.html">5</a>
                     <a id="next_page" href="/author/sai3.html">&#62;</a>
-        <a id="last_page" href="/author/sai3.html">&#62;&#62;</a>
+        <a id="last_page" href="/author/sai5.html">&#62;&#62;</a>
         </nav>      </section> <!-- /#page-main -->
 
         <aside id="page-side">
@@ -237,6 +244,7 @@
             <h3>Catégories</h3>
             <ul>
                           <li><a href="/category/code.html">code</a></li>
+                          <li><a href="/category/misc.html">misc</a></li>
                           <li><a href="/category/tech.html">tech</a></li>
                           <li><a href="/category/write.html">write</a></li>
                         </ul>

@@ -31,120 +31,30 @@
         <header class="post-header">
           <h1>
             <a rel="bookmark"
-               href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"
-               title="Lien permanent vers «利用rsync自动同步服务器与本地代码的python脚本»">
-               利用rsync自动同步服务器与本地代码的python脚本
+               href="/bu-xiang-xie-shi-de-shi-hou.html"
+               title="Lien permanent vers «不想写诗的时候»">
+               不想写诗的时候
             </a>
           </h1>
           <div class="meta">
             <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:27:06">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/python.html">Python</a>                        </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
-<p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
-用ssh sshfs scp都太慢  小东西又懒得用git<br />
-sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
-<p>于是用linux自带的rsync写了个同步脚本<br />
-可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
-<ol>
-<li>
-<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
-</li>
-<li>
-<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
-   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
-</li>
-<li>
-<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
-    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
-    他会监视改目录的文件 如果新建 修改或删除 都会sync
-    可以用 <code>nohup python rsync.py -auto&amp;</code> 
-    来后台运行</p>
-</li>
-<li>
-<p>只根据emacs优化了 ...</p></li></ol>
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">Lire la suite...</a>
-        </footer>
-      </article>
-                        
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html"
-               title="Lien permanent vers «自动获取Nexus4售卖状态的Python脚本»">
-               自动获取Nexus4售卖状态的Python脚本
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:24:06">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/python.html">Python</a>                        </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
-<p><img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/><br />
-使用pyquery做爬虫解析GooglePlay页面 获取状态
-然后通过Gmail发给指定邮箱
-每隔一个小时自动检测一次
-使用 <code><strong>nohup python *.py &amp;</strong></code> 可在后台运行</p>
-<!-- more -->
-
-<div class="highlight"><pre><span class="c">#coding=utf-8</span>
-<span class="c"># easy_install pyquery OR sudo apt-get install python-pyquery</span>
-<span class="kn">from</span> <span class="nn">pyquery</span> <span class="kn">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
-<span class="kn">import</span> <span class="nn">smtplib</span>
-<span class="kn">from</span> <span class="nn">email.Message</span> <span class="kn">import</span> <span class="n">Message</span>
-<span class="kn">import</span> <span class="nn">time</span>
-
-<span class="c"># 发给谁</span>
-<span class="n">mailto_list</span> <span class="o">=</span> <span class="s">&quot;xxx@xx.xx&quot;</span>
-<span class="c"># 设置服务器 用户名 口令 邮箱后缀</span>
-<span class="n">mail_host</span> <span class="o">=</span> <span class="s">&quot;smtp.gmail.com&quot;</span>
-<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!-->
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">Lire la suite...</a>
-        </footer>
-      </article>
-                        
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/wo-de-2011.html"
-               title="Lien permanent vers «我的2011»">
-               我的2011
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:12:11">四 07 二月 2013</time>
+            Le <time datetime="2013-04-22T00:00:00">一 22 四月 2013</time>
             post «<a href="/category/write.html">write</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/life.html">life</a>                        </div>
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/poem.html">poem</a>                        </div>
         </header>
         <div class="post-content"> 
           <hr />
-<p><p>&nbsp;&nbsp;&nbsp; 恍然中，就这样一个人走到了世界末日，回忆过去，点点滴滴，确如云烟，淡然彷徨。</p>
-<p>&nbsp;&nbsp;&nbsp; 这个时候回忆2011确实有点晚了，没办法，我就是这样一个懒散的人，有兴趣在脑海中描绘，却无心思在现实中构建。或许感动只属于自己，但也容易忘记，于是就在末日的前夕，做一份备份吧。</p>
-<p>&nbsp;</p>
-<p>&nbsp;&nbsp;&nbsp; 2011我是如何走过的呢？</p>
-<p>&nbsp;&nbsp;&nbsp; 呃啊&mdash; 已经记不清了，或者说真的不想去回忆，90后都拥有逃避的属性。</p>
-<p>&nbsp;&nbsp;&nbsp; 大一下到大二上是人成熟最快的时候吧，也是从中二到大叔进化的跳板，梦想变得模糊，高贵的刺也被扒光。我也没能逃脱命运的安排，经历了很多痛，然后消沉，逃避，堕落&mdash;&mdash;</p>
-<p>&nbsp;</p>
-<p align="center"><strong>（一）</strong></p>
-<p align="center">&nbsp;</p>
-<p>&nbsp;&nbsp;&nbsp; 应该从退Dian团队谈起吧，那段日子真的很难过。刚开学时，奶奶就走了，第一次尝到了失去亲人的痛，在悲伤中人也变得浑浑噩噩。迷迷糊糊中，作为新人加入了点团队的华三组，也毫无斗志的开始了学习。或许我属于疯子吧，更喜欢挑战和激情。简单无谓的软件测试让我毫无动力，刘老师井然有序的管理让我想起了初中最痛恨的教导主任（不是我吐槽 她们俩长得真像），于是每天就麻木的背着电脑去看RFC，写点东西，然后有索然无味的回来。一切就是这般过去了。</p>
-<p>&nbsp;&nbsp;&nbsp; 这个时候我又想学习下了 ...</p></p>
+<p>手里拿着笔的时候，就想该写点什么吧。<br />
+想了想，却不知从何入手，或许是入世已久，心已不属于自己。  </p>
+<p>曾经迷恋的诗，已经读不懂了。<br />
+曾经向往的人，已换去了容颜。  </p>
+<p>执着已经被风吹散，留下的却只有对尘世的漠然。<br />
+笔还在手里，人却没了心意。  </p>
+<p>也许是累了，也许是倦了。<br />
+闭上眼，不想写诗。  </p>
         </div>
         <footer class="post-footer">
-          <a class="readmore" href="/wo-de-2011.html">Lire la suite...</a>
+          <a class="readmore" href="/bu-xiang-xie-shi-de-shi-hou.html">Lire la suite...</a>
         </footer>
       </article>
                         
@@ -152,39 +62,30 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
         <header class="post-header">
           <h1>
             <a rel="bookmark"
-               href="/yin-hun-ze.html"
-               title="Lien permanent vers «银魂一则»">
-               银魂一则
+               href="/qi.html"
+               title="Lien permanent vers «器»">
+               器
             </a>
           </h1>
           <div class="meta">
             <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:11:31">四 07 二月 2013</time>
+            Le <time datetime="2013-04-22T00:00:00">一 22 四月 2013</time>
             post «<a href="/category/write.html">write</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/.html"></a>                        </div>
+            by <a href="/author/sai.html">Sai</a>          </div>
         </header>
         <div class="post-content"> 
           <hr />
-<p>不要说我到了这个年纪还看银魂 因为银魂里的感动不是时间能消磨的</p>
-<p>&nbsp;</p>
-<p>你确实是个不折不扣的废材</p>
-<p>并不是工作完成的不够快</p>
-<p>你只是在仰望山顶的时候 不自觉的弯下了腰</p>
-<p>越是不停的弯腰 就会离山顶越远</p>
-<p>山顶的存在不是为了让你感到自己的渺小</p>
-<p>而是作为一个努力的目标存在的</p>
-<p>如果有时间在山路上休息的话</p>
-<p>还不如一步一步继续往上攀登 即使很慢也不要紧</p>
-<p>秋本这座山实话了30年才成为山峰的</p>
-<p>可不是这么容易攀登的</p>
-<p>你要抱着攀登30年才能超越它的觉悟去攀登</p>
-<p>一步一步的 像乌龟一样脚踏实地地</p>
-<p>虽然不一定能达到顶峰</p>
-<p>也有可能在途中就用尽力气</p>
-<p>但是 你在那里看到的景色肯定要比现在美丽得多</p>
+<p>父有一笔 ，钢笔，自行伍以来，伴之数十载。书时，龙飞凤舞，铿锵有力，一气呵成，笔到文成，无不佩服。</p>
+<p>吾亦有笔，铅笔、圆珠笔、钢笔、毛笔。需之时，择一而书。了了几笔，随性着力，横七竖八，旁人捧腹。</p>
+<p>此父子何以差之巨甚？</p>
+<p>君不见，习武者，十八般兵器，择一而使。正可谓术业有专攻，隔行如隔山。吾，使键盘者，岂与笔者相争。</p>
+<p>键盘者，以机械为贵，而机械，有依轴有红黑青黄茶奶白绿之分，犹以黑茶青为甚。<br />
+黑者，直上直下，以速见长，为游戏者之所求。<br />
+青者，段落十足，击之，力声俱全，陶醉其中，为编码之首选，奈何其势过强，犹有扰民之嫌。<br />
+茶者，吾之最爱 ...</p>
         </div>
         <footer class="post-footer">
-          <a class="readmore" href="/yin-hun-ze.html">Lire la suite...</a>
+          <a class="readmore" href="/qi.html">Lire la suite...</a>
         </footer>
       </article>
                         
@@ -192,30 +93,89 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
         <header class="post-header">
           <h1>
             <a rel="bookmark"
-               href="/peng-you-su-sheng-jiu.html"
-               title="Lien permanent vers «朋友 • 俗生 • 酒»">
-               朋友 • 俗生 • 酒
+               href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html"
+               title="Lien permanent vers «真TM想休了Arch——豆瓣笔试血泪史»">
+               真TM想休了Arch——豆瓣笔试血泪史
             </a>
           </h1>
           <div class="meta">
             <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:10:31">四 07 二月 2013</time>
-            post «<a href="/category/write.html">write</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/life.html">life</a>                        </div>
+            Le <time datetime="2013-04-01T18:40:51">一 01 四月 2013</time>
+            post «<a href="/category/tech.html">tech</a>» 
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/linux.html">linux</a>,                             <a rel="tag" href="/tag/arch-douban.html">arch. douban</a>                        </div>
         </header>
         <div class="post-content"> 
           <hr />
-<p><span style="color: #ffcc99;">这算是我大学或者说人生第一次真正喝酒吧，当时喝多了还写了些东西，也转过来吧：</span></p>
-<p>刚刚喝了很多酒，也算是人生中第一次喝酒。晕乎乎的，飙车回来，很想写点什么。关于朋友，关于酒。</p>
-<p>所谓朋友，酒一喝，肩一搭，畅怀大笑，也就成了。</p>
-<p>在此之前，个人认为酒有害无益，不知有何存在价值；喝过之后，闹过之后，还是觉得他百害而无益处。但是，就是这毒物，确实人身必不可少的催化剂。</p>
-<p>所谓朋友，就是能同甘共苦，坦胸相对。而这酒正是苦痛，与朋交杯，便是苦痛的分担了。</p>
-<p>知己者，可以共语；同友者，可以同苦同乐。顶着浓重的眩晕之苦，血管的膨胀之痛，与朋举杯，正是弃开自我，敢于承担的誓言；酒后乱语，欣然长笑，更是摒除世俗，乐于分享的豪气。为此者，何不为朋。</p>
-<p>朋友之后，便是俗世。</p>
-<p>纵使立志放浪不羁，超脱形骸，也无法拜托 ...</p>
+<p>古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。<br />
+Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。<br />
+经历了各种折磨后，俺最终落脚在Arch。  </p>
+<p>初恋是甜美的，初识Arch，在尽力了前期苦苦最求的痛苦后，总算是把她调教得有模有样了，那速度，完爆Ubuntu有木有。<br />
+奈何婚姻是爱情的坟墓，Arch将我拐上贼船后就开始露出本性了，各种问题随着更新扑面而来。起初以为是小打小闹，调调bug也蛮惬意的，哪知后来她却变本加厉。  </p>
+<p>因为做ImagineCup，我只能回到Windows那，冷落了她许久。后来豆瓣笔试，俺还是屁颠屁颠的滚回娘家接她，为了讨好她，还特意更新了次，换上新内核，新数据库。岂止她还是生气，直接让我的GTK跪了，带着黑眼圈弄了一晚上，才讨好她。本以为已经大事化了了，可到了笔试当天才发现，她尽然拐走了Django，让我直接没法做题。<br />
+哎，随叫我喜欢折腾呢，悲剧的笔试后，调好了MySQL，救回了Django，就当是个教训吧。  </p>
+<p>可惜我还是太年轻了 ...</p>
         </div>
         <footer class="post-footer">
-          <a class="readmore" href="/peng-you-su-sheng-jiu.html">Lire la suite...</a>
+          <a class="readmore" href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html">Lire la suite...</a>
+        </footer>
+      </article>
+                        
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
+               href="/about-me-no-need.html"
+               title="Lien permanent vers «ABOUT ME? NO NEED»">
+               ABOUT ME? NO NEED
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-03-29T12:09:36">五 29 三月 2013</time>
+            post «<a href="/category/write.html">write</a>» 
+            by <a href="/author/sai.html">Sai</a>          </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
+<p>朋友今天取笑我：“你丫这blog够简洁的，连个'about me'都没有。“
+确实，自从由Wordpress换成Hexo后，就没怎么打点这一寸三亩地，直接套用默认模板，最开始连个feed都没加。
+不过，那些东西又有什么意义呢？</p>
+<p>最早写Blog是从高一开始，那时年轻气盛，为了丁点的虚荣心，绞尽脑汁的去打点。看着点击在一月内破20万甚是高兴，可之后呢，依旧是空虚。可以说那时候的Blog是为了炫耀，多么傻，多么天真。
+后来到了大学，人也成熟了些，Blog开始记录些技术文、一些心情、一些随笔。去掉了流量分析，去掉了访问量，去掉了浮云。
+不知为何，现在看得更开了，技术文就由Evernote记录吧，心情交给日记，随笔有所感还是会更新下。至于About me，那最后的虚荣，也就忽略吧。</p>
+<p>认识你的人，不会在意你的面具，不认识你的人，不在意你是谁。本是尘归尘，土归土，又何必在意那个名字呢。</p>
+<p>就仅在这网络的一个小角落，留下迷失的自我吧。</p>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/about-me-no-need.html">Lire la suite...</a>
+        </footer>
+      </article>
+                        
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
+               href="/rang-yong-hu-ti-yan-gai-bian-linux.html"
+               title="Lien permanent vers «让用户体验改变Linux»">
+               让用户体验改变Linux
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-03-29T10:59:47">五 29 三月 2013</time>
+            post «<a href="/category/tech.html">tech</a>» 
+            by <a href="/author/sai.html">Sai</a>          </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
+<p>不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。<br />
+后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  </p>
+<p>Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  </p>
+<p><img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /></p>
+<p>为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。</p>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/rang-yong-hu-ti-yan-gai-bian-linux.html">Lire la suite...</a>
         </footer>
       </article>
                       <nav id="pagination">        <a id="first_page" href="/index.html">&#60;&#60;</a>
@@ -223,8 +183,10 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                 <a href="/index.html">1</a>
                     <span class="a active">2</span>
                     <a href="/index3.html">3</a>
+                    <a href="/index4.html">4</a>
+                    <a href="/index5.html">5</a>
                     <a id="next_page" href="/index3.html">&#62;</a>
-        <a id="last_page" href="/index3.html">&#62;&#62;</a>
+        <a id="last_page" href="/index5.html">&#62;&#62;</a>
         </nav>      </section> <!-- /#page-main -->
 
         <aside id="page-side">
@@ -244,6 +206,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
             <h3>Catégories</h3>
             <ul>
                           <li><a href="/category/code.html">code</a></li>
+                          <li><a href="/category/misc.html">misc</a></li>
                           <li><a href="/category/tech.html">tech</a></li>
                           <li><a href="/category/write.html">write</a></li>
                         </ul>

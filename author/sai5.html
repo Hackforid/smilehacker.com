@@ -4,7 +4,7 @@
       <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=endge, chrome=IE8" />
     <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
-    <title>SmileHacker — Articles avec le mot clé « Python »</title>
+    <title>SmileHacker — Articles de Sai</title>
     <!--[if lte IE 8]><script type="text/javascript" src="/theme/js/html5shiv.js"></script><![endif]-->
     <link rel="stylesheet" type="text/css" href="/theme/css/skeleton.css" />
     <link rel="stylesheet" type="text/css" href="/theme/css/theme.css" />
@@ -24,51 +24,37 @@
       
       <div id="page-body">
         <section id="page-main" role="main">
-      <h1 class="small-title">Articles avec le mot clé « Python » :</h1>
+      <h1 class="small-title">Articles de <i>Sai</i> :</h1>
      
                  
       <article class="post">
         <header class="post-header">
           <h1>
             <a rel="bookmark"
-               href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"
-               title="Lien permanent vers «利用rsync自动同步服务器与本地代码的python脚本»">
-               利用rsync自动同步服务器与本地代码的python脚本
+               href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html"
+               title="Lien permanent vers «真TM想休了Arch——豆瓣笔试血泪史»">
+               真TM想休了Arch——豆瓣笔试血泪史
             </a>
           </h1>
           <div class="meta">
             <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:27:06">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/python.html">Python</a>                        </div>
+            Le <time datetime="2013-04-01T18:40:51">一 01 四月 2013</time>
+            post «<a href="/category/tech.html">tech</a>» 
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/linux.html">linux</a>,                             <a rel="tag" href="/tag/arch-douban.html">arch. douban</a>                        </div>
         </header>
         <div class="post-content"> 
           <hr />
-<p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
-用ssh sshfs scp都太慢  小东西又懒得用git<br />
-sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
-<p>于是用linux自带的rsync写了个同步脚本<br />
-可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
-<ol>
-<li>
-<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
-</li>
-<li>
-<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
-   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
-</li>
-<li>
-<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
-    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
-    他会监视改目录的文件 如果新建 修改或删除 都会sync
-    可以用 <code>nohup python rsync.py -auto&amp;</code> 
-    来后台运行</p>
-</li>
-<li>
-<p>只根据emacs优化了 ...</p></li></ol>
+<p>古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。<br />
+Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。<br />
+经历了各种折磨后，俺最终落脚在Arch。  </p>
+<p>初恋是甜美的，初识Arch，在尽力了前期苦苦最求的痛苦后，总算是把她调教得有模有样了，那速度，完爆Ubuntu有木有。<br />
+奈何婚姻是爱情的坟墓，Arch将我拐上贼船后就开始露出本性了，各种问题随着更新扑面而来。起初以为是小打小闹，调调bug也蛮惬意的，哪知后来她却变本加厉。  </p>
+<p>因为做ImagineCup，我只能回到Windows那，冷落了她许久。后来豆瓣笔试，俺还是屁颠屁颠的滚回娘家接她，为了讨好她，还特意更新了次，换上新内核，新数据库。岂止她还是生气，直接让我的GTK跪了，带着黑眼圈弄了一晚上，才讨好她。本以为已经大事化了了，可到了笔试当天才发现，她尽然拐走了Django，让我直接没法做题。<br />
+哎，随叫我喜欢折腾呢，悲剧的笔试后，调好了MySQL，救回了Django，就当是个教训吧。  </p>
+<p>可惜我还是太年轻了 ...</p>
         </div>
         <footer class="post-footer">
-          <a class="readmore" href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">Lire la suite...</a>
+          <a class="readmore" href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html">Lire la suite...</a>
         </footer>
       </article>
                         
@@ -113,9 +99,13 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
           <a class="readmore" href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">Lire la suite...</a>
         </footer>
       </article>
-                      <nav id="pagination">   <!-- <span id="first_page" class="a inactive">&#60;&#60;</span>
-        <span id="first_page" class="a inactive">&#60;</span> -->
-                <span class="a active">1</span>
+                      <nav id="pagination">        <a id="first_page" href="/author/sai.html">&#60;&#60;</a>
+        <a id="prev_page" href="/author/sai4.html">&#60;</a>
+                <a href="/author/sai.html">1</a>
+                    <a href="/author/sai2.html">2</a>
+                    <a href="/author/sai3.html">3</a>
+                    <a href="/author/sai4.html">4</a>
+                    <span class="a active">5</span>
                <!-- <span id="next_page" class="a inactive">&#62;</span>
         <span id="next_page" class="a inactive">&#62;&#62;</span> -->
         </nav>      </section> <!-- /#page-main -->
