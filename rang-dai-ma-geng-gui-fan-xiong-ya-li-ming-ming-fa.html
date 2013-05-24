@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+
+	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
+	
+	
+			<title>SmileHacker</title>
+		<meta charset="utf-8" />
+	</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://smilehacker.com"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">Sai</a></h1>
+			<h2></h2>
+						<ul>
+																										<li><a href="http://hustunique.com">Unique Studio</a></li>
+							</ul>
+		</div>
+		<footer>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+			<header>
+		<h1>Sai's blog</h1>
+		<h3>Posted 四 07 二月 2013</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark"
+				title="Permalink to 让代码更规范——匈牙利命名法">让代码更规范——匈牙利命名法</a>
+		</h1>
+		<hr />
+<p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
+好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
+<p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
+<p><strong>变量名＝属性＋类型＋对象描述</strong></p>
+<p>&nbsp;</p>
+<p>其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。</p>
+<p>&nbsp;</p>
+<p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
+<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型+对象描述的顺序组合起来，以使程序员作变量时对变量 的类型和其它属性有直观的了解，下面是HN变量命名规范，其中也有一些是我个人的偏向：</p>
+<!-- more -->
+
+<p><strong>属性部分 </strong></p>
+<p><strong>　　全局变量                               g_ </strong></p>
+<p><strong>常量                                   c_ </strong></p>
+<p><strong>c++</strong><strong>类成员变量                          m_ </strong></p>
+<p><strong>　　静态变量                               s_ </strong></p>
+<p><strong>　　</strong></p>
+<p><strong>类型部分 </strong></p>
+<p><strong>　　指针                                   p </strong></p>
+<p><strong>　　函数                                   fn </strong></p>
+<p><strong>　　无效                                   v </strong></p>
+<p><strong>　　句柄                                   h </strong></p>
+<p><strong>　　长整型                                 l </strong></p>
+<p><strong>　　布尔                                   b </strong></p>
+<p><strong>　　浮点型（有时也指文件）                 f </strong></p>
+<p><strong>　　双字                                   dw </strong></p>
+<p><strong>　　字符串                                 sz </strong></p>
+<p><strong>　　短整型                                 n </strong></p>
+<p><strong>　　双精度浮点                             d </strong></p>
+<p><strong>　　计数                                   c（通常用cnt） </strong></p>
+<p><strong>　　字符                                   ch（通常用c） </strong></p>
+<p><strong>　　整型                                   i（通常用n） </strong></p>
+<p><strong>　　字节                                   by </strong></p>
+<p><strong>　　字                                     w </strong></p>
+<p><strong>　　实型                                   r </strong></p>
+<p><strong>　　无符号                                 u </strong></p>
+<p><strong>　　</strong></p>
+<p><strong>描述部分 </strong></p>
+<p><strong>　　最大                                   Max </strong></p>
+<p><strong>　　最小                                   Min </strong></p>
+<p><strong>　　初始化                                 Init </strong></p>
+<p><strong>　　临时变量                               T（或Temp） </strong></p>
+<p><strong>　　源对象                                 Src </strong></p>
+<p><strong>　　目的对象                               Dest </strong></p>
+<p>这里顺便写几个例子：</p>
+<p>hwnd ： h 是类型描述，表示句柄， wnd 是变量对象描述，表示窗口，所以 hwnd 表示窗口句柄；</p>
+<p>pfnEatApple ： pfn 是类型描述，表示指向函数的指针， EatApple 是变量对象描述，所以它表示</p>
+<p>指向 EatApple 函数的函数指针变量。</p>
+<p>g_cch ： g_ 是属性描述，表示全局变量，c 和 ch 分别是计数类型和字符类型，一起表示变量类</p>
+<p>型，这里忽略了对象描述，所以它表示一个对字符进行计数的全局变量。</p>
+<p>上面就是HN命名法的一般规则。</p>
+<p>小结:匈牙利命名法</p>
+<p>匈牙利命名法</p>
+<p>MFC、句柄、控件及结构的命名规范 Windows类型 样本变量 MFC类 样本变量</p>
+<p>HWND hWnd； CWnd* pWnd；</p>
+<p>HDLG hDlg； CDialog* pDlg；</p>
+<p>HDC hDC； CDC* pDC；</p>
+<p>HGDIOBJ hGdiObj； CGdiObject* pGdiObj；</p>
+<p>HPEN hPen； CPen* pPen；</p>
+<p>HBRUSH hBrush； CBrush* pBrush；</p>
+<p>HFONT hFont； CFont* pFont；</p>
+<p>HBITMAP hBitmap； CBitmap* pBitmap；</p>
+<p>HPALETTE hPaltte； CPalette* pPalette；</p>
+<p>HRGN hRgn； CRgn* pRgn；</p>
+<p>HMENU hMenu； CMenu* pMenu；</p>
+<p>HWND hCtl； CState* pState；</p>
+<p>HWND hCtl； CButton* pButton；</p>
+<p>HWND hCtl； CEdit* pEdit；</p>
+<p>HWND hCtl； CListBox* pListBox；</p>
+<p>HWND hCtl； CComboBox* pComboBox；</p>
+<p>HWND hCtl； CScrollBar* pScrollBar；</p>
+<p>HSZ hszStr； CString pStr；</p>
+<p>POINT pt； CPoint pt；</p>
+<p>SIZE size； CSize size；</p>
+<p>RECT rect； CRect rect；</p>
+<p>一般前缀命名规范 前缀 类型 实例</p>
+<p>C   类或结构  CDocument ，CPrintInfo</p>
+<p>m_  成员变量  m_pDoc，m_nCustomers</p>
+<p>变量命名规范</p>
+<p>前缀     类型   描述                 实例</p>
+<p>ch      char   8位字符              chGrade</p>
+<p>ch TCHAR 如果_UNICODE定义，则为16位字符 chName</p>
+<p>b BOOL 布尔值 bEnable</p>
+<p>n int 整型（其大小依赖于操作系统） nLength</p>
+<p>n UINT 无符号值（其大小依赖于操作系统） nHeight</p>
+<p>w WORD 16位无符号值 wPos</p>
+<p>l LONG 32位有符号整型 lOffset</p>
+<p>dw DWORD 32位无符号整型 dwRange</p>
+<p>p * 指针 pDoc</p>
+<p>lp FAR* 远指针 lpszName</p>
+<p>lpsz LPSTR 32位字符串指针 lpszName</p>
+<p>lpsz LPCSTR 32位常量字符串指针 lpszName</p>
+<p>lpsz LPCTSTR 如果_UNICODE定义，则为32位常量字符串指针 lpszName</p>
+<p>h handle Windows对象句柄 hWnd</p>
+<p>lpfn callback 指向CALLBACK函数的远指针</p>
+<p>前缀 符号类型 实例 范围</p>
+<p>IDR_ 不同类型的多个资源共享标识 IDR_MAIINFRAME 1～0x6FFF</p>
+<p>IDD_ 对话框资源 IDD_SPELL_CHECK 1～0x6FFF</p>
+<p>HIDD_ 对话框资源的Help上下文 HIDD_SPELL_CHECK 0x20001～0x26FF</p>
+<p>IDB_ 位图资源 IDB_COMPANY_LOGO 1～0x6FFF</p>
+<p>IDC_ 光标资源 IDC_PENCIL 1～0x6FFF</p>
+<p>IDI_ 图标资源 IDI_NOTEPAD 1～0x6FFF</p>
+<p>ID_ 来自菜单项或工具栏的命令 ID_TOOLS_SPELLING 0x8000～0xDFFF</p>
+<p>HID_ 命令Help上下文 HID_TOOLS_SPELLING 0x18000～0x1DFFF</p>
+<p>IDP_ 消息框提示 IDP_INVALID_PARTNO 8～0xDEEF</p>
+<p>HIDP_ 消息框Help上下文 HIDP_INVALID_PARTNO 0x30008～0x3DEFF</p>
+<p>IDS_ 串资源 IDS_COPYRIGHT 1～0x7EEF</p>
+<p>IDC_ 对话框内的控件 IDC_RECALC 8～0xDEEF</p>
+<p>Microsoft MFC宏命名规范 名称 类型</p>
+<p>_AFXDLL 唯一的动态连接库（Dynamic Link Library，DLL）版本</p>
+<p>_ALPHA 仅编译DEC Alpha处理器</p>
+<p>_DEBUG 包括诊断的调试版本</p>
+<p>_MBCS 编译多字节字符集</p>
+<p>_UNICODE 在一个应用程序中打开Unicode</p>
+<p>AFXAPI MFC提供的函数</p>
+<p>CALLBACK 通过指针回调的函数</p>
+<p>库标识符命名法 标识符 值和含义</p>
+<p>u ANSI（N）或Unicode（U）</p>
+<p>d 调试或发行：D = 调试；忽略标识符为发行。</p>
+<p>静态库版本命名规范 库 描述</p>
+<p>NAFXCWD.LIB 调试版本：MFC静态连接库</p>
+<p>NAFXCW.LIB 发行版本：MFC静态连接库</p>
+<p>UAFXCWD.LIB 调试版本：具有Unicode支持的MFC静态连接库</p>
+<p>UAFXCW.LIB 发行版本：具有Unicode支持的MFC静态连接库</p>
+<p>动态连接库命名规范 名称 类型</p>
+<p>_AFXDLL 唯一的动态连接库（DLL）版本</p>
+<p>WINAPI Windows所提供的函数</p>
+<p>Windows.h中新的命名规范 类型 定义描述</p>
+<p>WINAPI 使用在API声明中的FAR PASCAL位置，如果正在编写一个具有导出API人口点的DLL，则可以在自己的API中使用该类型</p>
+<p>CALLBACK 使用在应用程序回叫例程，如窗口和对话框过程中的FAR PASCAL的位置</p>
+<p>LPCSTR 与LPSTR相同，只是LPCSTR用于只读串指针，其定义类似（const char FAR*）</p>
+<p>UINT 可移植的无符号整型类型，其大小由主机环境决定（对于Windows NT和Windows 9x为32位）；它是unsigned int的同义词</p>
+<p>LRESULT 窗口程序返回值的类型</p>
+<p>LPARAM 声明lParam所使用的类型，lParam是窗口程序的第四个参数</p>
+<p>WPARAM 声明wParam所使用的类型，wParam是窗口程序的第三个参数</p>
+<p>LPVOID 一般指针类型，与（void *）相同，可以用来代替LPSTR</p>
+<hr />
+<p>抨击匈牙利命名法</p>
+<p>匈牙利命名法是一种编程时的命名规范。命名规范是程序书写规范中最重要也是最富争议的地方，自古乃兵家必争之地。命名规范有何用？四个字：名正言顺。用 二分法，命名规范分为好的命名规范和坏的命名规范，也就是说名正言顺的命名规范和名不正言不顺的命名规范。好的舞鞋是让舞者感觉不到其存在的舞鞋，坏的舞 鞋是让舞者带着镣铐起舞。一个坏的命名规范具有的破坏力比一个好的命名规范具有的创造力要大得多。</p>
+<p>本文要证明的是：匈牙利命名法是一个坏的命名规范。本文的作用范围为静态强类型编程语言。本文的分析范本为C语言和C++语言。下文中的匈法为匈牙利命名法的简称。</p>
+<p>一 匈牙利命名法的成本</p>
+<p>匈法的表现形式为给变量名附加上类型名前缀，例如：nFoo,szFoo,pFoo,cpFoo分别表示整型变量，字符串型变量，指针型变量和常指针型 变量。可以看出，匈法将变量的类型信息从单一地点（声明变量处）复制到了多个地点（使用变量处），这是冗余法。冗余法的成本之一是要维护副本的一致性。这 个成本在编写和维护代码的过程中需要改变变量的类型时付出。冗余法的成本之二是占用了额外的空间。一个优秀的书写者会自觉地遵从一个法则：代码最小组织单 位的长度以30个自然行以下为宜，如果超过50行就应该重新组织。一个变量的书写空间会给这一法则添加不必要的难度。</p>
+<p>二 匈牙利命名法的收益</p>
+<p>这里要证明匈牙利命名法的收益是含糊的，无法预期的。</p>
+<p>范本1：strcpy(pstrFoo,pcstrFoo2) Vs strcpy(foo,foo2)</p>
+<p>匈法在这里有什么收益呢？我看不到。没有一个程序员会承认自己不知道strcpy函数的参数类型吧。</p>
+<p>范本2：unknown_function(nFoo) Vs unknown_function(foo)</p>
+<p>匈法在这里有什么收益呢？我看不到。对于一个不知道确定类型的函数，程序员应该去查看该函数的文档，这是一种成本。使用匈法的唯一好处是看代码的人知道 这个函数要求一个整型参数，这又有什么用处呢？函数是一种接口，参数的类型仅仅是接口中的一小部分。诸如函数的功能、出口信息、线程安全性、异常安全性、 参数合法性等重要信息还是必须查阅文档。</p>
+<p>范本3：nFoo=nBar Vs foo=bar</p>
+<p>匈法在这里有什么收益 呢？我看不到。使用匈法的唯一好处是看代码的人知道这里发生了一个整型变量的复制动作，听起来没什么问题，可以安心睡大觉了。如果他看到的是 nFoo=szBar，可能会从美梦中惊醒。且慢，事情真的会是这样吗？我想首先被惊醒的应该是编译器。另一方面，nFoo=nBar只是在语法上合法而 已，看代码的人真正关心的是语义的合法性，匈法对此毫无帮助。另一方面，一个优秀的书写者会自觉地遵从一个法则：代码最小组织单位中的临时变量以一两个为 宜，如果超过三个就应该重新组织。结合前述第一个法则，可以得出这样的结论：易于理解的代码本身就应该是易于理解的，这是代码的内建高质量。好的命名规范 对内建高质量的助益相当有限，而坏的命名规范对内建高质量的损害比人们想象的要大。</p>
+<p>三 匈牙利命名法的实施</p>
+<p>这里要证明匈牙利命名法在C语言是难以实施的，在C++语言中是无法实施的。从逻辑上讲，对匈法的收益做出否定的结论以后，再来论证匈法的可行性，是画蛇添足。不过有鉴于小马哥曾让已射杀之敌死灰复燃，我还是再踏上一支脚为妙。</p>
+<p>前面讲过，匈法是类型系统的冗余，所以实施匈法的关键是我们是否能够精确地对类型系统进行复制。这取决于类型系统的复杂性。</p>
+<p>先来看看C语言：</p>
+<p>1.内置类型：int,char,float,double 复制为 n,ch,f,d？好像没有什么问题。不过谁来告诉我void应该怎么表示？</p>
+<p>2.组合类型：array,union,enum,struct 复制为 a,u,e,s？好像比较别扭。</p>
+<p>这里的难点不是为主类型取名，而是为副类型取名。an表示整型数组？sfoo,sbar表示结构foo，结构bar？ausfoo表示联合结构foo数组？累不累啊。</p>
+<p>3.特殊类型：pointer。pointer在理论上应该是组合类型，但是在C语言中可以认为是内置类型，因为C语言并没有非常严格地区分不同的指针类型。下面开始表演：pausfoo表示联合结构foo数组指针？ppp表示指针的指针的指针？</p>
+<p>噩梦还没有结束，再来看看类型系统更为丰富的C++语言：</p>
+<p>1.class：如果说C语言中的struct还可以用stru搪塞过去的话，不要梦想用cls来搪塞C++中的class。严格地讲，class根本 就并不是一个类型，而是创造类型的工具，在C++中，语言内置类型的数量和class创造的用户自定义类型的数量相比完全可以忽略不计。 stdvectorFoo表示标准库向量类型变量Foo？疯狂的念头。</p>
+<p>2.命名空间：boostfilesystemiteratorFoo，表示boost空间filesystem子空间遍历目录类型变量Foo？程序员要崩溃了。</p>
+<p>3.模板：你记得std::map&lt;std::string,std::string&gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。</p>
+<p>4.模板参数：template &lt;class T, class BinaryPredicate&gt;const T&amp; max(const T&amp; a, const T&amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。</p>
+<p>5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。</p>
+
+		<div id="article_meta">
+							Category:
+					<a href="http://smilehacker.com/category/code.html">Code</a>
+										<br />Tags:
+									<a href="http://smilehacker.com/tag/.html"></a>
+									</div>
+	</article>
+
+	<footer>
+		<a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+		<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://smilehacker.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+	</section>
+
+	</body>
+</html>

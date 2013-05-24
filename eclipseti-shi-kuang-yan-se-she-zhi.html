@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+
+	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
+	
+	
+			<title>SmileHacker</title>
+		<meta charset="utf-8" />
+	</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://smilehacker.com"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">Sai</a></h1>
+			<h2></h2>
+						<ul>
+																										<li><a href="http://hustunique.com">Unique Studio</a></li>
+							</ul>
+		</div>
+		<footer>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+			<header>
+		<h1>Sai's blog</h1>
+		<h3>Posted 三 13 二月 2013</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="bookmark"
+				title="Permalink to Eclipse提示框颜色设置">Eclipse提示框颜色设置</a>
+		</h1>
+		<hr />
+<p><img alt="不知不觉又到情人节了 离找到心爱之人又近了一年" src="http://i.minus.com/jzqg4E3jT86sO.jpg" /></p>
+<p>以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。<br />
+后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。<br />
+现在用arch了，在自己调配主题时倒找到的修改的办法：  </p>
+<p>Linux主题文件位于<em>/usr/share/themes/</em>下对应的主题文件夹下
+比如我正在用使用<strong>Gnome-Cupertino</strong>主题，就进入到<strong>/usr/share/themes/Gnome-Cupertino/</strong>目录下 <br />
+<code>cd /usr/share/themes/Gnome-Cupertino</code></p>
+<p>打开gtk-2.0/gtkrc文件<br />
+<code>sudo vim gtk-2.0/gtkrc</code></p>
+<p>修改的<strong>tooltip_fg_color</strong>和<strong>tooltip_bg_color</strong>两个属性的值，如果没有改属性，可以自行添加<br />
+<code>gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"</code>  </p>
+<p>然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  </p>
+
+		<div id="article_meta">
+							Category:
+					<a href="http://smilehacker.com/category/linux.html">Linux</a>
+										<br />Tags:
+									<a href="http://smilehacker.com/tag/.html"></a>
+									</div>
+	</article>
+
+	<footer>
+		<a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+		<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "eclipseti-shi-kuang-yan-se-she-zhi.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://smilehacker.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+	</section>
+
+	</body>
+</html>

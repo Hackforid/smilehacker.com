@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/windows.atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-02-07T21:01:55+08:00</updated><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
+&lt;p _="%" _Windows_="[Windows]" _lang:="[lang:" c_="c++]%" codeblock="codeblock"&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;h1&gt;include&lt;/h1&gt;
+&lt;h1&gt;include&lt;/h1&gt;
+&lt;p&gt;// 窗口过程函数
+LRESULT CALLBACK WinSunProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);&lt;/p&gt;
+&lt;p&gt;int WINAPI WinMain(
+HINSTANCE hInstance, // handle to current instance
+HINSTANCE hPrevInstance, // handle to previous instance
+LPSTR lpCmdLine, // command line
+int nCmdShow // show state
+)&lt;/p&gt;
+&lt;p&gt;{
+// 窗口类
+WNDCLASS wndcls;
+wndcls.cbClsExtra = 0; // 类附加内存
+wndcls.cbWndExtra = 0; // 窗口附加内存
+wndcls.hbrBackground = (HBRUSH) GetStockObject(BLACK_BRUSH); // 背景画刷句柄
+wndcls.hCursor = LoadCursor(NULL, IDC_CROSS); // 窗口光标句柄
+wndcls.hIcon = LoadIcon(NULL, IDI_ERROR); // 窗口图标句柄
+wndcls.hInstance = hInstance; // 包含窗口过程函数的程序实例
+wndcls.lpfnWndProc = WinSunProc; // 只想窗口过程函数的指针
+wndcls.lpszClassName = "Kleist"; // 窗口类名称
+wndcls.lpszMenuName = NULL; // 菜单资源
+wndcls.style = CS_HREDRAW | CS_VREDRAW; // 窗口样式
+RegisterClass(&amp;amp;wndcls);&lt;/p&gt;
+&lt;p&gt;// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄
+HWND hwnd;
+hwnd = CreateWindow( // 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL
+"Kleist", // 窗口类名
+"Hello World", // 窗口名字
+WS_OVERLAPPEDWINDOW, // 窗口样式
+0, 0, // 窗口左上角坐标
+600, 400, // 窗口宽高
+NULL, // 父窗口句柄
+NULL, // 窗口菜单句柄
+hInstance, // 窗口所属应用程序实例
+NULL // WM_CREATE消息附加参数lParam传入的数据指针
+);&lt;/p&gt;
+&lt;p&gt;// 显示及刷新窗口
+ShowWindow(hwnd, SW_SHOWNORMAL);
+UpdateWindow(hwnd);&lt;/p&gt;
+&lt;p&gt;// 定义消息结构体
+MSG msg;
+while (GetMessage( // WM_QUIT消息返回0 错误返回-1
+&amp;amp;msg, // 指向消息的结构体
+NULL, // 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息
+0, // 获取消息的最小值 通常为0
+0)) // 获取消息的最大值 都设为0表示接收所有消息
+{
+TranslateMessage(&amp;amp;msg); // 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出
+DispatchMessage(&amp;amp;msg); // 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理
+}
+return msg.wParam;
+}&lt;/p&gt;
+&lt;p&gt;// 窗口过程函数
+LRESULT CALLBACK WinSunProc(
+HWND hwnd, // 窗口句柄
+UINT uMsg, // 消息代码
+WPARAM wParam, // 附加参数
+LPARAM lParam
+)
+{
+switch(uMsg)
+{
+case WM_CHAR:
+char szChar[20];
+sprintf(szChar, "char code is %d", wParam);
+MessageBox(hwnd, szChar, "char", 0);
+break;&lt;/p&gt;
+&lt;p&gt;default:
+return DefWindowProc(hwnd, uMsg, wParam, lParam);
+}&lt;/p&gt;
+&lt;p _="%" endcodeblock="endcodeblock"&gt;return 0;
+}&lt;/p&gt;
+&lt;p&gt;具体也就是WinMain函数作为程序入口，相当于main函数&lt;/p&gt;
+&lt;p&gt;然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
+对着代码看一些参考资料应该就够了。&lt;/p&gt;</summary><category term=""></category></entry></feed>

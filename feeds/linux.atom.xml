@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/linux.atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-03-29T10:59:47+08:00</updated><entry><title>让用户体验改变Linux</title><link href="http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。&lt;br /&gt;
+后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  &lt;/p&gt;
+&lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="不知不觉又到情人节了 离找到心爱之人又近了一年" src="http://i.minus.com/jzqg4E3jT86sO.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。&lt;br /&gt;
+后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。&lt;br /&gt;
+现在用arch了，在自己调配主题时倒找到的修改的办法：  &lt;/p&gt;
+&lt;p&gt;Linux主题文件位于&lt;em&gt;/usr/share/themes/&lt;/em&gt;下对应的主题文件夹下
+比如我正在用使用&lt;strong&gt;Gnome-Cupertino&lt;/strong&gt;主题，就进入到&lt;strong&gt;/usr/share/themes/Gnome-Cupertino/&lt;/strong&gt;目录下 &lt;br /&gt;
+&lt;code&gt;cd /usr/share/themes/Gnome-Cupertino&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;打开gtk-2.0/gtkrc文件&lt;br /&gt;
+&lt;code&gt;sudo vim gtk-2.0/gtkrc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;修改的&lt;strong&gt;tooltip_fg_color&lt;/strong&gt;和&lt;strong&gt;tooltip_bg_color&lt;/strong&gt;两个属性的值，如果没有改属性，可以自行添加&lt;br /&gt;
+&lt;code&gt;gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</summary><category term=""></category></entry></feed>

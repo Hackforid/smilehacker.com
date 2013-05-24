@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css">
+	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
+	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
+	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+
+	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
+	
+	
+			<title>SmileHacker</title>
+		<meta charset="utf-8" />
+	</head>
+<body>
+	<section id="sidebar">
+		<figure id="user_logo">
+            <a href="http://smilehacker.com"><div class="logo">&nbsp;</div></a>
+		</figure>
+
+		<div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">Sai</a></h1>
+			<h2></h2>
+						<ul>
+																										<li><a href="http://hustunique.com">Unique Studio</a></li>
+							</ul>
+		</div>
+		<footer>
+			<address>
+				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
+		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
+			</address>
+		</footer>
+	</section>
+
+	<section id="posts">
+			<header>
+		<h1>Sai's blog</h1>
+		<h3>Posted 四 07 二月 2013</h3>
+	</header>
+	<article>
+		<h1 id="title">
+			<a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="bookmark"
+				title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">利用rsync自动同步服务器与本地代码的python脚本</a>
+		</h1>
+		<hr />
+<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" />
+菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+用ssh sshfs scp都太慢  小东西又懒得用git<br />
+sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
+<p>于是用linux自带的rsync写了个同步脚本<br />
+可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
+<ol>
+<li>
+<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
+</li>
+<li>
+<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
+   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
+</li>
+<li>
+<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
+    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
+    他会监视改目录的文件 如果新建 修改或删除 都会sync
+    可以用 <code>nohup python rsync.py -auto&amp;</code> 
+    来后台运行</p>
+</li>
+<li>
+<p>只根据emacs优化了 vim党自己改</p>
+</li>
+<li>
+<p>sync时会忽略隐藏文件和临时文件</p>
+</li>
+</ol>
+<!-- more -->
+
+<p>{% codeblock [rsync.py] [lang: python]%}</p>
+<h1>use rsync to sync code from server</h1>
+<h1>coding = UTF8</h1>
+<h1>@author Kleist Zhou</h1>
+<h1>2013/2/5</h1>
+<h1>Need pyinotify, pexpect</h1>
+<h1>please use easy_install to add in</h1>
+<p>import os
+import sys
+import pyinotify
+import re</p>
+<h1>your sync config</h1>
+<p>server = '199.245.60.73'
+user = 'root'
+password = ''
+port = ''
+source = './'
+target = '/srv/www/love/public_html/'
+options = "-rtvuC --delete --progress --exclude='rsync.py'"</p>
+<h1>custom regular expression</h1>
+<p>rulers = (r"[#~.][\s\S]<em>", r"[\s\S]</em>[#~]", r"[\s\S]<em>_flymake.[\s\S]</em>")</p>
+<p>if port != '':
+    port = "-e 'ssh -p %d'" % (port)</p>
+<p>def runCmd(cmd):
+    global password
+    if password == '':
+        os.system(cmd)
+    else:
+        import pexpect
+        print cmd
+        child = pexpect.spawn(cmd)
+        try:
+            i = child.expect(['password: ', 'continue connecting (yes/no)?'])
+            if i == 0:
+                child.sendline(password)
+            elif i == 1:
+                child.sendline('yes')
+        except pexpect.EOF:
+            child.close()
+        else:
+            child.expect(pexpect.EOF)
+            child.close()</p>
+<p>def sync():
+    global server, user, port, source, target, option
+    cmd = "rsync %s %s %s %s@%s:%s" % (port, options, source, user, server, target)
+    #print cmd
+    runCmd(cmd)</p>
+<p>def download():
+    global server, user, port, source, target, option
+    cmd = "rsync %s %s %s@%s:%s" % (port, options, user, server, target)
+    print cmd
+    runCmd(cmd)</p>
+<p>class OnChangeHandler(pyinotify.ProcessEvent):
+    def checkFileName(self, fileName):
+        global rulers
+        for ruler in rulers:
+            p = re.compile(ruler)
+            if p.match(fileName) != None:
+                return False
+        return True</p>
+<div class="highlight"><pre><span class="n">def</span> <span class="n">syncFile</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span><span class="o">:</span>
+    <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">checkFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span><span class="o">:</span>
+        <span class="n">sync</span><span class="p">()</span>
+
+<span class="n">def</span> <span class="n">process_IN_CREATE</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span><span class="o">:</span>
+    <span class="err">#</span><span class="n">print</span> <span class="s">&quot;Create file: %s &quot;</span> <span class="o">%</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">def</span> <span class="n">process_IN_DELETE</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span><span class="o">:</span>
+    <span class="err">#</span><span class="n">print</span> <span class="s">&quot;Delete file: %s &quot;</span> <span class="o">%</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="n">def</span> <span class="n">process_IN_MODIFY</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span><span class="o">:</span>
+    <span class="err">#</span><span class="n">print</span> <span class="s">&quot;Modify file: %s &quot;</span> <span class="o">%</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+    <span class="n">self</span><span class="p">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+
+<p>def auto_sync():
+    wm = pyinotify.WatchManager()
+    mask = pyinotify.IN_CREATE | pyinotify.IN_DELETE | pyinotify.IN_MODIFY
+    notifier = pyinotify.Notifier(wm, OnChangeHandler())
+    wm.add_watch("./", mask, rec=True, auto_add=True)
+    notifier.loop()</p>
+<p>def main():
+    if len(sys.argv) == 2:
+        option = sys.argv[1]
+        if option == '-down':
+            download()
+        elif option == '-auto':
+            auto_sync()
+    else:
+        sync()</p>
+<h1>main</h1>
+<p _="%" endcodeblock="endcodeblock">if <strong>name</strong> == "<strong>main</strong>":
+    main()</p>
+
+		<div id="article_meta">
+							Category:
+					<a href="http://smilehacker.com/category/python.html">Python</a>
+										<br />Tags:
+									<a href="http://smilehacker.com/tag/.html"></a>
+									</div>
+	</article>
+
+	<footer>
+		<a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+	</footer>
+
+		<div id="comments">
+		<h2>Comments</h2>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_identifier = "li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html";
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = 'http://smilehacker.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+	</div>
+	
+	</section>
+
+	</body>
+</html>
