@@ -52,52 +52,56 @@
 使用 <code><strong>nohup python *.py &amp;</strong></code> 可在后台运行</p>
 <!-- more -->
 
-<p>```python</p>
-<h1>coding=utf-8</h1>
-<h1>easy_install pyquery OR sudo apt-get install python-pyquery</h1>
-<p>from pyquery import PyQuery as pq
-import smtplib
-from email.Message import Message
-import time</p>
-<h1>发给谁</h1>
-<p>mailto_list = "xxx@xx.xx"</p>
-<h1>设置服务器 用户名 口令 邮箱后缀</h1>
-<p>mail_host = "smtp.gmail.com"
-mail_user = "xxx@gmail.com"
-mail_pass = "you password"</p>
-<p>def sendMail(sub, content):
-    '''
-    sub:主题
-    content:内容
-    '''
-    msg = Message()
-    msg['Subject'] = sub
-    msg['From'] = mail_user
-    msg['To'] = mailto_list
-    msg.set_payload(content)
-    try:
-        s = smtplib.SMTP(mail_host, port=587, timeout=200)
-        s.starttls()
-        s.login(mail_user, mail_pass)
-        s.sendmail(mail_user, mailto_list, msg.as_string())
-        return True
-    except Exception, e:
-        print str(e)
-        return False</p>
-<p>def checkSoldState():
-    doc = pq(url = r'https://play.google.com/store/devices/details?id=nexus_4_16gb')
-    soldMsg = doc('span').filter('.hardware-price-description').text()
-    print soldMsg
-    if soldMsg != 'Sold out':
-        print 'sent mail'
-        sendMail('Nexus4 Info', 'Sold out')</p>
-<p>def say():
-    print "hello"</p>
-<h1>main</h1>
-<p>while True:
-    checkSoldState()
-    time.sleep(3600)
-```pyhon</p>
+<div class="highlight"><pre><span class="c">#coding=utf-8</span>
+<span class="c"># easy_install pyquery OR sudo apt-get install python-pyquery</span>
+<span class="kn">from</span> <span class="nn">pyquery</span> <span class="kn">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
+<span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.Message</span> <span class="kn">import</span> <span class="n">Message</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c"># 发给谁</span>
+<span class="n">mailto_list</span> <span class="o">=</span> <span class="s">&quot;xxx@xx.xx&quot;</span>
+<span class="c"># 设置服务器 用户名 口令 邮箱后缀</span>
+<span class="n">mail_host</span> <span class="o">=</span> <span class="s">&quot;smtp.gmail.com&quot;</span>
+<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com&quot;</span>
+<span class="n">mail_pass</span> <span class="o">=</span> <span class="s">&quot;you password&quot;</span>
+
+<span class="k">def</span> <span class="nf">sendMail</span><span class="p">(</span><span class="n">sub</span><span class="p">,</span> <span class="n">content</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    sub:主题</span>
+<span class="sd">    content:内容</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">msg</span> <span class="o">=</span> <span class="n">Message</span><span class="p">()</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s">&#39;Subject&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sub</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s">&#39;From&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mail_user</span>
+    <span class="n">msg</span><span class="p">[</span><span class="s">&#39;To&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">mailto_list</span>
+    <span class="n">msg</span><span class="o">.</span><span class="n">set_payload</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">s</span> <span class="o">=</span> <span class="n">smtplib</span><span class="o">.</span><span class="n">SMTP</span><span class="p">(</span><span class="n">mail_host</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">587</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">starttls</span><span class="p">()</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">login</span><span class="p">(</span><span class="n">mail_user</span><span class="p">,</span> <span class="n">mail_pass</span><span class="p">)</span>
+        <span class="n">s</span><span class="o">.</span><span class="n">sendmail</span><span class="p">(</span><span class="n">mail_user</span><span class="p">,</span> <span class="n">mailto_list</span><span class="p">,</span> <span class="n">msg</span><span class="o">.</span><span class="n">as_string</span><span class="p">())</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">,</span> <span class="n">e</span><span class="p">:</span>
+        <span class="k">print</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">checkSoldState</span><span class="p">():</span>
+    <span class="n">doc</span> <span class="o">=</span> <span class="n">pq</span><span class="p">(</span><span class="n">url</span> <span class="o">=</span> <span class="s">r&#39;https://play.google.com/store/devices/details?id=nexus_4_16gb&#39;</span><span class="p">)</span>
+    <span class="n">soldMsg</span> <span class="o">=</span> <span class="n">doc</span><span class="p">(</span><span class="s">&#39;span&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">filter</span><span class="p">(</span><span class="s">&#39;.hardware-price-description&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="p">()</span>
+    <span class="k">print</span> <span class="n">soldMsg</span>
+    <span class="k">if</span> <span class="n">soldMsg</span> <span class="o">!=</span> <span class="s">&#39;Sold out&#39;</span><span class="p">:</span>
+        <span class="k">print</span> <span class="s">&#39;sent mail&#39;</span>
+        <span class="n">sendMail</span><span class="p">(</span><span class="s">&#39;Nexus4 Info&#39;</span><span class="p">,</span> <span class="s">&#39;Sold out&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">say</span><span class="p">():</span>
+    <span class="k">print</span> <span class="s">&quot;hello&quot;</span>
+
+<span class="c"># main</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">checkSoldState</span><span class="p">()</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">3600</span><span class="p">)</span>
+</pre></div>
 
 		<div id="article_meta">
 							Category:

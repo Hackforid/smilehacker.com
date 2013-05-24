@@ -262,52 +262,56 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 使用 &lt;code&gt;&lt;strong&gt;nohup python *.py &amp;amp;&lt;/strong&gt;&lt;/code&gt; 可在后台运行&lt;/p&gt;
 &lt;!-- more --&gt;
 
-&lt;p&gt;```python&lt;/p&gt;
-&lt;h1&gt;coding=utf-8&lt;/h1&gt;
-&lt;h1&gt;easy_install pyquery OR sudo apt-get install python-pyquery&lt;/h1&gt;
-&lt;p&gt;from pyquery import PyQuery as pq
-import smtplib
-from email.Message import Message
-import time&lt;/p&gt;
-&lt;h1&gt;发给谁&lt;/h1&gt;
-&lt;p&gt;mailto_list = "xxx@xx.xx"&lt;/p&gt;
-&lt;h1&gt;设置服务器 用户名 口令 邮箱后缀&lt;/h1&gt;
-&lt;p&gt;mail_host = "smtp.gmail.com"
-mail_user = "xxx@gmail.com"
-mail_pass = "you password"&lt;/p&gt;
-&lt;p&gt;def sendMail(sub, content):
-    '''
-    sub:主题
-    content:内容
-    '''
-    msg = Message()
-    msg['Subject'] = sub
-    msg['From'] = mail_user
-    msg['To'] = mailto_list
-    msg.set_payload(content)
-    try:
-        s = smtplib.SMTP(mail_host, port=587, timeout=200)
-        s.starttls()
-        s.login(mail_user, mail_pass)
-        s.sendmail(mail_user, mailto_list, msg.as_string())
-        return True
-    except Exception, e:
-        print str(e)
-        return False&lt;/p&gt;
-&lt;p&gt;def checkSoldState():
-    doc = pq(url = r'https://play.google.com/store/devices/details?id=nexus_4_16gb')
-    soldMsg = doc('span').filter('.hardware-price-description').text()
-    print soldMsg
-    if soldMsg != 'Sold out':
-        print 'sent mail'
-        sendMail('Nexus4 Info', 'Sold out')&lt;/p&gt;
-&lt;p&gt;def say():
-    print "hello"&lt;/p&gt;
-&lt;h1&gt;main&lt;/h1&gt;
-&lt;p&gt;while True:
-    checkSoldState()
-    time.sleep(3600)
-```pyhon&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>我的2011</title><link href="http://smilehacker.com/wo-de-2011.html" rel="alternate"></link><updated>2013-02-07T21:12:11+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:wo-de-2011.html</id><summary type="html">&lt;hr /&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding=utf-8&lt;/span&gt;
+&lt;span class="c"&gt;# easy_install pyquery OR sudo apt-get install python-pyquery&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyquery&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PyQuery&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pq&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;smtplib&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;email.Message&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Message&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="c"&gt;# 发给谁&lt;/span&gt;
+&lt;span class="n"&gt;mailto_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xxx@xx.xx&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;# 设置服务器 用户名 口令 邮箱后缀&lt;/span&gt;
+&lt;span class="n"&gt;mail_host&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;smtp.gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;mail_user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xxx@gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;mail_pass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;you password&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sendMail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    sub:主题&lt;/span&gt;
+&lt;span class="sd"&gt;    content:内容&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Subject&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;From&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mail_user&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;To&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mailto_list&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_payload&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;smtplib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SMTP&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail_host&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;587&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;starttls&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail_user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mail_pass&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sendmail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail_user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mailto_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_string&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;checkSoldState&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;r&amp;#39;https://play.google.com/store/devices/details?id=nexus_4_16gb&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;soldMsg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;span&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;.hardware-price-description&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;soldMsg&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;soldMsg&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Sold out&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;sent mail&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;sendMail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Nexus4 Info&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Sold out&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# main&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;checkSoldState&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3600&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>我的2011</title><link href="http://smilehacker.com/wo-de-2011.html" rel="alternate"></link><updated>2013-02-07T21:12:11+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:wo-de-2011.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 恍然中，就这样一个人走到了世界末日，回忆过去，点点滴滴，确如云烟，淡然彷徨。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 这个时候回忆2011确实有点晚了，没办法，我就是这样一个懒散的人，有兴趣在脑海中描绘，却无心思在现实中构建。或许感动只属于自己，但也容易忘记，于是就在末日的前夕，做一份备份吧。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
