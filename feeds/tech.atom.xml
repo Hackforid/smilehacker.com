@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="/" rel="alternate"></link><link href="/feeds/tech.atom.xml" rel="self"></link><id>/</id><updated>2013-04-01T18:40:51+08:00</updated><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="我一直觉得红Archer这种近战弓兵不靠谱 So do Arch" src="http://i.minus.com/jzoB05z14cPIr.png" /&gt;&lt;/p&gt;
 &lt;p&gt;古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。&lt;br /&gt;
 Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。&lt;br /&gt;
 经历了各种折磨后，俺最终落脚在Arch。  &lt;/p&gt;
@@ -22,7 +21,6 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="不知不觉又到情人节了 离找到心爱之人又近了一年" src="http://i.minus.com/jzqg4E3jT86sO.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。&lt;br /&gt;
 后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。&lt;br /&gt;
 现在用arch了，在自己调配主题时倒找到的修改的办法：  &lt;/p&gt;

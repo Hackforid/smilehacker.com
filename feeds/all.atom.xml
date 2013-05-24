@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="/" rel="alternate"></link><link href="/feeds/all.atom.xml" rel="self"></link><id>/</id><updated>2013-04-01T18:40:51+08:00</updated><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="我一直觉得红Archer这种近战弓兵不靠谱 So do Arch" src="http://i.minus.com/jzoB05z14cPIr.png" /&gt;&lt;/p&gt;
 &lt;p&gt;古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。&lt;br /&gt;
 Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。&lt;br /&gt;
 经历了各种折磨后，俺最终落脚在Arch。  &lt;/p&gt;
@@ -17,7 +16,6 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  &lt;/p&gt;
 &lt;p&gt;这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  &lt;/p&gt;
 &lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch. douban"></category></entry><entry><title>ABOUT ME? NO NEED</title><link href="/about-me-no-need.html" rel="alternate"></link><updated>2013-03-29T12:09:36+08:00</updated><author><name>Sai</name></author><id>tag:,2013-03-29:about-me-no-need.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="My sadness strength my wings" src="http://i3.minus.com/ibtjRBCiqQzIwK.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;朋友今天取笑我：“你丫这blog够简洁的，连个'about me'都没有。“
 确实，自从由Wordpress换成Hexo后，就没怎么打点这一寸三亩地，直接套用默认模板，最开始连个feed都没加。
 不过，那些东西又有什么意义呢？&lt;/p&gt;
@@ -31,7 +29,6 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /&gt;&lt;/p&gt;
 &lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="不知不觉又到情人节了 离找到心爱之人又近了一年" src="http://i.minus.com/jzqg4E3jT86sO.jpg" /&gt;&lt;/p&gt;
 &lt;p&gt;以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。&lt;br /&gt;
 后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。&lt;br /&gt;
 现在用arch了，在自己调配主题时倒找到的修改的办法：  &lt;/p&gt;
@@ -43,7 +40,6 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;修改的&lt;strong&gt;tooltip_fg_color&lt;/strong&gt;和&lt;strong&gt;tooltip_bg_color&lt;/strong&gt;两个属性的值，如果没有改属性，可以自行添加&lt;br /&gt;
 &lt;code&gt;gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"&lt;/code&gt;  &lt;/p&gt;
 &lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</summary><category term="eclipse"></category></entry><entry><title>选择 一</title><link href="/xuan-ze.html" rel="alternate"></link><updated>2013-02-07T23:25:30+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:xuan-ze.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="选择不是那么好做出来的" src="http://i.minus.com/ibjMp2TOJPBBlw.jpeg" /&gt;&lt;/p&gt;
 &lt;p&gt;最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。&lt;br /&gt;
 对于完美主义拖延症晚期患者来说，特别是二选一最为纠结的。当掺杂太多因素时，是&lt;strong&gt;“高瞻远瞩”&lt;/strong&gt;还是&lt;strong&gt;“活在当下”&lt;/strong&gt;，将不再由理性来判断。 
 为了生成一个“主见”，我决定给自己找一套“抉择”的标准，以免日后犹豫。&lt;/p&gt;
@@ -119,7 +115,6 @@ bug的版本后，我也迁移了。Nodejs的速度果然不是盖的。  &lt;/p
 &lt;p&gt;这个世界总是充满了惊喜，太早的为未来做打算，可能不是一个好的选择，还是先找到自己
 的位置比较重要。  &lt;/p&gt;
 &lt;p&gt;写在第一次规划”抉择“。&lt;/p&gt;</summary><category term="coder"></category></entry><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /&gt;  &lt;/p&gt;
 &lt;p&gt;菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
 用ssh sshfs scp都太慢  小东西又懒得用git&lt;br /&gt;
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
@@ -255,7 +250,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="Nexus 4" src="http://i.i.com.com/cnwk.1d/i/tim/2012/12/17/nexus4.png" /&gt;
+&lt;p&gt;&lt;img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/&gt;&lt;br /&gt;
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
 每隔一个小时自动检测一次
@@ -593,81 +588,93 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;4.模板参数：template &amp;lt;class T, class BinaryPredicate&amp;gt;const T&amp;amp; max(const T&amp;amp; a, const T&amp;amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。&lt;/p&gt;
 &lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
-&lt;p _="%" _Windows_="[Windows]" _lang:="[lang:" c_="c++]%" codeblock="codeblock"&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
+&lt;p&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 &lt;!-- more --&gt;&lt;/p&gt;
-&lt;h1&gt;include&lt;/h1&gt;
-&lt;h1&gt;include&lt;/h1&gt;
-&lt;p&gt;// 窗口过程函数
-LRESULT CALLBACK WinSunProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);&lt;/p&gt;
-&lt;p&gt;int WINAPI WinMain(
-HINSTANCE hInstance, // handle to current instance
-HINSTANCE hPrevInstance, // handle to previous instance
-LPSTR lpCmdLine, // command line
-int nCmdShow // show state
-)&lt;/p&gt;
-&lt;p&gt;{
-// 窗口类
-WNDCLASS wndcls;
-wndcls.cbClsExtra = 0; // 类附加内存
-wndcls.cbWndExtra = 0; // 窗口附加内存
-wndcls.hbrBackground = (HBRUSH) GetStockObject(BLACK_BRUSH); // 背景画刷句柄
-wndcls.hCursor = LoadCursor(NULL, IDC_CROSS); // 窗口光标句柄
-wndcls.hIcon = LoadIcon(NULL, IDI_ERROR); // 窗口图标句柄
-wndcls.hInstance = hInstance; // 包含窗口过程函数的程序实例
-wndcls.lpfnWndProc = WinSunProc; // 只想窗口过程函数的指针
-wndcls.lpszClassName = "Kleist"; // 窗口类名称
-wndcls.lpszMenuName = NULL; // 菜单资源
-wndcls.style = CS_HREDRAW | CS_VREDRAW; // 窗口样式
-RegisterClass(&amp;amp;wndcls);&lt;/p&gt;
-&lt;p&gt;// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄
-HWND hwnd;
-hwnd = CreateWindow( // 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL
-"Kleist", // 窗口类名
-"Hello World", // 窗口名字
-WS_OVERLAPPEDWINDOW, // 窗口样式
-0, 0, // 窗口左上角坐标
-600, 400, // 窗口宽高
-NULL, // 父窗口句柄
-NULL, // 窗口菜单句柄
-hInstance, // 窗口所属应用程序实例
-NULL // WM_CREATE消息附加参数lParam传入的数据指针
-);&lt;/p&gt;
-&lt;p&gt;// 显示及刷新窗口
-ShowWindow(hwnd, SW_SHOWNORMAL);
-UpdateWindow(hwnd);&lt;/p&gt;
-&lt;p&gt;// 定义消息结构体
-MSG msg;
-while (GetMessage( // WM_QUIT消息返回0 错误返回-1
-&amp;amp;msg, // 指向消息的结构体
-NULL, // 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息
-0, // 获取消息的最小值 通常为0
-0)) // 获取消息的最大值 都设为0表示接收所有消息
-{
-TranslateMessage(&amp;amp;msg); // 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出
-DispatchMessage(&amp;amp;msg); // 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理
-}
-return msg.wParam;
-}&lt;/p&gt;
-&lt;p&gt;// 窗口过程函数
-LRESULT CALLBACK WinSunProc(
-HWND hwnd, // 窗口句柄
-UINT uMsg, // 消息代码
-WPARAM wParam, // 附加参数
-LPARAM lParam
-)
-{
-switch(uMsg)
-{
-case WM_CHAR:
-char szChar[20];
-sprintf(szChar, "char code is %d", wParam);
-MessageBox(hwnd, szChar, "char", 0);
-break;&lt;/p&gt;
-&lt;p&gt;default:
-return DefWindowProc(hwnd, uMsg, wParam, lParam);
-}&lt;/p&gt;
-&lt;p _="%" endcodeblock="endcodeblock"&gt;return 0;
-}&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 窗口过程函数&lt;/span&gt;
+&lt;span class="n"&gt;LRESULT&lt;/span&gt; &lt;span class="n"&gt;CALLBACK&lt;/span&gt; &lt;span class="nf"&gt;WinSunProc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HWND&lt;/span&gt; &lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UINT&lt;/span&gt; &lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;WPARAM&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LPARAM&lt;/span&gt; &lt;span class="n"&gt;lParam&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;WINAPI&lt;/span&gt; &lt;span class="nf"&gt;WinMain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="n"&gt;HINSTANCE&lt;/span&gt; &lt;span class="n"&gt;hInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// handle to current instance&lt;/span&gt;
+&lt;span class="n"&gt;HINSTANCE&lt;/span&gt; &lt;span class="n"&gt;hPrevInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// handle to previous instance&lt;/span&gt;
+&lt;span class="n"&gt;LPSTR&lt;/span&gt; &lt;span class="n"&gt;lpCmdLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// command line&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;nCmdShow&lt;/span&gt; &lt;span class="c1"&gt;// show state&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c1"&gt;// 窗口类&lt;/span&gt;
+&lt;span class="n"&gt;WNDCLASS&lt;/span&gt; &lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cbClsExtra&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 类附加内存&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cbWndExtra&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 窗口附加内存&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hbrBackground&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HBRUSH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;GetStockObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BLACK_BRUSH&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 背景画刷句柄&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hCursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LoadCursor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IDC_CROSS&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 窗口光标句柄&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hIcon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LoadIcon&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IDI_ERROR&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 窗口图标句柄&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 包含窗口过程函数的程序实例&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lpfnWndProc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;WinSunProc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 只想窗口过程函数的指针&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lpszClassName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Kleist&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 窗口类名称&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lpszMenuName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 菜单资源&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CS_HREDRAW&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;CS_VREDRAW&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 窗口样式&lt;/span&gt;
+&lt;span class="n"&gt;RegisterClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄&lt;/span&gt;
+&lt;span class="n"&gt;HWND&lt;/span&gt; &lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;hwnd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CreateWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="c1"&gt;// 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;Kleist&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口类名&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口名字&lt;/span&gt;
+&lt;span class="n"&gt;WS_OVERLAPPEDWINDOW&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口样式&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口左上角坐标&lt;/span&gt;
+&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口宽高&lt;/span&gt;
+&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 父窗口句柄&lt;/span&gt;
+&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口菜单句柄&lt;/span&gt;
+&lt;span class="n"&gt;hInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口所属应用程序实例&lt;/span&gt;
+&lt;span class="nb"&gt;NULL&lt;/span&gt; &lt;span class="c1"&gt;// WM_CREATE消息附加参数lParam传入的数据指针&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 显示及刷新窗口&lt;/span&gt;
+&lt;span class="n"&gt;ShowWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SW_SHOWNORMAL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;UpdateWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 定义消息结构体&lt;/span&gt;
+&lt;span class="n"&gt;MSG&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GetMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="c1"&gt;// WM_QUIT消息返回0 错误返回-1&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 指向消息的结构体&lt;/span&gt;
+    &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息&lt;/span&gt;
+    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 获取消息的最小值 通常为0&lt;/span&gt;
+    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="c1"&gt;// 获取消息的最大值 都设为0表示接收所有消息&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;TranslateMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出&lt;/span&gt;
+    &lt;span class="n"&gt;DispatchMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 窗口过程函数&lt;/span&gt;
+&lt;span class="n"&gt;LRESULT&lt;/span&gt; &lt;span class="n"&gt;CALLBACK&lt;/span&gt; &lt;span class="nf"&gt;WinSunProc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="n"&gt;HWND&lt;/span&gt; &lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口句柄&lt;/span&gt;
+&lt;span class="n"&gt;UINT&lt;/span&gt; &lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 消息代码&lt;/span&gt;
+&lt;span class="n"&gt;WPARAM&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 附加参数&lt;/span&gt;
+&lt;span class="n"&gt;LPARAM&lt;/span&gt; &lt;span class="n"&gt;lParam&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;WM_CHAR&lt;/span&gt;:
+&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;szChar&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="n"&gt;sprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;szChar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;char code is %d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;MessageBox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;szChar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;char&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nl"&gt;default:&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;DefWindowProc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lParam&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
 &lt;p&gt;具体也就是WinMain函数作为程序入口，相当于main函数&lt;/p&gt;
 &lt;p&gt;然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
 对着代码看一些参考资料应该就够了。&lt;/p&gt;</summary><category term="windows"></category></entry><entry><title>黑历史</title><link href="/hei-li-shi.html" rel="alternate"></link><updated>2013-02-07T20:55:16+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:hei-li-shi.html</id><summary type="html">&lt;hr /&gt;
