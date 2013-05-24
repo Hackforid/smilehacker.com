@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css">
-	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
-	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
-	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
+    
+            <title>让代码更规范——匈牙利命名法 - SmileHacker</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
-	
-	
-			<title>SmileHacker</title>
-		<meta charset="utf-8" />
-	</head>
 <body>
-	<section id="sidebar">
-		<figure id="user_logo">
-            <a href="http://smilehacker.com"><div class="logo">&nbsp;</div></a>
-		</figure>
+    <section id="navbar">
+        <div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">SmileHacker</a></h1>
+            <h2></h2>
+        </div>
+        <div class="nav-button">
+            <ul>
+                                                                                                                                        <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
+                                                <li><a href="http://hustunique.com">Unique Studio</a></li>
+                                 </ul>
+         </div>
+     </section>
 
-		<div class="user_meta">
-            <h1 id="user"><a href="http://smilehacker.com" class="">Sai</a></h1>
-			<h2></h2>
-						<ul>
-																										<li><a href="http://hustunique.com">Unique Studio</a></li>
-							</ul>
-		</div>
-		<footer>
-			<address>
-				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
-		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
-			</address>
-		</footer>
-	</section>
+     <section id="sidebar">
+        <div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">SmileHacker</a></h1>
+            <h2></h2>
+            <ul>
+                                                                                                                <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
+                                        <li><a href="http://hustunique.com">Unique Studio</a></li>
+                            </ul>
+        </div>
+        <footer>
+            <address>
+                Powered by <a href='http://docs.getpelican.com/en/latest/'>Pelican</a>,
+                <a href='https://github.com/jamescooke/pelican-svbtle#readme'>theme info</a>.
+            </address>
+        </footer>
+    </section>
 
-	<section id="posts">
-			<header>
-		<h1>Sai's blog</h1>
-		<h3>Posted 四 07 二月 2013</h3>
-	</header>
-	<article>
-		<h1 id="title">
-			<a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark"
-				title="Permalink to 让代码更规范——匈牙利命名法">让代码更规范——匈牙利命名法</a>
-		</h1>
-		<hr />
+    <section id="posts">
+                <article>
+                <h1 class="title">
+                        <a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark">让代码更规范——匈牙利命名法</a>
+                </h1>
+
+                <div class='article-content'>
+                    <hr />
 <p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
 好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
 <p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
@@ -209,32 +214,35 @@
 <p>3.模板：你记得std::map&lt;std::string,std::string&gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。</p>
 <p>4.模板参数：template &lt;class T, class BinaryPredicate&gt;const T&amp; max(const T&amp; a, const T&amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。</p>
 <p>5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。</p>
+                </div>
 
-		<div id="article_meta">
-							Category:
-					<a href="http://smilehacker.com/category/code.html">code</a>
-								</div>
-	</article>
+                <div class="abbr published" title='2013-02-07T21:07:22'>Posted 四 07 二月 2013</div>
 
-	<footer>
-		<a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
-	</footer>
+                <div id="article_meta">
+                                                        Category:
+                                        <a href="http://smilehacker.com/category/code.html">code</a>
+                                                                </div>
+        </article>
 
-		<div id="comments">
-		<h2>Comments</h2>
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-			var disqus_identifier = "rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html";
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = 'http://smilehacker.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
-	</div>
-	
-	</section>
+        <footer>
+                <a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+        </footer>
 
-	</body>
+                <div id="comments">
+                <h2>Comments</h2>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                        var disqus_identifier = "rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html";
+                        (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'http://smilehacker.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                </script>
+                <noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+        </div>
+        
+    </section>
+
+    </body>
 </html>

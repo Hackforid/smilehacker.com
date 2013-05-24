@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css">
-	<!--<link rel="stylesheet/less" type="text/css" href="/theme/css/style.less">-->
-	<!--<script src="/theme/js/less.js" type="text/javascript"></script>-->
-	<link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/style.css"> 
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/css/pygments.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:800,400,300|Inconsolata' rel='stylesheet' type='text/css'>
+    <link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
+    
+            <title>WIN32编程入门 - SmileHacker</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
 
-	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
-	
-	
-			<title>SmileHacker</title>
-		<meta charset="utf-8" />
-	</head>
 <body>
-	<section id="sidebar">
-		<figure id="user_logo">
-            <a href="http://smilehacker.com"><div class="logo">&nbsp;</div></a>
-		</figure>
+    <section id="navbar">
+        <div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">SmileHacker</a></h1>
+            <h2></h2>
+        </div>
+        <div class="nav-button">
+            <ul>
+                                                                                                                                        <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
+                                                <li><a href="http://hustunique.com">Unique Studio</a></li>
+                                 </ul>
+         </div>
+     </section>
 
-		<div class="user_meta">
-            <h1 id="user"><a href="http://smilehacker.com" class="">Sai</a></h1>
-			<h2></h2>
-						<ul>
-																										<li><a href="http://hustunique.com">Unique Studio</a></li>
-							</ul>
-		</div>
-		<footer>
-			<address>
-				Powered by <a href="http://pelican.notmyidea.org/">Pelican</a>,
-		                theme by <a href="https://github.com/wting/pelican-svbtle">wting</a>.
-			</address>
-		</footer>
-	</section>
+     <section id="sidebar">
+        <div class="user_meta">
+            <h1 id="user"><a href="http://smilehacker.com" class="">SmileHacker</a></h1>
+            <h2></h2>
+            <ul>
+                                                                                                                <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
+                                        <li><a href="http://hustunique.com">Unique Studio</a></li>
+                            </ul>
+        </div>
+        <footer>
+            <address>
+                Powered by <a href='http://docs.getpelican.com/en/latest/'>Pelican</a>,
+                <a href='https://github.com/jamescooke/pelican-svbtle#readme'>theme info</a>.
+            </address>
+        </footer>
+    </section>
 
-	<section id="posts">
-			<header>
-		<h1>Sai's blog</h1>
-		<h3>Posted 四 07 二月 2013</h3>
-	</header>
-	<article>
-		<h1 id="title">
-			<a href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark"
-				title="Permalink to WIN32编程入门">WIN32编程入门</a>
-		</h1>
-		<hr />
+    <section id="posts">
+                <article>
+                <h1 class="title">
+                        <a href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark">WIN32编程入门</a>
+                </h1>
+
+                <div class='article-content'>
+                    <hr />
 <p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
 <p _="%" _Windows_="[Windows]" _lang:="[lang:" c_="c++]%" codeblock="codeblock">学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 <!-- more --></p>
@@ -124,34 +129,37 @@ return DefWindowProc(hwnd, uMsg, wParam, lParam);
 <p>具体也就是WinMain函数作为程序入口，相当于main函数</p>
 <p>然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
 对着代码看一些参考资料应该就够了。</p>
+                </div>
 
-		<div id="article_meta">
-							Category:
-					<a href="http://smilehacker.com/category/code.html">code</a>
-										<br />Tags:
-									<a href="http://smilehacker.com/tag/windows.html">windows</a>
-									</div>
-	</article>
+                <div class="abbr published" title='2013-02-07T21:01:55'>Posted 四 07 二月 2013</div>
 
-	<footer>
-		<a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
-	</footer>
+                <div id="article_meta">
+                                                        Category:
+                                        <a href="http://smilehacker.com/category/code.html">code</a>
+                                                                                <br />Tags:
+                                                                        <a href="http://smilehacker.com/tag/windows.html">windows</a>
+                                                                        </div>
+        </article>
 
-		<div id="comments">
-		<h2>Comments</h2>
-		<div id="disqus_thread"></div>
-		<script type="text/javascript">
-			var disqus_identifier = "win32bian-cheng-ru-men.html";
-			(function() {
-				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-				dsq.src = 'http://smilehacker.disqus.com/embed.js';
-				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-			})();
-		</script>
-		<noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
-	</div>
-	
-	</section>
+        <footer>
+                <a href="http://smilehacker.com/" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;Back to blog</a>
+        </footer>
 
-	</body>
+                <div id="comments">
+                <h2>Comments</h2>
+                <div id="disqus_thread"></div>
+                <script type="text/javascript">
+                        var disqus_identifier = "win32bian-cheng-ru-men.html";
+                        (function() {
+                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                dsq.src = 'http://smilehacker.disqus.com/embed.js';
+                                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                </script>
+                <noscript>Please enable JavaScript to view <a href="http://disqus.com/?ref_noscript">comments</a>.</noscript>
+        </div>
+        
+    </section>
+
+    </body>
 </html>
