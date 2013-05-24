@@ -1,49 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=endge, chrome=IE8" />
-    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
-    <title>SmileHacker — Articles avec le mot clé « Python »</title>
-    <!--[if lte IE 8]><script type="text/javascript" src="/theme/js/html5shiv.js"></script><![endif]-->
-    <link rel="stylesheet" type="text/css" href="/theme/css/skeleton.css" />
-    <link rel="stylesheet" type="text/css" href="/theme/css/theme.css" />
-    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-    <!--[if lte IE 8]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
-    <link rel="alternate" type="application/atom+xml"
-                           title="SmileHacker — Flux Atom"
-                           href="/" /> 
-        </head>
-  <body>
-    <div id="page">
-      <header id="page-head">
-        <h1>
-          <a href="/index.html">SmileHacker</a>
-        </h1>
-      </header>
-      
-      <div id="page-body">
-        <section id="page-main" role="main">
-      <h1 class="small-title">Articles avec le mot clé « Python » :</h1>
-     
-                 
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"
-               title="Lien permanent vers «利用rsync自动同步服务器与本地代码的python脚本»">
-               利用rsync自动同步服务器与本地代码的python脚本
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:27:06">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/python.html">Python</a>                        </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
+<head>
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
+
+    <title>SmileHacker - Python</title>
+
+    <link rel="stylesheet" href="/theme/css/normalize.css" />
+    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="/theme/css/style.css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" />	
+    <script src="/theme/js/custom.modernizr.js"></script>
+</head>
+
+<body>
+
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="">SmileHacker</a></h1>
+    </div>
+</div>
+</div>
+
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+	
+                        <li><a href="/pages/about.html" class="button secondary small">About</a></li>
+                </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+            
+            
+
+                            <article>
+                <a href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"><h3 class="article-title">利用rsync自动同步服务器与本地代码的python脚本</h3></a>
+                <h6 class="subheader" title="2013-02-07T21:27:06">四 07 二月 2013
+    </h6>
+
+
+<hr />
 <p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
 用ssh sshfs scp都太慢  小东西又懒得用git<br />
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
@@ -65,30 +74,143 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
     来后台运行</p>
 </li>
 <li>
-<p>只根据emacs优化了 ...</p></li></ol>
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">Lire la suite...</a>
-        </footer>
-      </article>
-                        
-      <article class="post">
-        <header class="post-header">
-          <h1>
-            <a rel="bookmark"
-               href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html"
-               title="Lien permanent vers «自动获取Nexus4售卖状态的Python脚本»">
-               自动获取Nexus4售卖状态的Python脚本
-            </a>
-          </h1>
-          <div class="meta">
-            <!-- includes/article_meta.html -->
-            Le <time datetime="2013-02-07T21:24:06">四 07 二月 2013</time>
-            post «<a href="/category/code.html">code</a>» 
-            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/python.html">Python</a>                        </div>
-        </header>
-        <div class="post-content"> 
-          <hr />
+<p>只根据emacs优化了 vim党自己改</p>
+</li>
+<li>
+<p>sync时会忽略隐藏文件和临时文件</p>
+</li>
+</ol>
+<!-- more -->
+
+<div class="highlight"><pre><span class="c"># use rsync to sync code from server</span>
+<span class="c"># coding = UTF8</span>
+<span class="c"># @author Kleist Zhou</span>
+<span class="c"># 2013/2/5</span>
+
+<span class="c"># Need pyinotify, pexpect</span>
+<span class="c"># please use easy_install to add in</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">pyinotify</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c"># your sync config</span>
+<span class="n">server</span> <span class="o">=</span> <span class="s">&#39;199.245.60.73&#39;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s">&#39;root&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">port</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">source</span> <span class="o">=</span> <span class="s">&#39;./&#39;</span>
+<span class="n">target</span> <span class="o">=</span> <span class="s">&#39;/srv/www/love/public_html/&#39;</span>
+<span class="n">options</span> <span class="o">=</span> <span class="s">&quot;-rtvuC --delete --progress --exclude=&#39;rsync.py&#39;&quot;</span>
+
+<span class="c">#custom regular expression</span>
+<span class="n">rulers</span> <span class="o">=</span> <span class="p">(</span><span class="s">r&quot;[#~.][\s\S]*&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*[#~]&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*_flymake.[\s\S]*&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">port</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="s">&quot;-e &#39;ssh -p </span><span class="si">%d</span><span class="s">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">password</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">pexpect</span>
+        <span class="k">print</span> <span class="n">cmd</span>
+        <span class="n">child</span> <span class="o">=</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">([</span><span class="s">&#39;password: &#39;</span><span class="p">,</span> <span class="s">&#39;continue connecting (yes/no)?&#39;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s">&#39;yes&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span><span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">)</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">sync</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+    <span class="c">#print cmd</span>
+    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">download</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">cmd</span>
+    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">OnChangeHandler</span><span class="p">(</span><span class="n">pyinotify</span><span class="o">.</span><span class="n">ProcessEvent</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">checkFileName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
+        <span class="k">global</span> <span class="n">rulers</span>
+        <span class="k">for</span> <span class="n">ruler</span> <span class="ow">in</span> <span class="n">rulers</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">ruler</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">syncFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
+            <span class="n">sync</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">process_IN_CREATE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c">#print &quot;Create file: %s &quot; % os.path.join(event.path,event.name)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_IN_DELETE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c">#print &quot;Delete file: %s &quot; % os.path.join(event.path,event.name)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_IN_MODIFY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c">#print &quot;Modify file: %s &quot; % os.path.join(event.path,event.name)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">auto_sync</span><span class="p">():</span>
+    <span class="n">wm</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">WatchManager</span><span class="p">()</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_CREATE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_DELETE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_MODIFY</span>
+    <span class="n">notifier</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">Notifier</span><span class="p">(</span><span class="n">wm</span><span class="p">,</span> <span class="n">OnChangeHandler</span><span class="p">())</span>
+    <span class="n">wm</span><span class="o">.</span><span class="n">add_watch</span><span class="p">(</span><span class="s">&quot;./&quot;</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">rec</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">auto_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">notifier</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-down&#39;</span><span class="p">:</span>
+            <span class="n">download</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-auto&#39;</span><span class="p">:</span>
+            <span class="n">auto_sync</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">sync</span><span class="p">()</span>
+
+<span class="c"># main</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div><p class="subheader">Category: <a href="/category/code.html">code</a>
+
+    Tagged: 
+        <a href="/tag/python.html">Python </a>
+    </p>
+
+
+
+<p><a href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html#disqus_thread">comments</a></p>            </article>
+
+            
+                            <hr  class="gradient"/>
+            
+                
+                    
+
+                
+            <article>
+                <a href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html"><h3 class="article-title">自动获取Nexus4售卖状态的Python脚本</h3></a>
+                <h6 class="subheader" title="2013-02-07T21:24:06">四 07 二月 2013
+    </h6>
+
+
+<hr />
 <p><img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/><br />
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
@@ -107,58 +229,68 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 <span class="n">mailto_list</span> <span class="o">=</span> <span class="s">&quot;xxx@xx.xx&quot;</span>
 <span class="c"># 设置服务器 用户名 口令 邮箱后缀</span>
 <span class="n">mail_host</span> <span class="o">=</span> <span class="s">&quot;smtp.gmail.com&quot;</span>
-<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!-->
-        </div>
-        <footer class="post-footer">
-          <a class="readmore" href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">Lire la suite...</a>
-        </footer>
-      </article>
-                      <nav id="pagination">   <!-- <span id="first_page" class="a inactive">&#60;&#60;</span>
-        <span id="first_page" class="a inactive">&#60;</span> -->
-                <span class="a active">1</span>
-               <!-- <span id="next_page" class="a inactive">&#62;</span>
-        <span id="next_page" class="a inactive">&#62;&#62;</span> -->
-        </nav>      </section> <!-- /#page-main -->
+<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!--><p class="subheader">Category: <a href="/category/code.html">code</a>
 
-        <aside id="page-side">
-          <!-- begin includes/sidebar.html -->
-          <nav>
-            <h3>Pages</h3>
-            <ul>
-              <li><a href="">Home</a></li>
-              <li><a href="/categories.html">Categorise</a></li>
-              <li><a href="/archives.html">Archives</a></li>
-              <li><a href="/tags.html">Tags</a></li>
-                                                    <li><a href="/pages/about.html">About</a></li>
-                                      </ul>
-          </nav>
+    Tagged: 
+        <a href="/tag/python.html">Python </a>
+    </p>
 
-                    <nav>
-            <h3>Catégories</h3>
-            <ul>
-                          <li><a href="/category/code.html">code</a></li>
-                          <li><a href="/category/misc.html">misc</a></li>
-                          <li><a href="/category/tech.html">tech</a></li>
-                          <li><a href="/category/write.html">write</a></li>
-                        </ul>
-          </nav>
-          
-          <nav>
-            <h3>Liens</h3>
-            <ul>
-                                                                <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
-                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                                                                  <li><a href="../category/write.html">Write</a></li>
-                            <li><a href="../category/code.html">Code</a></li>
-                            <li><a href="../category/tech.html">Tech</a></li>
-                                      </ul>
-          </nav>
-          <!-- end includes/sidebar.html --></aside> <!-- /#page-side -->
-      </div>  <!-- /#page-body -->
 
-      <footer id="page-foot">
-        <p> Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
-        <p><a id="github-link" href="http://github.com/zhouquanbest/">Fork me on Github</a></p>      </footer>
-    </div> <!-- /#page -->
-      </body>
-</html>
+
+<p><a href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        
+                    <!-- /#posts-list -->
+                            <div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+    
+    </p>
+</div>
+                        
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="/archives.html">Archives</a>
+            <li><a href="/tags.html">Tags</a>
+                                </ul>
+
+        		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+                    <li><a href="/category/code.html">code</a></li>
+                    <li><a href="/category/misc.html">misc</a></li>
+                    <li><a href="/category/tech.html">tech</a></li>
+                    <li><a href="/category/write.html">write</a></li>
+           
+        </ul>
+        
+        		
+                <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+                    <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
+                    <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
+                </ul>
+        
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
+
+
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+                <p>SmileHacker by Sai</p>
+            </div>
+            </div>
+    </div>
+</footer>
