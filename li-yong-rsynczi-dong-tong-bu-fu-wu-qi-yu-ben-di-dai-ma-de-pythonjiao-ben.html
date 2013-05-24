@@ -45,7 +45,7 @@
 				title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">利用rsync自动同步服务器与本地代码的python脚本</a>
 		</h1>
 		<hr />
-<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" />
+<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /><br />
 菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
 用ssh sshfs scp都太慢  小东西又懒得用git<br />
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
@@ -75,101 +75,112 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 </ol>
 <!-- more -->
 
-<h1>use rsync to sync code from server</h1>
-<h1>coding = UTF8</h1>
-<h1>@author Kleist Zhou</h1>
-<h1>2013/2/5</h1>
-<h1>Need pyinotify, pexpect</h1>
-<h1>please use easy_install to add in</h1>
-<p>import os
-import sys
-import pyinotify
-import re</p>
-<h1>your sync config</h1>
-<p>server = '199.245.60.73'
-user = 'root'
-password = ''
-port = ''
-source = './'
-target = '/srv/www/love/public_html/'
-options = "-rtvuC --delete --progress --exclude='rsync.py'"</p>
-<h1>custom regular expression</h1>
-<p>rulers = (r"[#~.][\s\S]<em>", r"[\s\S]</em>[#~]", r"[\s\S]<em>_flymake.[\s\S]</em>")</p>
-<p>if port != '':
-    port = "-e 'ssh -p %d'" % (port)</p>
-<p>def runCmd(cmd):
-    global password
-    if password == '':
-        os.system(cmd)
-    else:
-        import pexpect
-        print cmd
-        child = pexpect.spawn(cmd)
-        try:
-            i = child.expect(['password: ', 'continue connecting (yes/no)?'])
-            if i == 0:
-                child.sendline(password)
-            elif i == 1:
-                child.sendline('yes')
-        except pexpect.EOF:
-            child.close()
-        else:
-            child.expect(pexpect.EOF)
-            child.close()</p>
-<p>def sync():
-    global server, user, port, source, target, option
-    cmd = "rsync %s %s %s %s@%s:%s" % (port, options, source, user, server, target)
-    #print cmd
-    runCmd(cmd)</p>
-<p>def download():
-    global server, user, port, source, target, option
-    cmd = "rsync %s %s %s@%s:%s" % (port, options, user, server, target)
-    print cmd
-    runCmd(cmd)</p>
-<p>class OnChangeHandler(pyinotify.ProcessEvent):
-    def checkFileName(self, fileName):
-        global rulers
-        for ruler in rulers:
-            p = re.compile(ruler)
-            if p.match(fileName) != None:
-                return False
-        return True</p>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">syncFile</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">)</span><span class="o">:</span>
-    <span class="k">if</span> <span class="n">self</span><span class="p">.</span><span class="n">checkFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span><span class="o">:</span>
+<div class="highlight"><pre><span class="c"># use rsync to sync code from server</span>
+<span class="c"># coding = UTF8</span>
+<span class="c"># @author Kleist Zhou</span>
+<span class="c"># 2013/2/5</span>
+
+<span class="c"># Need pyinotify, pexpect</span>
+<span class="c"># please use easy_install to add in</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">pyinotify</span>
+<span class="kn">import</span> <span class="nn">re</span>
+
+<span class="c"># your sync config</span>
+<span class="n">server</span> <span class="o">=</span> <span class="s">&#39;199.245.60.73&#39;</span>
+<span class="n">user</span> <span class="o">=</span> <span class="s">&#39;root&#39;</span>
+<span class="n">password</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">port</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+<span class="n">source</span> <span class="o">=</span> <span class="s">&#39;./&#39;</span>
+<span class="n">target</span> <span class="o">=</span> <span class="s">&#39;/srv/www/love/public_html/&#39;</span>
+<span class="n">options</span> <span class="o">=</span> <span class="s">&quot;-rtvuC --delete --progress --exclude=&#39;rsync.py&#39;&quot;</span>
+
+<span class="c">#custom regular expression</span>
+<span class="n">rulers</span> <span class="o">=</span> <span class="p">(</span><span class="s">r&quot;[#~.][\s\S]*&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*[#~]&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*_flymake.[\s\S]*&quot;</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">port</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+    <span class="n">port</span> <span class="o">=</span> <span class="s">&quot;-e &#39;ssh -p </span><span class="si">%d</span><span class="s">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">):</span>
+    <span class="k">global</span> <span class="n">password</span>
+    <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
+        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">pexpect</span>
+        <span class="k">print</span> <span class="n">cmd</span>
+        <span class="n">child</span> <span class="o">=</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">i</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">([</span><span class="s">&#39;password: &#39;</span><span class="p">,</span> <span class="s">&#39;continue connecting (yes/no)?&#39;</span><span class="p">])</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
+            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s">&#39;yes&#39;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span><span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">)</span>
+            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">sync</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+    <span class="c">#print cmd</span>
+    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">download</span><span class="p">():</span>
+    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
+    <span class="k">print</span> <span class="n">cmd</span>
+    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">OnChangeHandler</span><span class="p">(</span><span class="n">pyinotify</span><span class="o">.</span><span class="n">ProcessEvent</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">checkFileName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
+        <span class="k">global</span> <span class="n">rulers</span>
+        <span class="k">for</span> <span class="n">ruler</span> <span class="ow">in</span> <span class="n">rulers</span><span class="p">:</span>
+            <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">ruler</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+                <span class="k">return</span> <span class="bp">False</span>
+        <span class="k">return</span> <span class="bp">True</span>
+
+    <span class="k">def</span> <span class="nf">syncFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
+            <span class="n">sync</span><span class="p">()</span>
+
+    <span class="k">def</span> <span class="nf">process_IN_CREATE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c">#print &quot;Create file: %s &quot; % os.path.join(event.path,event.name)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_IN_DELETE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c">#print &quot;Delete file: %s &quot; % os.path.join(event.path,event.name)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">process_IN_MODIFY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
+        <span class="c">#print &quot;Modify file: %s &quot; % os.path.join(event.path,event.name)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">auto_sync</span><span class="p">():</span>
+    <span class="n">wm</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">WatchManager</span><span class="p">()</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_CREATE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_DELETE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_MODIFY</span>
+    <span class="n">notifier</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">Notifier</span><span class="p">(</span><span class="n">wm</span><span class="p">,</span> <span class="n">OnChangeHandler</span><span class="p">())</span>
+    <span class="n">wm</span><span class="o">.</span><span class="n">add_watch</span><span class="p">(</span><span class="s">&quot;./&quot;</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">rec</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">auto_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">notifier</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
+
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="n">option</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-down&#39;</span><span class="p">:</span>
+            <span class="n">download</span><span class="p">()</span>
+        <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-auto&#39;</span><span class="p">:</span>
+            <span class="n">auto_sync</span><span class="p">()</span>
+    <span class="k">else</span><span class="p">:</span>
         <span class="n">sync</span><span class="p">()</span>
 
-<span class="n">def</span> <span class="n">process_IN_CREATE</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span><span class="n">print</span> <span class="s">&quot;Create file: %s &quot;</span> <span class="o">%</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
-
-<span class="n">def</span> <span class="n">process_IN_DELETE</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span><span class="n">print</span> <span class="s">&quot;Delete file: %s &quot;</span> <span class="o">%</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
-
-<span class="n">def</span> <span class="n">process_IN_MODIFY</span><span class="p">(</span><span class="n">self</span><span class="p">,</span> <span class="n">event</span><span class="p">)</span><span class="o">:</span>
-    <span class="err">#</span><span class="n">print</span> <span class="s">&quot;Modify file: %s &quot;</span> <span class="o">%</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">path</span><span class="p">,</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
-    <span class="n">self</span><span class="p">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="p">.</span><span class="n">name</span><span class="p">)</span>
+<span class="c"># main</span>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
 </pre></div>
-
-
-<p>def auto_sync():
-    wm = pyinotify.WatchManager()
-    mask = pyinotify.IN_CREATE | pyinotify.IN_DELETE | pyinotify.IN_MODIFY
-    notifier = pyinotify.Notifier(wm, OnChangeHandler())
-    wm.add_watch("./", mask, rec=True, auto_add=True)
-    notifier.loop()</p>
-<p>def main():
-    if len(sys.argv) == 2:
-        option = sys.argv[1]
-        if option == '-down':
-            download()
-        elif option == '-auto':
-            auto_sync()
-    else:
-        sync()</p>
-<h1>main</h1>
-<p>if <strong>name</strong> == "<strong>main</strong>":
-    main()</p>
 
 		<div id="article_meta">
 							Category:
