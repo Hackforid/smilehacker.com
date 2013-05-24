@@ -1,58 +1,49 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
-
-    <title>SmileHacker - eclipse</title>
-
-    <link rel="stylesheet" href="/theme/css/normalize.css" />
-    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="/theme/css/style.css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" />	
-    <script src="/theme/js/custom.modernizr.js"></script>
-</head>
-
-<body>
-
-<!-- Nav Bar -->
-<nav>
-<div class="top-bar">
-<div class="row">
-    <div class="large-9 large-centered columns">
-	    <h1><a href="">SmileHacker</a></h1>
-    </div>
-</div>
-</div>
-
-<!-- Show menu items and pages -->
-<div class="row">
-<div class="large-9 columns">
-    <ul class="button-group navigation">
-	
-                        <li><a href="/pages/about.html" class="button secondary small">About</a></li>
-                </ul>
-</div>
-</div>
-</nav>
-<!-- End Nav -->
-
-
-<!-- Main Page Content and Sidebar -->
-<div class="row">
-
-    <!-- Main Blog Content -->
-    <div class="large-9 columns">
-            
-            
-
-                            <article>
-                <a href="/eclipseti-shi-kuang-yan-se-she-zhi.html"><h3 class="article-title">Eclipse提示框颜色设置</h3></a>
-                <h6 class="subheader" title="2013-02-13T13:02:47">三 13 二月 2013
-    </h6>
-
-
-<hr />
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=endge, chrome=IE8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+    <title>SmileHacker — Articles avec le mot clé « eclipse »</title>
+    <!--[if lte IE 8]><script type="text/javascript" src="/theme/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="/theme/css/theme.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <!--[if lte IE 8]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
+    <link rel="alternate" type="application/atom+xml"
+                           title="SmileHacker — Flux Atom"
+                           href="/" /> 
+        </head>
+  <body>
+    <div id="page">
+      <header id="page-head">
+        <h1>
+          <a href="/index.html">SmileHacker</a>
+        </h1>
+      </header>
+      
+      <div id="page-body">
+        <section id="page-main" role="main">
+      <h1 class="small-title">Articles avec le mot clé « eclipse » :</h1>
+     
+                 
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
+               href="/eclipseti-shi-kuang-yan-se-she-zhi.html"
+               title="Lien permanent vers «Eclipse提示框颜色设置»">
+               Eclipse提示框颜色设置
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-02-13T13:02:47">三 13 二月 2013</time>
+            post «<a href="/category/tech.html">tech</a>» 
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/eclipse.html">eclipse</a>                        </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
 <p>以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。<br />
 后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。<br />
 现在用arch了，在自己调配主题时倒找到的修改的办法：  </p>
@@ -63,68 +54,54 @@
 <code>sudo vim gtk-2.0/gtkrc</code></p>
 <p>修改的<strong>tooltip_fg_color</strong>和<strong>tooltip_bg_color</strong>两个属性的值，如果没有改属性，可以自行添加<br />
 <code>gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"</code>  </p>
-<p>然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  </p><p class="subheader">Category: <a href="/category/tech.html">tech</a>
+<p>然后保存退出 ...</p>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/eclipseti-shi-kuang-yan-se-she-zhi.html">Lire la suite...</a>
+        </footer>
+      </article>
+                      <nav id="pagination">   <!-- <span id="first_page" class="a inactive">&#60;&#60;</span>
+        <span id="first_page" class="a inactive">&#60;</span> -->
+                <span class="a active">1</span>
+               <!-- <span id="next_page" class="a inactive">&#62;</span>
+        <span id="next_page" class="a inactive">&#62;&#62;</span> -->
+        </nav>      </section> <!-- /#page-main -->
 
-    Tagged: 
-        <a href="/tag/eclipse.html">eclipse </a>
-    </p>
+        <aside id="page-side">
+          <!-- begin includes/sidebar.html -->
+          <nav>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="/categories.html">Categorise</a></li>
+              <li><a href="/archives.html">Archives</a></li>
+              <li><a href="/tags.html">Tags</a></li>
+                                                    <li><a href="/pages/about.html">About</a></li>
+                                      </ul>
+          </nav>
 
+                    <nav>
+            <h3>Catégories</h3>
+            <ul>
+                          <li><a href="/category/code.html">code</a></li>
+                          <li><a href="/category/tech.html">tech</a></li>
+                          <li><a href="/category/write.html">write</a></li>
+                        </ul>
+          </nav>
+          
+          <nav>
+            <h3>Liens</h3>
+            <ul>
+                                                                <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
+                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
+                                                  </ul>
+          </nav>
+          <!-- end includes/sidebar.html --></aside> <!-- /#page-side -->
+      </div>  <!-- /#page-body -->
 
-
-<p><a href="/eclipseti-shi-kuang-yan-se-she-zhi.html#disqus_thread">comments</a></p>            </article>
-
-                            <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
-
-<p>
-    
-    </p>
-</div>
-            
-            
-                
-                    <!-- /#posts-list -->
-                        
-    </div>
-    <!-- End Main Content -->
-
-    <!-- Sidebar -->
-    <aside class="large-3 columns">
-        <h5 class="sidebar-title">Site</h5>
-        <ul class="side-nav">
-            <li><a href="/archives.html">Archives</a>
-            <li><a href="/tags.html">Tags</a>
-                                </ul>
-
-        		
-        <h5 class="sidebar-title">Categories</h5>
-        <ul class="side-nav">
-                    <li><a href="/category/code.html">code</a></li>
-                    <li><a href="/category/tech.html">tech</a></li>
-                    <li><a href="/category/write.html">write</a></li>
-           
-        </ul>
-        
-        		
-                <h5 class="sidebar-title">Social</h5>
-        <ul class="side-nav">
-                    <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
-                    <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                </ul>
-        
-    </aside> <!-- End Sidebar -->
-
-</div> <!-- End Main Content and Sidebar -->
-
-
-<!-- Footer -->
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="large-6 columns">
-                <p>SmileHacker by Sai</p>
-            </div>
-            </div>
-    </div>
-</footer>
+      <footer id="page-foot">
+        <p> Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
+        <p><a id="github-link" href="http://github.com/zhouquanbest/">Fork me on Github</a></p>      </footer>
+    </div> <!-- /#page -->
+      </body>
+</html>

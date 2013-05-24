@@ -1,58 +1,49 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
-
-    <title>SmileHacker - windows</title>
-
-    <link rel="stylesheet" href="/theme/css/normalize.css" />
-    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="/theme/css/style.css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" />	
-    <script src="/theme/js/custom.modernizr.js"></script>
-</head>
-
-<body>
-
-<!-- Nav Bar -->
-<nav>
-<div class="top-bar">
-<div class="row">
-    <div class="large-9 large-centered columns">
-	    <h1><a href="">SmileHacker</a></h1>
-    </div>
-</div>
-</div>
-
-<!-- Show menu items and pages -->
-<div class="row">
-<div class="large-9 columns">
-    <ul class="button-group navigation">
-	
-                        <li><a href="/pages/about.html" class="button secondary small">About</a></li>
-                </ul>
-</div>
-</div>
-</nav>
-<!-- End Nav -->
-
-
-<!-- Main Page Content and Sidebar -->
-<div class="row">
-
-    <!-- Main Blog Content -->
-    <div class="large-9 columns">
-            
-            
-
-                            <article>
-                <a href="/win32bian-cheng-ru-men.html"><h3 class="article-title">WIN32编程入门</h3></a>
-                <h6 class="subheader" title="2013-02-07T21:01:55">四 07 二月 2013
-    </h6>
-
-
-<hr />
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=endge, chrome=IE8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+    <title>SmileHacker — Articles avec le mot clé « windows »</title>
+    <!--[if lte IE 8]><script type="text/javascript" src="/theme/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="/theme/css/theme.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <!--[if lte IE 8]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
+    <link rel="alternate" type="application/atom+xml"
+                           title="SmileHacker — Flux Atom"
+                           href="/" /> 
+        </head>
+  <body>
+    <div id="page">
+      <header id="page-head">
+        <h1>
+          <a href="/index.html">SmileHacker</a>
+        </h1>
+      </header>
+      
+      <div id="page-body">
+        <section id="page-main" role="main">
+      <h1 class="small-title">Articles avec le mot clé « windows » :</h1>
+     
+                 
+      <article class="post">
+        <header class="post-header">
+          <h1>
+            <a rel="bookmark"
+               href="/win32bian-cheng-ru-men.html"
+               title="Lien permanent vers «WIN32编程入门»">
+               WIN32编程入门
+            </a>
+          </h1>
+          <div class="meta">
+            <!-- includes/article_meta.html -->
+            Le <time datetime="2013-02-07T21:01:55">四 07 二月 2013</time>
+            post «<a href="/category/code.html">code</a>» 
+            by <a href="/author/sai.html">Sai</a>              <br />Tags:              <a rel="tag" href="/tag/windows.html">windows</a>                        </div>
+        </header>
+        <div class="post-content"> 
+          <hr />
 <p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
 <p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 <!-- more --></p>
@@ -72,139 +63,54 @@
 <span class="p">{</span>
 <span class="c1">// 窗口类</span>
 <span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 类附加内存</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbWndExtra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 窗口附加内存</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hbrBackground</span> <span class="o">=</span> <span class="p">(</span><span class="n">HBRUSH</span><span class="p">)</span> <span class="n">GetStockObject</span><span class="p">(</span><span class="n">BLACK_BRUSH</span><span class="p">);</span> <span class="c1">// 背景画刷句柄</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hCursor</span> <span class="o">=</span> <span class="n">LoadCursor</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">IDC_CROSS</span><span class="p">);</span> <span class="c1">// 窗口光标句柄</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hIcon</span> <span class="o">=</span> <span class="n">LoadIcon</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">IDI_ERROR</span><span class="p">);</span> <span class="c1">// 窗口图标句柄</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hInstance</span> <span class="o">=</span> <span class="n">hInstance</span><span class="p">;</span> <span class="c1">// 包含窗口过程函数的程序实例</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">lpfnWndProc</span> <span class="o">=</span> <span class="n">WinSunProc</span><span class="p">;</span> <span class="c1">// 只想窗口过程函数的指针</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">lpszClassName</span> <span class="o">=</span> <span class="s">&quot;Kleist&quot;</span><span class="p">;</span> <span class="c1">// 窗口类名称</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">lpszMenuName</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// 菜单资源</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">CS_HREDRAW</span> <span class="o">|</span> <span class="n">CS_VREDRAW</span><span class="p">;</span> <span class="c1">// 窗口样式</span>
-<span class="n">RegisterClass</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">wndcls</span><span class="p">);</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
+        </div>
+        <footer class="post-footer">
+          <a class="readmore" href="/win32bian-cheng-ru-men.html">Lire la suite...</a>
+        </footer>
+      </article>
+                      <nav id="pagination">   <!-- <span id="first_page" class="a inactive">&#60;&#60;</span>
+        <span id="first_page" class="a inactive">&#60;</span> -->
+                <span class="a active">1</span>
+               <!-- <span id="next_page" class="a inactive">&#62;</span>
+        <span id="next_page" class="a inactive">&#62;&#62;</span> -->
+        </nav>      </section> <!-- /#page-main -->
 
-<span class="c1">// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄</span>
-<span class="n">HWND</span> <span class="n">hwnd</span><span class="p">;</span>
-<span class="n">hwnd</span> <span class="o">=</span> <span class="n">CreateWindow</span><span class="p">(</span> <span class="c1">// 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL</span>
-<span class="s">&quot;Kleist&quot;</span><span class="p">,</span> <span class="c1">// 窗口类名</span>
-<span class="s">&quot;Hello World&quot;</span><span class="p">,</span> <span class="c1">// 窗口名字</span>
-<span class="n">WS_OVERLAPPEDWINDOW</span><span class="p">,</span> <span class="c1">// 窗口样式</span>
-<span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 窗口左上角坐标</span>
-<span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="c1">// 窗口宽高</span>
-<span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 父窗口句柄</span>
-<span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 窗口菜单句柄</span>
-<span class="n">hInstance</span><span class="p">,</span> <span class="c1">// 窗口所属应用程序实例</span>
-<span class="nb">NULL</span> <span class="c1">// WM_CREATE消息附加参数lParam传入的数据指针</span>
-<span class="p">);</span>
+        <aside id="page-side">
+          <!-- begin includes/sidebar.html -->
+          <nav>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="/categories.html">Categorise</a></li>
+              <li><a href="/archives.html">Archives</a></li>
+              <li><a href="/tags.html">Tags</a></li>
+                                                    <li><a href="/pages/about.html">About</a></li>
+                                      </ul>
+          </nav>
 
-<span class="c1">// 显示及刷新窗口</span>
-<span class="n">ShowWindow</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">SW_SHOWNORMAL</span><span class="p">);</span>
-<span class="n">UpdateWindow</span><span class="p">(</span><span class="n">hwnd</span><span class="p">);</span>
+                    <nav>
+            <h3>Catégories</h3>
+            <ul>
+                          <li><a href="/category/code.html">code</a></li>
+                          <li><a href="/category/tech.html">tech</a></li>
+                          <li><a href="/category/write.html">write</a></li>
+                        </ul>
+          </nav>
+          
+          <nav>
+            <h3>Liens</h3>
+            <ul>
+                                                                <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
+                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
+                                                  </ul>
+          </nav>
+          <!-- end includes/sidebar.html --></aside> <!-- /#page-side -->
+      </div>  <!-- /#page-body -->
 
-<span class="c1">// 定义消息结构体</span>
-<span class="n">MSG</span> <span class="n">msg</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">GetMessage</span><span class="p">(</span> <span class="c1">// WM_QUIT消息返回0 错误返回-1</span>
-    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">,</span> <span class="c1">// 指向消息的结构体</span>
-    <span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息</span>
-    <span class="mi">0</span><span class="p">,</span> <span class="c1">// 获取消息的最小值 通常为0</span>
-    <span class="mi">0</span><span class="p">))</span> <span class="c1">// 获取消息的最大值 都设为0表示接收所有消息</span>
-<span class="p">{</span>
-    <span class="n">TranslateMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">);</span> <span class="c1">// 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出</span>
-    <span class="n">DispatchMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">);</span> <span class="c1">// 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理</span>
-<span class="p">}</span>
-<span class="k">return</span> <span class="n">msg</span><span class="p">.</span><span class="n">wParam</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// 窗口过程函数</span>
-<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span>
-<span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="c1">// 窗口句柄</span>
-<span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="c1">// 消息代码</span>
-<span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="c1">// 附加参数</span>
-<span class="n">LPARAM</span> <span class="n">lParam</span>
-<span class="p">)</span>
-<span class="p">{</span>
-<span class="k">switch</span><span class="p">(</span><span class="n">uMsg</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="k">case</span> <span class="n">WM_CHAR</span>:
-<span class="kt">char</span> <span class="n">szChar</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-<span class="n">sprintf</span><span class="p">(</span><span class="n">szChar</span><span class="p">,</span> <span class="s">&quot;char code is %d&quot;</span><span class="p">,</span> <span class="n">wParam</span><span class="p">);</span>
-<span class="n">MessageBox</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">szChar</span><span class="p">,</span> <span class="s">&quot;char&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-<span class="k">break</span><span class="p">;</span>
-
-<span class="nl">default:</span>
-<span class="k">return</span> <span class="n">DefWindowProc</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>具体也就是WinMain函数作为程序入口，相当于main函数</p>
-<p>然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
-对着代码看一些参考资料应该就够了。</p><p class="subheader">Category: <a href="/category/code.html">code</a>
-
-    Tagged: 
-        <a href="/tag/windows.html">windows </a>
-    </p>
-
-
-
-<p><a href="/win32bian-cheng-ru-men.html#disqus_thread">comments</a></p>            </article>
-
-                            <div class="pagination-centered">
-<h6 class="subheader">Page 1 of 1</h6>
-
-<p>
-    
-    </p>
-</div>
-            
-            
-                
-                    <!-- /#posts-list -->
-                        
-    </div>
-    <!-- End Main Content -->
-
-    <!-- Sidebar -->
-    <aside class="large-3 columns">
-        <h5 class="sidebar-title">Site</h5>
-        <ul class="side-nav">
-            <li><a href="/archives.html">Archives</a>
-            <li><a href="/tags.html">Tags</a>
-                                </ul>
-
-        		
-        <h5 class="sidebar-title">Categories</h5>
-        <ul class="side-nav">
-                    <li><a href="/category/code.html">code</a></li>
-                    <li><a href="/category/tech.html">tech</a></li>
-                    <li><a href="/category/write.html">write</a></li>
-           
-        </ul>
-        
-        		
-                <h5 class="sidebar-title">Social</h5>
-        <ul class="side-nav">
-                    <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
-                    <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                </ul>
-        
-    </aside> <!-- End Sidebar -->
-
-</div> <!-- End Main Content and Sidebar -->
-
-
-<!-- Footer -->
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="large-6 columns">
-                <p>SmileHacker by Sai</p>
-            </div>
-            </div>
-    </div>
-</footer>
+      <footer id="page-foot">
+        <p> Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
+        <p><a id="github-link" href="http://github.com/zhouquanbest/">Fork me on Github</a></p>      </footer>
+    </div> <!-- /#page -->
+      </body>
+</html>

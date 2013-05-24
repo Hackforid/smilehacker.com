@@ -1,145 +1,97 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8" />
-    <!-- Set the viewport width to device width for mobile -->
-    <meta name="viewport" content="width=device-width" />
+<html lang="en">
+  <head>
+      <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=endge, chrome=IE8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+    <title>SmileHacker — Mots-clés</title>
+    <!--[if lte IE 8]><script type="text/javascript" src="/theme/js/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" type="text/css" href="/theme/css/skeleton.css" />
+    <link rel="stylesheet" type="text/css" href="/theme/css/theme.css" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+    <!--[if lte IE 8]><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" /><![endif]-->
+    <link rel="alternate" type="application/atom+xml"
+                           title="SmileHacker — Flux Atom"
+                           href="/" /> 
+      
+    <script type="text/javascript" src="/theme/js/microTags.js"></script>
+    <script>
+      function tag_cloud_init() {
+        var ul = document.getElementById("tag-cloud");
+        window.tagCloud = new microTags(ul, {
+          'min-size': .95,
+          'max-size': 3.5,
+          'min-angle': -8,
+          'max-angle': 8
+        });
+      }
+      if (window.addEventListener) window.addEventListener("load", tag_cloud_init, false);
+      else if (window.attachEvent) window.attachEvent("onload", tag_cloud_init);
+      else window.onload = tag_cloud_init;
+    </script>
+  </head>
+  <body>
+    <div id="page">
+      <header id="page-head">
+        <h1>
+          <a href="/index.html">SmileHacker</a>
+        </h1>
+      </header>
+      
+      <div id="page-body">
+        <section id="page-main" role="main">
+      <h1>Mots-clés</h1>
+      <ul id="tag-cloud">
+            <li data-count="2" title="2 article(s)"><a href="/tag/.html"></a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/poem.html">poem</a></li>
+            <li data-count="4" title="4 article(s)"><a href="/tag/life.html">life</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/novel.html">novel</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/douban.html">douban</a></li>
+            <li data-count="2" title="2 article(s)"><a href="/tag/python.html">Python</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/alg.html">alg</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/eclipse.html">eclipse</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/coder.html">coder</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/windows.html">windows</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/linux.html">linux</a></li>
+            <li data-count="1" title="1 article(s)"><a href="/tag/arch.html">arch</a></li>
+            </ul>
+      </section> <!-- /#page-main -->
 
-    <title>SmileHacker</title>
+        <aside id="page-side">
+          <!-- begin includes/sidebar.html -->
+          <nav>
+            <h3>Pages</h3>
+            <ul>
+              <li><a href="">Home</a></li>
+              <li><a href="/categories.html">Categorise</a></li>
+              <li><a href="/archives.html">Archives</a></li>
+              <li><a href="/tags.html">Tags</a></li>
+                                                    <li><a href="/pages/about.html">About</a></li>
+                                      </ul>
+          </nav>
 
-    <link rel="stylesheet" href="/theme/css/normalize.css" />
-    <link rel="stylesheet" href="/theme/css/foundation.min.css" />
-    <link rel="stylesheet" href="/theme/css/style.css" />
-    <link rel="stylesheet" href="/theme/css/pygments.css" />	
-    <script src="/theme/js/custom.modernizr.js"></script>
-</head>
+                    <nav>
+            <h3>Catégories</h3>
+            <ul>
+                          <li><a href="/category/code.html">code</a></li>
+                          <li><a href="/category/tech.html">tech</a></li>
+                          <li><a href="/category/write.html">write</a></li>
+                        </ul>
+          </nav>
+          
+          <nav>
+            <h3>Liens</h3>
+            <ul>
+                                                                <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
+                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
+                                                  </ul>
+          </nav>
+          <!-- end includes/sidebar.html --></aside> <!-- /#page-side -->
+      </div>  <!-- /#page-body -->
 
-<body>
-
-<!-- Nav Bar -->
-<nav>
-<div class="top-bar">
-<div class="row">
-    <div class="large-9 large-centered columns">
-	    <h1><a href="">SmileHacker</a></h1>
-    </div>
-</div>
-</div>
-
-<!-- Show menu items and pages -->
-<div class="row">
-<div class="large-9 columns">
-    <ul class="button-group navigation">
-	
-                        <li><a href="/pages/about.html" class="button secondary small">About</a></li>
-                </ul>
-</div>
-</div>
-</nav>
-<!-- End Nav -->
-
-
-<!-- Main Page Content and Sidebar -->
-<div class="row">
-
-    <!-- Main Blog Content -->
-    <div class="large-9 columns">
-    
-<ul class="circle">
-    	<li><a href="/tag/.html"></a></li>
-	<ul class="square">
-		<li><a href="/yin-hun-ze.html"><small>银魂一则</small></li>
-		<li><a href="/hei-li-shi.html"><small>黑历史</small></li>
-		</ul>
-    	<li><a href="/tag/python.html">Python</a></li>
-	<ul class="square">
-		<li><a href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"><small>利用rsync自动同步服务器与本地代码的python脚本</small></li>
-		<li><a href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html"><small>自动获取Nexus4售卖状态的Python脚本</small></li>
-		</ul>
-    	<li><a href="/tag/alg.html">alg</a></li>
-	<ul class="square">
-		<li><a href="/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html"><small>像上菜一样推送合乎口味的文章</small></li>
-		</ul>
-    	<li><a href="/tag/arch.html">arch</a></li>
-	<ul class="square">
-		<li><a href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html"><small>真TM想休了Arch——豆瓣笔试血泪史</small></li>
-		</ul>
-    	<li><a href="/tag/coder.html">coder</a></li>
-	<ul class="square">
-		<li><a href="/xuan-ze.html"><small>选择 一</small></li>
-		</ul>
-    	<li><a href="/tag/douban.html">douban</a></li>
-	<ul class="square">
-		<li><a href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html"><small>真TM想休了Arch——豆瓣笔试血泪史</small></li>
-		</ul>
-    	<li><a href="/tag/eclipse.html">eclipse</a></li>
-	<ul class="square">
-		<li><a href="/eclipseti-shi-kuang-yan-se-she-zhi.html"><small>Eclipse提示框颜色设置</small></li>
-		</ul>
-    	<li><a href="/tag/life.html">life</a></li>
-	<ul class="square">
-		<li><a href="/he-tang-bu-zai.html"><small>荷塘不再</small></li>
-		<li><a href="/peng-you-su-sheng-jiu.html"><small>朋友 • 俗生 • 酒</small></li>
-		<li><a href="/ke-wang-feng-kuang.html"><small>渴望疯狂</small></li>
-		<li><a href="/wo-de-2011.html"><small>我的2011</small></li>
-		</ul>
-    	<li><a href="/tag/linux.html">linux</a></li>
-	<ul class="square">
-		<li><a href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html"><small>真TM想休了Arch——豆瓣笔试血泪史</small></li>
-		</ul>
-    	<li><a href="/tag/novel.html">novel</a></li>
-	<ul class="square">
-		<li><a href="/qi-yuan.html"><small>起源</small></li>
-		</ul>
-    	<li><a href="/tag/poem.html">poem</a></li>
-	<ul class="square">
-		<li><a href="/bu-xiang-xie-shi-de-shi-hou.html"><small>不想写诗的时候</small></li>
-		</ul>
-    	<li><a href="/tag/windows.html">windows</a></li>
-	<ul class="square">
-		<li><a href="/win32bian-cheng-ru-men.html"><small>WIN32编程入门</small></li>
-		</ul>
-    </ul>
-
-    </div>
-    <!-- End Main Content -->
-
-    <!-- Sidebar -->
-    <aside class="large-3 columns">
-        <h5 class="sidebar-title">Site</h5>
-        <ul class="side-nav">
-            <li><a href="/archives.html">Archives</a>
-            <li><a href="/tags.html">Tags</a>
-                                </ul>
-
-        		
-        <h5 class="sidebar-title">Categories</h5>
-        <ul class="side-nav">
-                    <li><a href="/category/code.html">code</a></li>
-                    <li><a href="/category/tech.html">tech</a></li>
-                    <li><a href="/category/write.html">write</a></li>
-           
-        </ul>
-        
-        		
-                <h5 class="sidebar-title">Social</h5>
-        <ul class="side-nav">
-                    <li><a href="http://weibo.com/zhouquanbest">@Weibo</a></li>
-                    <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                </ul>
-        
-    </aside> <!-- End Sidebar -->
-
-</div> <!-- End Main Content and Sidebar -->
-
-
-<!-- Footer -->
-<footer class="row">
-    <div class="large-12 columns">
-        <hr />
-        <div class="row">
-            <div class="large-6 columns">
-                <p>SmileHacker by Sai</p>
-            </div>
-            </div>
-    </div>
-</footer>
+      <footer id="page-foot">
+        <p> Powered by <a href="http://pelican.readthedocs.org">Pelican</a></p>
+        <p><a id="github-link" href="http://github.com/zhouquanbest/">Fork me on Github</a></p>      </footer>
+    </div> <!-- /#page -->
+      </body>
+</html>
