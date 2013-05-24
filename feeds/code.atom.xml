@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="/" rel="alternate"></link><link href="/feeds/code.atom.xml" rel="self"></link><id>/</id><updated>2013-02-07T21:27:06+08:00</updated><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/code.atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-02-07T21:27:06+08:00</updated><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
 用ssh sshfs scp都太慢  小东西又懒得用git&lt;br /&gt;
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
@@ -134,7 +134,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;span class="c"&gt;# main&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/&gt;&lt;br /&gt;
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
@@ -191,7 +191,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;checkSoldState&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3600&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
 好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。&lt;/p&gt;
 &lt;p&gt;匈牙利命名法是一种编程时的命名规范。基本原则是：&lt;/p&gt;
@@ -355,7 +355,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;2.命名空间：boostfilesystemiteratorFoo，表示boost空间filesystem子空间遍历目录类型变量Foo？程序员要崩溃了。&lt;/p&gt;
 &lt;p&gt;3.模板：你记得std::map&amp;lt;std::string,std::string&amp;gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。&lt;/p&gt;
 &lt;p&gt;4.模板参数：template &amp;lt;class T, class BinaryPredicate&amp;gt;const T&amp;amp; max(const T&amp;amp; a, const T&amp;amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。&lt;/p&gt;
-&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
 &lt;p&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 &lt;!-- more --&gt;&lt;/p&gt;

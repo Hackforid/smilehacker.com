@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="/" rel="alternate"></link><link href="/feeds/tech.atom.xml" rel="self"></link><id>/</id><updated>2013-05-21T13:37:32+08:00</updated><entry><title>像上菜一样推送合乎口味的文章</title><link href="/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html" rel="alternate"></link><updated>2013-05-21T13:37:32+08:00</updated><author><name>Sai</name></author><id>tag:,2013-05-21:xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/tech.atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-05-21T13:37:32+08:00</updated><entry><title>像上菜一样推送合乎口味的文章</title><link href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html" rel="alternate"></link><updated>2013-05-21T13:37:32+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-21:xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;引&lt;/h2&gt;
 &lt;p&gt;《阅FM》是个很棒的idea，当我第一次触摸到它时，就想山寨之，如果不是因为一些意外，可能就做了一款英文版的copy。这个idea让我眼前一亮，但作为产品，却不尽如人意，“极简”可不是表面的简单，而是精湛的打磨。&lt;br /&gt;
 不知什么时候，我们突然进入了web2.0时代，然后，3.0的影子也开始显露。《阅FM》是一道菜，你不需要思索，他便在合适的时候，合适的地点被端上来了，但是否合口味呢？&lt;br /&gt;
@@ -23,7 +23,7 @@
 &lt;p&gt;线索来自于细节，细节是有维度的，文章也是有维度的。比如作者，比如历史时期，比如创作背景。我们没法给每篇文章单独去精准的定义，但却可以联系所有的线索来给他一个框架。历史背景、背景下的事件、作者信息，他们都是影响因子，给予一个权值就能更好的分类。&lt;/p&gt;
 &lt;h2&gt;尾&lt;/h2&gt;
 &lt;p&gt;海量时代的分类必然是基于海量数据，使用传统算法对中文文章进行分类必然是件吃力不讨好的事，通过相似度对比、背景数据分析、用户行为分析，我们才能得到key。&lt;br /&gt;
-定过无数菜、阅过无数的人，才能通过衣着、气质、情感来挑选合乎口味的佳肴吧。&lt;/p&gt;</summary><category term="alg"></category></entry><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
+定过无数菜、阅过无数的人，才能通过衣着、气质、情感来挑选合乎口味的佳肴吧。&lt;/p&gt;</summary><category term="alg"></category></entry><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。&lt;br /&gt;
 Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。&lt;br /&gt;
 经历了各种折磨后，俺最终落脚在Arch。  &lt;/p&gt;
@@ -39,12 +39,12 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;你狠，我掏出Emacs，在没有代码提示的情况下，苦逼的回忆着那蛋疼坑爹还特别长的各种属性名。尼玛，忘记单词是件多么蛋疼。。。。  &lt;/p&gt;
 &lt;p&gt;认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  &lt;/p&gt;
 &lt;p&gt;这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  &lt;/p&gt;
-&lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch"></category><category term="douban"></category></entry><entry><title>让用户体验改变Linux</title><link href="/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch"></category><category term="douban"></category></entry><entry><title>让用户体验改变Linux</title><link href="http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。&lt;br /&gt;
 后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  &lt;/p&gt;
 &lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /&gt;&lt;/p&gt;
-&lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。&lt;br /&gt;
 后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。&lt;br /&gt;
 现在用arch了，在自己调配主题时倒找到的修改的办法：  &lt;/p&gt;
