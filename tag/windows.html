@@ -1,76 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>SmileHacker</title>
-    <meta name="description" content="">
-    <meta name="author" content="Sai">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="http://smilehacker.com/theme/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
-    <link href="http://smilehacker.com/theme/local.css" rel="stylesheet">
-    <link href="http://smilehacker.com/theme/pygments.css" rel="stylesheet">
-    <link href="http://smilehacker.com/theme/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-<header class="blog-header">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="span9">
-	<a href="http://smilehacker.com" class="brand">SmileHacker</a>
-      </div>
-
-      <div class="span3" id="blog-nav">
-	<ul class="nav nav-pills pull-right">
-	                        <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
-                        	   	    <li >
-	      <a href="http://smilehacker.com/category/code.html ">code</a>
-	   	    <li >
-	      <a href="http://smilehacker.com/category/tech.html ">tech</a>
-	   	    <li >
-	      <a href="http://smilehacker.com/category/write.html ">write</a>
-	   	</ul>
-      </div>
-    </div> <!-- End of fluid row-->
-  </div>   <!-- End of Container-->
-</header>
-    
-<div class="container">
-    <div class="content">
-    <div class="row-fluid">
-
-        <div class="span10">
-                
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <title>Tag windows - SmileHacker</title>
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/pastie.css" />
+    <link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
         
+    
+  </head>
 
-    <div class='row-fluid''>
-        <div class="article-title span9">
-            <a href="http://smilehacker.com/win32bian-cheng-ru-men.html"><h1>WIN32编程入门</h1></a>
-        </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span2">
-	<p>四 07 二月 2013 </p>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span8">
+          <div id="content">
+<h1>Blog</h1>
 
-<p style="text-align: left;">
-Filed under <a href="http://smilehacker.com/category/code.html">code</a>
-</p>
-<p style="text-align: left;">
- 
-    Tags <a href="http://smilehacker.com/tag/windows.html">windows</a> </p>
-<p>
-</p>
-      </div>
-      <div class="article-content span8">
-	<hr />
+<ul class="unstyled">
+        <li>
+            <div>
+                <div class="header">
+                    <h2>WIN32编程入门</h2>
+                </div>
+                <p class="meta"><small><span><a href="http://smilehacker.com/author/sai/">Sai</a> - </span><span>四 07 二月 2013</span> - <span class="tags"><a href="/tag/windows/">windows</a></span></small></p>
+                <div class="entry-content">
+                    <hr />
 <p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
 <p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 <!-- more --></p>
@@ -90,154 +46,66 @@ Filed under <a href="http://smilehacker.com/category/code.html">code</a>
 <span class="p">{</span>
 <span class="c1">// 窗口类</span>
 <span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 类附加内存</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbWndExtra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 窗口附加内存</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hbrBackground</span> <span class="o">=</span> <span class="p">(</span><span class="n">HBRUSH</span><span class="p">)</span> <span class="n">GetStockObject</span><span class="p">(</span><span class="n">BLACK_BRUSH</span><span class="p">);</span> <span class="c1">// 背景画刷句柄</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hCursor</span> <span class="o">=</span> <span class="n">LoadCursor</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">IDC_CROSS</span><span class="p">);</span> <span class="c1">// 窗口光标句柄</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hIcon</span> <span class="o">=</span> <span class="n">LoadIcon</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">IDI_ERROR</span><span class="p">);</span> <span class="c1">// 窗口图标句柄</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">hInstance</span> <span class="o">=</span> <span class="n">hInstance</span><span class="p">;</span> <span class="c1">// 包含窗口过程函数的程序实例</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">lpfnWndProc</span> <span class="o">=</span> <span class="n">WinSunProc</span><span class="p">;</span> <span class="c1">// 只想窗口过程函数的指针</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">lpszClassName</span> <span class="o">=</span> <span class="s">&quot;Kleist&quot;</span><span class="p">;</span> <span class="c1">// 窗口类名称</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">lpszMenuName</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// 菜单资源</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">CS_HREDRAW</span> <span class="o">|</span> <span class="n">CS_VREDRAW</span><span class="p">;</span> <span class="c1">// 窗口样式</span>
-<span class="n">RegisterClass</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">wndcls</span><span class="p">);</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
+                </div><!-- /.entry-content -->
+                <div class="row">
+                    <div class="span4">
+                                                <a class="btn btn-small disabled" href="http://smilehacker.com/win32bian-cheng-ru-men.html#disqus_thread"></a>
+                                            </div>
+                    <div class="span1 offset3">
+                        <a class="btn btn-small" href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark" title="Permalink to WIN32编程入门">Mehr</a>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-<span class="c1">// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄</span>
-<span class="n">HWND</span> <span class="n">hwnd</span><span class="p">;</span>
-<span class="n">hwnd</span> <span class="o">=</span> <span class="n">CreateWindow</span><span class="p">(</span> <span class="c1">// 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL</span>
-<span class="s">&quot;Kleist&quot;</span><span class="p">,</span> <span class="c1">// 窗口类名</span>
-<span class="s">&quot;Hello World&quot;</span><span class="p">,</span> <span class="c1">// 窗口名字</span>
-<span class="n">WS_OVERLAPPEDWINDOW</span><span class="p">,</span> <span class="c1">// 窗口样式</span>
-<span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 窗口左上角坐标</span>
-<span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="c1">// 窗口宽高</span>
-<span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 父窗口句柄</span>
-<span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 窗口菜单句柄</span>
-<span class="n">hInstance</span><span class="p">,</span> <span class="c1">// 窗口所属应用程序实例</span>
-<span class="nb">NULL</span> <span class="c1">// WM_CREATE消息附加参数lParam传入的数据指针</span>
-<span class="p">);</span>
+        <li><hr /></li>
+</ul><!-- /#posts-list -->
 
-<span class="c1">// 显示及刷新窗口</span>
-<span class="n">ShowWindow</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">SW_SHOWNORMAL</span><span class="p">);</span>
-<span class="n">UpdateWindow</span><span class="p">(</span><span class="n">hwnd</span><span class="p">);</span>
-
-<span class="c1">// 定义消息结构体</span>
-<span class="n">MSG</span> <span class="n">msg</span><span class="p">;</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">GetMessage</span><span class="p">(</span> <span class="c1">// WM_QUIT消息返回0 错误返回-1</span>
-    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">,</span> <span class="c1">// 指向消息的结构体</span>
-    <span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息</span>
-    <span class="mi">0</span><span class="p">,</span> <span class="c1">// 获取消息的最小值 通常为0</span>
-    <span class="mi">0</span><span class="p">))</span> <span class="c1">// 获取消息的最大值 都设为0表示接收所有消息</span>
-<span class="p">{</span>
-    <span class="n">TranslateMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">);</span> <span class="c1">// 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出</span>
-    <span class="n">DispatchMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">);</span> <span class="c1">// 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理</span>
-<span class="p">}</span>
-<span class="k">return</span> <span class="n">msg</span><span class="p">.</span><span class="n">wParam</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="c1">// 窗口过程函数</span>
-<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span>
-<span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="c1">// 窗口句柄</span>
-<span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="c1">// 消息代码</span>
-<span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="c1">// 附加参数</span>
-<span class="n">LPARAM</span> <span class="n">lParam</span>
-<span class="p">)</span>
-<span class="p">{</span>
-<span class="k">switch</span><span class="p">(</span><span class="n">uMsg</span><span class="p">)</span>
-<span class="p">{</span>
-<span class="k">case</span> <span class="n">WM_CHAR</span>:
-<span class="kt">char</span> <span class="n">szChar</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-<span class="n">sprintf</span><span class="p">(</span><span class="n">szChar</span><span class="p">,</span> <span class="s">&quot;char code is %d&quot;</span><span class="p">,</span> <span class="n">wParam</span><span class="p">);</span>
-<span class="n">MessageBox</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">szChar</span><span class="p">,</span> <span class="s">&quot;char&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-<span class="k">break</span><span class="p">;</span>
-
-<span class="nl">default:</span>
-<span class="k">return</span> <span class="n">DefWindowProc</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-</pre></div>
-
-
-<p>具体也就是WinMain函数作为程序入口，相当于main函数</p>
-<p>然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
-对着代码看一些参考资料应该就够了。</p> 
-	<a class="btn btn-mini xsmall" href="http://smilehacker.com/win32bian-cheng-ru-men.html">
-          <i class="icon-comment"></i> Comment </a>
-	<hr />
+<div class="pagination pagination-centered">
+    <ul>
+                    <li class="active"><a href="#">1</a></li>
+                </ul>
+</div>
+</div><!-- /#content -->
+        </div>
+        <div class="span3 offset1">
+          <div class="well">
+            <ul class="nav nav-list">
+              <li class="nav-header">Blog</li>
+              <li ><a href="http://smilehacker.com">Index</a></li>
+              <li ><a href="http://smilehacker.com/tags/">Tags</a></li>
+              <li ><a href="http://smilehacker.com/archives/">Archiv</a></li>
+                                          <li class="nav-header">Seiten</li>
+                            <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
+                                                                                  </ul>
+          </div><!-- /#menu -->
+        </div>
       </div>
-      
+
+      <hr />
+
+      <div class="row">
+        <div class="span12">
+          <div id="about">
+            <p>Proudly powered by <a href="http://twitter.github.com/bootstrap/">bootstrap</a>, <a href="http://docs.notmyidea.org/alexis/pelican/">pelican</a>, <a href="http://python.org">python</a> and <a href="http://www.julo.ch/about/">Alex</a>!</p>
+          </div><!-- /#about -->
+        </div><!-- /#contentinfo -->
+      </div>
     </div>
+
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'smilehacker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
     
-            <div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
-
-    <li class="active"><a href="http://smilehacker.com/tag/windows.html">1</a></li>
-
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>    
- 
-  
-        </div>
-        
-        
-    </div>     </div> </div>
-
-<!--footer-->
-<div class="container">
-  <div class="well" style="background-color: #E9EFF6">
-    <div id="blog-footer">
-      <div class="row-fluid">
-		<div class="social span2" align="center" id="socialist">
-	  <ul class="nav nav-list">
-	    <li class="nav-header">
-	      Social
-	    </li>
-	    	    <li><a href="http://weibo.com/zhouquanbest"><i class="icon-@Weibo" style="color: #1f334b"></i>@Weibo</a></li>
-	    	    <li><a href="http://www.douban.com/people/zhouquanbest/"><i class="icon-Douban" style="color: #1f334b"></i>Douban</a></li>
-	                
-	  </ul>
-	</div>
-		        	<div class="site-nav span2" align="center">
-          <ul class="nav nav-list" id="site-links">
-            <li class="nav-header"> 
-              Site
-            </li>
-            <li><a href="http://smilehacker.com"><i class="icon-home" style="color: #1f334b">
-                </i>Home</a></li>
-            <li><a href="http://smilehacker.com/archives.html"><i class="icon-list" style="color: #1f334b">
-                </i>Archives</a></li>
-	    <li><a href="http://smilehacker.com/tags.html"><i class="icon-tags" style="color: #1f334b">
-                </i>Tags</a></li>
-	    
-	                <li><a href="http://smilehacker.com/" rel="alternate">
-                <i class="icon-rss-sign" style="color: #1f334b"></i>
-                Atom Feed</a></li>
-	  </ul>
-
-        </div>
-
-      </div> <!--end of fluid row-->
-    </div> <!--end of blog-footer-->
-    <hr />
-    <p align="center"><a href="http://smilehacker.com">SmileHacker</a>
-      &copy; Sai
-    Powered by <a href="github.com/getpelican/pelican">Pelican</a> and
-        <a href="https://twitter.github.com/bootstrap">Twitter Bootstrap</a>. 
-        Icons by <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> and 
-        <a href="http://gregoryloucas.github.com/Font-Awesome-More">Font Awesome More</a></p>
-
-  </div> <!--end of well -->
-</div> <!--end of container -->
-
-<!--/footer-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
-
-
-
-</body>
+  </body>
 </html>

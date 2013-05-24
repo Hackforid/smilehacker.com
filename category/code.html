@@ -1,76 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>SmileHacker</title>
-    <meta name="description" content="">
-    <meta name="author" content="Sai">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="http://smilehacker.com/theme/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap.no-icons.min.css" rel="stylesheet">
-    <link href="http://smilehacker.com/theme/local.css" rel="stylesheet">
-    <link href="http://smilehacker.com/theme/pygments.css" rel="stylesheet">
-    <link href="http://smilehacker.com/theme/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Gudea:400,400italic|Alegreya+SC' rel='stylesheet' type='text/css'>
-</head>
-
-<body>
-<header class="blog-header">
-  <div class="container">
-    <div class="row-fluid">
-      <div class="span9">
-	<a href="http://smilehacker.com" class="brand">SmileHacker</a>
-      </div>
-
-      <div class="span3" id="blog-nav">
-	<ul class="nav nav-pills pull-right">
-	                        <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
-                        	   	    <li  class="active" >
-	      <a href="http://smilehacker.com/category/code.html ">code</a>
-	   	    <li >
-	      <a href="http://smilehacker.com/category/tech.html ">tech</a>
-	   	    <li >
-	      <a href="http://smilehacker.com/category/write.html ">write</a>
-	   	</ul>
-      </div>
-    </div> <!-- End of fluid row-->
-  </div>   <!-- End of Container-->
-</header>
-    
-<div class="container">
-    <div class="content">
-    <div class="row-fluid">
-
-        <div class="span10">
-                
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+        <title>Blog - SmileHacker</title>
+    <link href="http://fonts.googleapis.com/css?family=Arimo:400,700|Inika" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="http://smilehacker.com/theme/pastie.css" />
+    <link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
         
+    
+  </head>
 
-    <div class='row-fluid''>
-        <div class="article-title span9">
-            <a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"><h1>利用rsync自动同步服务器与本地代码的python脚本</h1></a>
-        </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span2">
-	<p>四 07 二月 2013 </p>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span8">
+          <div id="content">
+<h2>Articles in the code category</h2>
 
-<p style="text-align: left;">
-Filed under <a href="http://smilehacker.com/category/code.html">code</a>
-</p>
-<p style="text-align: left;">
- 
-    Tags <a href="http://smilehacker.com/tag/python.html">Python</a> </p>
-<p>
-</p>
-      </div>
-      <div class="article-content span8">
-	<hr />
+<ul class="unstyled">
+        <li>
+            <div>
+                <div class="header">
+                    <h2>利用rsync自动同步服务器与本地代码的python脚本</h2>
+                </div>
+                <p class="meta"><small><span><a href="http://smilehacker.com/author/sai/">Sai</a> - </span><span>四 07 二月 2013</span> - <span class="tags"><a href="/tag/Python/">Python</a></span></small></p>
+                <div class="entry-content">
+                    <hr />
 <p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
 用ssh sshfs scp都太慢  小东西又懒得用git<br />
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
@@ -92,153 +48,28 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
     来后台运行</p>
 </li>
 <li>
-<p>只根据emacs优化了 vim党自己改</p>
-</li>
-<li>
-<p>sync时会忽略隐藏文件和临时文件</p>
-</li>
-</ol>
-<!-- more -->
+<p>只根据emacs优化了 ...</p></li></ol>
+                </div><!-- /.entry-content -->
+                <div class="row">
+                    <div class="span4">
+                                                <a class="btn btn-small disabled" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html#disqus_thread"></a>
+                                            </div>
+                    <div class="span1 offset3">
+                        <a class="btn btn-small" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="bookmark" title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">Mehr</a>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-<div class="highlight"><pre><span class="c"># use rsync to sync code from server</span>
-<span class="c"># coding = UTF8</span>
-<span class="c"># @author Kleist Zhou</span>
-<span class="c"># 2013/2/5</span>
-
-<span class="c"># Need pyinotify, pexpect</span>
-<span class="c"># please use easy_install to add in</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">pyinotify</span>
-<span class="kn">import</span> <span class="nn">re</span>
-
-<span class="c"># your sync config</span>
-<span class="n">server</span> <span class="o">=</span> <span class="s">&#39;199.245.60.73&#39;</span>
-<span class="n">user</span> <span class="o">=</span> <span class="s">&#39;root&#39;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-<span class="n">port</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-<span class="n">source</span> <span class="o">=</span> <span class="s">&#39;./&#39;</span>
-<span class="n">target</span> <span class="o">=</span> <span class="s">&#39;/srv/www/love/public_html/&#39;</span>
-<span class="n">options</span> <span class="o">=</span> <span class="s">&quot;-rtvuC --delete --progress --exclude=&#39;rsync.py&#39;&quot;</span>
-
-<span class="c">#custom regular expression</span>
-<span class="n">rulers</span> <span class="o">=</span> <span class="p">(</span><span class="s">r&quot;[#~.][\s\S]*&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*[#~]&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*_flymake.[\s\S]*&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">port</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
-    <span class="n">port</span> <span class="o">=</span> <span class="s">&quot;-e &#39;ssh -p </span><span class="si">%d</span><span class="s">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">password</span>
-    <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="kn">import</span> <span class="nn">pexpect</span>
-        <span class="k">print</span> <span class="n">cmd</span>
-        <span class="n">child</span> <span class="o">=</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">([</span><span class="s">&#39;password: &#39;</span><span class="p">,</span> <span class="s">&#39;continue connecting (yes/no)?&#39;</span><span class="p">])</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s">&#39;yes&#39;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">:</span>
-            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span><span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">)</span>
-            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">sync</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
-    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-    <span class="c">#print cmd</span>
-    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">download</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
-    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-    <span class="k">print</span> <span class="n">cmd</span>
-    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">OnChangeHandler</span><span class="p">(</span><span class="n">pyinotify</span><span class="o">.</span><span class="n">ProcessEvent</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">checkFileName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
-        <span class="k">global</span> <span class="n">rulers</span>
-        <span class="k">for</span> <span class="n">ruler</span> <span class="ow">in</span> <span class="n">rulers</span><span class="p">:</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">ruler</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">return</span> <span class="bp">True</span>
-
-    <span class="k">def</span> <span class="nf">syncFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
-            <span class="n">sync</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">process_IN_CREATE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="c">#print &quot;Create file: %s &quot; % os.path.join(event.path,event.name)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">process_IN_DELETE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="c">#print &quot;Delete file: %s &quot; % os.path.join(event.path,event.name)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">process_IN_MODIFY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="c">#print &quot;Modify file: %s &quot; % os.path.join(event.path,event.name)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">auto_sync</span><span class="p">():</span>
-    <span class="n">wm</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">WatchManager</span><span class="p">()</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_CREATE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_DELETE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_MODIFY</span>
-    <span class="n">notifier</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">Notifier</span><span class="p">(</span><span class="n">wm</span><span class="p">,</span> <span class="n">OnChangeHandler</span><span class="p">())</span>
-    <span class="n">wm</span><span class="o">.</span><span class="n">add_watch</span><span class="p">(</span><span class="s">&quot;./&quot;</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">rec</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">auto_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">notifier</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">option</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-down&#39;</span><span class="p">:</span>
-            <span class="n">download</span><span class="p">()</span>
-        <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-auto&#39;</span><span class="p">:</span>
-            <span class="n">auto_sync</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">sync</span><span class="p">()</span>
-
-<span class="c"># main</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div> 
-	<a class="btn btn-mini xsmall" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">
-          <i class="icon-comment"></i> Comment </a>
-	<hr />
-      </div>
-      
-    </div>
-    
-    
- 
-        
-
-
-
-    <div class='row-fluid'>
-      <div class='article-title span9'> 
-        <a href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html"><h1>自动获取Nexus4售卖状态的Python脚本</h1></a>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span2">
-	<p>四 07 二月 2013 </p>
-
-<p style="text-align: left;">
-Filed under <a href="http://smilehacker.com/category/code.html">code</a>
-</p>
-<p style="text-align: left;">
- 
-    Tags <a href="http://smilehacker.com/tag/python.html">Python</a> </p>
-<p>
-</p>
-      </div>
-      <div class="summary span8">
-	<hr />
+        <li><hr /></li>
+        <li>
+            <div>
+                <div class="header">
+                    <h2>自动获取Nexus4售卖状态的Python脚本</h2>
+                </div>
+                <p class="meta"><small><span><a href="http://smilehacker.com/author/sai/">Sai</a> - </span><span>四 07 二月 2013</span> - <span class="tags"><a href="/tag/Python/">Python</a></span></small></p>
+                <div class="entry-content">
+                    <hr />
 <p><img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/><br />
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
@@ -257,39 +88,28 @@ Filed under <a href="http://smilehacker.com/category/code.html">code</a>
 <span class="n">mailto_list</span> <span class="o">=</span> <span class="s">&quot;xxx@xx.xx&quot;</span>
 <span class="c"># 设置服务器 用户名 口令 邮箱后缀</span>
 <span class="n">mail_host</span> <span class="o">=</span> <span class="s">&quot;smtp.gmail.com&quot;</span>
-<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!--> 
-	<a class="btn btn-mini xsmall" href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">
-          <i class="icon-plus-sign"></i> Read More </a>
-	<hr />
-      </div>
-      
-    </div>
-      
-    
- 
-        
+<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!-->
+                </div><!-- /.entry-content -->
+                <div class="row">
+                    <div class="span4">
+                                                <a class="btn btn-small disabled" href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html#disqus_thread"></a>
+                                            </div>
+                    <div class="span1 offset3">
+                        <a class="btn btn-small" href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="bookmark" title="Permalink to 自动获取Nexus4售卖状态的Python脚本">Mehr</a>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-
-
-    <div class='row-fluid'>
-      <div class='article-title span9'> 
-        <a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html"><h1>让代码更规范——匈牙利命名法</h1></a>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span2">
-	<p>四 07 二月 2013 </p>
-
-<p style="text-align: left;">
-Filed under <a href="http://smilehacker.com/category/code.html">code</a>
-</p>
-<p style="text-align: left;">
-</p>
-<p>
-</p>
-      </div>
-      <div class="summary span8">
-	<hr />
+        <li><hr /></li>
+        <li>
+            <div>
+                <div class="header">
+                    <h2>让代码更规范——匈牙利命名法</h2>
+                </div>
+                <p class="meta"><small><span><a href="http://smilehacker.com/author/sai/">Sai</a> - </span><span>四 07 二月 2013</span> - <span class="tags"></span></small></p>
+                <div class="entry-content">
+                    <hr />
 <p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
 好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
 <p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
@@ -298,40 +118,28 @@ Filed under <a href="http://smilehacker.com/category/code.html">code</a>
 <p>其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。</p>
 <p>&nbsp;</p>
 <p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
-<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p> 
-	<a class="btn btn-mini xsmall" href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html">
-          <i class="icon-plus-sign"></i> Read More </a>
-	<hr />
-      </div>
-      
-    </div>
-      
-    
- 
-        
+<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p>
+                </div><!-- /.entry-content -->
+                <div class="row">
+                    <div class="span4">
+                                                <a class="btn btn-small disabled" href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html#disqus_thread"></a>
+                                            </div>
+                    <div class="span1 offset3">
+                        <a class="btn btn-small" href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark" title="Permalink to 让代码更规范——匈牙利命名法">Mehr</a>
+                    </div>
+                </div>
+            </div>
+        </li>
 
-
-
-    <div class='row-fluid'>
-      <div class='article-title span9'> 
-        <a href="http://smilehacker.com/win32bian-cheng-ru-men.html"><h1>WIN32编程入门</h1></a>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span2">
-	<p>四 07 二月 2013 </p>
-
-<p style="text-align: left;">
-Filed under <a href="http://smilehacker.com/category/code.html">code</a>
-</p>
-<p style="text-align: left;">
- 
-    Tags <a href="http://smilehacker.com/tag/windows.html">windows</a> </p>
-<p>
-</p>
-      </div>
-      <div class="summary span8">
-	<hr />
+        <li><hr /></li>
+        <li>
+            <div>
+                <div class="header">
+                    <h2>WIN32编程入门</h2>
+                </div>
+                <p class="meta"><small><span><a href="http://smilehacker.com/author/sai/">Sai</a> - </span><span>四 07 二月 2013</span> - <span class="tags"><a href="/tag/windows/">windows</a></span></small></p>
+                <div class="entry-content">
+                    <hr />
 <p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
 <p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 <!-- more --></p>
@@ -351,83 +159,66 @@ Filed under <a href="http://smilehacker.com/category/code.html">code</a>
 <span class="p">{</span>
 <span class="c1">// 窗口类</span>
 <span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div> 
-	<a class="btn btn-mini xsmall" href="http://smilehacker.com/win32bian-cheng-ru-men.html">
-          <i class="icon-plus-sign"></i> Read More </a>
-	<hr />
+<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
+                </div><!-- /.entry-content -->
+                <div class="row">
+                    <div class="span4">
+                                                <a class="btn btn-small disabled" href="http://smilehacker.com/win32bian-cheng-ru-men.html#disqus_thread"></a>
+                                            </div>
+                    <div class="span1 offset3">
+                        <a class="btn btn-small" href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark" title="Permalink to WIN32编程入门">Mehr</a>
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        <li><hr /></li>
+</ul><!-- /#posts-list -->
+
+<div class="pagination pagination-centered">
+    <ul>
+                    <li class="active"><a href="#">1</a></li>
+                </ul>
+</div>
+</div><!-- /#content -->
+        </div>
+        <div class="span3 offset1">
+          <div class="well">
+            <ul class="nav nav-list">
+              <li class="nav-header">Blog</li>
+              <li ><a href="http://smilehacker.com">Index</a></li>
+              <li ><a href="http://smilehacker.com/tags/">Tags</a></li>
+              <li ><a href="http://smilehacker.com/archives/">Archiv</a></li>
+                                          <li class="nav-header">Seiten</li>
+                            <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
+                                                                                  </ul>
+          </div><!-- /#menu -->
+        </div>
       </div>
-      
+
+      <hr />
+
+      <div class="row">
+        <div class="span12">
+          <div id="about">
+            <p>Proudly powered by <a href="http://twitter.github.com/bootstrap/">bootstrap</a>, <a href="http://docs.notmyidea.org/alexis/pelican/">pelican</a>, <a href="http://python.org">python</a> and <a href="http://www.julo.ch/about/">Alex</a>!</p>
+          </div><!-- /#about -->
+        </div><!-- /#contentinfo -->
+      </div>
     </div>
-      
-            <div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="http://smilehacker.com/category/code.html">1</a></li>
+        <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'smilehacker'; // required: replace example with your forum shortname
 
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
-
-</ul>
-</div>    
- 
-  
-        </div>
-        
-        
-    </div>     </div> </div>
-
-<!--footer-->
-<div class="container">
-  <div class="well" style="background-color: #E9EFF6">
-    <div id="blog-footer">
-      <div class="row-fluid">
-		<div class="social span2" align="center" id="socialist">
-	  <ul class="nav nav-list">
-	    <li class="nav-header">
-	      Social
-	    </li>
-	    	    <li><a href="http://weibo.com/zhouquanbest"><i class="icon-@Weibo" style="color: #1f334b"></i>@Weibo</a></li>
-	    	    <li><a href="http://www.douban.com/people/zhouquanbest/"><i class="icon-Douban" style="color: #1f334b"></i>Douban</a></li>
-	                
-	  </ul>
-	</div>
-		        	<div class="site-nav span2" align="center">
-          <ul class="nav nav-list" id="site-links">
-            <li class="nav-header"> 
-              Site
-            </li>
-            <li><a href="http://smilehacker.com"><i class="icon-home" style="color: #1f334b">
-                </i>Home</a></li>
-            <li><a href="http://smilehacker.com/archives.html"><i class="icon-list" style="color: #1f334b">
-                </i>Archives</a></li>
-	    <li><a href="http://smilehacker.com/tags.html"><i class="icon-tags" style="color: #1f334b">
-                </i>Tags</a></li>
-	    
-	                <li><a href="http://smilehacker.com/" rel="alternate">
-                <i class="icon-rss-sign" style="color: #1f334b"></i>
-                Atom Feed</a></li>
-	  </ul>
-
-        </div>
-
-      </div> <!--end of fluid row-->
-    </div> <!--end of blog-footer-->
-    <hr />
-    <p align="center"><a href="http://smilehacker.com">SmileHacker</a>
-      &copy; Sai
-    Powered by <a href="github.com/getpelican/pelican">Pelican</a> and
-        <a href="https://twitter.github.com/bootstrap">Twitter Bootstrap</a>. 
-        Icons by <a href="http://fortawesome.github.com/Font-Awesome">Font Awesome</a> and 
-        <a href="http://gregoryloucas.github.com/Font-Awesome-More">Font Awesome More</a></p>
-
-  </div> <!--end of well -->
-</div> <!--end of container -->
-
-<!--/footer-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/js/bootstrap.min.js"></script>
-
-
-
-</body>
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script'); s.async = true;
+            s.type = 'text/javascript';
+            s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    
+  </body>
 </html>
