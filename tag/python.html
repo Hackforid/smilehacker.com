@@ -10,7 +10,7 @@
 	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
 	
 	
-			<title>SmileHacker - </title>
+			<title>SmileHacker - Python</title>
 		<meta charset="utf-8" />
 	</head>
 <body>
@@ -53,45 +53,39 @@
 		<ol>
 							<li>
 					<h1 class="title">
-						<a href="http://smilehacker.com/qi-yuan.html" rel="bookmark" title="Permalink to 起源">起源</a>
+						<a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="bookmark" title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">利用rsync自动同步服务器与本地代码的python脚本</a>
 					</h1>
-					<abbr class="published" title="2012-11-16T20:07:03">五 16 十一月 2012</abbr>
+					<abbr class="published" title="2013-02-07T21:27:06">四 07 二月 2013</abbr>
 				<div class="entry-content"> <hr />
-<p><strong>引子——</strong></p>
-<p>&nbsp;</p>
-<p>你是谁？</p>
-<p>你从何而来？</p>
-<p>你要到哪去？</p>
-<p>&nbsp;</p>
-<p>这不是哲学家的问题，这是我们每个人的问题。</p>
-<p>当你思考自己的起源时，都会陷入无限的循环与苦楚之中。</p>
-<p>&nbsp;</p>
-<p>我来自哪里，我为何而来，谁创造了我？</p>
-<p>如果是上帝，那谁又是上帝，上帝又从何而来？</p>
-<p>如果是宇宙大爆炸的尘埃，那宇宙又从何而来，宇宙外面是什么，外面的外面又是什么？</p>
-<p>&nbsp;</p>
-<p>或者说上帝是永恒的，宇宙是无限的，那永恒与无限又是什么，这不是一个合理的解释</p>
-<p>至少我无法接受。</p>
-<p>&nbsp;</p>
-<p>这个问题让我那难以入眠，每当想起，都焦躁不安</p>
-<p>世界就像魔术师手里的兔子，诞生于诡异的帽子魔法</p>
-<p>我们就诞生于兔子的毛发上，想努力攀爬到顶端去看看魔法师的样子，想看清这不解的魔法。</p>
-<p>&nbsp;</p>
-<p>但我们失败了，年长时，我们接受的“现实”，接受了“真理”</p>
-<p>于是世界变成了：本来就是这样</p>
-<p>我们遗弃了本源，在自己的秩序里生存，在终焉里安眠。</p>
-<p>&nbsp;</p>
-<p>但还有一群人不接受这样的现实，他们保留了那原始的疑惑</p>
-<p>他们在探寻着自己的起源</p>
-<p>他们在宗教、科学、魔法、哲学中挣扎</p>
-<p>我称他们为开辟的使者 ...</p> </div>
+<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" />
+菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+用ssh sshfs scp都太慢  小东西又懒得用git<br />
+sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
+<p>于是用linux自带的rsync写了个同步脚本<br />
+可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
+<ol>
+<li>
+<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
+</li>
+<li>
+<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
+   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
+</li>
+<li>
+<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
+    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
+    他会监视改目录的文件 如果新建 修改或删除 都会sync
+    可以用 <code>nohup python rsync.py -auto&amp;</code> 
+    来后台运行</p>
+</li>
+<li>
+<p>只根据emacs优化了 ...</p></li></ol> </div>
 				</li>
 					</ol>
 	</dl>
 
 	<p class="paginator">
-						<a href="http://smilehacker.com/tag/2.html" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;newer</a>
-				</p>
+		</p>
 	</section>
 
 	</body>

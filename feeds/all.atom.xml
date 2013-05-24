@@ -149,7 +149,6 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;/ol&gt;
 &lt;!-- more --&gt;
 
-&lt;p&gt;{% codeblock [rsync.py] [lang: python]%}&lt;/p&gt;
 &lt;h1&gt;use rsync to sync code from server&lt;/h1&gt;
 &lt;h1&gt;coding = UTF8&lt;/h1&gt;
 &lt;h1&gt;@author Kleist Zhou&lt;/h1&gt;
@@ -243,8 +242,8 @@ options = "-rtvuC --delete --progress --exclude='rsync.py'"&lt;/p&gt;
     else:
         sync()&lt;/p&gt;
 &lt;h1&gt;main&lt;/h1&gt;
-&lt;p _="%" endcodeblock="endcodeblock"&gt;if &lt;strong&gt;name&lt;/strong&gt; == "&lt;strong&gt;main&lt;/strong&gt;":
-    main()&lt;/p&gt;</summary><category term=""></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;if &lt;strong&gt;name&lt;/strong&gt; == "&lt;strong&gt;main&lt;/strong&gt;":
+    main()&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;img alt="Nexus 4" src="http://i.i.com.com/cnwk.1d/i/tim/2012/12/17/nexus4.png" /&gt;
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
@@ -657,7 +656,7 @@ return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }&lt;/p&gt;
 &lt;p&gt;具体也就是WinMain函数作为程序入口，相当于main函数&lt;/p&gt;
 &lt;p&gt;然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
-对着代码看一些参考资料应该就够了。&lt;/p&gt;</summary><category term=""></category></entry><entry><title>黑历史</title><link href="http://smilehacker.com/hei-li-shi.html" rel="alternate"></link><updated>2013-02-07T20:55:16+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:hei-li-shi.html</id><summary type="html">&lt;hr /&gt;
+对着代码看一些参考资料应该就够了。&lt;/p&gt;</summary><category term="windows"></category></entry><entry><title>黑历史</title><link href="http://smilehacker.com/hei-li-shi.html" rel="alternate"></link><updated>2013-02-07T20:55:16+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:hei-li-shi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;在很久很久以前
 有五个茫然年轻人
 他们厌倦了平淡的世界

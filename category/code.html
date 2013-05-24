@@ -53,19 +53,57 @@
 		<ol>
 							<li>
 					<h1 class="title">
-						<a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark" title="Permalink to 让代码更规范——匈牙利命名法">让代码更规范——匈牙利命名法</a>
+						<a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="bookmark" title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">利用rsync自动同步服务器与本地代码的python脚本</a>
 					</h1>
-					<abbr class="published" title="2013-02-07T21:07:22">四 07 二月 2013</abbr>
+					<abbr class="published" title="2013-02-07T21:27:06">四 07 二月 2013</abbr>
 				<div class="entry-content"> <hr />
-<p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
-好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
-<p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
-<p><strong>变量名＝属性＋类型＋对象描述</strong></p>
-<p>&nbsp;</p>
-<p>其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。</p>
-<p>&nbsp;</p>
-<p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
-<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p> </div>
+<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" />
+菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+用ssh sshfs scp都太慢  小东西又懒得用git<br />
+sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
+<p>于是用linux自带的rsync写了个同步脚本<br />
+可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
+<ol>
+<li>
+<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
+</li>
+<li>
+<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
+   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
+</li>
+<li>
+<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
+    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
+    他会监视改目录的文件 如果新建 修改或删除 都会sync
+    可以用 <code>nohup python rsync.py -auto&amp;</code> 
+    来后台运行</p>
+</li>
+<li>
+<p>只根据emacs优化了 ...</p></li></ol> </div>
+				</li>
+							<li>
+					<h1 class="title">
+						<a href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark" title="Permalink to WIN32编程入门">WIN32编程入门</a>
+					</h1>
+					<abbr class="published" title="2013-02-07T21:01:55">四 07 二月 2013</abbr>
+				<div class="entry-content"> <hr />
+<p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
+<p _="%" _Windows_="[Windows]" _lang:="[lang:" c_="c++]%" codeblock="codeblock">学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
+<!-- more --></p>
+<h1>include</h1>
+<h1>include</h1>
+<p>// 窗口过程函数
+LRESULT CALLBACK WinSunProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);</p>
+<p>int WINAPI WinMain(
+HINSTANCE hInstance, // handle to current instance
+HINSTANCE hPrevInstance, // handle to previous instance
+LPSTR lpCmdLine, // command line
+int nCmdShow // show state
+)</p>
+<p>{
+// 窗口类
+WNDCLASS wndcls;
+wndcls.cbClsExtra ...</p> </div>
 				</li>
 					</ol>
 	</dl>
