@@ -57,8 +57,8 @@
 					</h1>
 					<abbr class="published" title="2013-02-07T21:27:06">四 07 二月 2013</abbr>
 				<div class="entry-content"> <hr />
-<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /><br />
-菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" />  </p>
+<p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
 用ssh sshfs scp都太慢  小东西又懒得用git<br />
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 <p>于是用linux自带的rsync写了个同步脚本<br />
@@ -80,6 +80,48 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 </li>
 <li>
 <p>只根据emacs优化了 ...</p></li></ol> </div>
+				</li>
+							<li>
+					<h1 class="title">
+						<a href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="bookmark" title="Permalink to 自动获取Nexus4售卖状态的Python脚本">自动获取Nexus4售卖状态的Python脚本</a>
+					</h1>
+					<abbr class="published" title="2013-02-07T21:24:06">四 07 二月 2013</abbr>
+				<div class="entry-content"> <hr />
+<p><img alt="Nexus 4" src="http://i.i.com.com/cnwk.1d/i/tim/2012/12/17/nexus4.png" />
+使用pyquery做爬虫解析GooglePlay页面 获取状态
+然后通过Gmail发给指定邮箱
+每隔一个小时自动检测一次
+使用 <code><strong>nohup python *.py &amp;</strong></code> 可在后台运行</p>
+<!-- more -->
+
+<p>```python</p>
+<h1>coding=utf-8</h1>
+<h1>easy_install pyquery OR sudo apt-get install python-pyquery</h1>
+<p>from pyquery import PyQuery as pq
+import smtplib
+from email.Message import Message
+import time</p>
+<h1>发给谁</h1>
+<p>mailto_list = "xxx@xx.xx"</p>
+<h1>设置服务器 用户名 口令 邮箱后缀</h1>
+<p>mail_host = "smtp.gmail.com"
+mail_user = "xxx@gmail ...</p></!--> </div>
+				</li>
+							<li>
+					<h1 class="title">
+						<a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark" title="Permalink to 让代码更规范——匈牙利命名法">让代码更规范——匈牙利命名法</a>
+					</h1>
+					<abbr class="published" title="2013-02-07T21:07:22">四 07 二月 2013</abbr>
+				<div class="entry-content"> <hr />
+<p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
+好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
+<p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
+<p><strong>变量名＝属性＋类型＋对象描述</strong></p>
+<p>&nbsp;</p>
+<p>其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。</p>
+<p>&nbsp;</p>
+<p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
+<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p> </div>
 				</li>
 							<li>
 					<h1 class="title">

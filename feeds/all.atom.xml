@@ -17,15 +17,15 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  &lt;/p&gt;
 &lt;p&gt;这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  &lt;/p&gt;
 &lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch. douban"></category></entry><entry><title>ABOUT ME? NO NEED</title><link href="http://smilehacker.com/about-me-no-need.html" rel="alternate"></link><updated>2013-03-29T12:09:36+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:about-me-no-need.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="My sadness strength my wings" src="http://i3.minus.com/ibtjRBCiqQzIwK.jpg" /&gt;
-朋友今天取笑我：“你丫这blog够简洁的，连个'about me'都没有。“
+&lt;p&gt;&lt;img alt="My sadness strength my wings" src="http://i3.minus.com/ibtjRBCiqQzIwK.jpg" /&gt;&lt;/p&gt;
+&lt;p&gt;朋友今天取笑我：“你丫这blog够简洁的，连个'about me'都没有。“
 确实，自从由Wordpress换成Hexo后，就没怎么打点这一寸三亩地，直接套用默认模板，最开始连个feed都没加。
 不过，那些东西又有什么意义呢？&lt;/p&gt;
 &lt;p&gt;最早写Blog是从高一开始，那时年轻气盛，为了丁点的虚荣心，绞尽脑汁的去打点。看着点击在一月内破20万甚是高兴，可之后呢，依旧是空虚。可以说那时候的Blog是为了炫耀，多么傻，多么天真。
 后来到了大学，人也成熟了些，Blog开始记录些技术文、一些心情、一些随笔。去掉了流量分析，去掉了访问量，去掉了浮云。
 不知为何，现在看得更开了，技术文就由Evernote记录吧，心情交给日记，随笔有所感还是会更新下。至于About me，那最后的虚荣，也就忽略吧。&lt;/p&gt;
 &lt;p&gt;认识你的人，不会在意你的面具，不认识你的人，不在意你是谁。本是尘归尘，土归土，又何必在意那个名字呢。&lt;/p&gt;
-&lt;p&gt;就仅在这网络的一个小角落，留下迷失的自我吧。&lt;/p&gt;</summary><category term=""></category></entry><entry><title>让用户体验改变Linux</title><link href="http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;就仅在这网络的一个小角落，留下迷失的自我吧。&lt;/p&gt;</summary></entry><entry><title>让用户体验改变Linux</title><link href="http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。&lt;br /&gt;
 后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  &lt;/p&gt;
 &lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
@@ -42,7 +42,7 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;code&gt;sudo vim gtk-2.0/gtkrc&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;修改的&lt;strong&gt;tooltip_fg_color&lt;/strong&gt;和&lt;strong&gt;tooltip_bg_color&lt;/strong&gt;两个属性的值，如果没有改属性，可以自行添加&lt;br /&gt;
 &lt;code&gt;gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"&lt;/code&gt;  &lt;/p&gt;
-&lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</summary><category term=""></category></entry><entry><title>选择 一</title><link href="http://smilehacker.com/xuan-ze.html" rel="alternate"></link><updated>2013-02-07T23:25:30+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:xuan-ze.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</summary><category term="eclipse"></category></entry><entry><title>选择 一</title><link href="http://smilehacker.com/xuan-ze.html" rel="alternate"></link><updated>2013-02-07T23:25:30+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:xuan-ze.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;img alt="选择不是那么好做出来的" src="http://i.minus.com/ibjMp2TOJPBBlw.jpeg" /&gt;&lt;/p&gt;
 &lt;p&gt;最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。&lt;br /&gt;
 对于完美主义拖延症晚期患者来说，特别是二选一最为纠结的。当掺杂太多因素时，是&lt;strong&gt;“高瞻远瞩”&lt;/strong&gt;还是&lt;strong&gt;“活在当下”&lt;/strong&gt;，将不再由理性来判断。 
@@ -119,8 +119,8 @@ bug的版本后，我也迁移了。Nodejs的速度果然不是盖的。  &lt;/p
 &lt;p&gt;这个世界总是充满了惊喜，太早的为未来做打算，可能不是一个好的选择，还是先找到自己
 的位置比较重要。  &lt;/p&gt;
 &lt;p&gt;写在第一次规划”抉择“。&lt;/p&gt;</summary><category term=""></category></entry><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /&gt;&lt;br /&gt;
-菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
+&lt;p&gt;&lt;img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /&gt;  &lt;/p&gt;
+&lt;p&gt;菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
 用ssh sshfs scp都太慢  小东西又懒得用git&lt;br /&gt;
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;于是用linux自带的rsync写了个同步脚本&lt;br /&gt;
@@ -262,7 +262,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 使用 &lt;code&gt;&lt;strong&gt;nohup python *.py &amp;amp;&lt;/strong&gt;&lt;/code&gt; 可在后台运行&lt;/p&gt;
 &lt;!-- more --&gt;
 
-&lt;p&gt;{% codeblock [Python] [lang: python]%}&lt;/p&gt;
+&lt;p&gt;```python&lt;/p&gt;
 &lt;h1&gt;coding=utf-8&lt;/h1&gt;
 &lt;h1&gt;easy_install pyquery OR sudo apt-get install python-pyquery&lt;/h1&gt;
 &lt;p&gt;from pyquery import PyQuery as pq
@@ -307,8 +307,7 @@ mail_pass = "you password"&lt;/p&gt;
 &lt;p&gt;while True:
     checkSoldState()
     time.sleep(3600)
-[/python]&lt;/p&gt;
-&lt;p&gt;{% endcodeblock %}&lt;/p&gt;</summary><category term=""></category></entry><entry><title>我的2011</title><link href="http://smilehacker.com/wo-de-2011.html" rel="alternate"></link><updated>2013-02-07T21:12:11+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:wo-de-2011.html</id><summary type="html">&lt;hr /&gt;
+```pyhon&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>我的2011</title><link href="http://smilehacker.com/wo-de-2011.html" rel="alternate"></link><updated>2013-02-07T21:12:11+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:wo-de-2011.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 恍然中，就这样一个人走到了世界末日，回忆过去，点点滴滴，确如云烟，淡然彷徨。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 这个时候回忆2011确实有点晚了，没办法，我就是这样一个懒散的人，有兴趣在脑海中描绘，却无心思在现实中构建。或许感动只属于自己，但也容易忘记，于是就在末日的前夕，做一份备份吧。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
@@ -375,7 +374,7 @@ mail_pass = "you password"&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp; 2011.&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 写于2012&lt;/p&gt;&lt;/p&gt;</summary><category term=""></category></entry><entry><title>银魂一则</title><link href="http://smilehacker.com/yin-hun-ze.html" rel="alternate"></link><updated>2013-02-07T21:11:31+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:yin-hun-ze.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp; 写于2012&lt;/p&gt;&lt;/p&gt;</summary><category term="writing"></category></entry><entry><title>银魂一则</title><link href="http://smilehacker.com/yin-hun-ze.html" rel="alternate"></link><updated>2013-02-07T21:11:31+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:yin-hun-ze.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;不要说我到了这个年纪还看银魂 因为银魂里的感动不是时间能消磨的&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;你确实是个不折不扣的废材&lt;/p&gt;
@@ -424,7 +423,7 @@ mail_pass = "you password"&lt;/p&gt;
 &lt;p style="text-align: right;"&gt;                                                                                            ——记逝去的故乡&lt;/p&gt;
 &amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;由于土地开发，我土生土长的故乡已经不复存在了，现在竖起的高楼，只能成为住处，而不是乡。故乡不只是一个出生点的代名词，他的背后还有很多含义。她是你精神的支柱，让你有归属感；她是你童年的摇篮，让你有存在感。现在，我就像个流浪的灵魂，没了家。&lt;/p&gt;</summary><category term=""></category></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;由于土地开发，我土生土长的故乡已经不复存在了，现在竖起的高楼，只能成为住处，而不是乡。故乡不只是一个出生点的代名词，他的背后还有很多含义。她是你精神的支柱，让你有归属感；她是你童年的摇篮，让你有存在感。现在，我就像个流浪的灵魂，没了家。&lt;/p&gt;</summary></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
 好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。&lt;/p&gt;
 &lt;p&gt;匈牙利命名法是一种编程时的命名规范。基本原则是：&lt;/p&gt;
@@ -588,7 +587,7 @@ mail_pass = "you password"&lt;/p&gt;
 &lt;p&gt;2.命名空间：boostfilesystemiteratorFoo，表示boost空间filesystem子空间遍历目录类型变量Foo？程序员要崩溃了。&lt;/p&gt;
 &lt;p&gt;3.模板：你记得std::map&amp;lt;std::string,std::string&amp;gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。&lt;/p&gt;
 &lt;p&gt;4.模板参数：template &amp;lt;class T, class BinaryPredicate&amp;gt;const T&amp;amp; max(const T&amp;amp; a, const T&amp;amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。&lt;/p&gt;
-&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary><category term=""></category></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
 &lt;p _="%" _Windows_="[Windows]" _lang:="[lang:" c_="c++]%" codeblock="codeblock"&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 &lt;!-- more --&gt;&lt;/p&gt;
@@ -883,4 +882,4 @@ return DefWindowProc(hwnd, uMsg, wParam, lParam);
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;然后，泰坦们离开了。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;==待==&lt;/p&gt;</summary><category term=""></category></entry></feed>
+&lt;p&gt;==待==&lt;/p&gt;</summary></entry></feed>

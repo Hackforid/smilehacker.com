@@ -10,7 +10,7 @@
 	<link href="http://smilehacker.com/" type="application/atom+xml" rel="alternate" title="SmileHacker ATOM Feed" />
 	
 	
-			<title>SmileHacker - </title>
+			<title>SmileHacker - eclipse</title>
 		<meta charset="utf-8" />
 	</head>
 <body>
@@ -53,45 +53,28 @@
 		<ol>
 							<li>
 					<h1 class="title">
-						<a href="http://smilehacker.com/qi-yuan.html" rel="bookmark" title="Permalink to 起源">起源</a>
+						<a href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="bookmark" title="Permalink to Eclipse提示框颜色设置">Eclipse提示框颜色设置</a>
 					</h1>
-					<abbr class="published" title="2012-11-16T20:07:03">五 16 十一月 2012</abbr>
+					<abbr class="published" title="2013-02-13T13:02:47">三 13 二月 2013</abbr>
 				<div class="entry-content"> <hr />
-<p><strong>引子——</strong></p>
-<p>&nbsp;</p>
-<p>你是谁？</p>
-<p>你从何而来？</p>
-<p>你要到哪去？</p>
-<p>&nbsp;</p>
-<p>这不是哲学家的问题，这是我们每个人的问题。</p>
-<p>当你思考自己的起源时，都会陷入无限的循环与苦楚之中。</p>
-<p>&nbsp;</p>
-<p>我来自哪里，我为何而来，谁创造了我？</p>
-<p>如果是上帝，那谁又是上帝，上帝又从何而来？</p>
-<p>如果是宇宙大爆炸的尘埃，那宇宙又从何而来，宇宙外面是什么，外面的外面又是什么？</p>
-<p>&nbsp;</p>
-<p>或者说上帝是永恒的，宇宙是无限的，那永恒与无限又是什么，这不是一个合理的解释</p>
-<p>至少我无法接受。</p>
-<p>&nbsp;</p>
-<p>这个问题让我那难以入眠，每当想起，都焦躁不安</p>
-<p>世界就像魔术师手里的兔子，诞生于诡异的帽子魔法</p>
-<p>我们就诞生于兔子的毛发上，想努力攀爬到顶端去看看魔法师的样子，想看清这不解的魔法。</p>
-<p>&nbsp;</p>
-<p>但我们失败了，年长时，我们接受的“现实”，接受了“真理”</p>
-<p>于是世界变成了：本来就是这样</p>
-<p>我们遗弃了本源，在自己的秩序里生存，在终焉里安眠。</p>
-<p>&nbsp;</p>
-<p>但还有一群人不接受这样的现实，他们保留了那原始的疑惑</p>
-<p>他们在探寻着自己的起源</p>
-<p>他们在宗教、科学、魔法、哲学中挣扎</p>
-<p>我称他们为开辟的使者 ...</p> </div>
+<p><img alt="不知不觉又到情人节了 离找到心爱之人又近了一年" src="http://i.minus.com/jzqg4E3jT86sO.jpg" /></p>
+<p>以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。<br />
+后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。<br />
+现在用arch了，在自己调配主题时倒找到的修改的办法：  </p>
+<p>Linux主题文件位于<em>/usr/share/themes/</em>下对应的主题文件夹下
+比如我正在用使用<strong>Gnome-Cupertino</strong>主题，就进入到<strong>/usr/share/themes/Gnome-Cupertino/</strong>目录下 <br />
+<code>cd /usr/share/themes/Gnome-Cupertino</code></p>
+<p>打开gtk-2.0/gtkrc文件<br />
+<code>sudo vim gtk-2.0/gtkrc</code></p>
+<p>修改的<strong>tooltip_fg_color</strong>和<strong>tooltip_bg_color</strong>两个属性的值，如果没有改属性，可以自行添加<br />
+<code>gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"</code>  </p>
+<p>然后保存退出 ...</p> </div>
 				</li>
 					</ol>
 	</dl>
 
 	<p class="paginator">
-						<a href="http://smilehacker.com/tag/2.html" class="button_accent">&larr;&nbsp;&nbsp;&nbsp;newer</a>
-				</p>
+		</p>
 	</section>
 
 	</body>

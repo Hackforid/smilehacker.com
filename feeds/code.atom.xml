@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/code.atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-02-07T21:27:06+08:00</updated><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
-&lt;p&gt;&lt;img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /&gt;&lt;br /&gt;
-菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
+&lt;p&gt;&lt;img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /&gt;  &lt;/p&gt;
+&lt;p&gt;菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
 用ssh sshfs scp都太慢  小东西又懒得用git&lt;br /&gt;
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;于是用linux自带的rsync写了个同步脚本&lt;br /&gt;
@@ -135,7 +135,224 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;span class="c"&gt;# main&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;img alt="Nexus 4" src="http://i.i.com.com/cnwk.1d/i/tim/2012/12/17/nexus4.png" /&gt;
+使用pyquery做爬虫解析GooglePlay页面 获取状态
+然后通过Gmail发给指定邮箱
+每隔一个小时自动检测一次
+使用 &lt;code&gt;&lt;strong&gt;nohup python *.py &amp;amp;&lt;/strong&gt;&lt;/code&gt; 可在后台运行&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;```python&lt;/p&gt;
+&lt;h1&gt;coding=utf-8&lt;/h1&gt;
+&lt;h1&gt;easy_install pyquery OR sudo apt-get install python-pyquery&lt;/h1&gt;
+&lt;p&gt;from pyquery import PyQuery as pq
+import smtplib
+from email.Message import Message
+import time&lt;/p&gt;
+&lt;h1&gt;发给谁&lt;/h1&gt;
+&lt;p&gt;mailto_list = "xxx@xx.xx"&lt;/p&gt;
+&lt;h1&gt;设置服务器 用户名 口令 邮箱后缀&lt;/h1&gt;
+&lt;p&gt;mail_host = "smtp.gmail.com"
+mail_user = "xxx@gmail.com"
+mail_pass = "you password"&lt;/p&gt;
+&lt;p&gt;def sendMail(sub, content):
+    '''
+    sub:主题
+    content:内容
+    '''
+    msg = Message()
+    msg['Subject'] = sub
+    msg['From'] = mail_user
+    msg['To'] = mailto_list
+    msg.set_payload(content)
+    try:
+        s = smtplib.SMTP(mail_host, port=587, timeout=200)
+        s.starttls()
+        s.login(mail_user, mail_pass)
+        s.sendmail(mail_user, mailto_list, msg.as_string())
+        return True
+    except Exception, e:
+        print str(e)
+        return False&lt;/p&gt;
+&lt;p&gt;def checkSoldState():
+    doc = pq(url = r'https://play.google.com/store/devices/details?id=nexus_4_16gb')
+    soldMsg = doc('span').filter('.hardware-price-description').text()
+    print soldMsg
+    if soldMsg != 'Sold out':
+        print 'sent mail'
+        sendMail('Nexus4 Info', 'Sold out')&lt;/p&gt;
+&lt;p&gt;def say():
+    print "hello"&lt;/p&gt;
+&lt;h1&gt;main&lt;/h1&gt;
+&lt;p&gt;while True:
+    checkSoldState()
+    time.sleep(3600)
+```pyhon&lt;/p&gt;</summary><category term="Python"></category></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
+好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。&lt;/p&gt;
+&lt;p&gt;匈牙利命名法是一种编程时的命名规范。基本原则是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;变量名＝属性＋类型＋对象描述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。&lt;/p&gt;
+&lt;p&gt;据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型+对象描述的顺序组合起来，以使程序员作变量时对变量 的类型和其它属性有直观的了解，下面是HN变量命名规范，其中也有一些是我个人的偏向：&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;strong&gt;属性部分 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　全局变量                               g_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常量                                   c_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c++&lt;/strong&gt;&lt;strong&gt;类成员变量                          m_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　静态变量                               s_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;类型部分 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　指针                                   p &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　函数                                   fn &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　无效                                   v &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　句柄                                   h &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　长整型                                 l &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　布尔                                   b &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　浮点型（有时也指文件）                 f &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　双字                                   dw &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字符串                                 sz &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　短整型                                 n &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　双精度浮点                             d &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　计数                                   c（通常用cnt） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字符                                   ch（通常用c） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　整型                                   i（通常用n） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字节                                   by &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字                                     w &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　实型                                   r &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　无符号                                 u &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;描述部分 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　最大                                   Max &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　最小                                   Min &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　初始化                                 Init &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　临时变量                               T（或Temp） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　源对象                                 Src &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　目的对象                               Dest &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里顺便写几个例子：&lt;/p&gt;
+&lt;p&gt;hwnd ： h 是类型描述，表示句柄， wnd 是变量对象描述，表示窗口，所以 hwnd 表示窗口句柄；&lt;/p&gt;
+&lt;p&gt;pfnEatApple ： pfn 是类型描述，表示指向函数的指针， EatApple 是变量对象描述，所以它表示&lt;/p&gt;
+&lt;p&gt;指向 EatApple 函数的函数指针变量。&lt;/p&gt;
+&lt;p&gt;g_cch ： g_ 是属性描述，表示全局变量，c 和 ch 分别是计数类型和字符类型，一起表示变量类&lt;/p&gt;
+&lt;p&gt;型，这里忽略了对象描述，所以它表示一个对字符进行计数的全局变量。&lt;/p&gt;
+&lt;p&gt;上面就是HN命名法的一般规则。&lt;/p&gt;
+&lt;p&gt;小结:匈牙利命名法&lt;/p&gt;
+&lt;p&gt;匈牙利命名法&lt;/p&gt;
+&lt;p&gt;MFC、句柄、控件及结构的命名规范 Windows类型 样本变量 MFC类 样本变量&lt;/p&gt;
+&lt;p&gt;HWND hWnd； CWnd* pWnd；&lt;/p&gt;
+&lt;p&gt;HDLG hDlg； CDialog* pDlg；&lt;/p&gt;
+&lt;p&gt;HDC hDC； CDC* pDC；&lt;/p&gt;
+&lt;p&gt;HGDIOBJ hGdiObj； CGdiObject* pGdiObj；&lt;/p&gt;
+&lt;p&gt;HPEN hPen； CPen* pPen；&lt;/p&gt;
+&lt;p&gt;HBRUSH hBrush； CBrush* pBrush；&lt;/p&gt;
+&lt;p&gt;HFONT hFont； CFont* pFont；&lt;/p&gt;
+&lt;p&gt;HBITMAP hBitmap； CBitmap* pBitmap；&lt;/p&gt;
+&lt;p&gt;HPALETTE hPaltte； CPalette* pPalette；&lt;/p&gt;
+&lt;p&gt;HRGN hRgn； CRgn* pRgn；&lt;/p&gt;
+&lt;p&gt;HMENU hMenu； CMenu* pMenu；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CState* pState；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CButton* pButton；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CEdit* pEdit；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CListBox* pListBox；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CComboBox* pComboBox；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CScrollBar* pScrollBar；&lt;/p&gt;
+&lt;p&gt;HSZ hszStr； CString pStr；&lt;/p&gt;
+&lt;p&gt;POINT pt； CPoint pt；&lt;/p&gt;
+&lt;p&gt;SIZE size； CSize size；&lt;/p&gt;
+&lt;p&gt;RECT rect； CRect rect；&lt;/p&gt;
+&lt;p&gt;一般前缀命名规范 前缀 类型 实例&lt;/p&gt;
+&lt;p&gt;C   类或结构  CDocument ，CPrintInfo&lt;/p&gt;
+&lt;p&gt;m_  成员变量  m_pDoc，m_nCustomers&lt;/p&gt;
+&lt;p&gt;变量命名规范&lt;/p&gt;
+&lt;p&gt;前缀     类型   描述                 实例&lt;/p&gt;
+&lt;p&gt;ch      char   8位字符              chGrade&lt;/p&gt;
+&lt;p&gt;ch TCHAR 如果_UNICODE定义，则为16位字符 chName&lt;/p&gt;
+&lt;p&gt;b BOOL 布尔值 bEnable&lt;/p&gt;
+&lt;p&gt;n int 整型（其大小依赖于操作系统） nLength&lt;/p&gt;
+&lt;p&gt;n UINT 无符号值（其大小依赖于操作系统） nHeight&lt;/p&gt;
+&lt;p&gt;w WORD 16位无符号值 wPos&lt;/p&gt;
+&lt;p&gt;l LONG 32位有符号整型 lOffset&lt;/p&gt;
+&lt;p&gt;dw DWORD 32位无符号整型 dwRange&lt;/p&gt;
+&lt;p&gt;p * 指针 pDoc&lt;/p&gt;
+&lt;p&gt;lp FAR* 远指针 lpszName&lt;/p&gt;
+&lt;p&gt;lpsz LPSTR 32位字符串指针 lpszName&lt;/p&gt;
+&lt;p&gt;lpsz LPCSTR 32位常量字符串指针 lpszName&lt;/p&gt;
+&lt;p&gt;lpsz LPCTSTR 如果_UNICODE定义，则为32位常量字符串指针 lpszName&lt;/p&gt;
+&lt;p&gt;h handle Windows对象句柄 hWnd&lt;/p&gt;
+&lt;p&gt;lpfn callback 指向CALLBACK函数的远指针&lt;/p&gt;
+&lt;p&gt;前缀 符号类型 实例 范围&lt;/p&gt;
+&lt;p&gt;IDR_ 不同类型的多个资源共享标识 IDR_MAIINFRAME 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;IDD_ 对话框资源 IDD_SPELL_CHECK 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;HIDD_ 对话框资源的Help上下文 HIDD_SPELL_CHECK 0x20001～0x26FF&lt;/p&gt;
+&lt;p&gt;IDB_ 位图资源 IDB_COMPANY_LOGO 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;IDC_ 光标资源 IDC_PENCIL 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;IDI_ 图标资源 IDI_NOTEPAD 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;ID_ 来自菜单项或工具栏的命令 ID_TOOLS_SPELLING 0x8000～0xDFFF&lt;/p&gt;
+&lt;p&gt;HID_ 命令Help上下文 HID_TOOLS_SPELLING 0x18000～0x1DFFF&lt;/p&gt;
+&lt;p&gt;IDP_ 消息框提示 IDP_INVALID_PARTNO 8～0xDEEF&lt;/p&gt;
+&lt;p&gt;HIDP_ 消息框Help上下文 HIDP_INVALID_PARTNO 0x30008～0x3DEFF&lt;/p&gt;
+&lt;p&gt;IDS_ 串资源 IDS_COPYRIGHT 1～0x7EEF&lt;/p&gt;
+&lt;p&gt;IDC_ 对话框内的控件 IDC_RECALC 8～0xDEEF&lt;/p&gt;
+&lt;p&gt;Microsoft MFC宏命名规范 名称 类型&lt;/p&gt;
+&lt;p&gt;_AFXDLL 唯一的动态连接库（Dynamic Link Library，DLL）版本&lt;/p&gt;
+&lt;p&gt;_ALPHA 仅编译DEC Alpha处理器&lt;/p&gt;
+&lt;p&gt;_DEBUG 包括诊断的调试版本&lt;/p&gt;
+&lt;p&gt;_MBCS 编译多字节字符集&lt;/p&gt;
+&lt;p&gt;_UNICODE 在一个应用程序中打开Unicode&lt;/p&gt;
+&lt;p&gt;AFXAPI MFC提供的函数&lt;/p&gt;
+&lt;p&gt;CALLBACK 通过指针回调的函数&lt;/p&gt;
+&lt;p&gt;库标识符命名法 标识符 值和含义&lt;/p&gt;
+&lt;p&gt;u ANSI（N）或Unicode（U）&lt;/p&gt;
+&lt;p&gt;d 调试或发行：D = 调试；忽略标识符为发行。&lt;/p&gt;
+&lt;p&gt;静态库版本命名规范 库 描述&lt;/p&gt;
+&lt;p&gt;NAFXCWD.LIB 调试版本：MFC静态连接库&lt;/p&gt;
+&lt;p&gt;NAFXCW.LIB 发行版本：MFC静态连接库&lt;/p&gt;
+&lt;p&gt;UAFXCWD.LIB 调试版本：具有Unicode支持的MFC静态连接库&lt;/p&gt;
+&lt;p&gt;UAFXCW.LIB 发行版本：具有Unicode支持的MFC静态连接库&lt;/p&gt;
+&lt;p&gt;动态连接库命名规范 名称 类型&lt;/p&gt;
+&lt;p&gt;_AFXDLL 唯一的动态连接库（DLL）版本&lt;/p&gt;
+&lt;p&gt;WINAPI Windows所提供的函数&lt;/p&gt;
+&lt;p&gt;Windows.h中新的命名规范 类型 定义描述&lt;/p&gt;
+&lt;p&gt;WINAPI 使用在API声明中的FAR PASCAL位置，如果正在编写一个具有导出API人口点的DLL，则可以在自己的API中使用该类型&lt;/p&gt;
+&lt;p&gt;CALLBACK 使用在应用程序回叫例程，如窗口和对话框过程中的FAR PASCAL的位置&lt;/p&gt;
+&lt;p&gt;LPCSTR 与LPSTR相同，只是LPCSTR用于只读串指针，其定义类似（const char FAR*）&lt;/p&gt;
+&lt;p&gt;UINT 可移植的无符号整型类型，其大小由主机环境决定（对于Windows NT和Windows 9x为32位）；它是unsigned int的同义词&lt;/p&gt;
+&lt;p&gt;LRESULT 窗口程序返回值的类型&lt;/p&gt;
+&lt;p&gt;LPARAM 声明lParam所使用的类型，lParam是窗口程序的第四个参数&lt;/p&gt;
+&lt;p&gt;WPARAM 声明wParam所使用的类型，wParam是窗口程序的第三个参数&lt;/p&gt;
+&lt;p&gt;LPVOID 一般指针类型，与（void *）相同，可以用来代替LPSTR&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;抨击匈牙利命名法&lt;/p&gt;
+&lt;p&gt;匈牙利命名法是一种编程时的命名规范。命名规范是程序书写规范中最重要也是最富争议的地方，自古乃兵家必争之地。命名规范有何用？四个字：名正言顺。用 二分法，命名规范分为好的命名规范和坏的命名规范，也就是说名正言顺的命名规范和名不正言不顺的命名规范。好的舞鞋是让舞者感觉不到其存在的舞鞋，坏的舞 鞋是让舞者带着镣铐起舞。一个坏的命名规范具有的破坏力比一个好的命名规范具有的创造力要大得多。&lt;/p&gt;
+&lt;p&gt;本文要证明的是：匈牙利命名法是一个坏的命名规范。本文的作用范围为静态强类型编程语言。本文的分析范本为C语言和C++语言。下文中的匈法为匈牙利命名法的简称。&lt;/p&gt;
+&lt;p&gt;一 匈牙利命名法的成本&lt;/p&gt;
+&lt;p&gt;匈法的表现形式为给变量名附加上类型名前缀，例如：nFoo,szFoo,pFoo,cpFoo分别表示整型变量，字符串型变量，指针型变量和常指针型 变量。可以看出，匈法将变量的类型信息从单一地点（声明变量处）复制到了多个地点（使用变量处），这是冗余法。冗余法的成本之一是要维护副本的一致性。这 个成本在编写和维护代码的过程中需要改变变量的类型时付出。冗余法的成本之二是占用了额外的空间。一个优秀的书写者会自觉地遵从一个法则：代码最小组织单 位的长度以30个自然行以下为宜，如果超过50行就应该重新组织。一个变量的书写空间会给这一法则添加不必要的难度。&lt;/p&gt;
+&lt;p&gt;二 匈牙利命名法的收益&lt;/p&gt;
+&lt;p&gt;这里要证明匈牙利命名法的收益是含糊的，无法预期的。&lt;/p&gt;
+&lt;p&gt;范本1：strcpy(pstrFoo,pcstrFoo2) Vs strcpy(foo,foo2)&lt;/p&gt;
+&lt;p&gt;匈法在这里有什么收益呢？我看不到。没有一个程序员会承认自己不知道strcpy函数的参数类型吧。&lt;/p&gt;
+&lt;p&gt;范本2：unknown_function(nFoo) Vs unknown_function(foo)&lt;/p&gt;
+&lt;p&gt;匈法在这里有什么收益呢？我看不到。对于一个不知道确定类型的函数，程序员应该去查看该函数的文档，这是一种成本。使用匈法的唯一好处是看代码的人知道 这个函数要求一个整型参数，这又有什么用处呢？函数是一种接口，参数的类型仅仅是接口中的一小部分。诸如函数的功能、出口信息、线程安全性、异常安全性、 参数合法性等重要信息还是必须查阅文档。&lt;/p&gt;
+&lt;p&gt;范本3：nFoo=nBar Vs foo=bar&lt;/p&gt;
+&lt;p&gt;匈法在这里有什么收益 呢？我看不到。使用匈法的唯一好处是看代码的人知道这里发生了一个整型变量的复制动作，听起来没什么问题，可以安心睡大觉了。如果他看到的是 nFoo=szBar，可能会从美梦中惊醒。且慢，事情真的会是这样吗？我想首先被惊醒的应该是编译器。另一方面，nFoo=nBar只是在语法上合法而 已，看代码的人真正关心的是语义的合法性，匈法对此毫无帮助。另一方面，一个优秀的书写者会自觉地遵从一个法则：代码最小组织单位中的临时变量以一两个为 宜，如果超过三个就应该重新组织。结合前述第一个法则，可以得出这样的结论：易于理解的代码本身就应该是易于理解的，这是代码的内建高质量。好的命名规范 对内建高质量的助益相当有限，而坏的命名规范对内建高质量的损害比人们想象的要大。&lt;/p&gt;
+&lt;p&gt;三 匈牙利命名法的实施&lt;/p&gt;
+&lt;p&gt;这里要证明匈牙利命名法在C语言是难以实施的，在C++语言中是无法实施的。从逻辑上讲，对匈法的收益做出否定的结论以后，再来论证匈法的可行性，是画蛇添足。不过有鉴于小马哥曾让已射杀之敌死灰复燃，我还是再踏上一支脚为妙。&lt;/p&gt;
+&lt;p&gt;前面讲过，匈法是类型系统的冗余，所以实施匈法的关键是我们是否能够精确地对类型系统进行复制。这取决于类型系统的复杂性。&lt;/p&gt;
+&lt;p&gt;先来看看C语言：&lt;/p&gt;
+&lt;p&gt;1.内置类型：int,char,float,double 复制为 n,ch,f,d？好像没有什么问题。不过谁来告诉我void应该怎么表示？&lt;/p&gt;
+&lt;p&gt;2.组合类型：array,union,enum,struct 复制为 a,u,e,s？好像比较别扭。&lt;/p&gt;
+&lt;p&gt;这里的难点不是为主类型取名，而是为副类型取名。an表示整型数组？sfoo,sbar表示结构foo，结构bar？ausfoo表示联合结构foo数组？累不累啊。&lt;/p&gt;
+&lt;p&gt;3.特殊类型：pointer。pointer在理论上应该是组合类型，但是在C语言中可以认为是内置类型，因为C语言并没有非常严格地区分不同的指针类型。下面开始表演：pausfoo表示联合结构foo数组指针？ppp表示指针的指针的指针？&lt;/p&gt;
+&lt;p&gt;噩梦还没有结束，再来看看类型系统更为丰富的C++语言：&lt;/p&gt;
+&lt;p&gt;1.class：如果说C语言中的struct还可以用stru搪塞过去的话，不要梦想用cls来搪塞C++中的class。严格地讲，class根本 就并不是一个类型，而是创造类型的工具，在C++中，语言内置类型的数量和class创造的用户自定义类型的数量相比完全可以忽略不计。 stdvectorFoo表示标准库向量类型变量Foo？疯狂的念头。&lt;/p&gt;
+&lt;p&gt;2.命名空间：boostfilesystemiteratorFoo，表示boost空间filesystem子空间遍历目录类型变量Foo？程序员要崩溃了。&lt;/p&gt;
+&lt;p&gt;3.模板：你记得std::map&amp;lt;std::string,std::string&amp;gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。&lt;/p&gt;
+&lt;p&gt;4.模板参数：template &amp;lt;class T, class BinaryPredicate&amp;gt;const T&amp;amp; max(const T&amp;amp; a, const T&amp;amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。&lt;/p&gt;
+&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
 &lt;p _="%" _Windows_="[Windows]" _lang:="[lang:" c_="c++]%" codeblock="codeblock"&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 &lt;!-- more --&gt;&lt;/p&gt;

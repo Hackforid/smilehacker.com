@@ -57,8 +57,8 @@
 					</h1>
 					<abbr class="published" title="2013-02-07T21:27:06">四 07 二月 2013</abbr>
 				<div class="entry-content"> <hr />
-<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" /><br />
-菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+<p><img alt="x" src="http://i.minus.com/ibnh2sUjx4w0D0.jpg" />  </p>
+<p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
 用ssh sshfs scp都太慢  小东西又懒得用git<br />
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 <p>于是用linux自带的rsync写了个同步脚本<br />
@@ -80,6 +80,32 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 </li>
 <li>
 <p>只根据emacs优化了 ...</p></li></ol> </div>
+				</li>
+							<li>
+					<h1 class="title">
+						<a href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="bookmark" title="Permalink to 自动获取Nexus4售卖状态的Python脚本">自动获取Nexus4售卖状态的Python脚本</a>
+					</h1>
+					<abbr class="published" title="2013-02-07T21:24:06">四 07 二月 2013</abbr>
+				<div class="entry-content"> <hr />
+<p><img alt="Nexus 4" src="http://i.i.com.com/cnwk.1d/i/tim/2012/12/17/nexus4.png" />
+使用pyquery做爬虫解析GooglePlay页面 获取状态
+然后通过Gmail发给指定邮箱
+每隔一个小时自动检测一次
+使用 <code><strong>nohup python *.py &amp;</strong></code> 可在后台运行</p>
+<!-- more -->
+
+<p>```python</p>
+<h1>coding=utf-8</h1>
+<h1>easy_install pyquery OR sudo apt-get install python-pyquery</h1>
+<p>from pyquery import PyQuery as pq
+import smtplib
+from email.Message import Message
+import time</p>
+<h1>发给谁</h1>
+<p>mailto_list = "xxx@xx.xx"</p>
+<h1>设置服务器 用户名 口令 邮箱后缀</h1>
+<p>mail_host = "smtp.gmail.com"
+mail_user = "xxx@gmail ...</p></!--> </div>
 				</li>
 					</ol>
 	</dl>
