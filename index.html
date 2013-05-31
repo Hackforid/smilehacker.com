@@ -46,6 +46,45 @@
             
 
                             <article>
+                <a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html"><h3 class="article-title">Permission denied causing “Installation failed due to invalid APK file”</h3></a>
+                <h6 class="subheader" title="2013-05-31T00:00:00">五 31 五月 2013
+    </h6>
+
+
+<hr />
+<p>Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。</p>
+<p>算是缺少测试吧，刷了后bug就浮现了，用ADB安装apk会出现“invalid APK file”的报错。更新ADT，给777权限都没法解决问题。logcat显示为：<br />
+    Unable to open zip '/data/local/tmp/QuanZi.apk': Permission denied<br />
+    Unable to read AndroidManifest.xml of /data/local/tmp/QuanZi.apk  </p>
+<p>料想应该是ROM的问题吧，给了'local/tmp' 777权限依旧无法解决问题。<br />
+多次尝试修给内置存储的权限都无果，只好曲线救国，把tmp移到sdcard上：
+手机上装给命令行软件 开su权限</p>
+<div class="highlight"><pre>    <span class="nb">cd</span> /data/local  
+    mv tmp tmp_old  
+    mkdir /mnt/sdcard/tmp  
+    ln -s /mnt/sdcard/tmp ./tmp 
+</pre></div>
+
+
+<p>弄好后发现可以安装了  </p>
+<p>参考：http://stackoverflow.com/questions/14014871/permission-denied-causing-installation-failed-due-to-invalid-apk-file/14015196#14015196</p><p class="subheader">Category: <a href="http://smilehacker.com/category/code.html">code</a>
+
+    Tagged: 
+        <a href="http://smilehacker.com/tag/android.html">android </a>
+    </p>
+
+
+
+<p><a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html#disqus_thread">comments</a></p>            </article>
+
+            
+                            <hr  class="gradient"/>
+            
+                
+                    
+
+                
+            <article>
                 <a href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html"><h3 class="article-title">像上菜一样推送合乎口味的文章</h3></a>
                 <h6 class="subheader" title="2013-05-21T13:37:32">二 21 五月 2013
     </h6>
@@ -57,25 +96,7 @@
 不知什么时候，我们突然进入了web2.0时代，然后，3.0的影子也开始显露。《阅FM》是一道菜，你不需要思索，他便在合适的时候，合适的地点被端上来了，但是否合口味呢？<br />
 我花了大半年的时间都在想这个问题，web3.0到底该以什么样的姿态被提出，2.0到底会因为什么技术的爆发而被打破、淘汰。</p>
 <h2>上菜</h2>
-<p>为了给用户上一盘合口味的菜，我得知道他的喜好，了解我的菜单。最常用的方式就是tag了吧，”二次元““重口味”“死基佬”，这是描述性分类，“喜”“怒”“哀”“乐”，这是情感分类，还有许许多多的tag。QQ这么干，豆瓣这么干，微博还是这么干。给顾客贴上标签，给菜贴上标签，好嘞，上菜。<br />
-这是个有效的方法，这是个笨方法。</p>
-<p>曾做过一个比较cool的项目，通过神经网络识别人前臂的表面肌电信号（SEMG）来判断人的手势，通过加速度感应器和陀螺仪获取手的位移，然后怎么前肢的运动就被我获取了，然后我就要知道用户在干嘛。动作不是静态的，就像电影胶片只要26帧，而计算机模拟却需要60帧，我没法通过每一毫秒的数据去识别用户在干嘛，我需要联系前面的动作以及即将发生的动作来推测用户TM到底在干嘛。<br />
-分类也是动态的，您的顾客以前喜欢吃辣她就一辈子吃辣了？刚才他还在哭，吃了片刻又开始笑怎么办？</p>
-<p>一个简单的例子，文章的分类是定死了，它不会反抗。当用户快速略过几篇伤感的文字，不就是在告诉我们，他现在不想让他的悲哀暗流成河，请换大碗的开心果。因果就在那里，只是我们忽略了而已。</p>
-<h2>制定菜单</h2>
-<p>能上菜的前提是要有菜单呀，你家就几道特色菜还好说，万一多了呢，一下到海量，你数不过来，得靠机器贴标签吧。
-笨方法是给顾客贴，你给他随便来一盘，他说太辣，哦，太辣了。但你要极简，就不该这么做，顾客是上帝，上帝是不会搭理你的。</p>
-<p>最后还得机器来，教会机器汉语还要学会阅读可是个难活。中华文明博大精深，按文字，我们有白话文，有文言文，有网络文（雾）;论形态，我们有记叙文，有散文，有诗歌——太多了。<br />
-要想理解一篇中文文章，你的先搞清楚他是什么文体，我不是中文系教授，所以我只能想到笨方法。段落短，句子短的，肯定是诗歌吧，工整点就是古诗体。议论文结构比较明显，也好区分，实在看不出来，那就当成散文。“之乎者也”多的，定是文言文，太多“亲”，算是淘宝体。<br />
-（想来，还真需要去中文系请教）</p>
-<p>分完类型，就是提取情感了。其实这倒容易，浅薄的文章会用到大量咏物手法，比如“枯藤老树昏鸦”，关键字提取就能搞定，类似贝叶斯算法过滤垃圾邮件，我们也就能简单的得到感情了。<br />
-曾经有这么一个段子，某熊孩子把三百首古诗的意象做了个提取，然后您只要随机组合就能做出一首诗。反之如何呢？通过我的海量匹配以及机器学习算法，是否能的到意象或线索，然后反编译这篇文章呢？<br />
-即使对于散文也是有法可循的。高中时为了理解汉语语法，我曾跟着老师将每篇课文都按照语法分析，挑出主谓宾，挑出定状补，工程量巨大，但效果明显。汉语虽然复杂，但千年的积累只是让其变形，却未失工整。<br />
-我们不需要了解每句话的意思，不需要得到文章主旨，我们只需要得到大概即可。（视tag复杂度而定）</p>
-<p>线索来自于细节，细节是有维度的，文章也是有维度的。比如作者，比如历史时期，比如创作背景。我们没法给每篇文章单独去精准的定义，但却可以联系所有的线索来给他一个框架。历史背景、背景下的事件、作者信息，他们都是影响因子，给予一个权值就能更好的分类。</p>
-<h2>尾</h2>
-<p>海量时代的分类必然是基于海量数据，使用传统算法对中文文章进行分类必然是件吃力不讨好的事，通过相似度对比、背景数据分析、用户行为分析，我们才能得到key。<br />
-定过无数菜、阅过无数的人，才能通过衣着、气质、情感来挑选合乎口味的佳肴吧。</p><p class="subheader">Category: <a href="http://smilehacker.com/category/tech.html">tech</a>
+<p>为了给用户上一盘合口味的菜，我得知道他的喜好，了解我的菜单。最常用的方式就是tag了吧，”二次元““重口味”“死基佬”，这是描述性分类，“喜”“怒”“哀”“乐”，这是情感分类，还有许许多多的tag。QQ这么干，豆瓣这么干，微博还是这么干。给顾客贴上标签 ...</p><p class="subheader">Category: <a href="http://smilehacker.com/category/tech.html">tech</a>
 
     Tagged: 
         <a href="http://smilehacker.com/tag/alg.html">alg </a>
@@ -83,12 +104,10 @@
 
 
 
-<p><a href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html#disqus_thread">comments</a></p>            </article>
-
-            
-                            <hr  class="gradient"/>
-            
-                
+<p><a href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        
                     
 
                 
@@ -168,36 +187,6 @@
 
 
 <p><a href="http://smilehacker.com/guan-yu-qian.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="http://smilehacker.com/guan-yu-qian.html">Read More</a>
-                <hr  class="gradient"/>
-            </article>
-        
-                    
-
-                
-            <article>
-                <a href="http://smilehacker.com/ke-wang-feng-kuang.html"><h3 class="article-title">渴望疯狂</h3></a>
-                <h6 class="subheader" title="2013-05-07T00:00:00">二 07 五月 2013
-    </h6>
-
-
-<hr />
-<p>大学之前，便暗下决心，一定要在四年里最最疯狂的事，或者是在操场上边大吼大叫，边赤身奔跑；或者是痛快地和宿敌来一场万众瞩目的决斗……<br />
-但三年里，没一次满足，没一次能留下刻在灵魂里的记忆。<br />
-三年里，不断的寻找着疯狂，参加学生会去带领一群人做想做的的事，参加技术团队和一群geek们编写世界，参加各种奇怪的活动去加速为知因子的碰撞，希望奇遇能从天降临。<br />
-像叛逆青年一般随性翘课，如好好学生一般义务为学生服务，像中二少年一般在网上痛斥国家的腐朽，又和人民公知一般积极入党。<br />
-明知道弊大于利却也要舍弃现在去租房子参加讨厌技术主导的比赛，明知道没一点感觉却要去参加各种面试，明知道不喜欢却要去感受那份鄙夷，明知道没结果，却要写下这些在这无病呻吟。<br />
-一直就这样挥霍着时间，浪费着青春，希望有朝一日能找到让灵魂流血的东西。<br />
-但他们却都是这么苍白，都是这么无力，没在心里留下丁点刻痕。<br />
-孤独的生命渴望触动，蠢蠢欲动的血性撕碎尊严也要呐喊。<br />
-命运，我宁可你更多的曲折也不希望你给我平庸，请让我在暴风雨中真真正正的疯狂一把吧。  </p><p class="subheader">Category: <a href="http://smilehacker.com/category/write.html">write</a>
-
-    Tagged: 
-        <a href="http://smilehacker.com/tag/life.html">life </a>
-    </p>
-
-
-
-<p><a href="http://smilehacker.com/ke-wang-feng-kuang.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="http://smilehacker.com/ke-wang-feng-kuang.html">Read More</a>
                 <hr  class="gradient"/>
             </article>
         

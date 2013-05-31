@@ -46,6 +46,45 @@
             
 
                             <article>
+                <a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html"><h3 class="article-title">Permission denied causing “Installation failed due to invalid APK file”</h3></a>
+                <h6 class="subheader" title="2013-05-31T00:00:00">五 31 五月 2013
+    </h6>
+
+
+<hr />
+<p>Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。</p>
+<p>算是缺少测试吧，刷了后bug就浮现了，用ADB安装apk会出现“invalid APK file”的报错。更新ADT，给777权限都没法解决问题。logcat显示为：<br />
+    Unable to open zip '/data/local/tmp/QuanZi.apk': Permission denied<br />
+    Unable to read AndroidManifest.xml of /data/local/tmp/QuanZi.apk  </p>
+<p>料想应该是ROM的问题吧，给了'local/tmp' 777权限依旧无法解决问题。<br />
+多次尝试修给内置存储的权限都无果，只好曲线救国，把tmp移到sdcard上：
+手机上装给命令行软件 开su权限</p>
+<div class="highlight"><pre>    <span class="nb">cd</span> /data/local  
+    mv tmp tmp_old  
+    mkdir /mnt/sdcard/tmp  
+    ln -s /mnt/sdcard/tmp ./tmp 
+</pre></div>
+
+
+<p>弄好后发现可以安装了  </p>
+<p>参考：http://stackoverflow.com/questions/14014871/permission-denied-causing-installation-failed-due-to-invalid-apk-file/14015196#14015196</p><p class="subheader">Category: <a href="http://smilehacker.com/category/code.html">code</a>
+
+    Tagged: 
+        <a href="http://smilehacker.com/tag/android.html">android </a>
+    </p>
+
+
+
+<p><a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html#disqus_thread">comments</a></p>            </article>
+
+            
+                            <hr  class="gradient"/>
+            
+                
+                    
+
+                
+            <article>
                 <a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html"><h3 class="article-title">利用rsync自动同步服务器与本地代码的python脚本</h3></a>
                 <h6 class="subheader" title="2013-02-07T21:27:06">四 07 二月 2013
     </h6>
@@ -73,120 +112,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
     来后台运行</p>
 </li>
 <li>
-<p>只根据emacs优化了 vim党自己改</p>
-</li>
-<li>
-<p>sync时会忽略隐藏文件和临时文件</p>
-</li>
-</ol>
-<!-- more -->
-
-<div class="highlight"><pre><span class="c"># use rsync to sync code from server</span>
-<span class="c"># coding = UTF8</span>
-<span class="c"># @author Kleist Zhou</span>
-<span class="c"># 2013/2/5</span>
-
-<span class="c"># Need pyinotify, pexpect</span>
-<span class="c"># please use easy_install to add in</span>
-<span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">import</span> <span class="nn">sys</span>
-<span class="kn">import</span> <span class="nn">pyinotify</span>
-<span class="kn">import</span> <span class="nn">re</span>
-
-<span class="c"># your sync config</span>
-<span class="n">server</span> <span class="o">=</span> <span class="s">&#39;199.245.60.73&#39;</span>
-<span class="n">user</span> <span class="o">=</span> <span class="s">&#39;root&#39;</span>
-<span class="n">password</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-<span class="n">port</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
-<span class="n">source</span> <span class="o">=</span> <span class="s">&#39;./&#39;</span>
-<span class="n">target</span> <span class="o">=</span> <span class="s">&#39;/srv/www/love/public_html/&#39;</span>
-<span class="n">options</span> <span class="o">=</span> <span class="s">&quot;-rtvuC --delete --progress --exclude=&#39;rsync.py&#39;&quot;</span>
-
-<span class="c">#custom regular expression</span>
-<span class="n">rulers</span> <span class="o">=</span> <span class="p">(</span><span class="s">r&quot;[#~.][\s\S]*&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*[#~]&quot;</span><span class="p">,</span> <span class="s">r&quot;[\s\S]*_flymake.[\s\S]*&quot;</span><span class="p">)</span>
-
-<span class="k">if</span> <span class="n">port</span> <span class="o">!=</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
-    <span class="n">port</span> <span class="o">=</span> <span class="s">&quot;-e &#39;ssh -p </span><span class="si">%d</span><span class="s">&#39;&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">):</span>
-    <span class="k">global</span> <span class="n">password</span>
-    <span class="k">if</span> <span class="n">password</span> <span class="o">==</span> <span class="s">&#39;&#39;</span><span class="p">:</span>
-        <span class="n">os</span><span class="o">.</span><span class="n">system</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="kn">import</span> <span class="nn">pexpect</span>
-        <span class="k">print</span> <span class="n">cmd</span>
-        <span class="n">child</span> <span class="o">=</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">spawn</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-        <span class="k">try</span><span class="p">:</span>
-            <span class="n">i</span> <span class="o">=</span> <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">([</span><span class="s">&#39;password: &#39;</span><span class="p">,</span> <span class="s">&#39;continue connecting (yes/no)?&#39;</span><span class="p">])</span>
-            <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="n">password</span><span class="p">)</span>
-            <span class="k">elif</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
-                <span class="n">child</span><span class="o">.</span><span class="n">sendline</span><span class="p">(</span><span class="s">&#39;yes&#39;</span><span class="p">)</span>
-        <span class="k">except</span> <span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">:</span>
-            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">child</span><span class="o">.</span><span class="n">expect</span><span class="p">(</span><span class="n">pexpect</span><span class="o">.</span><span class="n">EOF</span><span class="p">)</span>
-            <span class="n">child</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="k">def</span> <span class="nf">sync</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
-    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-    <span class="c">#print cmd</span>
-    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">download</span><span class="p">():</span>
-    <span class="k">global</span> <span class="n">server</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">,</span> <span class="n">option</span>
-    <span class="n">cmd</span> <span class="o">=</span> <span class="s">&quot;rsync </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s"> </span><span class="si">%s</span><span class="s">@</span><span class="si">%s</span><span class="s">:</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">port</span><span class="p">,</span> <span class="n">options</span><span class="p">,</span> <span class="n">user</span><span class="p">,</span> <span class="n">server</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
-    <span class="k">print</span> <span class="n">cmd</span>
-    <span class="n">runCmd</span><span class="p">(</span><span class="n">cmd</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">OnChangeHandler</span><span class="p">(</span><span class="n">pyinotify</span><span class="o">.</span><span class="n">ProcessEvent</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">checkFileName</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
-        <span class="k">global</span> <span class="n">rulers</span>
-        <span class="k">for</span> <span class="n">ruler</span> <span class="ow">in</span> <span class="n">rulers</span><span class="p">:</span>
-            <span class="n">p</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">ruler</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">p</span><span class="o">.</span><span class="n">match</span><span class="p">(</span><span class="n">fileName</span><span class="p">)</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
-                <span class="k">return</span> <span class="bp">False</span>
-        <span class="k">return</span> <span class="bp">True</span>
-
-    <span class="k">def</span> <span class="nf">syncFile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">fileName</span><span class="p">):</span>
-        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">checkFileName</span><span class="p">(</span><span class="n">fileName</span><span class="p">):</span>
-            <span class="n">sync</span><span class="p">()</span>
-
-    <span class="k">def</span> <span class="nf">process_IN_CREATE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="c">#print &quot;Create file: %s &quot; % os.path.join(event.path,event.name)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">process_IN_DELETE</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="c">#print &quot;Delete file: %s &quot; % os.path.join(event.path,event.name)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-    <span class="k">def</span> <span class="nf">process_IN_MODIFY</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">):</span>
-        <span class="c">#print &quot;Modify file: %s &quot; % os.path.join(event.path,event.name)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">syncFile</span><span class="p">(</span><span class="n">event</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
-
-<span class="k">def</span> <span class="nf">auto_sync</span><span class="p">():</span>
-    <span class="n">wm</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">WatchManager</span><span class="p">()</span>
-    <span class="n">mask</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_CREATE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_DELETE</span> <span class="o">|</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">IN_MODIFY</span>
-    <span class="n">notifier</span> <span class="o">=</span> <span class="n">pyinotify</span><span class="o">.</span><span class="n">Notifier</span><span class="p">(</span><span class="n">wm</span><span class="p">,</span> <span class="n">OnChangeHandler</span><span class="p">())</span>
-    <span class="n">wm</span><span class="o">.</span><span class="n">add_watch</span><span class="p">(</span><span class="s">&quot;./&quot;</span><span class="p">,</span> <span class="n">mask</span><span class="p">,</span> <span class="n">rec</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">auto_add</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-    <span class="n">notifier</span><span class="o">.</span><span class="n">loop</span><span class="p">()</span>
-
-
-<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
-    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
-        <span class="n">option</span> <span class="o">=</span> <span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
-        <span class="k">if</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-down&#39;</span><span class="p">:</span>
-            <span class="n">download</span><span class="p">()</span>
-        <span class="k">elif</span> <span class="n">option</span> <span class="o">==</span> <span class="s">&#39;-auto&#39;</span><span class="p">:</span>
-            <span class="n">auto_sync</span><span class="p">()</span>
-    <span class="k">else</span><span class="p">:</span>
-        <span class="n">sync</span><span class="p">()</span>
-
-<span class="c"># main</span>
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
-    <span class="n">main</span><span class="p">()</span>
-</pre></div><p class="subheader">Category: <a href="http://smilehacker.com/category/code.html">code</a>
+<p>只根据emacs优化了 ...</p></li></ol><p class="subheader">Category: <a href="http://smilehacker.com/category/code.html">code</a>
 
     Tagged: 
         <a href="http://smilehacker.com/tag/python.html">Python </a>
@@ -194,12 +120,10 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 
 
 
-<p><a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html#disqus_thread">comments</a></p>            </article>
-
-            
-                            <hr  class="gradient"/>
-            
-                
+<p><a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html#disqus_thread">comments</a></p>                <a class="button radius secondary small right" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">Read More</a>
+                <hr  class="gradient"/>
+            </article>
+        
                     
 
                 
