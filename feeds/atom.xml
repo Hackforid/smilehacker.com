@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-05-31T00:00:00+08:00</updated><entry><title>Permission denied causing “Installation failed due to invalid APK file”</title><link href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html" rel="alternate"></link><updated>2013-05-31T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-31:permission-denied-causing-installation-failed-due-to-invalid-apk-file.html</id><summary type="html">&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="http://smilehacker.com/feeds/atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-07-20T00:00:00+08:00</updated><entry><title>北漂豆瓣</title><link href="http://smilehacker.com/bei-piao-dou-ban.html" rel="alternate"></link><updated>2013-07-20T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-07-20:bei-piao-dou-ban.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;来北京两周了，挺快的，奔波之余，也没太多体会，或许是自己期待太多，耶路撒冷还没成为圣城。&lt;br /&gt;
+之前来北京都太顺利，无论是比赛还是上节目，对方都把一切安排妥当了，到自己亲来，却发现没那么容易。  &lt;/p&gt;
+&lt;p&gt;一场大雨把我从大连站送到了北京站，在闷湿的空气以及雨滴的欢迎下，随着人流，挤出了地铁，啊，北京，我的梦都。&lt;br /&gt;
+第一次感受到房子的重要性，拖着笨重的行李，顶着雨，联系各路朋友，就想在迷宫中找个落脚的地。在一起实习的同级朋友处住了一天，狭小的空间，四散的霉味，却已比蜗居好数倍; 第二天被学长收留，环境好多了，却也不好打扰人家，一边找房子，一边还是找房子。&lt;br /&gt;
+最后经历几番波折，算是寻到了个不错的住处，一个月不多的工资也算是丢进去了吧。  &lt;/p&gt;
+&lt;p&gt;看房子时，中介大姐说你们真好呀，同校的学生一起，在同一家公司上班，很难得。确实如此，一向好强的我到了外地寻求自力更生时，也不得不低头，那种兜里只有几块钱的苦，是只有朋友才能解的。&lt;br /&gt;
+托小原和小明的福，才让北京的孤独没最先摧毁我。  &lt;/p&gt;
+&lt;p&gt;还在做着实习生的事，没有想象中的福利，有所不满，也有所理解。既然唯一的渴求就是技术，忍过intern期也是必须的。&lt;br /&gt;
+能够慰藉的还是朋友，和前辈们准时下班喝酒，互相调侃着回家，就够了。  &lt;/p&gt;
+&lt;p&gt;还没到哼《北京，北京》的时候，还在更多的感受这个圣城。&lt;/p&gt;</summary><category term="douban"></category></entry><entry><title>Permission denied causing “Installation failed due to invalid APK file”</title><link href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html" rel="alternate"></link><updated>2013-05-31T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-31:permission-denied-causing-installation-failed-due-to-invalid-apk-file.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。&lt;/p&gt;
 &lt;p&gt;算是缺少测试吧，刷了后bug就浮现了，用ADB安装apk会出现“invalid APK file”的报错。更新ADT，给777权限都没法解决问题。logcat显示为：&lt;br /&gt;
     Unable to open zip '/data/local/tmp/QuanZi.apk': Permission denied&lt;br /&gt;
