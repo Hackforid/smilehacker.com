@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SmileHacker</title><link>http://smilehacker.com/</link><description></description><atom:link href="http://smilehacker.com/feeds/rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 30 Jul 2013 00:00:00 +0800</lastBuildDate><item><title>VirtualBox in arch</title><link>http://smilehacker.com/virtualbox-in-arch.html</link><description>&lt;hr /&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="//atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-07-30T00:00:00+08:00</updated><entry><title>VirtualBox in arch</title><link href="http://smilehacker.com/virtualbox-in-arch.html" rel="alternate"></link><updated>2013-07-30T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-07-30:virtualbox-in-arch.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;arch跑vbox时显示：  &lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;VirtualBox&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;complaining&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;loaded&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt;
 &lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;VBoxManage&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;open&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;VirtualBox&lt;/span&gt; &lt;span class="n"&gt;GUI&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
@@ -30,7 +30,7 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;然后就OK了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Tue, 30 Jul 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-07-30:virtualbox-in-arch.html</guid><category>arch</category><category>virtual box</category><category>vagrant</category></item><item><title>北漂豆瓣</title><link>http://smilehacker.com/bei-piao-dou-ban.html</link><description>&lt;hr /&gt;
+&lt;p&gt;然后就OK了。&lt;/p&gt;</summary><category term="arch"></category><category term="virtual box"></category><category term="vagrant"></category></entry><entry><title>北漂豆瓣</title><link href="http://smilehacker.com/bei-piao-dou-ban.html" rel="alternate"></link><updated>2013-07-20T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-07-20:bei-piao-dou-ban.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;来北京两周了，挺快的，奔波之余，也没太多体会，或许是自己期待太多，耶路撒冷还没成为圣城。&lt;br /&gt;
 之前来北京都太顺利，无论是比赛还是上节目，对方都把一切安排妥当了，到自己亲来，却发现没那么容易。  &lt;/p&gt;
 &lt;p&gt;一场大雨把我从大连站送到了北京站，在闷湿的空气以及雨滴的欢迎下，随着人流，挤出了地铁，啊，北京，我的梦都。&lt;br /&gt;
@@ -40,7 +40,7 @@
 托小原和小明的福，才让北京的孤独没最先摧毁我。  &lt;/p&gt;
 &lt;p&gt;还在做着实习生的事，没有想象中的福利，有所不满，也有所理解。既然唯一的渴求就是技术，忍过intern期也是必须的。&lt;br /&gt;
 能够慰藉的还是朋友，和前辈们准时下班喝酒，互相调侃着回家，就够了。  &lt;/p&gt;
-&lt;p&gt;还没到哼《北京，北京》的时候，还在更多的感受这个圣城。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Sat, 20 Jul 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-07-20:bei-piao-dou-ban.html</guid><category>douban</category></item><item><title>Permission denied causing “Installation failed due to invalid APK file”</title><link>http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html</link><description>&lt;hr /&gt;
+&lt;p&gt;还没到哼《北京，北京》的时候，还在更多的感受这个圣城。&lt;/p&gt;</summary><category term="douban"></category></entry><entry><title>Permission denied causing “Installation failed due to invalid APK file”</title><link href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html" rel="alternate"></link><updated>2013-05-31T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-31:permission-denied-causing-installation-failed-due-to-invalid-apk-file.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。&lt;/p&gt;
 &lt;p&gt;算是缺少测试吧，刷了后bug就浮现了，用ADB安装apk会出现“invalid APK file”的报错。更新ADT，给777权限都没法解决问题。logcat显示为：&lt;br /&gt;
     Unable to open zip '/data/local/tmp/QuanZi.apk': Permission denied&lt;br /&gt;
@@ -56,7 +56,7 @@
 
 
 &lt;p&gt;弄好后发现可以安装了  &lt;/p&gt;
-&lt;p&gt;参考：http://stackoverflow.com/questions/14014871/permission-denied-causing-installation-failed-due-to-invalid-apk-file/14015196#14015196&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Fri, 31 May 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-05-31:permission-denied-causing-installation-failed-due-to-invalid-apk-file.html</guid><category>android</category></item><item><title>像上菜一样推送合乎口味的文章</title><link>http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html</link><description>&lt;hr /&gt;
+&lt;p&gt;参考：http://stackoverflow.com/questions/14014871/permission-denied-causing-installation-failed-due-to-invalid-apk-file/14015196#14015196&lt;/p&gt;</summary><category term="android"></category></entry><entry><title>像上菜一样推送合乎口味的文章</title><link href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html" rel="alternate"></link><updated>2013-05-21T13:37:32+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-21:xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html</id><summary type="html">&lt;hr /&gt;
 &lt;h2&gt;引&lt;/h2&gt;
 &lt;p&gt;《阅FM》是个很棒的idea，当我第一次触摸到它时，就想山寨之，如果不是因为一些意外，可能就做了一款英文版的copy。这个idea让我眼前一亮，但作为产品，却不尽如人意，“极简”可不是表面的简单，而是精湛的打磨。&lt;br /&gt;
 不知什么时候，我们突然进入了web2.0时代，然后，3.0的影子也开始显露。《阅FM》是一道菜，你不需要思索，他便在合适的时候，合适的地点被端上来了，但是否合口味呢？&lt;br /&gt;
@@ -80,7 +80,7 @@
 &lt;p&gt;线索来自于细节，细节是有维度的，文章也是有维度的。比如作者，比如历史时期，比如创作背景。我们没法给每篇文章单独去精准的定义，但却可以联系所有的线索来给他一个框架。历史背景、背景下的事件、作者信息，他们都是影响因子，给予一个权值就能更好的分类。&lt;/p&gt;
 &lt;h2&gt;尾&lt;/h2&gt;
 &lt;p&gt;海量时代的分类必然是基于海量数据，使用传统算法对中文文章进行分类必然是件吃力不讨好的事，通过相似度对比、背景数据分析、用户行为分析，我们才能得到key。&lt;br /&gt;
-定过无数菜、阅过无数的人，才能通过衣着、气质、情感来挑选合乎口味的佳肴吧。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Tue, 21 May 2013 13:37:32 +0800</pubDate><guid>tag:smilehacker.com,2013-05-21:xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html</guid><category>alg</category></item><item><title>为什么是日记呢？</title><link>http://smilehacker.com/wei-shi-yao-shi-ri-ji-ni.html</link><description>&lt;hr /&gt;
+定过无数菜、阅过无数的人，才能通过衣着、气质、情感来挑选合乎口味的佳肴吧。&lt;/p&gt;</summary><category term="alg"></category></entry><entry><title>为什么是日记呢？</title><link href="http://smilehacker.com/wei-shi-yao-shi-ri-ji-ni.html" rel="alternate"></link><updated>2013-05-18T23:38:59+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-18:wei-shi-yao-shi-ri-ji-ni.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;一直很疑惑，为什么这个板块要叫做“日记”呢？&lt;br /&gt;
 日记不是给自己看的吗，日记不是留下回忆的吗，日记不是私藏秘密的吗？&lt;br /&gt;
 那为什么要公开呢，为什么要评论呢，为什么要回应呢？&lt;/p&gt;
@@ -91,7 +91,7 @@
 后来食得人间烟火，日记回归小诗，记在纸上，只留给自己，只把苦痛留给灰烬。&lt;br /&gt;
 再后来，把他封印在心里，因为学会了孤独，学会了坚强。&lt;br /&gt;
 最后，日记留在了记忆里，留在了空气里，留在了曲子里，留在了存在里。&lt;/p&gt;
-&lt;p&gt;它本没有形式，又何必赋予它形式，当所有的所有交织在一起，会成为追忆吗？&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Sat, 18 May 2013 23:38:59 +0800</pubDate><guid>tag:smilehacker.com,2013-05-18:wei-shi-yao-shi-ri-ji-ni.html</guid></item><item><title>每个人都在等待一个人来终结自己的罪恶吧</title><link>http://smilehacker.com/mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html</link><description>&lt;hr /&gt;
+&lt;p&gt;它本没有形式，又何必赋予它形式，当所有的所有交织在一起，会成为追忆吗？&lt;/p&gt;</summary></entry><entry><title>每个人都在等待一个人来终结自己的罪恶吧</title><link href="http://smilehacker.com/mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html" rel="alternate"></link><updated>2013-05-16T12:17:50+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-16:mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;学校断网一直是学生生产力的阻碍，为了庸才而牺牲天才，值得吗？&lt;br /&gt;
 大半夜的，看不了Google IO大会，真是遗憾。通过微博直播，闲暇只能看日剧解渴。断网前下了部《胜利即是正义》，据说是一部会让你觉得快进键是多余的名作，几集之后却是如此，又是一部幽默之余，批判人性的剧作。&lt;br /&gt;
 说白了，主角是律师，也可说是“欺诈师”，通过人性的弱点去完成审判。欺诈可以为善，也能为恶，虽未看完，但也能预料他在等着人打败他，阻止自己的“恶行”。&lt;/p&gt;
@@ -102,14 +102,14 @@
 接触心理学，接触哲学，接触社会学，又是不经意的去分析身边的人，我越来越孤独。通过狡黠的言语去玩弄现实，竟是如此的简单。我明白这是罪恶，但它却不断的给我助攻。&lt;br /&gt;
 每个不眠之夜，我便会挣扎，我不知道这是堕落还是升华，某种东西就像原癌基因一样觉醒，然后不断的扩张。
 或许，我也在等待着一个人来终结自己。&lt;/p&gt;
-&lt;p&gt;不知道日本人为何更喜欢去发觉并讽刺人性，也许是他们更愿意直白的面对自己吧。中国人，更愿意把自己埋藏在自己的城府里。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Thu, 16 May 2013 12:17:50 +0800</pubDate><guid>tag:smilehacker.com,2013-05-16:mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html</guid></item><item><title>关于钱</title><link>http://smilehacker.com/guan-yu-qian.html</link><description>&lt;hr /&gt;
+&lt;p&gt;不知道日本人为何更喜欢去发觉并讽刺人性，也许是他们更愿意直白的面对自己吧。中国人，更愿意把自己埋藏在自己的城府里。&lt;/p&gt;</summary></entry><entry><title>关于钱</title><link href="http://smilehacker.com/guan-yu-qian.html" rel="alternate"></link><updated>2013-05-15T20:43:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-15:guan-yu-qian.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;人生迷茫，就会从书里、从圣贤的口里、从历史的破竹简里寻找答案。对于金，文人大豪是以唾斥为荣，但这个物欲横流的时代，谁又能大声说“老子不喜欢钱”。&lt;/p&gt;
 &lt;p&gt;今日突然从冯唐的一封信找到了些想法，或许能支撑一段时间吧。&lt;/p&gt;
 &lt;p&gt;关于钱，不能多，也不能少。没钱你活不下去，没钱你没法换酒吟诗。但钱多了也不好，你花不完，
 也带不走，它唤醒了你的欲望，交恶了你的朋友，你落不到一个好。&lt;/p&gt;
 &lt;p&gt;钱，只需要正好，不多不少。正好可以及时行乐，正好满足基本的欲望，正好可以不再纠结。&lt;/p&gt;
 &lt;p&gt;PS：
-今日也从微博上看到这么一条消息，以北京一万每月的工资，每月也只能剩下二十多块。这难道不好吗，赚的恰到好处，用得恰到好处。为何要保留俗世的欲，欲让你存钱买房，欲让你结婚生子？赚得磊落，花的爽朗，仰天一笑，何乐不为。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Wed, 15 May 2013 20:43:00 +0800</pubDate><guid>tag:smilehacker.com,2013-05-15:guan-yu-qian.html</guid></item><item><title>渴望疯狂</title><link>http://smilehacker.com/ke-wang-feng-kuang.html</link><description>&lt;hr /&gt;
+今日也从微博上看到这么一条消息，以北京一万每月的工资，每月也只能剩下二十多块。这难道不好吗，赚的恰到好处，用得恰到好处。为何要保留俗世的欲，欲让你存钱买房，欲让你结婚生子？赚得磊落，花的爽朗，仰天一笑，何乐不为。&lt;/p&gt;</summary></entry><entry><title>渴望疯狂</title><link href="http://smilehacker.com/ke-wang-feng-kuang.html" rel="alternate"></link><updated>2013-05-07T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-07:ke-wang-feng-kuang.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;大学之前，便暗下决心，一定要在四年里最最疯狂的事，或者是在操场上边大吼大叫，边赤身奔跑；或者是痛快地和宿敌来一场万众瞩目的决斗……&lt;br /&gt;
 但三年里，没一次满足，没一次能留下刻在灵魂里的记忆。&lt;br /&gt;
 三年里，不断的寻找着疯狂，参加学生会去带领一群人做想做的的事，参加技术团队和一群geek们编写世界，参加各种奇怪的活动去加速为知因子的碰撞，希望奇遇能从天降临。&lt;br /&gt;
@@ -118,7 +118,7 @@
 一直就这样挥霍着时间，浪费着青春，希望有朝一日能找到让灵魂流血的东西。&lt;br /&gt;
 但他们却都是这么苍白，都是这么无力，没在心里留下丁点刻痕。&lt;br /&gt;
 孤独的生命渴望触动，蠢蠢欲动的血性撕碎尊严也要呐喊。&lt;br /&gt;
-命运，我宁可你更多的曲折也不希望你给我平庸，请让我在暴风雨中真真正正的疯狂一把吧。  &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Tue, 07 May 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-05-07:ke-wang-feng-kuang.html</guid><category>life</category></item><item><title>我，分裂</title><link>http://smilehacker.com/wo-fen-lie.html</link><description>&lt;hr /&gt;
+命运，我宁可你更多的曲折也不希望你给我平庸，请让我在暴风雨中真真正正的疯狂一把吧。  &lt;/p&gt;</summary><category term="life"></category></entry><entry><title>我，分裂</title><link href="http://smilehacker.com/wo-fen-lie.html" rel="alternate"></link><updated>2013-04-29T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-29:wo-fen-lie.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;我喜欢在有些人面前呈现屌丝的一面，对自己的演技比较自豪，大家也都人为我是个屌丝吧，或许我就是，真实出镜而已。也喜欢在某些人面前像个诗人一样环绕，也喜欢在某些人面前正经应世。
 关上门，回到自己的小窝，我就是我自己了。&lt;/p&gt;
 &lt;p&gt;现实总是那么残酷，以前那么鄙视父亲应酬时的谄媚，现在我也坐在酒桌前傻笑了。曾经发誓不会磨平自己的刺，现在也在俗世中变得圆滑。&lt;/p&gt;
@@ -126,7 +126,7 @@
 &lt;p&gt;不知道这是天赋还是诅咒，我很适合扮演其他人，就像是自我催眠，我的“真理”会瞬变崩塌，然后有瞬间在残骸上再造。&lt;/p&gt;
 &lt;p&gt;甚至怀疑是多重人格，夜间，安静时，他们会互相争吵，难以入眠。我不知道韦小宝是怎么活过来的，我觉得自己会发疯吧。&lt;/p&gt;
 &lt;p&gt;我在每个社交圈扮演着不同的角色，却又在月下寻找这自己的角色，多么讽刺。我喜欢用言语去蒙骗世界，却又无法用言语描述自己，多么可悲。&lt;/p&gt;
-&lt;p&gt;预约了心理医生，希望崩坏前，能组织那个我。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Mon, 29 Apr 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-04-29:wo-fen-lie.html</guid></item><item><title>不想写诗的时候</title><link>http://smilehacker.com/bu-xiang-xie-shi-de-shi-hou.html</link><description>&lt;hr /&gt;
+&lt;p&gt;预约了心理医生，希望崩坏前，能组织那个我。&lt;/p&gt;</summary></entry><entry><title>不想写诗的时候</title><link href="http://smilehacker.com/bu-xiang-xie-shi-de-shi-hou.html" rel="alternate"></link><updated>2013-04-22T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-22:bu-xiang-xie-shi-de-shi-hou.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;手里拿着笔的时候，就想该写点什么吧。&lt;br /&gt;
 想了想，却不知从何入手，或许是入世已久，心已不属于自己。  &lt;/p&gt;
 &lt;p&gt;曾经迷恋的诗，已经读不懂了。&lt;br /&gt;
@@ -134,7 +134,7 @@
 &lt;p&gt;执着已经被风吹散，留下的却只有对尘世的漠然。&lt;br /&gt;
 笔还在手里，人却没了心意。  &lt;/p&gt;
 &lt;p&gt;也许是累了，也许是倦了。&lt;br /&gt;
-闭上眼，不想写诗。  &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Mon, 22 Apr 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-04-22:bu-xiang-xie-shi-de-shi-hou.html</guid><category>poem</category></item><item><title>器</title><link>http://smilehacker.com/qi.html</link><description>&lt;hr /&gt;
+闭上眼，不想写诗。  &lt;/p&gt;</summary><category term="poem"></category></entry><entry><title>器</title><link href="http://smilehacker.com/qi.html" rel="alternate"></link><updated>2013-04-22T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-22:qi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;父有一笔 ，钢笔，自行伍以来，伴之数十载。书时，龙飞凤舞，铿锵有力，一气呵成，笔到文成，无不佩服。&lt;/p&gt;
 &lt;p&gt;吾亦有笔，铅笔、圆珠笔、钢笔、毛笔。需之时，择一而书。了了几笔，随性着力，横七竖八，旁人捧腹。&lt;/p&gt;
 &lt;p&gt;此父子何以差之巨甚？&lt;/p&gt;
@@ -144,7 +144,7 @@
 青者，段落十足，击之，力声俱全，陶醉其中，为编码之首选，奈何其势过强，犹有扰民之嫌。&lt;br /&gt;
 茶者，吾之最爱，介于青黑之间，回馈有力而声不剧，反应灵敏而无虚，实乃吾辈之利器，而为吾终身之所求。&lt;/p&gt;
 &lt;p&gt;吾遨游万网之内，访名站，阅名文，以求一名器能与吾父之笔匹敌，奈何欲一知音难，遇一器亦难。吾矢志于此，欲上下而求索。&lt;/p&gt;
-&lt;p&gt;吾谓之吾父，吾父曰:狗屁。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Mon, 22 Apr 2013 00:00:00 +0800</pubDate><guid>tag:smilehacker.com,2013-04-22:qi.html</guid></item><item><title>真TM想休了Arch——豆瓣笔试血泪史</title><link>http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</link><description>&lt;hr /&gt;
+&lt;p&gt;吾谓之吾父，吾父曰:狗屁。&lt;/p&gt;</summary></entry><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。&lt;br /&gt;
 Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。&lt;br /&gt;
 经历了各种折磨后，俺最终落脚在Arch。  &lt;/p&gt;
@@ -160,7 +160,7 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;p&gt;你狠，我掏出Emacs，在没有代码提示的情况下，苦逼的回忆着那蛋疼坑爹还特别长的各种属性名。尼玛，忘记单词是件多么蛋疼。。。。  &lt;/p&gt;
 &lt;p&gt;认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  &lt;/p&gt;
 &lt;p&gt;这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  &lt;/p&gt;
-&lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Mon, 01 Apr 2013 18:40:51 +0800</pubDate><guid>tag:smilehacker.com,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</guid><category>linux</category><category>arch</category><category>douban</category></item><item><title>ABOUT ME? NO NEED</title><link>http://smilehacker.com/about-me-no-need.html</link><description>&lt;hr /&gt;
+&lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch"></category><category term="douban"></category></entry><entry><title>ABOUT ME? NO NEED</title><link href="http://smilehacker.com/about-me-no-need.html" rel="alternate"></link><updated>2013-03-29T12:09:36+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:about-me-no-need.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;朋友今天取笑我：“你丫这blog够简洁的，连个'about me'都没有。“
 确实，自从由Wordpress换成Hexo后，就没怎么打点这一寸三亩地，直接套用默认模板，最开始连个feed都没加。
 不过，那些东西又有什么意义呢？&lt;/p&gt;
@@ -168,12 +168,12 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 后来到了大学，人也成熟了些，Blog开始记录些技术文、一些心情、一些随笔。去掉了流量分析，去掉了访问量，去掉了浮云。
 不知为何，现在看得更开了，技术文就由Evernote记录吧，心情交给日记，随笔有所感还是会更新下。至于About me，那最后的虚荣，也就忽略吧。&lt;/p&gt;
 &lt;p&gt;认识你的人，不会在意你的面具，不认识你的人，不在意你是谁。本是尘归尘，土归土，又何必在意那个名字呢。&lt;/p&gt;
-&lt;p&gt;就仅在这网络的一个小角落，留下迷失的自我吧。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Fri, 29 Mar 2013 12:09:36 +0800</pubDate><guid>tag:smilehacker.com,2013-03-29:about-me-no-need.html</guid></item><item><title>让用户体验改变Linux</title><link>http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html</link><description>&lt;hr /&gt;
+&lt;p&gt;就仅在这网络的一个小角落，留下迷失的自我吧。&lt;/p&gt;</summary></entry><entry><title>让用户体验改变Linux</title><link href="http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。&lt;br /&gt;
 后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  &lt;/p&gt;
 &lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
 &lt;p&gt;&lt;img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /&gt;&lt;/p&gt;
-&lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Fri, 29 Mar 2013 10:59:47 +0800</pubDate><guid>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</guid></item><item><title>Eclipse提示框颜色设置</title><link>http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html</link><description>&lt;hr /&gt;
+&lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。&lt;br /&gt;
 后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。&lt;br /&gt;
 现在用arch了，在自己调配主题时倒找到的修改的办法：  &lt;/p&gt;
@@ -184,7 +184,7 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 &lt;code&gt;sudo vim gtk-2.0/gtkrc&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;修改的&lt;strong&gt;tooltip_fg_color&lt;/strong&gt;和&lt;strong&gt;tooltip_bg_color&lt;/strong&gt;两个属性的值，如果没有改属性，可以自行添加&lt;br /&gt;
 &lt;code&gt;gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"&lt;/code&gt;  &lt;/p&gt;
-&lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Wed, 13 Feb 2013 13:02:47 +0800</pubDate><guid>tag:smilehacker.com,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</guid><category>eclipse</category></item><item><title>选择 一</title><link>http://smilehacker.com/xuan-ze.html</link><description>&lt;hr /&gt;
+&lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</summary><category term="eclipse"></category></entry><entry><title>选择 一</title><link href="http://smilehacker.com/xuan-ze.html" rel="alternate"></link><updated>2013-02-07T23:25:30+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:xuan-ze.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。&lt;br /&gt;
 对于完美主义拖延症晚期患者来说，特别是二选一最为纠结的。当掺杂太多因素时，是&lt;strong&gt;“高瞻远瞩”&lt;/strong&gt;还是&lt;strong&gt;“活在当下”&lt;/strong&gt;，将不再由理性来判断。 
 为了生成一个“主见”，我决定给自己找一套“抉择”的标准，以免日后犹豫。&lt;/p&gt;
@@ -259,7 +259,7 @@ bug的版本后，我也迁移了。Nodejs的速度果然不是盖的。  &lt;/p
 现在看来，”活在当下“应该分配更多的点数了。  &lt;/p&gt;
 &lt;p&gt;这个世界总是充满了惊喜，太早的为未来做打算，可能不是一个好的选择，还是先找到自己
 的位置比较重要。  &lt;/p&gt;
-&lt;p&gt;写在第一次规划”抉择“。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Thu, 07 Feb 2013 23:25:30 +0800</pubDate><guid>tag:smilehacker.com,2013-02-07:xuan-ze.html</guid><category>coder</category></item><item><title>利用rsync自动同步服务器与本地代码的python脚本</title><link>http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</link><description>&lt;hr /&gt;
+&lt;p&gt;写在第一次规划”抉择“。&lt;/p&gt;</summary><category term="coder"></category></entry><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
 用ssh sshfs scp都太慢  小东西又懒得用git&lt;br /&gt;
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
@@ -394,7 +394,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;span class="c"&gt;# main&lt;/span&gt;
 &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Thu, 07 Feb 2013 21:27:06 +0800</pubDate><guid>tag:smilehacker.com,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</guid><category>Python</category></item><item><title>自动获取Nexus4售卖状态的Python脚本</title><link>http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</link><description>&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/&gt;&lt;br /&gt;
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
@@ -451,7 +451,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
     &lt;span class="n"&gt;checkSoldState&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
     &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3600&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Thu, 07 Feb 2013 21:24:06 +0800</pubDate><guid>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</guid><category>Python</category></item><item><title>让代码更规范——匈牙利命名法</title><link>http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</link><description>&lt;hr /&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
 好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。&lt;/p&gt;
 &lt;p&gt;匈牙利命名法是一种编程时的命名规范。基本原则是：&lt;/p&gt;
@@ -615,7 +615,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;2.命名空间：boostfilesystemiteratorFoo，表示boost空间filesystem子空间遍历目录类型变量Foo？程序员要崩溃了。&lt;/p&gt;
 &lt;p&gt;3.模板：你记得std::map&amp;lt;std::string,std::string&amp;gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。&lt;/p&gt;
 &lt;p&gt;4.模板参数：template &amp;lt;class T, class BinaryPredicate&amp;gt;const T&amp;amp; max(const T&amp;amp; a, const T&amp;amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。&lt;/p&gt;
-&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Thu, 07 Feb 2013 21:07:22 +0800</pubDate><guid>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</guid></item><item><title>WIN32编程入门</title><link>http://smilehacker.com/win32bian-cheng-ru-men.html</link><description>&lt;hr /&gt;
+&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
 &lt;p&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 &lt;!-- more --&gt;&lt;/p&gt;
@@ -706,7 +706,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 
 &lt;p&gt;具体也就是WinMain函数作为程序入口，相当于main函数&lt;/p&gt;
 &lt;p&gt;然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
-对着代码看一些参考资料应该就够了。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Thu, 07 Feb 2013 21:01:55 +0800</pubDate><guid>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</guid><category>windows</category></item><item><title>起源</title><link>http://smilehacker.com/qi-yuan.html</link><description>&lt;hr /&gt;
+对着代码看一些参考资料应该就够了。&lt;/p&gt;</summary><category term="windows"></category></entry><entry><title>起源</title><link href="http://smilehacker.com/qi-yuan.html" rel="alternate"></link><updated>2012-10-02T20:07:03+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-10-02:qi-yuan.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;strong&gt;引子——&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;你是谁？&lt;/p&gt;
@@ -893,7 +893,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;然后，泰坦们离开了。&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;==待==&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Tue, 02 Oct 2012 20:07:03 +0800</pubDate><guid>tag:smilehacker.com,2012-10-02:qi-yuan.html</guid><category>novel</category></item><item><title>黑历史</title><link>http://smilehacker.com/hei-li-shi.html</link><description>&lt;hr /&gt;
+&lt;p&gt;==待==&lt;/p&gt;</summary><category term="novel"></category></entry><entry><title>黑历史</title><link href="http://smilehacker.com/hei-li-shi.html" rel="alternate"></link><updated>2012-09-07T20:55:16+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-09-07:hei-li-shi.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;在很久很久以前
 有五个茫然年轻人
 他们厌倦了平淡的世界
@@ -922,7 +922,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 新鲜的血液迭代着
 作为他们的继承者
 我们不屈的占据着顶点
-荣誉与血性与我们同在&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Fri, 07 Sep 2012 20:55:16 +0800</pubDate><guid>tag:smilehacker.com,2012-09-07:hei-li-shi.html</guid><category></category></item><item><title>银魂一则</title><link>http://smilehacker.com/yin-hun-ze.html</link><description>&lt;hr /&gt;
+荣誉与血性与我们同在&lt;/p&gt;</summary><category term=""></category></entry><entry><title>银魂一则</title><link href="http://smilehacker.com/yin-hun-ze.html" rel="alternate"></link><updated>2012-08-04T21:11:31+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-08-04:yin-hun-ze.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;不要说我到了这个年纪还看银魂 因为银魂里的感动不是时间能消磨的&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
 &lt;p&gt;你确实是个不折不扣的废材&lt;/p&gt;
@@ -939,7 +939,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;一步一步的 像乌龟一样脚踏实地地&lt;/p&gt;
 &lt;p&gt;虽然不一定能达到顶峰&lt;/p&gt;
 &lt;p&gt;也有可能在途中就用尽力气&lt;/p&gt;
-&lt;p&gt;但是 你在那里看到的景色肯定要比现在美丽得多&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Sat, 04 Aug 2012 21:11:31 +0800</pubDate><guid>tag:smilehacker.com,2012-08-04:yin-hun-ze.html</guid><category></category></item><item><title>我的2011</title><link>http://smilehacker.com/wo-de-2011.html</link><description>&lt;hr /&gt;
+&lt;p&gt;但是 你在那里看到的景色肯定要比现在美丽得多&lt;/p&gt;</summary><category term=""></category></entry><entry><title>我的2011</title><link href="http://smilehacker.com/wo-de-2011.html" rel="alternate"></link><updated>2012-02-11T21:12:11+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-02-11:wo-de-2011.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;恍然中，就这样一个人走到了世界末日，回忆过去，点点滴滴，确如云烟，淡然彷徨。&lt;/p&gt;
 &lt;p&gt;这个时候回忆2011确实有点晚了，没办法，我就是这样一个懒散的人，有兴趣在脑海中描绘，却无心思在现实中构建。或许感动只属于自己，但也容易忘记，于是就在末日的前夕，做一份备份吧。&lt;/p&gt;
 &lt;p&gt;2011我是如何走过的呢？&lt;/p&gt;
@@ -983,7 +983,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;不。&lt;/p&gt;
 &lt;p&gt;这就是我的选择，既然走过来了，就会走下去。&lt;/p&gt;
 &lt;p&gt;回忆着伤痛，一阵冷战，却隐忍着泪水。&lt;/p&gt;
-&lt;p&gt;2011.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Sat, 11 Feb 2012 21:12:11 +0800</pubDate><guid>tag:smilehacker.com,2012-02-11:wo-de-2011.html</guid><category>life</category></item><item><title>朋友 • 俗生 • 酒</title><link>http://smilehacker.com/peng-you-su-sheng-jiu.html</link><description>&lt;hr /&gt;
+&lt;p&gt;2011.&lt;/p&gt;</summary><category term="life"></category></entry><entry><title>朋友 • 俗生 • 酒</title><link href="http://smilehacker.com/peng-you-su-sheng-jiu.html" rel="alternate"></link><updated>2010-12-03T21:10:31+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2010-12-03:peng-you-su-sheng-jiu.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;&lt;span style="color: #ffcc99;"&gt;这算是我大学或者说人生第一次真正喝酒吧，当时喝多了还写了些东西，也转过来吧：&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;刚刚喝了很多酒，也算是人生中第一次喝酒。晕乎乎的，飙车回来，很想写点什么。关于朋友，关于酒。&lt;/p&gt;
 &lt;p&gt;所谓朋友，酒一喝，肩一搭，畅怀大笑，也就成了。&lt;/p&gt;
@@ -995,7 +995,7 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p&gt;酒前，晓龙学长说了很多，什么敬酒的礼仪，喝酒的重要性。也许过去，我会愤然斥之，但今天，我接受了。也许这便是人生逃不开的惑。&lt;/p&gt;
 &lt;p&gt;总有很多东西是为世俗鄙视，但又为世俗需求的。昨日象牙塔中的风发意气，今朝可能就变为惨淡的回忆，成长，正在收取它的代价，而我，也沦为世俗中人。&lt;/p&gt;
 &lt;p&gt;四瓶下肚，人是难受的，但却是高兴的。也许是因为结交了酒后朋友，也许是因为感怀的人身炎凉。&lt;/p&gt;
-&lt;p&gt;也许只是酒后疯语，梦醒之后，再观世道&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Fri, 03 Dec 2010 21:10:31 +0800</pubDate><guid>tag:smilehacker.com,2010-12-03:peng-you-su-sheng-jiu.html</guid><category>life</category></item><item><title>荷塘不再</title><link>http://smilehacker.com/he-tang-bu-zai.html</link><description>&lt;hr /&gt;
+&lt;p&gt;也许只是酒后疯语，梦醒之后，再观世道&lt;/p&gt;</summary><category term="life"></category></entry><entry><title>荷塘不再</title><link href="http://smilehacker.com/he-tang-bu-zai.html" rel="alternate"></link><updated>2010-08-13T21:09:44+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2010-08-13:he-tang-bu-zai.html</id><summary type="html">&lt;hr /&gt;
 &lt;p&gt;八月中旬，回想起来，已经走过多少个夏夜了。&lt;/p&gt;
 &lt;p&gt;回首四顾，站在混凝土的墓碑间，任月下的寒风透过，只能孤独的回忆，回忆那逝去的昨天。&lt;/p&gt;
 &lt;p&gt;昨天，我还在乡间的田野中飞驰，感受炎炎的骄阳，感受狂躁的季风。&lt;/p&gt;
@@ -1015,4 +1015,4 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
 &lt;p style="text-align: right;"&gt;                                                                                            ——记逝去的故乡&lt;/p&gt;
 &amp;nbsp;&lt;/p&gt;
 &lt;p&gt;&amp;nbsp;&lt;/p&gt;
-&lt;p&gt;由于土地开发，我土生土长的故乡已经不复存在了，现在竖起的高楼，只能成为住处，而不是乡。故乡不只是一个出生点的代名词，他的背后还有很多含义。她是你精神的支柱，让你有归属感；她是你童年的摇篮，让你有存在感。现在，我就像个流浪的灵魂，没了家。&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Sai</dc:creator><pubDate>Fri, 13 Aug 2010 21:09:44 +0800</pubDate><guid>tag:smilehacker.com,2010-08-13:he-tang-bu-zai.html</guid><category>life</category></item></channel></rss>
+&lt;p&gt;由于土地开发，我土生土长的故乡已经不复存在了，现在竖起的高楼，只能成为住处，而不是乡。故乡不只是一个出生点的代名词，他的背后还有很多含义。她是你精神的支柱，让你有归属感；她是你童年的摇篮，让你有存在感。现在，我就像个流浪的灵魂，没了家。&lt;/p&gt;</summary><category term="life"></category></entry></feed>
