@@ -1,48 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-        <title>SmileHacker - coder</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="http://smilehacker.com/theme/css/main.css" type="text/css" />
-        <link href="//atom.xml" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
+    <title>SmileHacker - coder</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Open Graph tags -->
 
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie.css"/>
-                <script src="http://smilehacker.com/js/IE8.js" type="text/javascript"></script><![endif]-->
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="SmileHacker"/>
+            <meta property="og:url" content="http://smilehacker.com"/>
+            <meta property="og:description" content="SmileHacker"/>
 
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie6.css"/><![endif]-->
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://smilehacker.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://smilehacker.com/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://smilehacker.com/theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://smilehacker.com/theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
 
+        <link href="http://smilehacker.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SmileHacker ATOM Feed"/>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-41207338-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </head>
-
-<body id="index" class="home">
-<a href="http://github.com/Hackforid/">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="http://smilehacker.com">SmileHacker </a></h1>
-                <nav>
-                    <a href="http://smilehacker.com/pages/about.html">About</a>&nbsp;
-                    <a href="http://smilehacker.com/category/code.html">code</a>&nbsp;
-                    <a href="http://smilehacker.com/category/life.html">life</a>&nbsp;
-                    <a href="http://smilehacker.com/category/tech.html">tech</a>&nbsp;
-                    <a href="http://smilehacker.com/category/write.html">write</a>&nbsp;
-                </nav>
-        </header><!-- /#banner -->
-        
-        
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://smilehacker.com/xuan-ze.html">选择 一</a></h1> 
-<footer class="post-info">
-        <abbr class="published" title="2013-02-07T23:25:30">
-                四 07 二月 2013
-        </abbr>
-<p>tags: <a href="http://smilehacker.com/tag/coder.html">coder</a></p></footer><!-- /.post-info --><hr />
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://smilehacker.com" class="navbar-brand">SmileHacker</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
+                        <li >
+                            <a href="http://smilehacker.com/category/code.html">code</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/life.html">life</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/tech.html">tech</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/write.html">write</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://smilehacker.com/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <article>
+                <h2><a href="http://smilehacker.com/xuan-ze.html">选择 一</a></h2>
+                <div class="summary"><hr />
 <p>最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。<br />
 对于完美主义拖延症晚期患者来说，特别是二选一最为纠结的。当掺杂太多因素时，是<strong>“高瞻远瞩”</strong>还是<strong>“活在当下”</strong>，将不再由理性来判断。 
 为了生成一个“主见”，我决定给自己找一套“抉择”的标准，以免日后犹豫。</p>
@@ -60,112 +103,126 @@
 </ul>
 <h3>Other</h3>
 <ul>
-<li><strong>Blog</strong>: Wordpress -&gt; Hexo</li>
-<li><strong>IT Skill</strong>: Android -&gt; Web<br />
-<!-- more --><br />
-对工具的选择到没太多的思索，基本是随着技术的提升学会了更好的东西吧，就像SVN到Git，
-Bash到Zsh，都只是掌握后有了更高的需求而作出改变。
-但一些其他的东西，却也有不同判断依据：</li>
-</ul>
-<h2>活在当下</h2>
-<p>虽然“活在当下”近年来被很大一部分人接受，但我还是没法认同它，可能我属于激进派吧，
-还不想这么快就放弃攀登。而这反而和”和谐“有异曲同工之妙，更像执政党的维稳手段。  </p>
-<p>但每次做选择时，我都不得不考虑它。就像操作系统，以前我一直用Windows，因为我主要
-做Android开发，JAVA和Eclipse有很好的跨平台性，我完全用不到Linux的“优点“，而
-Windows又能给我提供更好的桌面体验，除了装B，我还有什么理由选择其他操作系统呢？但
-后来Android无法满足我了，我开始学习Web，这时蹩脚的Windows完全无法满足的我的需求，
-于是现在，我变得无法离开Linux了。</p>
-<p>“任何真理都是合理的偏见”，在不同的境况下，为何不作出不同的选择。团队有个女生说
-我太善变了，因为在给她推荐手机时第一天说“性价比高的东西，不值得买”，第二天我就
-推荐她买小米了,我很无辜。当预算在3000——4000时，品质当然是第一选择（特别是在你摔
-坏了N部手机后），当预算在2000左右时，我想小米是无二的选择了。  </p>
-<p>中国人讲究天时地利人和，大概就是如此吧。</p>
-<h2>高瞻远瞩</h2>
-<p>“高瞻远瞩”算是小时候老师提得最多了的吧，但有时候却会陷入“好高鹜远”的漩涡。  </p>
-<p>以前在code之前，一定会先想用什么技术、架构，总考虑后期数据量大了、或者需求改了的
-时候怎么办，一定要采用最好的技术，既是是一个小项目。  </p>
-<p>记得刚学web时还特别反感动态语言，认为其性能不如静态语言，理由很简单，Java处理数
-据库的速度比PHP高一个数量级，安全性也更好，君不见Facebook前期偷懒，后期不得不把
-PHP完全Hack了才能满足高并发。Twitter开始用Ruby很爽吧，现在后悔了吧。  </p>
-<p>为了方便，在选 动态语言时也考虑了很久，Pyhon还是Ruby，最后还是选了性能更好的
-Python。Ruby虽然在特性上更符合我的性格，但ROR确实没在性能上很乏力。  </p>
-<p>作出了这样的选择后，可想而知我当年是有多痛苦，别人用php一下午搞定的课设，我用
-J2EE这反人类的玩意写了一个星期，捉急！！！</p>
-<p>后来看了一篇某高人的文章，说我这种做法是“自寻死路”。一个菜鸟的项目，用户量能有
-多大，并发能有多高？盲目的最求技术却输在了时间上，这是互联网世界中不能忍的。现在
-的硬件完全能够弥补动态语言带来的性能缺失，与其说是Google的V8拯救了javascript，倒
-不如说是现在的机器跑得动Chrome了。（建议和我一样对动态语言耿耿于怀的朋友去看下
-《黑客与画家》）  </p>
-<p>虽然容易好高鹜远，但远见还是必须的。<br />
-就像Blog，去年Octopress特别火时我便对它没什么好感，就一个原因——Ruby，Ruby的执行
-效率一只是个问题，与其用Ruby来做静态生成器，我宁愿拿等待的时间来用C写一个。<br />
-果不其然，当年换Octopress的人也开始纷纷转型了，如果你有100篇博文，每次生成你都要
-等几分钟，然后还要花更多的时间去把它pull到github上，一个字，“累”。<br />
-忍受了半年Wordpress，看到Lucifr也换成了Hexo，一个Nodejs的生成器，在他出到没什么
-bug的版本后，我也迁移了。Nodejs的速度果然不是盖的。  </p>
-<p>个人认为Octopress和Ruby都属于无法经受时间考验的东西，初期用着很爽，后期就要为它
-付出代价了（怎么感觉和.Net一样。。。）。 </p>
-<p>对于从Android转型Web我也抱有相同的态度，Android就像一个大框架，限制太多了，而就
-其前景来说，诺基亚的倒塌已经证明了Android也不会走得太远。基于Html5的Firefox OS和
-更为底层的Ubuntu Phone在初期可能无法撼动Android，但他们会走得更远是可以预料的。  </p>
-<p>而对于Web来说，刚接触我就被它的自由吸引了，更多的语言，更多的技术，更多的框架，
-如果说Android是刚开坑出来的金矿，那Web就是无尽的海洋，孕育了一切的奇迹。  </p>
-<p>————节外生枝了好多————</p>
-<p>技术上的抉择只是这一年来的一小部分，但把他写出来，确实也让重新审视了不少东西。每
-次写随笔总是想到什么写什么，写到最后，主旨早就变了。  </p>
-<p>我想对于<strong>”抉择“</strong>，我会所有理由一个权值，然后再来排序，选出最后的结果。<br />
-现在看来，”活在当下“应该分配更多的点数了。  </p>
-<p>这个世界总是充满了惊喜，太早的为未来做打算，可能不是一个好的选择，还是先找到自己
-的位置比较重要。  </p>
-<p>写在第一次规划”抉择“。</p><p>There are <a href="http://smilehacker.com/xuan-ze.html#disqus_thread">comments</a>.</p>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://hustunique.com">Unique Studio</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="//atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+<li><strong>Blog</strong>: Wordpress ...</li></ul>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/xuan-ze.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-                            <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
-                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        </div>
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zhouquanbest"><i
+                            class="icon-Weibo-sign icon-large"></i>Weibo
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.douban.com/people/zhouquanbest/"><i
+                            class="icon-Douban-sign icon-large"></i>Douban
+                    </a></li>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. Theme is using <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
-                </address><!-- /#about -->
 
-        </footer><!-- /#contentinfo -->
 
+            <li class="list-group-item"><a href="http://smilehacker.com/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
+                <li class="list-group-item tag-1">
+                    <a href="http://smilehacker.com/tag/life.html">
+                        life
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/douban.html">
+                        douban
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/.html">
+                        
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/python.html">
+                        Python
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/arch.html">
+                        arch
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/windows.html">
+                        windows
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/coder.html">
+                        coder
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/virtual-box.html">
+                        virtual box
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/poem.html">
+                        poem
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/linux.html">
+                        linux
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/eclipse.html">
+                        eclipse
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/alg.html">
+                        alg
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/vagrant.html">
+                        vagrant
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/novel.html">
+                        novel
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/android.html">
+                        android
+                    </a>
+                </li>
+        </ul>
+    </section>
+</aside>        </div>
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://smilehacker.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://smilehacker.com/theme/js/respond.min.js"></script>
     <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'smilehacker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
     </script>
-    <script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-41207338-1");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-<script type="text/javascript">
-    var disqus_shortname = 'smilehacker';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 </body>
 </html>

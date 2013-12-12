@@ -1,48 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-        <title>SmileHacker - linux</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="http://smilehacker.com/theme/css/main.css" type="text/css" />
-        <link href="//atom.xml" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
+    <title>SmileHacker - linux</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Open Graph tags -->
 
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie.css"/>
-                <script src="http://smilehacker.com/js/IE8.js" type="text/javascript"></script><![endif]-->
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="SmileHacker"/>
+            <meta property="og:url" content="http://smilehacker.com"/>
+            <meta property="og:description" content="SmileHacker"/>
 
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie6.css"/><![endif]-->
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://smilehacker.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://smilehacker.com/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://smilehacker.com/theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://smilehacker.com/theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
 
+        <link href="http://smilehacker.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SmileHacker ATOM Feed"/>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-41207338-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </head>
-
-<body id="index" class="home">
-<a href="http://github.com/Hackforid/">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="http://smilehacker.com">SmileHacker </a></h1>
-                <nav>
-                    <a href="http://smilehacker.com/pages/about.html">About</a>&nbsp;
-                    <a href="http://smilehacker.com/category/code.html">code</a>&nbsp;
-                    <a href="http://smilehacker.com/category/life.html">life</a>&nbsp;
-                    <a href="http://smilehacker.com/category/tech.html">tech</a>&nbsp;
-                    <a href="http://smilehacker.com/category/write.html">write</a>&nbsp;
-                </nav>
-        </header><!-- /#banner -->
-        
-        
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html">真TM想休了Arch——豆瓣笔试血泪史</a></h1> 
-<footer class="post-info">
-        <abbr class="published" title="2013-04-01T18:40:51">
-                一 01 四月 2013
-        </abbr>
-<p>tags: <a href="http://smilehacker.com/tag/linux.html">linux</a><a href="http://smilehacker.com/tag/arch.html">arch</a><a href="http://smilehacker.com/tag/douban.html">douban</a></p></footer><!-- /.post-info --><hr />
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://smilehacker.com" class="navbar-brand">SmileHacker</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
+                        <li >
+                            <a href="http://smilehacker.com/category/code.html">code</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/life.html">life</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/tech.html">tech</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/write.html">write</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://smilehacker.com/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <article>
+                <h2><a href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html">真TM想休了Arch——豆瓣笔试血泪史</a></h2>
+                <div class="summary"><hr />
 <p>古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。<br />
 Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。<br />
 经历了各种折磨后，俺最终落脚在Arch。  </p>
@@ -50,63 +93,126 @@ Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了�
 奈何婚姻是爱情的坟墓，Arch将我拐上贼船后就开始露出本性了，各种问题随着更新扑面而来。起初以为是小打小闹，调调bug也蛮惬意的，哪知后来她却变本加厉。  </p>
 <p>因为做ImagineCup，我只能回到Windows那，冷落了她许久。后来豆瓣笔试，俺还是屁颠屁颠的滚回娘家接她，为了讨好她，还特意更新了次，换上新内核，新数据库。岂止她还是生气，直接让我的GTK跪了，带着黑眼圈弄了一晚上，才讨好她。本以为已经大事化了了，可到了笔试当天才发现，她尽然拐走了Django，让我直接没法做题。<br />
 哎，随叫我喜欢折腾呢，悲剧的笔试后，调好了MySQL，救回了Django，就当是个教训吧。  </p>
-<p>可惜我还是太年轻了，too young， too simple。<br />
-今天豆瓣的HR姐姐说我报的是移动开发，要再笔试一次，让又我屁颠屁颠的翘课跑回来找Arch。
-开始做得很开心，算法也不是很难（主要是这个比上次的省时间），Android的题算是毫无压力（笑）。再看看那道必做题，一个简单的布局问题，太简单了，最后做吧。<br />
-就这么心情愉悦的忽略了暴风雨前的平静，我打开Eclipse准备最后一击——我操——ADT呢？？？  </p>
-<p>试想一下，奥特曼的人间体看到一只鲜肥可爱的小怪兽，准备掏出棒子秒之，哪知发现拿错了，直接被小怪兽一脚拿了First Blood，这是多么惊世骇俗。  </p>
-<p>你狠，我掏出Emacs，在没有代码提示的情况下，苦逼的回忆着那蛋疼坑爹还特别长的各种属性名。尼玛，忘记单词是件多么蛋疼。。。。  </p>
-<p>认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  </p>
-<p>这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  </p>
-<p>等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  </p><p>There are <a href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html#disqus_thread">comments</a>.</p>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
-            </ol><!-- /#posts-list -->
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://hustunique.com">Unique Studio</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="//atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+<p>可惜我还是太年轻了 ...</p>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-                            <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
-                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        </div>
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zhouquanbest"><i
+                            class="icon-Weibo-sign icon-large"></i>Weibo
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.douban.com/people/zhouquanbest/"><i
+                            class="icon-Douban-sign icon-large"></i>Douban
+                    </a></li>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. Theme is using <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
-                </address><!-- /#about -->
 
-        </footer><!-- /#contentinfo -->
 
+            <li class="list-group-item"><a href="http://smilehacker.com/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
+                <li class="list-group-item tag-1">
+                    <a href="http://smilehacker.com/tag/life.html">
+                        life
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/douban.html">
+                        douban
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/.html">
+                        
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/python.html">
+                        Python
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/arch.html">
+                        arch
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/windows.html">
+                        windows
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/coder.html">
+                        coder
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/virtual-box.html">
+                        virtual box
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/poem.html">
+                        poem
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/linux.html">
+                        linux
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/eclipse.html">
+                        eclipse
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/alg.html">
+                        alg
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/vagrant.html">
+                        vagrant
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/novel.html">
+                        novel
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/android.html">
+                        android
+                    </a>
+                </li>
+        </ul>
+    </section>
+</aside>        </div>
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://smilehacker.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://smilehacker.com/theme/js/respond.min.js"></script>
     <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'smilehacker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
     </script>
-    <script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-41207338-1");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-<script type="text/javascript">
-    var disqus_shortname = 'smilehacker';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 </body>
 </html>

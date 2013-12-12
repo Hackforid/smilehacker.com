@@ -1,79 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:og="http://ogp.me/ns#"
+      xmlns:fb="https://www.facebook.com/2008/fbml">
 <head>
-        <title>SmileHacker - code</title>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="http://smilehacker.com/theme/css/main.css" type="text/css" />
-        <link href="//atom.xml" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
+    <title>SmileHacker - code</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <!-- Open Graph tags -->
 
-        <!--[if lte IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie.css"/>
-                <script src="http://smilehacker.com/js/IE8.js" type="text/javascript"></script><![endif]-->
+            <meta property="og:type" content="website"/>
+            <meta property="og:title" content="SmileHacker"/>
+            <meta property="og:url" content="http://smilehacker.com"/>
+            <meta property="og:description" content="SmileHacker"/>
 
-        <!--[if lt IE 7]>
-                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie6.css"/><![endif]-->
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://smilehacker.com/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://smilehacker.com/theme/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://smilehacker.com/theme/css/pygments.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://smilehacker.com/theme/css/style.css" type="text/css"/>
+    <!-- JavaScript plugins (requires jQuery) -->
+    <script src="http://code.jquery.com/jquery.js"></script>
 
+        <link href="http://smilehacker.com/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="SmileHacker ATOM Feed"/>
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-41207338-1']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script');
+            ga.type = 'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
 </head>
-
-<body id="index" class="home">
-<a href="http://github.com/Hackforid/">
-<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
-</a>
-        <header id="banner" class="body">
-                <h1><a href="http://smilehacker.com">SmileHacker </a></h1>
-                <nav>
-                    <a href="http://smilehacker.com/pages/about.html">About</a>&nbsp;
-                    <a href="http://smilehacker.com/category/code.html">code</a>&nbsp;
-                    <a href="http://smilehacker.com/category/life.html">life</a>&nbsp;
-                    <a href="http://smilehacker.com/category/tech.html">tech</a>&nbsp;
-                    <a href="http://smilehacker.com/category/write.html">write</a>&nbsp;
-                </nav>
-        </header><!-- /#banner -->
-        
-        
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html">Permission denied causing “Installation failed due to invalid APK file”</a></h1> 
-<footer class="post-info">
-        <abbr class="published" title="2013-05-31T00:00:00">
-                五 31 五月 2013
-        </abbr>
-<p>tags: <a href="http://smilehacker.com/tag/android.html">android</a></p></footer><!-- /.post-info --><hr />
+<body>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://smilehacker.com" class="navbar-brand">SmileHacker</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li><a href="http://smilehacker.com/pages/about.html">About</a></li>
+                        <li class="active">
+                            <a href="http://smilehacker.com/category/code.html">code</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/life.html">life</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/tech.html">tech</a>
+                        </li>
+                        <li >
+                            <a href="http://smilehacker.com/category/write.html">write</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="http://smilehacker.com/archives.html"><i class="icon-th-list"></i>Archives</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</nav>
+<!-- /.navbar -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-9">
+            <article>
+                <h2><a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html">Permission denied causing “Installation failed due to invalid APK file”</a></h2>
+                <div class="summary"><hr />
 <p>Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。</p>
 <p>算是缺少测试吧，刷了后bug就浮现了，用ADB安装apk会出现“invalid APK file”的报错。更新ADT，给777权限都没法解决问题。logcat显示为：<br />
     Unable to open zip '/data/local/tmp/QuanZi.apk': Permission denied<br />
     Unable to read AndroidManifest.xml of /data/local/tmp/QuanZi.apk  </p>
 <p>料想应该是ROM的问题吧，给了'local/tmp' 777权限依旧无法解决问题。<br />
-多次尝试修给内置存储的权限都无果，只好曲线救国，把tmp移到sdcard上：
-手机上装给命令行软件 开su权限</p>
-<div class="highlight"><pre>    <span class="nb">cd</span> /data/local  
-    mv tmp tmp_old  
-    mkdir /mnt/sdcard/tmp  
-    ln -s /mnt/sdcard/tmp ./tmp 
-</pre></div>
-
-
-<p>弄好后发现可以安装了  </p>
-<p>参考：http://stackoverflow.com/questions/14014871/permission-denied-causing-installation-failed-due-to-invalid-apk-file/14015196#14015196</p><p>There are <a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html#disqus_thread">comments</a>.</p>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
-        
-
- 
-            <li><article class="hentry">    
-                <header>
-                    <h3><a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="bookmark"
-                           title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">利用rsync自动同步服务器与本地代码的python脚本</a></h3>
-                </header>
-                
-                <div class="entry-content">
-                <hr />
+多次尝试修给内置存储的权限都无果 ...</p>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">利用rsync自动同步服务器与本地代码的python脚本</a></h2>
+                <div class="summary"><hr />
 <p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
 用ssh sshfs scp都太慢  小东西又懒得用git<br />
 sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
@@ -96,20 +121,13 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 </li>
 <li>
 <p>只根据emacs优化了 ...</p></li></ol>
-                <a class="readmore" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-        
-
- 
-            <li><article class="hentry">    
-                <header>
-                    <h3><a href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="bookmark"
-                           title="Permalink to 自动获取Nexus4售卖状态的Python脚本">自动获取Nexus4售卖状态的Python脚本</a></h3>
-                </header>
-                
-                <div class="entry-content">
-                <hr />
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">自动获取Nexus4售卖状态的Python脚本</a></h2>
+                <div class="summary"><hr />
 <p><img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/><br />
 使用pyquery做爬虫解析GooglePlay页面 获取状态
 然后通过Gmail发给指定邮箱
@@ -129,20 +147,13 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 <span class="c"># 设置服务器 用户名 口令 邮箱后缀</span>
 <span class="n">mail_host</span> <span class="o">=</span> <span class="s">&quot;smtp.gmail.com&quot;</span>
 <span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!-->
-                <a class="readmore" href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-        
-
- 
-            <li><article class="hentry">    
-                <header>
-                    <h3><a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark"
-                           title="Permalink to 让代码更规范——匈牙利命名法">让代码更规范——匈牙利命名法</a></h3>
-                </header>
-                
-                <div class="entry-content">
-                <hr />
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html">让代码更规范——匈牙利命名法</a></h2>
+                <div class="summary"><hr />
 <p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
 好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
 <p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
@@ -152,20 +163,13 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 <p>&nbsp;</p>
 <p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
 <p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p>
-                <a class="readmore" href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-        
-
- 
-            <li><article class="hentry">    
-                <header>
-                    <h3><a href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark"
-                           title="Permalink to WIN32编程入门">WIN32编程入门</a></h3>
-                </header>
-                
-                <div class="entry-content">
-                <hr />
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
+                <h2><a href="http://smilehacker.com/win32bian-cheng-ru-men.html">WIN32编程入门</a></h2>
+                <div class="summary"><hr />
 <p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
 <p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
 <!-- more --></p>
@@ -186,56 +190,125 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
 <span class="c1">// 窗口类</span>
 <span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
 <span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
-                <a class="readmore" href="http://smilehacker.com/win32bian-cheng-ru-men.html">read more</a>
-                </div><!-- /.entry-content -->
-            </article></li>
-            </ol><!-- /#posts-list -->
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </section><!-- /#content -->
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>blogroll</h2>
-                        <ul>
-                            <li><a href="http://hustunique.com">Unique Studio</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-                            <li><a href="//atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/win32bian-cheng-ru-men.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
 
-                            <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
-                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
+        </div>
+        <div class="col-lg-3 well well-sm" id="sidebar">
+<aside>
+    <section>
+        <ul class="list-group list-group-flush">
+                <li class="list-group-item"><h4><i class="icon-home icon-large"></i>Social</h4></li>
+                    <li class="list-group-item"><a href="http://weibo.com/zhouquanbest"><i
+                            class="icon-Weibo-sign icon-large"></i>Weibo
+                    </a></li>
+                    <li class="list-group-item"><a href="http://www.douban.com/people/zhouquanbest/"><i
+                            class="icon-Douban-sign icon-large"></i>Douban
+                    </a></li>
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. Theme is using <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
-                </address><!-- /#about -->
 
-        </footer><!-- /#contentinfo -->
 
+            <li class="list-group-item"><a href="http://smilehacker.com/tags.html"><h4><i class="icon-tags icon-large"></i>Tags</h4></a></li>
+                <li class="list-group-item tag-1">
+                    <a href="http://smilehacker.com/tag/life.html">
+                        life
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/douban.html">
+                        douban
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/.html">
+                        
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/python.html">
+                        Python
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/arch.html">
+                        arch
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/windows.html">
+                        windows
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/coder.html">
+                        coder
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/virtual-box.html">
+                        virtual box
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/poem.html">
+                        poem
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/linux.html">
+                        linux
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/eclipse.html">
+                        eclipse
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/alg.html">
+                        alg
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/vagrant.html">
+                        vagrant
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/novel.html">
+                        novel
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/android.html">
+                        android
+                    </a>
+                </li>
+        </ul>
+    </section>
+</aside>        </div>
+    </div>
+</div>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://smilehacker.com/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://smilehacker.com/theme/js/respond.min.js"></script>
     <script type="text/javascript">
-    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'smilehacker'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
     </script>
-    <script type="text/javascript">
-    try {
-        var pageTracker = _gat._getTracker("UA-41207338-1");
-    pageTracker._trackPageview();
-    } catch(err) {}</script>
-<script type="text/javascript">
-    var disqus_shortname = 'smilehacker';
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-</script>
 </body>
 </html>
