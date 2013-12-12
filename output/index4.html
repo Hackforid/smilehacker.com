@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>SmileHacker</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://smilehacker.com/theme/css/main.css" type="text/css" />
+        <link href="//atom.xml" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie.css"/>
+                <script src="http://smilehacker.com/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+<a href="http://github.com/Hackforid/">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="http://smilehacker.com">SmileHacker </a></h1>
+                <nav>
+                    <a href="http://smilehacker.com/pages/about.html">About</a>&nbsp;
+                    <a href="http://smilehacker.com/category/code.html">code</a>&nbsp;
+                    <a href="http://smilehacker.com/category/life.html">life</a>&nbsp;
+                    <a href="http://smilehacker.com/category/tech.html">tech</a>&nbsp;
+                    <a href="http://smilehacker.com/category/write.html">write</a>&nbsp;
+                </nav>
+        </header><!-- /#banner -->
+        
+        
+
+ 
+                <section id="content" class="body">
+                    <ol id="posts-list" class="hfeed" start="4">
+            <li><article class="hentry">    
+                <header>
+                    <h3><a href="http://smilehacker.com/xuan-ze.html" rel="bookmark"
+                           title="Permalink to 选择 一">选择 一</a></h3>
+                </header>
+                
+                <div class="entry-content">
+                <hr />
+<p>最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。<br />
+对于完美主义拖延症晚期患者来说，特别是二选一最为纠结的。当掺杂太多因素时，是<strong>“高瞻远瞩”</strong>还是<strong>“活在当下”</strong>，将不再由理性来判断。 
+为了生成一个“主见”，我决定给自己找一套“抉择”的标准，以免日后犹豫。</p>
+<p>昨天看了一个帖子，列举<a href="http://python-china.org/topic/65#reply31">程序猿们的开发工
+具</a>，想想自己这一年内为开发工具也做了
+很多抉择，就列举出来作为判断依据吧：</p>
+<h3>开发工具</h3>
+<ul>
+<li><strong>OS</strong>： Windows -&gt; Ubuntu</li>
+<li><strong>Editor</strong>: Vim -&gt; Sublime Text -&gt; Emacs</li>
+<li><strong>Version</strong>: SVN -&gt; Git</li>
+<li><strong>Terminal</strong>: Gnome Terminal -&gt; Guake</li>
+<li><strong>Shell</strong>： bash -&gt; zsh</li>
+<li><strong>Broswer</strong>: Firefox -&gt; Chrome</li>
+</ul>
+<h3>Other</h3>
+<ul>
+<li><strong>Blog</strong>: Wordpress ...</li></ul>
+                <a class="readmore" href="http://smilehacker.com/xuan-ze.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+        
+
+ 
+            <li><article class="hentry">    
+                <header>
+                    <h3><a href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="bookmark"
+                           title="Permalink to 利用rsync自动同步服务器与本地代码的python脚本">利用rsync自动同步服务器与本地代码的python脚本</a></h3>
+                </header>
+                
+                <div class="entry-content">
+                <hr />
+<p>菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦<br />
+用ssh sshfs scp都太慢  小东西又懒得用git<br />
+sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
+<p>于是用linux自带的rsync写了个同步脚本<br />
+可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  </p>
+<ol>
+<li>
+<p>把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码</p>
+</li>
+<li>
+<p>如果代码在服务器上 先执行 ： <code>python rsync.py -down</code> 
+   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服</p>
+</li>
+<li>
+<p>每次修改完了 可以手动上传:<code>python rsync,py</code>
+    或者也可以放在后台自动上传：<code>python rsync.py -auto</code>
+    他会监视改目录的文件 如果新建 修改或删除 都会sync
+    可以用 <code>nohup python rsync.py -auto&amp;</code> 
+    来后台运行</p>
+</li>
+<li>
+<p>只根据emacs优化了 ...</p></li></ol>
+                <a class="readmore" href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+        
+
+ 
+            <li><article class="hentry">    
+                <header>
+                    <h3><a href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="bookmark"
+                           title="Permalink to 自动获取Nexus4售卖状态的Python脚本">自动获取Nexus4售卖状态的Python脚本</a></h3>
+                </header>
+                
+                <div class="entry-content">
+                <hr />
+<p><img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/><br />
+使用pyquery做爬虫解析GooglePlay页面 获取状态
+然后通过Gmail发给指定邮箱
+每隔一个小时自动检测一次
+使用 <code><strong>nohup python *.py &amp;</strong></code> 可在后台运行</p>
+<!-- more -->
+
+<div class="highlight"><pre><span class="c">#coding=utf-8</span>
+<span class="c"># easy_install pyquery OR sudo apt-get install python-pyquery</span>
+<span class="kn">from</span> <span class="nn">pyquery</span> <span class="kn">import</span> <span class="n">PyQuery</span> <span class="k">as</span> <span class="n">pq</span>
+<span class="kn">import</span> <span class="nn">smtplib</span>
+<span class="kn">from</span> <span class="nn">email.Message</span> <span class="kn">import</span> <span class="n">Message</span>
+<span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c"># 发给谁</span>
+<span class="n">mailto_list</span> <span class="o">=</span> <span class="s">&quot;xxx@xx.xx&quot;</span>
+<span class="c"># 设置服务器 用户名 口令 邮箱后缀</span>
+<span class="n">mail_host</span> <span class="o">=</span> <span class="s">&quot;smtp.gmail.com&quot;</span>
+<span class="n">mail_user</span> <span class="o">=</span> <span class="s">&quot;xxx@gmail.com ...</span></pre></div></!-->
+                <a class="readmore" href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+        
+
+ 
+            <li><article class="hentry">    
+                <header>
+                    <h3><a href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="bookmark"
+                           title="Permalink to 让代码更规范——匈牙利命名法">让代码更规范——匈牙利命名法</a></h3>
+                </header>
+                
+                <div class="entry-content">
+                <hr />
+<p>以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
+好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。</p>
+<p>匈牙利命名法是一种编程时的命名规范。基本原则是：</p>
+<p><strong>变量名＝属性＋类型＋对象描述</strong></p>
+<p>&nbsp;</p>
+<p>其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。</p>
+<p>&nbsp;</p>
+<p>举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。</p>
+<p>据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型 ...</p>
+                <a class="readmore" href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+        
+
+ 
+            <li><article class="hentry">    
+                <header>
+                    <h3><a href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="bookmark"
+                           title="Permalink to WIN32编程入门">WIN32编程入门</a></h3>
+                </header>
+                
+                <div class="entry-content">
+                <hr />
+<p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
+<p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
+<!-- more --></p>
+<div class="highlight"><pre><span class="cp">#include</span>
+<span class="cp">#include</span>
+
+<span class="c1">// 窗口过程函数</span>
+<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span><span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="n">WINAPI</span> <span class="nf">WinMain</span><span class="p">(</span>
+<span class="n">HINSTANCE</span> <span class="n">hInstance</span><span class="p">,</span> <span class="c1">// handle to current instance</span>
+<span class="n">HINSTANCE</span> <span class="n">hPrevInstance</span><span class="p">,</span> <span class="c1">// handle to previous instance</span>
+<span class="n">LPSTR</span> <span class="n">lpCmdLine</span><span class="p">,</span> <span class="c1">// command line</span>
+<span class="kt">int</span> <span class="n">nCmdShow</span> <span class="c1">// show state</span>
+<span class="p">)</span>
+
+<span class="p">{</span>
+<span class="c1">// 窗口类</span>
+<span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
+                <a class="readmore" href="http://smilehacker.com/win32bian-cheng-ru-men.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+        <a href="http://smilehacker.com/index3.html">&laquo;</a>
+    Page 4 / 6
+        <a href="http://smilehacker.com/index5.html">&raquo;</a>
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://hustunique.com">Unique Studio</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="//atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
+                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. Theme is using <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
+                </address><!-- /#about -->
+
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-41207338-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+<script type="text/javascript">
+    var disqus_shortname = 'smilehacker';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>WIN32编程入门</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="http://smilehacker.com/theme/css/main.css" type="text/css" />
+        <link href="//atom.xml" type="application/atom+xml" rel="alternate" title="SmileHacker Atom Feed" />
+
+        <!--[if IE]>
+                <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie.css"/>
+                <script src="http://smilehacker.com/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="http://smilehacker.com/css/ie6.css"/><![endif]-->
+
+</head>
+
+<body id="index" class="home">
+<a href="http://github.com/Hackforid/">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+        <header id="banner" class="body">
+                <h1><a href="http://smilehacker.com">SmileHacker </a></h1>
+                <nav>
+                    <a href="http://smilehacker.com/pages/about.html">About</a>&nbsp;
+                    <a href="http://smilehacker.com/category/code.html">code</a>&nbsp;
+                    <a href="http://smilehacker.com/category/life.html">life</a>&nbsp;
+                    <a href="http://smilehacker.com/category/tech.html">tech</a>&nbsp;
+                    <a href="http://smilehacker.com/category/write.html">write</a>&nbsp;
+                </nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="win32bian-cheng-ru-men.html" rel="bookmark"
+           title="Permalink to WIN32编程入门">WIN32编程入门</a></h1>
+    </header>
+
+    <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2013-02-07T21:01:55">
+                四 07 二月 2013
+        </abbr>
+<p>tags: <a href="http://smilehacker.com/tag/windows.html">windows</a></p></footer><!-- /.post-info -->      <hr />
+<p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
+<p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
+<!-- more --></p>
+<div class="highlight"><pre><span class="cp">#include</span>
+<span class="cp">#include</span>
+
+<span class="c1">// 窗口过程函数</span>
+<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span><span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="n">WINAPI</span> <span class="nf">WinMain</span><span class="p">(</span>
+<span class="n">HINSTANCE</span> <span class="n">hInstance</span><span class="p">,</span> <span class="c1">// handle to current instance</span>
+<span class="n">HINSTANCE</span> <span class="n">hPrevInstance</span><span class="p">,</span> <span class="c1">// handle to previous instance</span>
+<span class="n">LPSTR</span> <span class="n">lpCmdLine</span><span class="p">,</span> <span class="c1">// command line</span>
+<span class="kt">int</span> <span class="n">nCmdShow</span> <span class="c1">// show state</span>
+<span class="p">)</span>
+
+<span class="p">{</span>
+<span class="c1">// 窗口类</span>
+<span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 类附加内存</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">cbWndExtra</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="c1">// 窗口附加内存</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">hbrBackground</span> <span class="o">=</span> <span class="p">(</span><span class="n">HBRUSH</span><span class="p">)</span> <span class="n">GetStockObject</span><span class="p">(</span><span class="n">BLACK_BRUSH</span><span class="p">);</span> <span class="c1">// 背景画刷句柄</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">hCursor</span> <span class="o">=</span> <span class="n">LoadCursor</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">IDC_CROSS</span><span class="p">);</span> <span class="c1">// 窗口光标句柄</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">hIcon</span> <span class="o">=</span> <span class="n">LoadIcon</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span> <span class="n">IDI_ERROR</span><span class="p">);</span> <span class="c1">// 窗口图标句柄</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">hInstance</span> <span class="o">=</span> <span class="n">hInstance</span><span class="p">;</span> <span class="c1">// 包含窗口过程函数的程序实例</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">lpfnWndProc</span> <span class="o">=</span> <span class="n">WinSunProc</span><span class="p">;</span> <span class="c1">// 只想窗口过程函数的指针</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">lpszClassName</span> <span class="o">=</span> <span class="s">&quot;Kleist&quot;</span><span class="p">;</span> <span class="c1">// 窗口类名称</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">lpszMenuName</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span> <span class="c1">// 菜单资源</span>
+<span class="n">wndcls</span><span class="p">.</span><span class="n">style</span> <span class="o">=</span> <span class="n">CS_HREDRAW</span> <span class="o">|</span> <span class="n">CS_VREDRAW</span><span class="p">;</span> <span class="c1">// 窗口样式</span>
+<span class="n">RegisterClass</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">wndcls</span><span class="p">);</span>
+
+<span class="c1">// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄</span>
+<span class="n">HWND</span> <span class="n">hwnd</span><span class="p">;</span>
+<span class="n">hwnd</span> <span class="o">=</span> <span class="n">CreateWindow</span><span class="p">(</span> <span class="c1">// 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL</span>
+<span class="s">&quot;Kleist&quot;</span><span class="p">,</span> <span class="c1">// 窗口类名</span>
+<span class="s">&quot;Hello World&quot;</span><span class="p">,</span> <span class="c1">// 窗口名字</span>
+<span class="n">WS_OVERLAPPEDWINDOW</span><span class="p">,</span> <span class="c1">// 窗口样式</span>
+<span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="c1">// 窗口左上角坐标</span>
+<span class="mi">600</span><span class="p">,</span> <span class="mi">400</span><span class="p">,</span> <span class="c1">// 窗口宽高</span>
+<span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 父窗口句柄</span>
+<span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 窗口菜单句柄</span>
+<span class="n">hInstance</span><span class="p">,</span> <span class="c1">// 窗口所属应用程序实例</span>
+<span class="nb">NULL</span> <span class="c1">// WM_CREATE消息附加参数lParam传入的数据指针</span>
+<span class="p">);</span>
+
+<span class="c1">// 显示及刷新窗口</span>
+<span class="n">ShowWindow</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">SW_SHOWNORMAL</span><span class="p">);</span>
+<span class="n">UpdateWindow</span><span class="p">(</span><span class="n">hwnd</span><span class="p">);</span>
+
+<span class="c1">// 定义消息结构体</span>
+<span class="n">MSG</span> <span class="n">msg</span><span class="p">;</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">GetMessage</span><span class="p">(</span> <span class="c1">// WM_QUIT消息返回0 错误返回-1</span>
+    <span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">,</span> <span class="c1">// 指向消息的结构体</span>
+    <span class="nb">NULL</span><span class="p">,</span> <span class="c1">// 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息</span>
+    <span class="mi">0</span><span class="p">,</span> <span class="c1">// 获取消息的最小值 通常为0</span>
+    <span class="mi">0</span><span class="p">))</span> <span class="c1">// 获取消息的最大值 都设为0表示接收所有消息</span>
+<span class="p">{</span>
+    <span class="n">TranslateMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">);</span> <span class="c1">// 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出</span>
+    <span class="n">DispatchMessage</span><span class="p">(</span><span class="o">&amp;</span><span class="n">amp</span><span class="p">;</span><span class="n">msg</span><span class="p">);</span> <span class="c1">// 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理</span>
+<span class="p">}</span>
+<span class="k">return</span> <span class="n">msg</span><span class="p">.</span><span class="n">wParam</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// 窗口过程函数</span>
+<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span>
+<span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="c1">// 窗口句柄</span>
+<span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="c1">// 消息代码</span>
+<span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="c1">// 附加参数</span>
+<span class="n">LPARAM</span> <span class="n">lParam</span>
+<span class="p">)</span>
+<span class="p">{</span>
+<span class="k">switch</span><span class="p">(</span><span class="n">uMsg</span><span class="p">)</span>
+<span class="p">{</span>
+<span class="k">case</span> <span class="n">WM_CHAR</span>:
+<span class="kt">char</span> <span class="n">szChar</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<span class="n">sprintf</span><span class="p">(</span><span class="n">szChar</span><span class="p">,</span> <span class="s">&quot;char code is %d&quot;</span><span class="p">,</span> <span class="n">wParam</span><span class="p">);</span>
+<span class="n">MessageBox</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">szChar</span><span class="p">,</span> <span class="s">&quot;char&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+<span class="k">break</span><span class="p">;</span>
+
+<span class="nl">default:</span>
+<span class="k">return</span> <span class="n">DefWindowProc</span><span class="p">(</span><span class="n">hwnd</span><span class="p">,</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">lParam</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+
+
+<p>具体也就是WinMain函数作为程序入口，相当于main函数</p>
+<p>然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
+对着代码看一些参考资料应该就够了。</p>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_identifier = "win32bian-cheng-ru-men.html";
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://smilehacker.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+    </div>
+
+  </article>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>blogroll</h2>
+                        <ul>
+                            <li><a href="http://hustunique.com">Unique Studio</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+                            <li><a href="//atom.xml" type="application/atom+xml" rel="alternate">atom feed</a></li>
+
+                            <li><a href="http://weibo.com/zhouquanbest">Weibo</a></li>
+                            <li><a href="http://www.douban.com/people/zhouquanbest/">Douban</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                     Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>. Theme is using <a href="http://github.com/getpelican/pelican-themes" target="_blank">cebong</a>.
+                </address><!-- /#about -->
+
+        </footer><!-- /#contentinfo -->
+
+    <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+    try {
+        var pageTracker = _gat._getTracker("UA-41207338-1");
+    pageTracker._trackPageview();
+    } catch(err) {}</script>
+<script type="text/javascript">
+    var disqus_shortname = 'smilehacker';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = 'http://' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>

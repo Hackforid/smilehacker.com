@@ -1,0 +1,1018 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>SmileHacker</title><link href="http://smilehacker.com/" rel="alternate"></link><link href="//atom.xml" rel="self"></link><id>http://smilehacker.com/</id><updated>2013-07-30T00:00:00+08:00</updated><entry><title>VirtualBox in arch</title><link href="http://smilehacker.com/virtualbox-in-arch.html" rel="alternate"></link><updated>2013-07-30T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-07-30:virtualbox-in-arch.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;arch跑vbox时显示：  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;VirtualBox&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;complaining&lt;/span&gt; &lt;span class="n"&gt;that&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="n"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;loaded&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt;
+&lt;span class="n"&gt;run&lt;/span&gt; &lt;span class="err"&gt;`&lt;/span&gt;&lt;span class="n"&gt;VBoxManage&lt;/span&gt; &lt;span class="o"&gt;--&lt;/span&gt;&lt;span class="n"&gt;version&lt;/span&gt;&lt;span class="err"&gt;`&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;open&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;VirtualBox&lt;/span&gt; &lt;span class="n"&gt;GUI&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;see&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;
+&lt;span class="n"&gt;message&lt;/span&gt; &lt;span class="n"&gt;which&lt;/span&gt; &lt;span class="n"&gt;should&lt;/span&gt; &lt;span class="n"&gt;contain&lt;/span&gt; &lt;span class="n"&gt;instructions&lt;/span&gt; &lt;span class="n"&gt;on&lt;/span&gt; &lt;span class="n"&gt;how&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;fix&lt;/span&gt; &lt;span class="n"&gt;this&lt;/span&gt; &lt;span class="n"&gt;error&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;按提示输入&lt;code&gt;VBoxManage --version&lt;/code&gt;:  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;WARNING&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;The&lt;/span&gt; &lt;span class="n"&gt;vboxdrv&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;loaded&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Either&lt;/span&gt; &lt;span class="n"&gt;there&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt;
+    &lt;span class="n"&gt;available&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;current&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;3.10&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;ARCH&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="n"&gt;failed&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt;
+    &lt;span class="n"&gt;load&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="n"&gt;Please&lt;/span&gt; &lt;span class="n"&gt;reinstall&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;module&lt;/span&gt; &lt;span class="n"&gt;virtualbox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;modules&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;don&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;t&lt;/span&gt; &lt;span class="n"&gt;use&lt;/span&gt; &lt;span class="n"&gt;our&lt;/span&gt; &lt;span class="n"&gt;stock&lt;/span&gt; &lt;span class="n"&gt;kernel&lt;/span&gt; &lt;span class="n"&gt;compile&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;modules&lt;/span&gt; &lt;span class="k"&gt;with&lt;/span&gt;
+    &lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;dkms&lt;/span&gt; &lt;span class="n"&gt;autoinstall&lt;/span&gt;
+    &lt;span class="n"&gt;You&lt;/span&gt; &lt;span class="n"&gt;will&lt;/span&gt; &lt;span class="n"&gt;not&lt;/span&gt; &lt;span class="n"&gt;be&lt;/span&gt; &lt;span class="n"&gt;able&lt;/span&gt; &lt;span class="n"&gt;to&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt; &lt;span class="n"&gt;VMs&lt;/span&gt; &lt;span class="n"&gt;until&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt; &lt;span class="n"&gt;problem&lt;/span&gt; &lt;span class="k"&gt;is&lt;/span&gt; &lt;span class="n"&gt;fixed&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;
+&lt;span class="mf"&gt;4.2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="mi"&gt;16&lt;/span&gt;&lt;span class="n"&gt;_OSEr86992&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;尝试升级内核：  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pacman&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Ss&lt;/span&gt; &lt;span class="n"&gt;linux&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;headers&lt;/span&gt;  
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;pacman&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;Ss&lt;/span&gt; &lt;span class="n"&gt;virtualbox&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;host&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;modules&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;还是英文的arch wiki给力，发现是内核还要手动load：  &lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;modprobe&lt;/span&gt; &lt;span class="n"&gt;vboxdrv&lt;/span&gt;
+&lt;span class="n"&gt;sudo&lt;/span&gt; &lt;span class="n"&gt;systemctl&lt;/span&gt; &lt;span class="n"&gt;enable&lt;/span&gt; &lt;span class="n"&gt;dkms&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;service&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;然后就OK了。&lt;/p&gt;</summary><category term="arch"></category><category term="virtual box"></category><category term="vagrant"></category></entry><entry><title>北漂豆瓣</title><link href="http://smilehacker.com/bei-piao-dou-ban.html" rel="alternate"></link><updated>2013-07-20T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-07-20:bei-piao-dou-ban.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;来北京两周了，挺快的，奔波之余，也没太多体会，或许是自己期待太多，耶路撒冷还没成为圣城。&lt;br /&gt;
+之前来北京都太顺利，无论是比赛还是上节目，对方都把一切安排妥当了，到自己亲来，却发现没那么容易。  &lt;/p&gt;
+&lt;p&gt;一场大雨把我从大连站送到了北京站，在闷湿的空气以及雨滴的欢迎下，随着人流，挤出了地铁，啊，北京，我的梦都。&lt;br /&gt;
+第一次感受到房子的重要性，拖着笨重的行李，顶着雨，联系各路朋友，就想在迷宫中找个落脚的地。在一起实习的同级朋友处住了一天，狭小的空间，四散的霉味，却已比蜗居好数倍; 第二天被学长收留，环境好多了，却也不好打扰人家，一边找房子，一边还是找房子。&lt;br /&gt;
+最后经历几番波折，算是寻到了个不错的住处，一个月不多的工资也算是丢进去了吧。  &lt;/p&gt;
+&lt;p&gt;看房子时，中介大姐说你们真好呀，同校的学生一起，在同一家公司上班，很难得。确实如此，一向好强的我到了外地寻求自力更生时，也不得不低头，那种兜里只有几块钱的苦，是只有朋友才能解的。&lt;br /&gt;
+托小原和小明的福，才让北京的孤独没最先摧毁我。  &lt;/p&gt;
+&lt;p&gt;还在做着实习生的事，没有想象中的福利，有所不满，也有所理解。既然唯一的渴求就是技术，忍过intern期也是必须的。&lt;br /&gt;
+能够慰藉的还是朋友，和前辈们准时下班喝酒，互相调侃着回家，就够了。  &lt;/p&gt;
+&lt;p&gt;还没到哼《北京，北京》的时候，还在更多的感受这个圣城。&lt;/p&gt;</summary><category term="douban"></category></entry><entry><title>Permission denied causing “Installation failed due to invalid APK file”</title><link href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html" rel="alternate"></link><updated>2013-05-31T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-31:permission-denied-causing-installation-failed-due-to-invalid-apk-file.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。&lt;/p&gt;
+&lt;p&gt;算是缺少测试吧，刷了后bug就浮现了，用ADB安装apk会出现“invalid APK file”的报错。更新ADT，给777权限都没法解决问题。logcat显示为：&lt;br /&gt;
+    Unable to open zip '/data/local/tmp/QuanZi.apk': Permission denied&lt;br /&gt;
+    Unable to read AndroidManifest.xml of /data/local/tmp/QuanZi.apk  &lt;/p&gt;
+&lt;p&gt;料想应该是ROM的问题吧，给了'local/tmp' 777权限依旧无法解决问题。&lt;br /&gt;
+多次尝试修给内置存储的权限都无果，只好曲线救国，把tmp移到sdcard上：
+手机上装给命令行软件 开su权限&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="nb"&gt;cd&lt;/span&gt; /data/local  
+    mv tmp tmp_old  
+    mkdir /mnt/sdcard/tmp  
+    ln -s /mnt/sdcard/tmp ./tmp 
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;弄好后发现可以安装了  &lt;/p&gt;
+&lt;p&gt;参考：http://stackoverflow.com/questions/14014871/permission-denied-causing-installation-failed-due-to-invalid-apk-file/14015196#14015196&lt;/p&gt;</summary><category term="android"></category></entry><entry><title>像上菜一样推送合乎口味的文章</title><link href="http://smilehacker.com/xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html" rel="alternate"></link><updated>2013-05-21T13:37:32+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-21:xiang-shang-cai-yang-tui-song-he-hu-kou-wei-de-wen-zhang.html</id><summary type="html">&lt;hr /&gt;
+&lt;h2&gt;引&lt;/h2&gt;
+&lt;p&gt;《阅FM》是个很棒的idea，当我第一次触摸到它时，就想山寨之，如果不是因为一些意外，可能就做了一款英文版的copy。这个idea让我眼前一亮，但作为产品，却不尽如人意，“极简”可不是表面的简单，而是精湛的打磨。&lt;br /&gt;
+不知什么时候，我们突然进入了web2.0时代，然后，3.0的影子也开始显露。《阅FM》是一道菜，你不需要思索，他便在合适的时候，合适的地点被端上来了，但是否合口味呢？&lt;br /&gt;
+我花了大半年的时间都在想这个问题，web3.0到底该以什么样的姿态被提出，2.0到底会因为什么技术的爆发而被打破、淘汰。&lt;/p&gt;
+&lt;h2&gt;上菜&lt;/h2&gt;
+&lt;p&gt;为了给用户上一盘合口味的菜，我得知道他的喜好，了解我的菜单。最常用的方式就是tag了吧，”二次元““重口味”“死基佬”，这是描述性分类，“喜”“怒”“哀”“乐”，这是情感分类，还有许许多多的tag。QQ这么干，豆瓣这么干，微博还是这么干。给顾客贴上标签，给菜贴上标签，好嘞，上菜。&lt;br /&gt;
+这是个有效的方法，这是个笨方法。&lt;/p&gt;
+&lt;p&gt;曾做过一个比较cool的项目，通过神经网络识别人前臂的表面肌电信号（SEMG）来判断人的手势，通过加速度感应器和陀螺仪获取手的位移，然后怎么前肢的运动就被我获取了，然后我就要知道用户在干嘛。动作不是静态的，就像电影胶片只要26帧，而计算机模拟却需要60帧，我没法通过每一毫秒的数据去识别用户在干嘛，我需要联系前面的动作以及即将发生的动作来推测用户TM到底在干嘛。&lt;br /&gt;
+分类也是动态的，您的顾客以前喜欢吃辣她就一辈子吃辣了？刚才他还在哭，吃了片刻又开始笑怎么办？&lt;/p&gt;
+&lt;p&gt;一个简单的例子，文章的分类是定死了，它不会反抗。当用户快速略过几篇伤感的文字，不就是在告诉我们，他现在不想让他的悲哀暗流成河，请换大碗的开心果。因果就在那里，只是我们忽略了而已。&lt;/p&gt;
+&lt;h2&gt;制定菜单&lt;/h2&gt;
+&lt;p&gt;能上菜的前提是要有菜单呀，你家就几道特色菜还好说，万一多了呢，一下到海量，你数不过来，得靠机器贴标签吧。
+笨方法是给顾客贴，你给他随便来一盘，他说太辣，哦，太辣了。但你要极简，就不该这么做，顾客是上帝，上帝是不会搭理你的。&lt;/p&gt;
+&lt;p&gt;最后还得机器来，教会机器汉语还要学会阅读可是个难活。中华文明博大精深，按文字，我们有白话文，有文言文，有网络文（雾）;论形态，我们有记叙文，有散文，有诗歌——太多了。&lt;br /&gt;
+要想理解一篇中文文章，你的先搞清楚他是什么文体，我不是中文系教授，所以我只能想到笨方法。段落短，句子短的，肯定是诗歌吧，工整点就是古诗体。议论文结构比较明显，也好区分，实在看不出来，那就当成散文。“之乎者也”多的，定是文言文，太多“亲”，算是淘宝体。&lt;br /&gt;
+（想来，还真需要去中文系请教）&lt;/p&gt;
+&lt;p&gt;分完类型，就是提取情感了。其实这倒容易，浅薄的文章会用到大量咏物手法，比如“枯藤老树昏鸦”，关键字提取就能搞定，类似贝叶斯算法过滤垃圾邮件，我们也就能简单的得到感情了。&lt;br /&gt;
+曾经有这么一个段子，某熊孩子把三百首古诗的意象做了个提取，然后您只要随机组合就能做出一首诗。反之如何呢？通过我的海量匹配以及机器学习算法，是否能的到意象或线索，然后反编译这篇文章呢？&lt;br /&gt;
+即使对于散文也是有法可循的。高中时为了理解汉语语法，我曾跟着老师将每篇课文都按照语法分析，挑出主谓宾，挑出定状补，工程量巨大，但效果明显。汉语虽然复杂，但千年的积累只是让其变形，却未失工整。&lt;br /&gt;
+我们不需要了解每句话的意思，不需要得到文章主旨，我们只需要得到大概即可。（视tag复杂度而定）&lt;/p&gt;
+&lt;p&gt;线索来自于细节，细节是有维度的，文章也是有维度的。比如作者，比如历史时期，比如创作背景。我们没法给每篇文章单独去精准的定义，但却可以联系所有的线索来给他一个框架。历史背景、背景下的事件、作者信息，他们都是影响因子，给予一个权值就能更好的分类。&lt;/p&gt;
+&lt;h2&gt;尾&lt;/h2&gt;
+&lt;p&gt;海量时代的分类必然是基于海量数据，使用传统算法对中文文章进行分类必然是件吃力不讨好的事，通过相似度对比、背景数据分析、用户行为分析，我们才能得到key。&lt;br /&gt;
+定过无数菜、阅过无数的人，才能通过衣着、气质、情感来挑选合乎口味的佳肴吧。&lt;/p&gt;</summary><category term="alg"></category></entry><entry><title>为什么是日记呢？</title><link href="http://smilehacker.com/wei-shi-yao-shi-ri-ji-ni.html" rel="alternate"></link><updated>2013-05-18T23:38:59+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-18:wei-shi-yao-shi-ri-ji-ni.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;一直很疑惑，为什么这个板块要叫做“日记”呢？&lt;br /&gt;
+日记不是给自己看的吗，日记不是留下回忆的吗，日记不是私藏秘密的吗？&lt;br /&gt;
+那为什么要公开呢，为什么要评论呢，为什么要回应呢？&lt;/p&gt;
+&lt;p&gt;或许是人太寂寞了吧，他想找个角落吐露自己的心声，很小心，但有想有倾听者，很惆怅。如娇羞的小鹿，离你远远的，但有在那边注视者你，享受着你的关心。&lt;br /&gt;
+又或者人是自恋的动物，他想被人知道，他想被人关心，他想被人抚摸。于是，他像个孩子般，蹑手蹑脚的把拙作藏在身后，当着大人的面。他知道这会吸引他们的注意力，又有借口掩饰自己的小心思。&lt;br /&gt;
+又或者是自怜，又或者是宣泄，又或者是无心……&lt;/p&gt;
+&lt;p&gt;犹记那年年少轻狂，恨不得全世界都认识自己，那时日记是记在blog上，那时蠢得可笑。&lt;br /&gt;
+后来食得人间烟火，日记回归小诗，记在纸上，只留给自己，只把苦痛留给灰烬。&lt;br /&gt;
+再后来，把他封印在心里，因为学会了孤独，学会了坚强。&lt;br /&gt;
+最后，日记留在了记忆里，留在了空气里，留在了曲子里，留在了存在里。&lt;/p&gt;
+&lt;p&gt;它本没有形式，又何必赋予它形式，当所有的所有交织在一起，会成为追忆吗？&lt;/p&gt;</summary></entry><entry><title>每个人都在等待一个人来终结自己的罪恶吧</title><link href="http://smilehacker.com/mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html" rel="alternate"></link><updated>2013-05-16T12:17:50+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-16:mei-ge-ren-du-zai-deng-dai-ge-ren-lai-zhong-jie-zi-ji-de-zui-e-ba.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;学校断网一直是学生生产力的阻碍，为了庸才而牺牲天才，值得吗？&lt;br /&gt;
+大半夜的，看不了Google IO大会，真是遗憾。通过微博直播，闲暇只能看日剧解渴。断网前下了部《胜利即是正义》，据说是一部会让你觉得快进键是多余的名作，几集之后却是如此，又是一部幽默之余，批判人性的剧作。&lt;br /&gt;
+说白了，主角是律师，也可说是“欺诈师”，通过人性的弱点去完成审判。欺诈可以为善，也能为恶，虽未看完，但也能预料他在等着人打败他，阻止自己的“恶行”。&lt;/p&gt;
+&lt;p&gt;多年前，我可能会觉得这是《Jump》里才会有的剧情吧，但大学三年后，我已不再认为那是童话。&lt;br /&gt;
+三年前，我一直鄙视着自己的父亲，一个同样使用文字和言语的“欺诈师”。父亲负责的工作更多的是帮公司消除负面新闻，应酬、摆平记者、谄媚领导是他的任务。&lt;br /&gt;
+我讨厌着这样的父亲，我发誓不为俗世所染，保守自己的清泉。&lt;br /&gt;
+直到我在不经意间也使用了这种能力，通过这曾经唾弃，无意继承的能力，简单的便完成了看似困难的任务。起初依旧是排斥，直到多次碰壁后接受了它。&lt;br /&gt;
+接触心理学，接触哲学，接触社会学，又是不经意的去分析身边的人，我越来越孤独。通过狡黠的言语去玩弄现实，竟是如此的简单。我明白这是罪恶，但它却不断的给我助攻。&lt;br /&gt;
+每个不眠之夜，我便会挣扎，我不知道这是堕落还是升华，某种东西就像原癌基因一样觉醒，然后不断的扩张。
+或许，我也在等待着一个人来终结自己。&lt;/p&gt;
+&lt;p&gt;不知道日本人为何更喜欢去发觉并讽刺人性，也许是他们更愿意直白的面对自己吧。中国人，更愿意把自己埋藏在自己的城府里。&lt;/p&gt;</summary></entry><entry><title>关于钱</title><link href="http://smilehacker.com/guan-yu-qian.html" rel="alternate"></link><updated>2013-05-15T20:43:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-15:guan-yu-qian.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;人生迷茫，就会从书里、从圣贤的口里、从历史的破竹简里寻找答案。对于金，文人大豪是以唾斥为荣，但这个物欲横流的时代，谁又能大声说“老子不喜欢钱”。&lt;/p&gt;
+&lt;p&gt;今日突然从冯唐的一封信找到了些想法，或许能支撑一段时间吧。&lt;/p&gt;
+&lt;p&gt;关于钱，不能多，也不能少。没钱你活不下去，没钱你没法换酒吟诗。但钱多了也不好，你花不完，
+也带不走，它唤醒了你的欲望，交恶了你的朋友，你落不到一个好。&lt;/p&gt;
+&lt;p&gt;钱，只需要正好，不多不少。正好可以及时行乐，正好满足基本的欲望，正好可以不再纠结。&lt;/p&gt;
+&lt;p&gt;PS：
+今日也从微博上看到这么一条消息，以北京一万每月的工资，每月也只能剩下二十多块。这难道不好吗，赚的恰到好处，用得恰到好处。为何要保留俗世的欲，欲让你存钱买房，欲让你结婚生子？赚得磊落，花的爽朗，仰天一笑，何乐不为。&lt;/p&gt;</summary></entry><entry><title>渴望疯狂</title><link href="http://smilehacker.com/ke-wang-feng-kuang.html" rel="alternate"></link><updated>2013-05-07T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-05-07:ke-wang-feng-kuang.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;大学之前，便暗下决心，一定要在四年里最最疯狂的事，或者是在操场上边大吼大叫，边赤身奔跑；或者是痛快地和宿敌来一场万众瞩目的决斗……&lt;br /&gt;
+但三年里，没一次满足，没一次能留下刻在灵魂里的记忆。&lt;br /&gt;
+三年里，不断的寻找着疯狂，参加学生会去带领一群人做想做的的事，参加技术团队和一群geek们编写世界，参加各种奇怪的活动去加速为知因子的碰撞，希望奇遇能从天降临。&lt;br /&gt;
+像叛逆青年一般随性翘课，如好好学生一般义务为学生服务，像中二少年一般在网上痛斥国家的腐朽，又和人民公知一般积极入党。&lt;br /&gt;
+明知道弊大于利却也要舍弃现在去租房子参加讨厌技术主导的比赛，明知道没一点感觉却要去参加各种面试，明知道不喜欢却要去感受那份鄙夷，明知道没结果，却要写下这些在这无病呻吟。&lt;br /&gt;
+一直就这样挥霍着时间，浪费着青春，希望有朝一日能找到让灵魂流血的东西。&lt;br /&gt;
+但他们却都是这么苍白，都是这么无力，没在心里留下丁点刻痕。&lt;br /&gt;
+孤独的生命渴望触动，蠢蠢欲动的血性撕碎尊严也要呐喊。&lt;br /&gt;
+命运，我宁可你更多的曲折也不希望你给我平庸，请让我在暴风雨中真真正正的疯狂一把吧。  &lt;/p&gt;</summary><category term="life"></category></entry><entry><title>我，分裂</title><link href="http://smilehacker.com/wo-fen-lie.html" rel="alternate"></link><updated>2013-04-29T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-29:wo-fen-lie.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;我喜欢在有些人面前呈现屌丝的一面，对自己的演技比较自豪，大家也都人为我是个屌丝吧，或许我就是，真实出镜而已。也喜欢在某些人面前像个诗人一样环绕，也喜欢在某些人面前正经应世。
+关上门，回到自己的小窝，我就是我自己了。&lt;/p&gt;
+&lt;p&gt;现实总是那么残酷，以前那么鄙视父亲应酬时的谄媚，现在我也坐在酒桌前傻笑了。曾经发誓不会磨平自己的刺，现在也在俗世中变得圆滑。&lt;/p&gt;
+&lt;p&gt;即便对着镜子，也无法认清自己了吧。说的谎多了，拍的马屁也多了，一键换装般的改变自己然后去适应环境，然后去迎合他人，无论是言行还是灵魂，就这样变了个人。然后，我不认得自己了。&lt;/p&gt;
+&lt;p&gt;不知道这是天赋还是诅咒，我很适合扮演其他人，就像是自我催眠，我的“真理”会瞬变崩塌，然后有瞬间在残骸上再造。&lt;/p&gt;
+&lt;p&gt;甚至怀疑是多重人格，夜间，安静时，他们会互相争吵，难以入眠。我不知道韦小宝是怎么活过来的，我觉得自己会发疯吧。&lt;/p&gt;
+&lt;p&gt;我在每个社交圈扮演着不同的角色，却又在月下寻找这自己的角色，多么讽刺。我喜欢用言语去蒙骗世界，却又无法用言语描述自己，多么可悲。&lt;/p&gt;
+&lt;p&gt;预约了心理医生，希望崩坏前，能组织那个我。&lt;/p&gt;</summary></entry><entry><title>不想写诗的时候</title><link href="http://smilehacker.com/bu-xiang-xie-shi-de-shi-hou.html" rel="alternate"></link><updated>2013-04-22T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-22:bu-xiang-xie-shi-de-shi-hou.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;手里拿着笔的时候，就想该写点什么吧。&lt;br /&gt;
+想了想，却不知从何入手，或许是入世已久，心已不属于自己。  &lt;/p&gt;
+&lt;p&gt;曾经迷恋的诗，已经读不懂了。&lt;br /&gt;
+曾经向往的人，已换去了容颜。  &lt;/p&gt;
+&lt;p&gt;执着已经被风吹散，留下的却只有对尘世的漠然。&lt;br /&gt;
+笔还在手里，人却没了心意。  &lt;/p&gt;
+&lt;p&gt;也许是累了，也许是倦了。&lt;br /&gt;
+闭上眼，不想写诗。  &lt;/p&gt;</summary><category term="poem"></category></entry><entry><title>器</title><link href="http://smilehacker.com/qi.html" rel="alternate"></link><updated>2013-04-22T00:00:00+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-22:qi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;父有一笔 ，钢笔，自行伍以来，伴之数十载。书时，龙飞凤舞，铿锵有力，一气呵成，笔到文成，无不佩服。&lt;/p&gt;
+&lt;p&gt;吾亦有笔，铅笔、圆珠笔、钢笔、毛笔。需之时，择一而书。了了几笔，随性着力，横七竖八，旁人捧腹。&lt;/p&gt;
+&lt;p&gt;此父子何以差之巨甚？&lt;/p&gt;
+&lt;p&gt;君不见，习武者，十八般兵器，择一而使。正可谓术业有专攻，隔行如隔山。吾，使键盘者，岂与笔者相争。&lt;/p&gt;
+&lt;p&gt;键盘者，以机械为贵，而机械，有依轴有红黑青黄茶奶白绿之分，犹以黑茶青为甚。&lt;br /&gt;
+黑者，直上直下，以速见长，为游戏者之所求。&lt;br /&gt;
+青者，段落十足，击之，力声俱全，陶醉其中，为编码之首选，奈何其势过强，犹有扰民之嫌。&lt;br /&gt;
+茶者，吾之最爱，介于青黑之间，回馈有力而声不剧，反应灵敏而无虚，实乃吾辈之利器，而为吾终身之所求。&lt;/p&gt;
+&lt;p&gt;吾遨游万网之内，访名站，阅名文，以求一名器能与吾父之笔匹敌，奈何欲一知音难，遇一器亦难。吾矢志于此，欲上下而求索。&lt;/p&gt;
+&lt;p&gt;吾谓之吾父，吾父曰:狗屁。&lt;/p&gt;</summary></entry><entry><title>真TM想休了Arch——豆瓣笔试血泪史</title><link href="http://smilehacker.com/zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html" rel="alternate"></link><updated>2013-04-01T18:40:51+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-04-01:zhen-tmxiang-xiu-liao-arch-dou-ban-bi-shi-xie-lei-shi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;古人云：“绳命在于折腾”，自想圣人不欺余，于是走上了折腾Linux的不归路。&lt;br /&gt;
+Ubuntu、Fedora、Deepin、CentOS、Arch各路版本都用过，Gentoo就算了，机子差，编译慢。&lt;br /&gt;
+经历了各种折磨后，俺最终落脚在Arch。  &lt;/p&gt;
+&lt;p&gt;初恋是甜美的，初识Arch，在尽力了前期苦苦最求的痛苦后，总算是把她调教得有模有样了，那速度，完爆Ubuntu有木有。&lt;br /&gt;
+奈何婚姻是爱情的坟墓，Arch将我拐上贼船后就开始露出本性了，各种问题随着更新扑面而来。起初以为是小打小闹，调调bug也蛮惬意的，哪知后来她却变本加厉。  &lt;/p&gt;
+&lt;p&gt;因为做ImagineCup，我只能回到Windows那，冷落了她许久。后来豆瓣笔试，俺还是屁颠屁颠的滚回娘家接她，为了讨好她，还特意更新了次，换上新内核，新数据库。岂止她还是生气，直接让我的GTK跪了，带着黑眼圈弄了一晚上，才讨好她。本以为已经大事化了了，可到了笔试当天才发现，她尽然拐走了Django，让我直接没法做题。&lt;br /&gt;
+哎，随叫我喜欢折腾呢，悲剧的笔试后，调好了MySQL，救回了Django，就当是个教训吧。  &lt;/p&gt;
+&lt;p&gt;可惜我还是太年轻了，too young， too simple。&lt;br /&gt;
+今天豆瓣的HR姐姐说我报的是移动开发，要再笔试一次，让又我屁颠屁颠的翘课跑回来找Arch。
+开始做得很开心，算法也不是很难（主要是这个比上次的省时间），Android的题算是毫无压力（笑）。再看看那道必做题，一个简单的布局问题，太简单了，最后做吧。&lt;br /&gt;
+就这么心情愉悦的忽略了暴风雨前的平静，我打开Eclipse准备最后一击——我操——ADT呢？？？  &lt;/p&gt;
+&lt;p&gt;试想一下，奥特曼的人间体看到一只鲜肥可爱的小怪兽，准备掏出棒子秒之，哪知发现拿错了，直接被小怪兽一脚拿了First Blood，这是多么惊世骇俗。  &lt;/p&gt;
+&lt;p&gt;你狠，我掏出Emacs，在没有代码提示的情况下，苦逼的回忆着那蛋疼坑爹还特别长的各种属性名。尼玛，忘记单词是件多么蛋疼。。。。  &lt;/p&gt;
+&lt;p&gt;认栽了，简单用中文描述了下这道题还是蛮简单的，大体这么布局，然后就交了。  &lt;/p&gt;
+&lt;p&gt;这次滴教训是，以后Arch更新后，把所有东西都试一次，免得悲剧（哭）  &lt;/p&gt;
+&lt;p&gt;等哥有钱了，绝对休了你，直接换顶配RMBP15，哼。  &lt;/p&gt;</summary><category term="linux"></category><category term="arch"></category><category term="douban"></category></entry><entry><title>ABOUT ME? NO NEED</title><link href="http://smilehacker.com/about-me-no-need.html" rel="alternate"></link><updated>2013-03-29T12:09:36+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:about-me-no-need.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;朋友今天取笑我：“你丫这blog够简洁的，连个'about me'都没有。“
+确实，自从由Wordpress换成Hexo后，就没怎么打点这一寸三亩地，直接套用默认模板，最开始连个feed都没加。
+不过，那些东西又有什么意义呢？&lt;/p&gt;
+&lt;p&gt;最早写Blog是从高一开始，那时年轻气盛，为了丁点的虚荣心，绞尽脑汁的去打点。看着点击在一月内破20万甚是高兴，可之后呢，依旧是空虚。可以说那时候的Blog是为了炫耀，多么傻，多么天真。
+后来到了大学，人也成熟了些，Blog开始记录些技术文、一些心情、一些随笔。去掉了流量分析，去掉了访问量，去掉了浮云。
+不知为何，现在看得更开了，技术文就由Evernote记录吧，心情交给日记，随笔有所感还是会更新下。至于About me，那最后的虚荣，也就忽略吧。&lt;/p&gt;
+&lt;p&gt;认识你的人，不会在意你的面具，不认识你的人，不在意你是谁。本是尘归尘，土归土，又何必在意那个名字呢。&lt;/p&gt;
+&lt;p&gt;就仅在这网络的一个小角落，留下迷失的自我吧。&lt;/p&gt;</summary></entry><entry><title>让用户体验改变Linux</title><link href="http://smilehacker.com/rang-yong-hu-ti-yan-gai-bian-linux.html" rel="alternate"></link><updated>2013-03-29T10:59:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-03-29:rang-yong-hu-ti-yan-gai-bian-linux.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;不到一年前。我还是个Windows死忠，倒不是不喜欢Linux，而是因为Linux当时2.6的内核不支持双显卡，只能放弃。&lt;br /&gt;
+后来到了3.0内核的时代，终于能进入X了，也体验到了Linux的魅力，深深的为之动容。奈何XWindow是如此的不争气，各种bug与对用户体验的漠视让吾辈在无限的崩溃中抓狂。我甚至专门写了篇文章对比windows与Ubuntu的交互差别，来证明程序猿也是需要关爱的。  &lt;/p&gt;
+&lt;p&gt;Office、QQ、Thunder、Sogou，这些都是Win的王牌，不过时至今日，随着开源的盛行与互联网的强势崛起，各大公司也开始重新审视Linux。Wiz、WPS等先后登陆，现在Sogou输入法也来了，Chrome上也有了Dualx这样的QQ插件，不用再忍受wineQQ了。  &lt;/p&gt;
+&lt;p&gt;&lt;img alt="sogou" src="http://i5.minus.com/iG7EhXIXYX5q2.png" /&gt;&lt;/p&gt;
+&lt;p&gt;为了替代坑爹的Xwindow，各大社区也开始向Wayland转型，GTK+3.1宣布将在9月与Wayland一同发布，Gnome3.8与Arch均表示将支持之。相信在2014之前，我们能够见到由Wayland支持的强大Linux GUI,Linux桌面端将焕发第二春。&lt;/p&gt;</summary></entry><entry><title>Eclipse提示框颜色设置</title><link href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html" rel="alternate"></link><updated>2013-02-13T13:02:47+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-13:eclipseti-shi-kuang-yan-se-she-zhi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。&lt;br /&gt;
+后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。&lt;br /&gt;
+现在用arch了，在自己调配主题时倒找到的修改的办法：  &lt;/p&gt;
+&lt;p&gt;Linux主题文件位于&lt;em&gt;/usr/share/themes/&lt;/em&gt;下对应的主题文件夹下
+比如我正在用使用&lt;strong&gt;Gnome-Cupertino&lt;/strong&gt;主题，就进入到&lt;strong&gt;/usr/share/themes/Gnome-Cupertino/&lt;/strong&gt;目录下 &lt;br /&gt;
+&lt;code&gt;cd /usr/share/themes/Gnome-Cupertino&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;打开gtk-2.0/gtkrc文件&lt;br /&gt;
+&lt;code&gt;sudo vim gtk-2.0/gtkrc&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;修改的&lt;strong&gt;tooltip_fg_color&lt;/strong&gt;和&lt;strong&gt;tooltip_bg_color&lt;/strong&gt;两个属性的值，如果没有改属性，可以自行添加&lt;br /&gt;
+&lt;code&gt;gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"&lt;/code&gt;  &lt;/p&gt;
+&lt;p&gt;然后保存退出，打开系统外观配置，切换一下主题，当切换回来的时候，修改的效果就生效了  &lt;/p&gt;</summary><category term="eclipse"></category></entry><entry><title>选择 一</title><link href="http://smilehacker.com/xuan-ze.html" rel="alternate"></link><updated>2013-02-07T23:25:30+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:xuan-ze.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。&lt;br /&gt;
+对于完美主义拖延症晚期患者来说，特别是二选一最为纠结的。当掺杂太多因素时，是&lt;strong&gt;“高瞻远瞩”&lt;/strong&gt;还是&lt;strong&gt;“活在当下”&lt;/strong&gt;，将不再由理性来判断。 
+为了生成一个“主见”，我决定给自己找一套“抉择”的标准，以免日后犹豫。&lt;/p&gt;
+&lt;p&gt;昨天看了一个帖子，列举&lt;a href="http://python-china.org/topic/65#reply31"&gt;程序猿们的开发工
+具&lt;/a&gt;，想想自己这一年内为开发工具也做了
+很多抉择，就列举出来作为判断依据吧：&lt;/p&gt;
+&lt;h3&gt;开发工具&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;OS&lt;/strong&gt;： Windows -&amp;gt; Ubuntu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Editor&lt;/strong&gt;: Vim -&amp;gt; Sublime Text -&amp;gt; Emacs&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Version&lt;/strong&gt;: SVN -&amp;gt; Git&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Terminal&lt;/strong&gt;: Gnome Terminal -&amp;gt; Guake&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Shell&lt;/strong&gt;： bash -&amp;gt; zsh&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Broswer&lt;/strong&gt;: Firefox -&amp;gt; Chrome&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Other&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Blog&lt;/strong&gt;: Wordpress -&amp;gt; Hexo&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;IT Skill&lt;/strong&gt;: Android -&amp;gt; Web&lt;br /&gt;
+&lt;!-- more --&gt;&lt;br /&gt;
+对工具的选择到没太多的思索，基本是随着技术的提升学会了更好的东西吧，就像SVN到Git，
+Bash到Zsh，都只是掌握后有了更高的需求而作出改变。
+但一些其他的东西，却也有不同判断依据：&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;活在当下&lt;/h2&gt;
+&lt;p&gt;虽然“活在当下”近年来被很大一部分人接受，但我还是没法认同它，可能我属于激进派吧，
+还不想这么快就放弃攀登。而这反而和”和谐“有异曲同工之妙，更像执政党的维稳手段。  &lt;/p&gt;
+&lt;p&gt;但每次做选择时，我都不得不考虑它。就像操作系统，以前我一直用Windows，因为我主要
+做Android开发，JAVA和Eclipse有很好的跨平台性，我完全用不到Linux的“优点“，而
+Windows又能给我提供更好的桌面体验，除了装B，我还有什么理由选择其他操作系统呢？但
+后来Android无法满足我了，我开始学习Web，这时蹩脚的Windows完全无法满足的我的需求，
+于是现在，我变得无法离开Linux了。&lt;/p&gt;
+&lt;p&gt;“任何真理都是合理的偏见”，在不同的境况下，为何不作出不同的选择。团队有个女生说
+我太善变了，因为在给她推荐手机时第一天说“性价比高的东西，不值得买”，第二天我就
+推荐她买小米了,我很无辜。当预算在3000——4000时，品质当然是第一选择（特别是在你摔
+坏了N部手机后），当预算在2000左右时，我想小米是无二的选择了。  &lt;/p&gt;
+&lt;p&gt;中国人讲究天时地利人和，大概就是如此吧。&lt;/p&gt;
+&lt;h2&gt;高瞻远瞩&lt;/h2&gt;
+&lt;p&gt;“高瞻远瞩”算是小时候老师提得最多了的吧，但有时候却会陷入“好高鹜远”的漩涡。  &lt;/p&gt;
+&lt;p&gt;以前在code之前，一定会先想用什么技术、架构，总考虑后期数据量大了、或者需求改了的
+时候怎么办，一定要采用最好的技术，既是是一个小项目。  &lt;/p&gt;
+&lt;p&gt;记得刚学web时还特别反感动态语言，认为其性能不如静态语言，理由很简单，Java处理数
+据库的速度比PHP高一个数量级，安全性也更好，君不见Facebook前期偷懒，后期不得不把
+PHP完全Hack了才能满足高并发。Twitter开始用Ruby很爽吧，现在后悔了吧。  &lt;/p&gt;
+&lt;p&gt;为了方便，在选 动态语言时也考虑了很久，Pyhon还是Ruby，最后还是选了性能更好的
+Python。Ruby虽然在特性上更符合我的性格，但ROR确实没在性能上很乏力。  &lt;/p&gt;
+&lt;p&gt;作出了这样的选择后，可想而知我当年是有多痛苦，别人用php一下午搞定的课设，我用
+J2EE这反人类的玩意写了一个星期，捉急！！！&lt;/p&gt;
+&lt;p&gt;后来看了一篇某高人的文章，说我这种做法是“自寻死路”。一个菜鸟的项目，用户量能有
+多大，并发能有多高？盲目的最求技术却输在了时间上，这是互联网世界中不能忍的。现在
+的硬件完全能够弥补动态语言带来的性能缺失，与其说是Google的V8拯救了javascript，倒
+不如说是现在的机器跑得动Chrome了。（建议和我一样对动态语言耿耿于怀的朋友去看下
+《黑客与画家》）  &lt;/p&gt;
+&lt;p&gt;虽然容易好高鹜远，但远见还是必须的。&lt;br /&gt;
+就像Blog，去年Octopress特别火时我便对它没什么好感，就一个原因——Ruby，Ruby的执行
+效率一只是个问题，与其用Ruby来做静态生成器，我宁愿拿等待的时间来用C写一个。&lt;br /&gt;
+果不其然，当年换Octopress的人也开始纷纷转型了，如果你有100篇博文，每次生成你都要
+等几分钟，然后还要花更多的时间去把它pull到github上，一个字，“累”。&lt;br /&gt;
+忍受了半年Wordpress，看到Lucifr也换成了Hexo，一个Nodejs的生成器，在他出到没什么
+bug的版本后，我也迁移了。Nodejs的速度果然不是盖的。  &lt;/p&gt;
+&lt;p&gt;个人认为Octopress和Ruby都属于无法经受时间考验的东西，初期用着很爽，后期就要为它
+付出代价了（怎么感觉和.Net一样。。。）。 &lt;/p&gt;
+&lt;p&gt;对于从Android转型Web我也抱有相同的态度，Android就像一个大框架，限制太多了，而就
+其前景来说，诺基亚的倒塌已经证明了Android也不会走得太远。基于Html5的Firefox OS和
+更为底层的Ubuntu Phone在初期可能无法撼动Android，但他们会走得更远是可以预料的。  &lt;/p&gt;
+&lt;p&gt;而对于Web来说，刚接触我就被它的自由吸引了，更多的语言，更多的技术，更多的框架，
+如果说Android是刚开坑出来的金矿，那Web就是无尽的海洋，孕育了一切的奇迹。  &lt;/p&gt;
+&lt;p&gt;————节外生枝了好多————&lt;/p&gt;
+&lt;p&gt;技术上的抉择只是这一年来的一小部分，但把他写出来，确实也让重新审视了不少东西。每
+次写随笔总是想到什么写什么，写到最后，主旨早就变了。  &lt;/p&gt;
+&lt;p&gt;我想对于&lt;strong&gt;”抉择“&lt;/strong&gt;，我会所有理由一个权值，然后再来排序，选出最后的结果。&lt;br /&gt;
+现在看来，”活在当下“应该分配更多的点数了。  &lt;/p&gt;
+&lt;p&gt;这个世界总是充满了惊喜，太早的为未来做打算，可能不是一个好的选择，还是先找到自己
+的位置比较重要。  &lt;/p&gt;
+&lt;p&gt;写在第一次规划”抉择“。&lt;/p&gt;</summary><category term="coder"></category></entry><entry><title>利用rsync自动同步服务器与本地代码的python脚本</title><link href="http://smilehacker.com/li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:27:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:li-yong-rsynczi-dong-tong-bu-fu-wu-qi-yu-ben-di-dai-ma-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;菜鸟表示写web时 每次修改完后把文件往VPS上丢很麻烦&lt;br /&gt;
+用ssh sshfs scp都太慢  小东西又懒得用git&lt;br /&gt;
+sublimetext上得sftp不支持中文 emacs干脆就只能ssh  &lt;/p&gt;
+&lt;p&gt;于是用linux自带的rsync写了个同步脚本&lt;br /&gt;
+可以手动或自动往服务器上差异性同步 不用scp一堆东西 也不用忍受ssh那个渣速度  &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;把脚本copy到你的目录 修改脚本内的配置 如果在脚本内设置了密码 那每次上次就会自动输入密码 否则除非你设置本地key 否则都要输密码&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果代码在服务器上 先执行 ： &lt;code&gt;python rsync.py -down&lt;/code&gt; 
+   把代码download下来 ， 个人觉得先down下来再修改 不用忍受每次load一遍 比较舒服&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;每次修改完了 可以手动上传:&lt;code&gt;python rsync,py&lt;/code&gt;
+    或者也可以放在后台自动上传：&lt;code&gt;python rsync.py -auto&lt;/code&gt;
+    他会监视改目录的文件 如果新建 修改或删除 都会sync
+    可以用 &lt;code&gt;nohup python rsync.py -auto&amp;amp;&lt;/code&gt; 
+    来后台运行&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;只根据emacs优化了 vim党自己改&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;sync时会忽略隐藏文件和临时文件&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;!-- more --&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;# use rsync to sync code from server&lt;/span&gt;
+&lt;span class="c"&gt;# coding = UTF8&lt;/span&gt;
+&lt;span class="c"&gt;# @author Kleist Zhou&lt;/span&gt;
+&lt;span class="c"&gt;# 2013/2/5&lt;/span&gt;
+
+&lt;span class="c"&gt;# Need pyinotify, pexpect&lt;/span&gt;
+&lt;span class="c"&gt;# please use easy_install to add in&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;os&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;sys&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pyinotify&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;re&lt;/span&gt;
+
+&lt;span class="c"&gt;# your sync config&lt;/span&gt;
+&lt;span class="n"&gt;server&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;199.245.60.73&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;root&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;./&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;target&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;/srv/www/love/public_html/&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;options&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;-rtvuC --delete --progress --exclude=&amp;#39;rsync.py&amp;#39;&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;#custom regular expression&lt;/span&gt;
+&lt;span class="n"&gt;rulers&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;r&amp;quot;[#~.][\s\S]*&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;r&amp;quot;[\s\S]*[#~]&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;r&amp;quot;[\s\S]*_flymake.[\s\S]*&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;-e &amp;#39;ssh -p &lt;/span&gt;&lt;span class="si"&gt;%d&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;runCmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;os&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;system&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;pexpect&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;
+        &lt;span class="n"&gt;child&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pexpect&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;spawn&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;password: &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;continue connecting (yes/no)?&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sendline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sendline&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;yes&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="n"&gt;pexpect&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EOF&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;expect&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pexpect&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;EOF&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="n"&gt;child&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;close&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;option&lt;/span&gt;
+    &lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;rsync &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;@&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;:&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c"&gt;#print cmd&lt;/span&gt;
+    &lt;span class="n"&gt;runCmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;download&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;option&lt;/span&gt;
+    &lt;span class="n"&gt;cmd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;rsync &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt; &lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;@&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;:&lt;/span&gt;&lt;span class="si"&gt;%s&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt; &lt;span class="o"&gt;%&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;options&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;server&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;target&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;cmd&lt;/span&gt;
+    &lt;span class="n"&gt;runCmd&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cmd&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;OnChangeHandler&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;pyinotify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ProcessEvent&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;checkFileName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fileName&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;global&lt;/span&gt; &lt;span class="n"&gt;rulers&lt;/span&gt;
+        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;ruler&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;rulers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;p&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ruler&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;p&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;match&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fileName&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+                &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;syncFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fileName&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;checkFileName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fileName&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process_IN_CREATE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c"&gt;#print &amp;quot;Create file: %s &amp;quot; % os.path.join(event.path,event.name)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;syncFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process_IN_DELETE&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c"&gt;#print &amp;quot;Delete file: %s &amp;quot; % os.path.join(event.path,event.name)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;syncFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;process_IN_MODIFY&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="c"&gt;#print &amp;quot;Modify file: %s &amp;quot; % os.path.join(event.path,event.name)&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;syncFile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;event&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;auto_sync&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;wm&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyinotify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;WatchManager&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;mask&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyinotify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IN_CREATE&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;pyinotify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IN_DELETE&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;pyinotify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IN_MODIFY&lt;/span&gt;
+    &lt;span class="n"&gt;notifier&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pyinotify&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Notifier&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;wm&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;OnChangeHandler&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+    &lt;span class="n"&gt;wm&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;add_watch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;./&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mask&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;rec&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;auto_add&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;notifier&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;loop&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sys&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;argv&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;-down&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;download&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="k"&gt;elif&lt;/span&gt; &lt;span class="n"&gt;option&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;-auto&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+            &lt;span class="n"&gt;auto_sync&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;else&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;sync&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="c"&gt;# main&lt;/span&gt;
+&lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;__name__&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;__main__&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>自动获取Nexus4售卖状态的Python脚本</title><link href="http://smilehacker.com/zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html" rel="alternate"></link><updated>2013-02-07T21:24:06+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:zi-dong-huo-qu-nexus4shou-mai-zhuang-tai-de-pythonjiao-ben.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;img src="static/images/nexus4.png" alt="Nexus" style="width: 630px;"/&gt;&lt;br /&gt;
+使用pyquery做爬虫解析GooglePlay页面 获取状态
+然后通过Gmail发给指定邮箱
+每隔一个小时自动检测一次
+使用 &lt;code&gt;&lt;strong&gt;nohup python *.py &amp;amp;&lt;/strong&gt;&lt;/code&gt; 可在后台运行&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="c"&gt;#coding=utf-8&lt;/span&gt;
+&lt;span class="c"&gt;# easy_install pyquery OR sudo apt-get install python-pyquery&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pyquery&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;PyQuery&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;pq&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;smtplib&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;email.Message&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;Message&lt;/span&gt;
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+
+&lt;span class="c"&gt;# 发给谁&lt;/span&gt;
+&lt;span class="n"&gt;mailto_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xxx@xx.xx&amp;quot;&lt;/span&gt;
+&lt;span class="c"&gt;# 设置服务器 用户名 口令 邮箱后缀&lt;/span&gt;
+&lt;span class="n"&gt;mail_host&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;smtp.gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;mail_user&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;xxx@gmail.com&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;mail_pass&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;you password&amp;quot;&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;sendMail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+&lt;span class="sd"&gt;    sub:主题&lt;/span&gt;
+&lt;span class="sd"&gt;    content:内容&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Message&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Subject&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;sub&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;From&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mail_user&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;To&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;mailto_list&lt;/span&gt;
+    &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set_payload&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;smtplib&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;SMTP&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail_host&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;port&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;587&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;timeout&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;200&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;starttls&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;login&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail_user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mail_pass&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sendmail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mail_user&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;mailto_list&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;as_string&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;Exception&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;str&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;e&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;False&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;checkSoldState&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;doc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pq&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;url&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;r&amp;#39;https://play.google.com/store/devices/details?id=nexus_4_16gb&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="n"&gt;soldMsg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;doc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;span&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;.hardware-price-description&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;soldMsg&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;soldMsg&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Sold out&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;sent mail&amp;#39;&lt;/span&gt;
+        &lt;span class="n"&gt;sendMail&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Nexus4 Info&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;Sold out&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;say&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;hello&amp;quot;&lt;/span&gt;
+
+&lt;span class="c"&gt;# main&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="n"&gt;checkSoldState&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sleep&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3600&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="Python"></category></entry><entry><title>让代码更规范——匈牙利命名法</title><link href="http://smilehacker.com/rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html" rel="alternate"></link><updated>2013-02-07T21:07:22+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:rang-dai-ma-geng-gui-fan-xiong-ya-li-ming-ming-fa.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;以前用TurboC时，编译器无法动态识别变量类型，东西多了后很蛋疼，你不知道某个变量到底是干嘛的了，特别是维护很久以前的代码。
+好的命名规范能给开发和维护带来极大的帮助，基本不需要注释便能让能看懂你的代码，而在所有的命名规范里，我最喜欢的便是匈牙利命名法。&lt;/p&gt;
+&lt;p&gt;匈牙利命名法是一种编程时的命名规范。基本原则是：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;变量名＝属性＋类型＋对象描述&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;其中每一对象的名称都要求有明确含义，可以取对象名字全称或名字的一部分。命名要基于容易记忆容易理解的原则。保证名字的连贯性是非常重要的。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;举例来说，表单的名称为form，那么在匈牙利命名法中可以简写为frm，则当表单变量名称为Switchboard时，变量全称应该为 frmSwitchboard。这样可以很容易从变量名看出Switchboard是一个表单，同样，如果此变量类型为标签，那么就应命名成 lblSwitchboard。可以看出，匈牙利命名法非常便于记忆，而且使变量名非常清晰易懂，这样，增强了代码的可读性，方便各程序员之间相互交流代 码。&lt;/p&gt;
+&lt;p&gt;据说这种命名法是一位叫 Charles Simonyi 的匈牙利程序员发明的，后来他在微软呆了几年，于是这种命名法就通过微软的各种产品和文档资料向世界传播开了。现在，大部分程序员不管自 己使用什么软件进行开发，或多或少都使用了这种命名法。这种命名法的出发点是把变量名按：属性+类型+对象描述的顺序组合起来，以使程序员作变量时对变量 的类型和其它属性有直观的了解，下面是HN变量命名规范，其中也有一些是我个人的偏向：&lt;/p&gt;
+&lt;!-- more --&gt;
+
+&lt;p&gt;&lt;strong&gt;属性部分 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　全局变量                               g_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;常量                                   c_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;c++&lt;/strong&gt;&lt;strong&gt;类成员变量                          m_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　静态变量                               s_ &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;类型部分 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　指针                                   p &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　函数                                   fn &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　无效                                   v &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　句柄                                   h &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　长整型                                 l &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　布尔                                   b &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　浮点型（有时也指文件）                 f &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　双字                                   dw &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字符串                                 sz &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　短整型                                 n &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　双精度浮点                             d &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　计数                                   c（通常用cnt） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字符                                   ch（通常用c） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　整型                                   i（通常用n） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字节                                   by &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　字                                     w &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　实型                                   r &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　无符号                                 u &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;描述部分 &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　最大                                   Max &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　最小                                   Min &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　初始化                                 Init &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　临时变量                               T（或Temp） &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　源对象                                 Src &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;　　目的对象                               Dest &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这里顺便写几个例子：&lt;/p&gt;
+&lt;p&gt;hwnd ： h 是类型描述，表示句柄， wnd 是变量对象描述，表示窗口，所以 hwnd 表示窗口句柄；&lt;/p&gt;
+&lt;p&gt;pfnEatApple ： pfn 是类型描述，表示指向函数的指针， EatApple 是变量对象描述，所以它表示&lt;/p&gt;
+&lt;p&gt;指向 EatApple 函数的函数指针变量。&lt;/p&gt;
+&lt;p&gt;g_cch ： g_ 是属性描述，表示全局变量，c 和 ch 分别是计数类型和字符类型，一起表示变量类&lt;/p&gt;
+&lt;p&gt;型，这里忽略了对象描述，所以它表示一个对字符进行计数的全局变量。&lt;/p&gt;
+&lt;p&gt;上面就是HN命名法的一般规则。&lt;/p&gt;
+&lt;p&gt;小结:匈牙利命名法&lt;/p&gt;
+&lt;p&gt;匈牙利命名法&lt;/p&gt;
+&lt;p&gt;MFC、句柄、控件及结构的命名规范 Windows类型 样本变量 MFC类 样本变量&lt;/p&gt;
+&lt;p&gt;HWND hWnd； CWnd* pWnd；&lt;/p&gt;
+&lt;p&gt;HDLG hDlg； CDialog* pDlg；&lt;/p&gt;
+&lt;p&gt;HDC hDC； CDC* pDC；&lt;/p&gt;
+&lt;p&gt;HGDIOBJ hGdiObj； CGdiObject* pGdiObj；&lt;/p&gt;
+&lt;p&gt;HPEN hPen； CPen* pPen；&lt;/p&gt;
+&lt;p&gt;HBRUSH hBrush； CBrush* pBrush；&lt;/p&gt;
+&lt;p&gt;HFONT hFont； CFont* pFont；&lt;/p&gt;
+&lt;p&gt;HBITMAP hBitmap； CBitmap* pBitmap；&lt;/p&gt;
+&lt;p&gt;HPALETTE hPaltte； CPalette* pPalette；&lt;/p&gt;
+&lt;p&gt;HRGN hRgn； CRgn* pRgn；&lt;/p&gt;
+&lt;p&gt;HMENU hMenu； CMenu* pMenu；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CState* pState；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CButton* pButton；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CEdit* pEdit；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CListBox* pListBox；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CComboBox* pComboBox；&lt;/p&gt;
+&lt;p&gt;HWND hCtl； CScrollBar* pScrollBar；&lt;/p&gt;
+&lt;p&gt;HSZ hszStr； CString pStr；&lt;/p&gt;
+&lt;p&gt;POINT pt； CPoint pt；&lt;/p&gt;
+&lt;p&gt;SIZE size； CSize size；&lt;/p&gt;
+&lt;p&gt;RECT rect； CRect rect；&lt;/p&gt;
+&lt;p&gt;一般前缀命名规范 前缀 类型 实例&lt;/p&gt;
+&lt;p&gt;C   类或结构  CDocument ，CPrintInfo&lt;/p&gt;
+&lt;p&gt;m_  成员变量  m_pDoc，m_nCustomers&lt;/p&gt;
+&lt;p&gt;变量命名规范&lt;/p&gt;
+&lt;p&gt;前缀     类型   描述                 实例&lt;/p&gt;
+&lt;p&gt;ch      char   8位字符              chGrade&lt;/p&gt;
+&lt;p&gt;ch TCHAR 如果_UNICODE定义，则为16位字符 chName&lt;/p&gt;
+&lt;p&gt;b BOOL 布尔值 bEnable&lt;/p&gt;
+&lt;p&gt;n int 整型（其大小依赖于操作系统） nLength&lt;/p&gt;
+&lt;p&gt;n UINT 无符号值（其大小依赖于操作系统） nHeight&lt;/p&gt;
+&lt;p&gt;w WORD 16位无符号值 wPos&lt;/p&gt;
+&lt;p&gt;l LONG 32位有符号整型 lOffset&lt;/p&gt;
+&lt;p&gt;dw DWORD 32位无符号整型 dwRange&lt;/p&gt;
+&lt;p&gt;p * 指针 pDoc&lt;/p&gt;
+&lt;p&gt;lp FAR* 远指针 lpszName&lt;/p&gt;
+&lt;p&gt;lpsz LPSTR 32位字符串指针 lpszName&lt;/p&gt;
+&lt;p&gt;lpsz LPCSTR 32位常量字符串指针 lpszName&lt;/p&gt;
+&lt;p&gt;lpsz LPCTSTR 如果_UNICODE定义，则为32位常量字符串指针 lpszName&lt;/p&gt;
+&lt;p&gt;h handle Windows对象句柄 hWnd&lt;/p&gt;
+&lt;p&gt;lpfn callback 指向CALLBACK函数的远指针&lt;/p&gt;
+&lt;p&gt;前缀 符号类型 实例 范围&lt;/p&gt;
+&lt;p&gt;IDR_ 不同类型的多个资源共享标识 IDR_MAIINFRAME 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;IDD_ 对话框资源 IDD_SPELL_CHECK 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;HIDD_ 对话框资源的Help上下文 HIDD_SPELL_CHECK 0x20001～0x26FF&lt;/p&gt;
+&lt;p&gt;IDB_ 位图资源 IDB_COMPANY_LOGO 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;IDC_ 光标资源 IDC_PENCIL 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;IDI_ 图标资源 IDI_NOTEPAD 1～0x6FFF&lt;/p&gt;
+&lt;p&gt;ID_ 来自菜单项或工具栏的命令 ID_TOOLS_SPELLING 0x8000～0xDFFF&lt;/p&gt;
+&lt;p&gt;HID_ 命令Help上下文 HID_TOOLS_SPELLING 0x18000～0x1DFFF&lt;/p&gt;
+&lt;p&gt;IDP_ 消息框提示 IDP_INVALID_PARTNO 8～0xDEEF&lt;/p&gt;
+&lt;p&gt;HIDP_ 消息框Help上下文 HIDP_INVALID_PARTNO 0x30008～0x3DEFF&lt;/p&gt;
+&lt;p&gt;IDS_ 串资源 IDS_COPYRIGHT 1～0x7EEF&lt;/p&gt;
+&lt;p&gt;IDC_ 对话框内的控件 IDC_RECALC 8～0xDEEF&lt;/p&gt;
+&lt;p&gt;Microsoft MFC宏命名规范 名称 类型&lt;/p&gt;
+&lt;p&gt;_AFXDLL 唯一的动态连接库（Dynamic Link Library，DLL）版本&lt;/p&gt;
+&lt;p&gt;_ALPHA 仅编译DEC Alpha处理器&lt;/p&gt;
+&lt;p&gt;_DEBUG 包括诊断的调试版本&lt;/p&gt;
+&lt;p&gt;_MBCS 编译多字节字符集&lt;/p&gt;
+&lt;p&gt;_UNICODE 在一个应用程序中打开Unicode&lt;/p&gt;
+&lt;p&gt;AFXAPI MFC提供的函数&lt;/p&gt;
+&lt;p&gt;CALLBACK 通过指针回调的函数&lt;/p&gt;
+&lt;p&gt;库标识符命名法 标识符 值和含义&lt;/p&gt;
+&lt;p&gt;u ANSI（N）或Unicode（U）&lt;/p&gt;
+&lt;p&gt;d 调试或发行：D = 调试；忽略标识符为发行。&lt;/p&gt;
+&lt;p&gt;静态库版本命名规范 库 描述&lt;/p&gt;
+&lt;p&gt;NAFXCWD.LIB 调试版本：MFC静态连接库&lt;/p&gt;
+&lt;p&gt;NAFXCW.LIB 发行版本：MFC静态连接库&lt;/p&gt;
+&lt;p&gt;UAFXCWD.LIB 调试版本：具有Unicode支持的MFC静态连接库&lt;/p&gt;
+&lt;p&gt;UAFXCW.LIB 发行版本：具有Unicode支持的MFC静态连接库&lt;/p&gt;
+&lt;p&gt;动态连接库命名规范 名称 类型&lt;/p&gt;
+&lt;p&gt;_AFXDLL 唯一的动态连接库（DLL）版本&lt;/p&gt;
+&lt;p&gt;WINAPI Windows所提供的函数&lt;/p&gt;
+&lt;p&gt;Windows.h中新的命名规范 类型 定义描述&lt;/p&gt;
+&lt;p&gt;WINAPI 使用在API声明中的FAR PASCAL位置，如果正在编写一个具有导出API人口点的DLL，则可以在自己的API中使用该类型&lt;/p&gt;
+&lt;p&gt;CALLBACK 使用在应用程序回叫例程，如窗口和对话框过程中的FAR PASCAL的位置&lt;/p&gt;
+&lt;p&gt;LPCSTR 与LPSTR相同，只是LPCSTR用于只读串指针，其定义类似（const char FAR*）&lt;/p&gt;
+&lt;p&gt;UINT 可移植的无符号整型类型，其大小由主机环境决定（对于Windows NT和Windows 9x为32位）；它是unsigned int的同义词&lt;/p&gt;
+&lt;p&gt;LRESULT 窗口程序返回值的类型&lt;/p&gt;
+&lt;p&gt;LPARAM 声明lParam所使用的类型，lParam是窗口程序的第四个参数&lt;/p&gt;
+&lt;p&gt;WPARAM 声明wParam所使用的类型，wParam是窗口程序的第三个参数&lt;/p&gt;
+&lt;p&gt;LPVOID 一般指针类型，与（void *）相同，可以用来代替LPSTR&lt;/p&gt;
+&lt;hr /&gt;
+&lt;p&gt;抨击匈牙利命名法&lt;/p&gt;
+&lt;p&gt;匈牙利命名法是一种编程时的命名规范。命名规范是程序书写规范中最重要也是最富争议的地方，自古乃兵家必争之地。命名规范有何用？四个字：名正言顺。用 二分法，命名规范分为好的命名规范和坏的命名规范，也就是说名正言顺的命名规范和名不正言不顺的命名规范。好的舞鞋是让舞者感觉不到其存在的舞鞋，坏的舞 鞋是让舞者带着镣铐起舞。一个坏的命名规范具有的破坏力比一个好的命名规范具有的创造力要大得多。&lt;/p&gt;
+&lt;p&gt;本文要证明的是：匈牙利命名法是一个坏的命名规范。本文的作用范围为静态强类型编程语言。本文的分析范本为C语言和C++语言。下文中的匈法为匈牙利命名法的简称。&lt;/p&gt;
+&lt;p&gt;一 匈牙利命名法的成本&lt;/p&gt;
+&lt;p&gt;匈法的表现形式为给变量名附加上类型名前缀，例如：nFoo,szFoo,pFoo,cpFoo分别表示整型变量，字符串型变量，指针型变量和常指针型 变量。可以看出，匈法将变量的类型信息从单一地点（声明变量处）复制到了多个地点（使用变量处），这是冗余法。冗余法的成本之一是要维护副本的一致性。这 个成本在编写和维护代码的过程中需要改变变量的类型时付出。冗余法的成本之二是占用了额外的空间。一个优秀的书写者会自觉地遵从一个法则：代码最小组织单 位的长度以30个自然行以下为宜，如果超过50行就应该重新组织。一个变量的书写空间会给这一法则添加不必要的难度。&lt;/p&gt;
+&lt;p&gt;二 匈牙利命名法的收益&lt;/p&gt;
+&lt;p&gt;这里要证明匈牙利命名法的收益是含糊的，无法预期的。&lt;/p&gt;
+&lt;p&gt;范本1：strcpy(pstrFoo,pcstrFoo2) Vs strcpy(foo,foo2)&lt;/p&gt;
+&lt;p&gt;匈法在这里有什么收益呢？我看不到。没有一个程序员会承认自己不知道strcpy函数的参数类型吧。&lt;/p&gt;
+&lt;p&gt;范本2：unknown_function(nFoo) Vs unknown_function(foo)&lt;/p&gt;
+&lt;p&gt;匈法在这里有什么收益呢？我看不到。对于一个不知道确定类型的函数，程序员应该去查看该函数的文档，这是一种成本。使用匈法的唯一好处是看代码的人知道 这个函数要求一个整型参数，这又有什么用处呢？函数是一种接口，参数的类型仅仅是接口中的一小部分。诸如函数的功能、出口信息、线程安全性、异常安全性、 参数合法性等重要信息还是必须查阅文档。&lt;/p&gt;
+&lt;p&gt;范本3：nFoo=nBar Vs foo=bar&lt;/p&gt;
+&lt;p&gt;匈法在这里有什么收益 呢？我看不到。使用匈法的唯一好处是看代码的人知道这里发生了一个整型变量的复制动作，听起来没什么问题，可以安心睡大觉了。如果他看到的是 nFoo=szBar，可能会从美梦中惊醒。且慢，事情真的会是这样吗？我想首先被惊醒的应该是编译器。另一方面，nFoo=nBar只是在语法上合法而 已，看代码的人真正关心的是语义的合法性，匈法对此毫无帮助。另一方面，一个优秀的书写者会自觉地遵从一个法则：代码最小组织单位中的临时变量以一两个为 宜，如果超过三个就应该重新组织。结合前述第一个法则，可以得出这样的结论：易于理解的代码本身就应该是易于理解的，这是代码的内建高质量。好的命名规范 对内建高质量的助益相当有限，而坏的命名规范对内建高质量的损害比人们想象的要大。&lt;/p&gt;
+&lt;p&gt;三 匈牙利命名法的实施&lt;/p&gt;
+&lt;p&gt;这里要证明匈牙利命名法在C语言是难以实施的，在C++语言中是无法实施的。从逻辑上讲，对匈法的收益做出否定的结论以后，再来论证匈法的可行性，是画蛇添足。不过有鉴于小马哥曾让已射杀之敌死灰复燃，我还是再踏上一支脚为妙。&lt;/p&gt;
+&lt;p&gt;前面讲过，匈法是类型系统的冗余，所以实施匈法的关键是我们是否能够精确地对类型系统进行复制。这取决于类型系统的复杂性。&lt;/p&gt;
+&lt;p&gt;先来看看C语言：&lt;/p&gt;
+&lt;p&gt;1.内置类型：int,char,float,double 复制为 n,ch,f,d？好像没有什么问题。不过谁来告诉我void应该怎么表示？&lt;/p&gt;
+&lt;p&gt;2.组合类型：array,union,enum,struct 复制为 a,u,e,s？好像比较别扭。&lt;/p&gt;
+&lt;p&gt;这里的难点不是为主类型取名，而是为副类型取名。an表示整型数组？sfoo,sbar表示结构foo，结构bar？ausfoo表示联合结构foo数组？累不累啊。&lt;/p&gt;
+&lt;p&gt;3.特殊类型：pointer。pointer在理论上应该是组合类型，但是在C语言中可以认为是内置类型，因为C语言并没有非常严格地区分不同的指针类型。下面开始表演：pausfoo表示联合结构foo数组指针？ppp表示指针的指针的指针？&lt;/p&gt;
+&lt;p&gt;噩梦还没有结束，再来看看类型系统更为丰富的C++语言：&lt;/p&gt;
+&lt;p&gt;1.class：如果说C语言中的struct还可以用stru搪塞过去的话，不要梦想用cls来搪塞C++中的class。严格地讲，class根本 就并不是一个类型，而是创造类型的工具，在C++中，语言内置类型的数量和class创造的用户自定义类型的数量相比完全可以忽略不计。 stdvectorFoo表示标准库向量类型变量Foo？疯狂的念头。&lt;/p&gt;
+&lt;p&gt;2.命名空间：boostfilesystemiteratorFoo，表示boost空间filesystem子空间遍历目录类型变量Foo？程序员要崩溃了。&lt;/p&gt;
+&lt;p&gt;3.模板：你记得std::map&amp;lt;std::string,std::string&amp;gt;类型的确切名字吗？我是记不得了，好像超过255个字符，还是饶了我吧。&lt;/p&gt;
+&lt;p&gt;4.模板参数：template &amp;lt;class T, class BinaryPredicate&amp;gt;const T&amp;amp; max(const T&amp;amp; a, const T&amp;amp; b, BinaryPredicate comp) 聪明的你，请用匈法为T命名。上帝在发笑。&lt;/p&gt;
+&lt;p&gt;5.类型修饰：static,extern,mutable,register,volatile,const,short,long,unsigned 噩梦加上修饰是什么？还是噩梦。&lt;/p&gt;</summary></entry><entry><title>WIN32编程入门</title><link href="http://smilehacker.com/win32bian-cheng-ru-men.html" rel="alternate"></link><updated>2013-02-07T21:01:55+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2013-02-07:win32bian-cheng-ru-men.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。&lt;/p&gt;
+&lt;p&gt;学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
+&lt;!-- more --&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;#include&lt;/span&gt;
+&lt;span class="cp"&gt;#include&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 窗口过程函数&lt;/span&gt;
+&lt;span class="n"&gt;LRESULT&lt;/span&gt; &lt;span class="n"&gt;CALLBACK&lt;/span&gt; &lt;span class="nf"&gt;WinSunProc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HWND&lt;/span&gt; &lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;UINT&lt;/span&gt; &lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;WPARAM&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;LPARAM&lt;/span&gt; &lt;span class="n"&gt;lParam&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;WINAPI&lt;/span&gt; &lt;span class="nf"&gt;WinMain&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="n"&gt;HINSTANCE&lt;/span&gt; &lt;span class="n"&gt;hInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// handle to current instance&lt;/span&gt;
+&lt;span class="n"&gt;HINSTANCE&lt;/span&gt; &lt;span class="n"&gt;hPrevInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// handle to previous instance&lt;/span&gt;
+&lt;span class="n"&gt;LPSTR&lt;/span&gt; &lt;span class="n"&gt;lpCmdLine&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// command line&lt;/span&gt;
+&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;nCmdShow&lt;/span&gt; &lt;span class="c1"&gt;// show state&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="c1"&gt;// 窗口类&lt;/span&gt;
+&lt;span class="n"&gt;WNDCLASS&lt;/span&gt; &lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cbClsExtra&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 类附加内存&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;cbWndExtra&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 窗口附加内存&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hbrBackground&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;HBRUSH&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;GetStockObject&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;BLACK_BRUSH&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 背景画刷句柄&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hCursor&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LoadCursor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IDC_CROSS&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 窗口光标句柄&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hIcon&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;LoadIcon&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;IDI_ERROR&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 窗口图标句柄&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hInstance&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;hInstance&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 包含窗口过程函数的程序实例&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lpfnWndProc&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;WinSunProc&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 只想窗口过程函数的指针&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lpszClassName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;Kleist&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 窗口类名称&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lpszMenuName&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 菜单资源&lt;/span&gt;
+&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;style&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CS_HREDRAW&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="n"&gt;CS_VREDRAW&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// 窗口样式&lt;/span&gt;
+&lt;span class="n"&gt;RegisterClass&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;wndcls&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 创建窗口， 定义一个变量用来保存成功创建窗口后返回的句柄&lt;/span&gt;
+&lt;span class="n"&gt;HWND&lt;/span&gt; &lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="n"&gt;hwnd&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;CreateWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="c1"&gt;// 窗口创建成功时返回为窗口分配的句柄 失败时返回NULL&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;Kleist&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口类名&lt;/span&gt;
+&lt;span class="s"&gt;&amp;quot;Hello World&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口名字&lt;/span&gt;
+&lt;span class="n"&gt;WS_OVERLAPPEDWINDOW&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口样式&lt;/span&gt;
+&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口左上角坐标&lt;/span&gt;
+&lt;span class="mi"&gt;600&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口宽高&lt;/span&gt;
+&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 父窗口句柄&lt;/span&gt;
+&lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口菜单句柄&lt;/span&gt;
+&lt;span class="n"&gt;hInstance&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口所属应用程序实例&lt;/span&gt;
+&lt;span class="nb"&gt;NULL&lt;/span&gt; &lt;span class="c1"&gt;// WM_CREATE消息附加参数lParam传入的数据指针&lt;/span&gt;
+&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 显示及刷新窗口&lt;/span&gt;
+&lt;span class="n"&gt;ShowWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;SW_SHOWNORMAL&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;UpdateWindow&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 定义消息结构体&lt;/span&gt;
+&lt;span class="n"&gt;MSG&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;GetMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt; &lt;span class="c1"&gt;// WM_QUIT消息返回0 错误返回-1&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 指向消息的结构体&lt;/span&gt;
+    &lt;span class="nb"&gt;NULL&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 指定接收属于哪一窗口的消息 通常设为NULL，用来接收属于调用线程的所有窗口的窗口消息&lt;/span&gt;
+    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 获取消息的最小值 通常为0&lt;/span&gt;
+    &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="c1"&gt;// 获取消息的最大值 都设为0表示接收所有消息&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="n"&gt;TranslateMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 将虚拟消息转换为字符消息 投递到调用线程的消息队列中 下次调用GetMessage时被取出&lt;/span&gt;
+    &lt;span class="n"&gt;DispatchMessage&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt;&lt;span class="n"&gt;amp&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="c1"&gt;// 将消息传递给操作系统 由操作系统调用窗口过程函数对消息进行处理&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;msg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;// 窗口过程函数&lt;/span&gt;
+&lt;span class="n"&gt;LRESULT&lt;/span&gt; &lt;span class="n"&gt;CALLBACK&lt;/span&gt; &lt;span class="nf"&gt;WinSunProc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+&lt;span class="n"&gt;HWND&lt;/span&gt; &lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 窗口句柄&lt;/span&gt;
+&lt;span class="n"&gt;UINT&lt;/span&gt; &lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 消息代码&lt;/span&gt;
+&lt;span class="n"&gt;WPARAM&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="c1"&gt;// 附加参数&lt;/span&gt;
+&lt;span class="n"&gt;LPARAM&lt;/span&gt; &lt;span class="n"&gt;lParam&lt;/span&gt;
+&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;switch&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="p"&gt;{&lt;/span&gt;
+&lt;span class="k"&gt;case&lt;/span&gt; &lt;span class="n"&gt;WM_CHAR&lt;/span&gt;:
+&lt;span class="kt"&gt;char&lt;/span&gt; &lt;span class="n"&gt;szChar&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;];&lt;/span&gt;
+&lt;span class="n"&gt;sprintf&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;szChar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;char code is %d&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="n"&gt;MessageBox&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;szChar&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;char&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="nl"&gt;default:&lt;/span&gt;
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;DefWindowProc&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;hwnd&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;uMsg&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;wParam&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;lParam&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;具体也就是WinMain函数作为程序入口，相当于main函数&lt;/p&gt;
+&lt;p&gt;然后定义窗口类 绑定过程函数，创建窗口实例，显示并刷新窗口实例，建立消息队列。
+对着代码看一些参考资料应该就够了。&lt;/p&gt;</summary><category term="windows"></category></entry><entry><title>起源</title><link href="http://smilehacker.com/qi-yuan.html" rel="alternate"></link><updated>2012-10-02T20:07:03+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-10-02:qi-yuan.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;strong&gt;引子——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;你是谁？&lt;/p&gt;
+&lt;p&gt;你从何而来？&lt;/p&gt;
+&lt;p&gt;你要到哪去？&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;这不是哲学家的问题，这是我们每个人的问题。&lt;/p&gt;
+&lt;p&gt;当你思考自己的起源时，都会陷入无限的循环与苦楚之中。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;我来自哪里，我为何而来，谁创造了我？&lt;/p&gt;
+&lt;p&gt;如果是上帝，那谁又是上帝，上帝又从何而来？&lt;/p&gt;
+&lt;p&gt;如果是宇宙大爆炸的尘埃，那宇宙又从何而来，宇宙外面是什么，外面的外面又是什么？&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;或者说上帝是永恒的，宇宙是无限的，那永恒与无限又是什么，这不是一个合理的解释&lt;/p&gt;
+&lt;p&gt;至少我无法接受。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;这个问题让我那难以入眠，每当想起，都焦躁不安&lt;/p&gt;
+&lt;p&gt;世界就像魔术师手里的兔子，诞生于诡异的帽子魔法&lt;/p&gt;
+&lt;p&gt;我们就诞生于兔子的毛发上，想努力攀爬到顶端去看看魔法师的样子，想看清这不解的魔法。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;但我们失败了，年长时，我们接受的“现实”，接受了“真理”&lt;/p&gt;
+&lt;p&gt;于是世界变成了：本来就是这样&lt;/p&gt;
+&lt;p&gt;我们遗弃了本源，在自己的秩序里生存，在终焉里安眠。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;但还有一群人不接受这样的现实，他们保留了那原始的疑惑&lt;/p&gt;
+&lt;p&gt;他们在探寻着自己的起源&lt;/p&gt;
+&lt;p&gt;他们在宗教、科学、魔法、哲学中挣扎&lt;/p&gt;
+&lt;p&gt;我称他们为开辟的使者&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;而我，则默默的记录着这一切。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;
+&lt;!-- more --&gt;
+&lt;strong&gt;疑惑——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;起源的问题，已经在人类浩瀚的历史里被探讨了多次，但没有人得出了结果，没有人能够用双眼去见证它，他的一切都被“混乱”所掩盖。&lt;/p&gt;
+&lt;p&gt;试着跟着我做，闭上眼，在大脑中构建一个宇宙，我们的星云置身其中，我们的星球在银河系里，而我们也只是星球上不起眼的一点，然后将视野放大，放到宇宙的边缘，然后是宇宙之外。&lt;/p&gt;
+&lt;p&gt;如果宇宙是有空间大小的，那他的外面一定还有东西，是另一个宇宙，父级宇宙的外面呢，如果他也有大小，那外面一定还有。继续放到，将思维无限放大，去试着包容这一切，让大脑去解析所有的宇宙。&lt;/p&gt;
+&lt;p&gt;于是混乱开始了，这没有终点，当你记录了一定数量的宇宙后，你开始焦躁，开始迷惑，开始无法冷静，手心出汗，双腿颤抖，你的内存已经泄漏，栈溢出是必然的结果。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;好， 我们换个假设，如果宇宙之外不是无限的，我们定义我们能理解的宇宙为“有”，那么我们不能理解的必定为“无”了。我们生活在“有”里，有的外面是“无”。 好的，悖论出来了，“无”在“有”之外，即“有”之外还有东西，因为“有”的定义是有范围的，而范围又是需要名为“无”的“有”来确立。我们无法定义 “无”。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;那么世界是起源于“无”吗？&lt;/p&gt;
+&lt;p&gt;无数的物质世界在大爆炸里从“无”诞生。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;科学家为了定义这个世界曾经作出如下假设：&lt;/p&gt;
+&lt;p&gt;能量 == 物质 + 反物质&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;认为宇宙中还有一些称为“反物质”的粒子，当他们与物质想碰时，便会与之一同湮灭，产生能量。至今反质子、反中子还没被找到。&lt;/p&gt;
+&lt;p&gt;如果假设成立，那么我们便需否决“无”，或者“无”就是能量。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;====&lt;/p&gt;
+&lt;p&gt;有限或无限，无或者有都无法让我解释这个世界，以及这个世界以外的世界。&lt;/p&gt;
+&lt;p&gt;当我去竭力思考时便会陷入一种“混乱”，让我无法继续，如果继续下去，我想我的大脑会因无法接受这海量的数据而变得疯狂。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;于是我开始从已有的“猜想”中开始寻求解脱。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;体系神话——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;当人类无法理解某些因果时，就会用一些荒唐的故事来神化它们&lt;/p&gt;
+&lt;p&gt;比如闪电，天空最强大的自然现象，每一次劈开天空，都震撼人心&lt;/p&gt;
+&lt;p&gt;于是他被赋予给最强大的幻想，宙斯、佐尔，这些最强大的神明才有驾驭它的能力。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;现代，也有无数学者在遇到无法解决的问题时开始了幻想之路，比如克苏恩神话。他给我带来了很多不错的思路，结合人类历史上的种种创奇，我总结了自己的神话体系。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;混沌的开始——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;世界依旧起源于无，一片空虚，一片寂静&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;但这是矛盾的，这矛盾在世界里膨胀，不知从何时起，不知在哪个维度出现&lt;/p&gt;
+&lt;p&gt;只知道那是自世界诞生，或者说世界有了该存在的意识起&lt;/p&gt;
+&lt;p&gt;在每一个角落，或者就是整个空间里&lt;/p&gt;
+&lt;p&gt;都开始争吵&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;矛盾越来越来&lt;/p&gt;
+&lt;p&gt;越来越大&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;“轰”&lt;/p&gt;
+&lt;p&gt;寂灭中出现一声翻天覆地的“巨响”&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;宇宙产生了。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;宇宙产生自这无法解决的矛盾&lt;/p&gt;
+&lt;p&gt;因为这矛盾宇宙产生&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;宇宙就是悖论 宇宙源于悖论 宇宙带来悖论&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;混乱与秩序——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;想想我们自己，我们是什么&lt;/p&gt;
+&lt;p&gt;是一堆有机物的组合，是肉体与灵魂的交杂，是物质世界的随机因果？&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;不，我们是矛盾，是混乱与秩序的矛盾。&lt;/p&gt;
+&lt;p&gt;看看我们自己，拥有理性，却也具有感性&lt;/p&gt;
+&lt;p&gt;我们可以像机器一样生存，遵循没一个因果，在没一个公式下的推导下按照理性的逻辑进行“必然”的下一步;&lt;/p&gt;
+&lt;p&gt;我们也可以像梦境一样或在幻想里，把激素与神经的共同作用称为爱情，把复杂的反射机制归为愤怒、悲伤和高兴，在感性里迎接未知的未来。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们把理性称之为“秩序”，把感性称之为“混乱”&lt;/p&gt;
+&lt;p&gt;而我们无数次亲身体会到了两者的碰撞，无数次艰难的在两者间选择&lt;/p&gt;
+&lt;p&gt;谁是谁非，总是来自于“真理”——那合理的偏见&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;微小的我们是矛盾体，世界也是矛盾体。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;神——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;世界爆炸了，诞生了宇宙，也诞生了两个认知意外的“物质”&lt;/p&gt;
+&lt;p&gt;秩序与混沌&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;他们分属矛盾的两边，是世界无法承受他们时通过大爆炸释放的。&lt;/p&gt;
+&lt;p&gt;大爆炸后他们交错在一起，却互相排斥，挤压&lt;/p&gt;
+&lt;p&gt;于是宇宙越来越大，温度越来越高&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;高温让他们的结构变得不稳定，他们开始分裂，变成无数粒子，散落在宇宙里&lt;/p&gt;
+&lt;p&gt;慢慢的，他们的意识开始消亡，宇宙开始冷却&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;冷却中无数秩序粒子组合在一起，形成了宇宙里的尘埃&lt;/p&gt;
+&lt;p&gt;混乱也开始汇聚，但混乱的特性让他们无形&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;秩序更为稳定，他们在无数随机或者说“必然”下，重新获得了意识&lt;/p&gt;
+&lt;p&gt;成为无机的神——泰坦&lt;/p&gt;
+&lt;p&gt;无情、强大、神秘、中里的东西&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;他们诞生目的只有一个，修复宇宙，让世界重新获得秩序，归于无。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;混乱也开始冷却，附着于没有意识的尘埃上，开始展现自己的生命意识。&lt;/p&gt;
+&lt;p&gt;他们被称之为“古神”，混乱的结合体&lt;/p&gt;
+&lt;p&gt;他们没有形体，他们唯一的意识就是吞噬&lt;/p&gt;
+&lt;p&gt;就像癌细胞，他们在宇宙里肆虐，吞噬遇到的一切，包括泰坦。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;显然泰坦们力量更为强大，遵循秩序让他们更适合在物质世界生存。&lt;/p&gt;
+&lt;p&gt;他们组成了议会，他们开始合作，开始操纵尘埃，将他们做成武器，开始毁灭古神。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;但是和他们一样，古神起源于矛盾，“混乱”是无法消除的“存在”&lt;/p&gt;
+&lt;p&gt;所以泰坦只好将古神封印，用更多的物质建立监牢，让古神沉睡于中。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;而这监牢，就如同我们可以理解的尘埃汇集物——星球。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;苏醒——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;古神们陷入了深眠，但也有例外。&lt;/p&gt;
+&lt;p&gt;在一颗星球上，一个古神开始苏醒，他发现监牢在周边星球的引力下出现了裂口。&lt;/p&gt;
+&lt;p&gt;他开始伸展自己的思维，用混乱去影响周遭。&lt;/p&gt;
+&lt;p&gt;特别是泰坦留下的无机守卫。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;古神的神格就像海洋包围者这些由颗粒构成的守卫，就像在电场下光速震颤的电子，开始变得不稳定。&lt;/p&gt;
+&lt;p&gt;守卫的结构被打乱，粒子们不断汇聚与散开，不断重组又不断被撕裂。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;最后，守卫们被打败了，变成了古神的奴仆——“上古之神”&lt;/p&gt;
+&lt;p&gt;在这颗星球上一共诞生了四位上古之神&lt;/p&gt;
+&lt;p&gt;上古之神由于源自被吞噬的守卫，他们在物质世界有了形体。&lt;/p&gt;
+&lt;p&gt;上古之神不断的吞噬物质并且开始疯狂的生长，但缺失秩序的他们只能像肉团一样，不断的生出触须，粘液&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;战乱——&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;泰坦发现了古神的异动，降临到这可星球，开始整顿并毁灭这的一切。&lt;/p&gt;
+&lt;p&gt;他们在地心遏制着古神，并放出更多的守卫去消灭地表的上古之神。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;显然泰坦低估了上古之神，守卫的力量不足以形成压倒性的优势。&lt;/p&gt;
+&lt;p&gt;吞噬了守卫的上古之神也开始有了意识，秩序影响了他们的本源&lt;/p&gt;
+&lt;p&gt;他们的生长改变了星球的环境，甚至使这颗星球出现了大气。&lt;/p&gt;
+&lt;p&gt;被守卫斩断的肢体在分解后形成了新了生物——有机体。&lt;/p&gt;
+&lt;p&gt;那些有机体脱离的古神的控制，又结合了守卫的秩序，在两种本源下开始重新组合。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;最终，古神再次被打败了，又一次陷入的长眠。&lt;/p&gt;
+&lt;p&gt;当泰坦们回到地表时，他们惊愕了&lt;/p&gt;
+&lt;p&gt;持续几个世纪的战斗后，这颗丑陋贫瘠的星球发生的翻天覆地的变化。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;上古之神被守卫封印到了地底&lt;/p&gt;
+&lt;p&gt;而地表却出现了不属于两者的生物&lt;/p&gt;
+&lt;p&gt;他们拥有混乱一样生命，却有秩序一般的外表&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;他们的生长遵循这秩序，行为却无法被理解。&lt;/p&gt;
+&lt;p&gt;泰坦们无法定义他们，不知道是否该给予毁灭。&lt;/p&gt;
+&lt;p&gt;如果是守卫，他们拥有自己的程式，泰坦可以轻易推导出其行为方式&lt;/p&gt;
+&lt;p&gt;如果是上古之神，泰坦们无法检测到秩序时只需要给予毁灭&lt;/p&gt;
+&lt;p&gt;而现在，他们不知所措&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;议会最终决定，降临到生物头上的裁决是“观察”&lt;/p&gt;
+&lt;p&gt;他们留下更佳强大的守卫监视着这些生物&lt;/p&gt;
+&lt;p&gt;如果其进化为混乱，则立即将其毁灭&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;然后，泰坦们离开了。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;==待==&lt;/p&gt;</summary><category term="novel"></category></entry><entry><title>黑历史</title><link href="http://smilehacker.com/hei-li-shi.html" rel="alternate"></link><updated>2012-09-07T20:55:16+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-09-07:hei-li-shi.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;在很久很久以前
+有五个茫然年轻人
+他们厌倦了平淡的世界
+有一个人说道
+“该做些什么吧”&lt;/p&gt;
+&lt;p&gt;于是五个人变成了十三个人
+用汗水画着0和1
+后来他们站在了高台上 一个带着老式眼镜
+顶着一头乱糟糟头发的人
+为他们带上了桂冠&lt;/p&gt;
+&lt;p&gt;他们成了英雄
+他们不希望这里失去他们的意志
+他们坚持在这里建立了自己的主权
+他们让后来者在他们的光环下继续着辉煌&lt;/p&gt;
+&lt;p&gt;但继任者也同时继承了先驱不拘的个性
+相对于保护
+他们更期望厮杀
+有一个人说道
+“该做些什么吧”&lt;/p&gt;
+&lt;p&gt;于是一场政变发生了
+他们胜利了
+先驱者带着欣慰离开了
+但他们的精神
+依旧留下了&lt;/p&gt;
+&lt;p&gt;后来的后来
+新鲜的血液迭代着
+作为他们的继承者
+我们不屈的占据着顶点
+荣誉与血性与我们同在&lt;/p&gt;</summary><category term=""></category></entry><entry><title>银魂一则</title><link href="http://smilehacker.com/yin-hun-ze.html" rel="alternate"></link><updated>2012-08-04T21:11:31+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-08-04:yin-hun-ze.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;不要说我到了这个年纪还看银魂 因为银魂里的感动不是时间能消磨的&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;你确实是个不折不扣的废材&lt;/p&gt;
+&lt;p&gt;并不是工作完成的不够快&lt;/p&gt;
+&lt;p&gt;你只是在仰望山顶的时候 不自觉的弯下了腰&lt;/p&gt;
+&lt;p&gt;越是不停的弯腰 就会离山顶越远&lt;/p&gt;
+&lt;p&gt;山顶的存在不是为了让你感到自己的渺小&lt;/p&gt;
+&lt;p&gt;而是作为一个努力的目标存在的&lt;/p&gt;
+&lt;p&gt;如果有时间在山路上休息的话&lt;/p&gt;
+&lt;p&gt;还不如一步一步继续往上攀登 即使很慢也不要紧&lt;/p&gt;
+&lt;p&gt;秋本这座山实话了30年才成为山峰的&lt;/p&gt;
+&lt;p&gt;可不是这么容易攀登的&lt;/p&gt;
+&lt;p&gt;你要抱着攀登30年才能超越它的觉悟去攀登&lt;/p&gt;
+&lt;p&gt;一步一步的 像乌龟一样脚踏实地地&lt;/p&gt;
+&lt;p&gt;虽然不一定能达到顶峰&lt;/p&gt;
+&lt;p&gt;也有可能在途中就用尽力气&lt;/p&gt;
+&lt;p&gt;但是 你在那里看到的景色肯定要比现在美丽得多&lt;/p&gt;</summary><category term=""></category></entry><entry><title>我的2011</title><link href="http://smilehacker.com/wo-de-2011.html" rel="alternate"></link><updated>2012-02-11T21:12:11+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2012-02-11:wo-de-2011.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;恍然中，就这样一个人走到了世界末日，回忆过去，点点滴滴，确如云烟，淡然彷徨。&lt;/p&gt;
+&lt;p&gt;这个时候回忆2011确实有点晚了，没办法，我就是这样一个懒散的人，有兴趣在脑海中描绘，却无心思在现实中构建。或许感动只属于自己，但也容易忘记，于是就在末日的前夕，做一份备份吧。&lt;/p&gt;
+&lt;p&gt;2011我是如何走过的呢？&lt;/p&gt;
+&lt;p&gt;呃啊— 已经记不清了，或者说真的不想去回忆，90后都拥有逃避的属性。&lt;/p&gt;
+&lt;p&gt;大一下到大二上是人成熟最快的时候吧，也是从中二到大叔进化的跳板，梦想变得模糊，高贵的刺也被扒光。我也没能逃脱命运的安排，经历了很多痛，然后消沉，逃避，堕落——&lt;/p&gt;
+&lt;h2&gt;一&lt;/h2&gt;
+&lt;p&gt;应该从退Dian团队谈起吧，那段日子真的很难过。刚开学时，奶奶就走了，第一次尝到了失去亲人的痛，在悲伤中人也变得浑浑噩噩。迷迷糊糊中，作为新人加入了点团队的华三组，也毫无斗志的开始了学习。或许我属于疯子吧，更喜欢挑战和激情。简单无谓的软件测试让我毫无动力，刘老师井然有序的管理让我想起了初中最痛恨的教导主任（不是我吐槽 她们俩长得真像），于是每天就麻木的背着电脑去看RFC，写点东西，然后有索然无味的回来。一切就是这般过去了。&lt;/p&gt;
+&lt;p&gt;这个时候我又想学习下了，大一加权没好好搞，勉强80。咱也不是智商低，大学这点东西想好好弄还是有信心的，奈何这种快速学习，并且连续性不强和课程实在让人提不起劲，于是旷课，随懒觉，抄作业一并归来。不过有拿的出手的东西，自认为技术还行，软件硬件都摸得到边，好歹咱也是学算法搞竞赛出生的，于是铁了心要搞技术。奈何我被分到了一个加权型班级，懂代码的屈指可数，他们的唯一话题就是分数。在这样一个环境中被孤立，确实很难受。现在好了，技术停滞了，也就想回归“正途”了。&lt;/p&gt;
+&lt;p&gt;最后，在一个梅雨之夜，我给队长发了条短信，正式决定退出了。&lt;/p&gt;
+&lt;p&gt;很多人觉得我很傻，很多人觉得我很幼稚，还有很多人更是慷慨的献出的鄙视与嘲讽。我都不在乎，我就想失恋后的醉汉，一点都不在乎，只想找到一瓶酒来继续麻痹自己。我给自己找了很多理由——不适应环境、不喜欢氛围、影响学习……真正的原因我不知道，但本能要我这样做。我失败过很多次，我也学会了在适当的时候选择去失败。&lt;/p&gt;
+&lt;p&gt;然后呢？我也不知道，彻底变成一个迷途的小丑，在继续寻找归途。 &lt;/p&gt;
+&lt;h2&gt;二&lt;/h2&gt;
+&lt;p&gt;很平凡的，走到的期末，我又复活了。&lt;/p&gt;
+&lt;p&gt;人就是这样，好了伤口忘了痛，但在睡梦中忘记了过去，我也再次变得不知天高地厚了。我给暑假加上了程，参加创新计划夏令营，报考网工，学习web，回归WOW……&lt;/p&gt;
+&lt;p&gt;起初一切也很完美，我顺利通过了夏令营的测试，开始了救赎之旅。&lt;/p&gt;
+&lt;p&gt;这确实是个好的选择，在这样一个炎热的暑假，和哥们一起起床，到面包房买上早餐，跑到创新计划团队代码，逗逗那只顽皮的猫，然后一跑到东校门外点上烧烤，喝上几瓶，互相搀扶着，说着大话，吹着牛嘻回到宿舍，在打开电脑，开始艾泽拉斯之旅。&lt;/p&gt;
+&lt;p&gt;这才是我一直期盼的大学生活啊，很充实，很完美。和志同道合的兄弟，一起挥洒汗水，一起在雨中狂奔狂的大叫，一起享受着青春。&lt;/p&gt;
+&lt;p&gt;我真的很渴望，再这样来一次。&lt;/p&gt;
+&lt;p&gt;当然，美好的总是开头，后面就开始继续深陷“大灾变的漩涡”（WOW第三个资料片）里。&lt;/p&gt;
+&lt;h2&gt;三&lt;/h2&gt;
+&lt;p&gt;大二的生活也如约而至了，开学便抛下开发时间被压缩到一半的软酷实训中，本来计划好的开学网工预习也作废了。&lt;/p&gt;
+&lt;p&gt;软酷确实败了，败在了自大与懒散中。自大在以为以一己之力就能毫无压力的搞定，懒散在确实能搞定于是——你也懂得。虽然完成品还不错，赖和却被无情淘汰。&lt;/p&gt;
+&lt;p&gt;后来看过获奖作品后确实深受启发。由于以前习惯于竞赛，作品被要求的是以最高的效率完成题目要求。我做到了，我们的代码质量确实可以看到，但我却忘了，评委是看不到的。他们能看到的是什么，UI、创意……&lt;/p&gt;
+&lt;p&gt;我很懊恼，也很后悔。&lt;/p&gt;
+&lt;p&gt;走出了一个圈，拖着战败之躯，我突然又想寻找战友了，我也很寂寞，我真的好想找朋友。&lt;/p&gt;
+&lt;p&gt;这时联创又招新了。&lt;/p&gt;
+&lt;h2&gt;四&lt;/h2&gt;
+&lt;p&gt;对于现在的我，联创的测试确实不难了。同样的测试，和大一时比起来，确实感觉自己有了很多的进步。&lt;/p&gt;
+&lt;p&gt;自己学了很多东西，C++、JAVA、C#、ASP.NET、SQL等，虽然都只摸到了皮毛，但获得了一个很好的宏观概念，我想我也该选着一条路走下去了吧。&lt;/p&gt;
+&lt;p&gt;联创的氛围确实不错，这确实很像我期待的那种学生团体。有不同的牛人、不同的思想、不同的味道。可以随意的包夜、随意的学习、随意的聊天。当然，可以看出，大家都有一样的眼神。&lt;/p&gt;
+&lt;p&gt;还记得小时候看过讲述比尔盖茨和乔布斯的《硅谷传奇》，我大概就是在羡慕他们那种找的挚友然后燃烧生命的生活吧。我很喜欢新东西，特别是电子设备，小学时无意学习了编程然后认识了这个计算机的世界。但这样一个世界却让我寂寞，变得和其他人不一样，出了魔兽世界和考试，就没有共同话题。所以我一直在渴望着什么。大学报了软件，想填补心中饿漏洞，却发现漏洞太大了，同样的专业却没找到同样的人。&lt;/p&gt;
+&lt;p&gt;在联创半年了，我期待着。&lt;/p&gt;
+&lt;h2&gt;五&lt;/h2&gt;
+&lt;p&gt;大概是真觉得非专业学习什么的无所谓了吧，我迎来了人生第一次挂科。我依然期待着大一那般24小时从入门到精通，结果败了，讨厌的感觉。&lt;/p&gt;
+&lt;p&gt;那是在其中，第一次迎来考试周，满满的五门课，基本没学过，开始考前突击。依旧我行我素，于是第一门败了，还好总结了教训，警惕着，后面的都过了。&lt;/p&gt;
+&lt;p&gt;尤记那天考完第一门我就病了，一连发烧了6天，我却没了感觉，只想对着雨笑啊。&lt;/p&gt;
+&lt;h2&gt;最后&lt;/h2&gt;
+&lt;p&gt;看完自己的回忆，我真想笑啊。&lt;/p&gt;
+&lt;p&gt;原来自己是如此的幼稚，如此的天真。如孩童般随着性子，做着梦，用兴趣选择方向，用感觉赌博未来。&lt;/p&gt;
+&lt;p&gt;后悔吗？&lt;/p&gt;
+&lt;p&gt;不。&lt;/p&gt;
+&lt;p&gt;这就是我的选择，既然走过来了，就会走下去。&lt;/p&gt;
+&lt;p&gt;回忆着伤痛，一阵冷战，却隐忍着泪水。&lt;/p&gt;
+&lt;p&gt;2011.&lt;/p&gt;</summary><category term="life"></category></entry><entry><title>朋友 • 俗生 • 酒</title><link href="http://smilehacker.com/peng-you-su-sheng-jiu.html" rel="alternate"></link><updated>2010-12-03T21:10:31+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2010-12-03:peng-you-su-sheng-jiu.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;&lt;span style="color: #ffcc99;"&gt;这算是我大学或者说人生第一次真正喝酒吧，当时喝多了还写了些东西，也转过来吧：&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;刚刚喝了很多酒，也算是人生中第一次喝酒。晕乎乎的，飙车回来，很想写点什么。关于朋友，关于酒。&lt;/p&gt;
+&lt;p&gt;所谓朋友，酒一喝，肩一搭，畅怀大笑，也就成了。&lt;/p&gt;
+&lt;p&gt;在此之前，个人认为酒有害无益，不知有何存在价值；喝过之后，闹过之后，还是觉得他百害而无益处。但是，就是这毒物，确实人身必不可少的催化剂。&lt;/p&gt;
+&lt;p&gt;所谓朋友，就是能同甘共苦，坦胸相对。而这酒正是苦痛，与朋交杯，便是苦痛的分担了。&lt;/p&gt;
+&lt;p&gt;知己者，可以共语；同友者，可以同苦同乐。顶着浓重的眩晕之苦，血管的膨胀之痛，与朋举杯，正是弃开自我，敢于承担的誓言；酒后乱语，欣然长笑，更是摒除世俗，乐于分享的豪气。为此者，何不为朋。&lt;/p&gt;
+&lt;p&gt;朋友之后，便是俗世。&lt;/p&gt;
+&lt;p&gt;纵使立志放浪不羁，超脱形骸，也无法拜托“俗”之绊。也许，这是我以不再年轻的哀嚎。&lt;/p&gt;
+&lt;p&gt;酒前，晓龙学长说了很多，什么敬酒的礼仪，喝酒的重要性。也许过去，我会愤然斥之，但今天，我接受了。也许这便是人生逃不开的惑。&lt;/p&gt;
+&lt;p&gt;总有很多东西是为世俗鄙视，但又为世俗需求的。昨日象牙塔中的风发意气，今朝可能就变为惨淡的回忆，成长，正在收取它的代价，而我，也沦为世俗中人。&lt;/p&gt;
+&lt;p&gt;四瓶下肚，人是难受的，但却是高兴的。也许是因为结交了酒后朋友，也许是因为感怀的人身炎凉。&lt;/p&gt;
+&lt;p&gt;也许只是酒后疯语，梦醒之后，再观世道&lt;/p&gt;</summary><category term="life"></category></entry><entry><title>荷塘不再</title><link href="http://smilehacker.com/he-tang-bu-zai.html" rel="alternate"></link><updated>2010-08-13T21:09:44+08:00</updated><author><name>Sai</name></author><id>tag:smilehacker.com,2010-08-13:he-tang-bu-zai.html</id><summary type="html">&lt;hr /&gt;
+&lt;p&gt;八月中旬，回想起来，已经走过多少个夏夜了。&lt;/p&gt;
+&lt;p&gt;回首四顾，站在混凝土的墓碑间，任月下的寒风透过，只能孤独的回忆，回忆那逝去的昨天。&lt;/p&gt;
+&lt;p&gt;昨天，我还在乡间的田野中飞驰，感受炎炎的骄阳，感受狂躁的季风。&lt;/p&gt;
+&lt;p&gt;那是焦躁而又可爱的阳光，温顺的洒在你身上，好奇的看着升腾的热气，傻傻地笑着——那是没有掩饰的热情，真正的阳光。&lt;/p&gt;
+&lt;p&gt;那是高傲而又温柔的狂风，呼啸者穿过麦田，带走我手中的风筝，在热浪中撕嚎——那是毫无拘束的自由，真正的风。&lt;/p&gt;
+&lt;p&gt;他们陪伴着我，好奇地认识这个世界。我们来到了那里，那边静静的荷塘。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;这是一篇普通的水塘，作为旁边大鱼塘的附属，一直为干旱做准备。人们觉得她太寂寞了，于是种上了莲藕，于是，在夏天，她便如灰姑娘般的成为了公主。&lt;/p&gt;
+&lt;p&gt;我很喜欢她，既为我们提供了芳香，也带来了果实。摘取一片大大的荷叶，像个精灵般躲在下面，偷吃着莲子，为甘甜欣喜，为苦涩嚼舌。有蜻蜓做伴，有蝴蝶为舞，有蛙声奏乐，有聪明喝彩。这边是昨天的荷塘，那个为人小憩的天地。&lt;/p&gt;
+&lt;p&gt;她没有朱自清的赞笔，但她有我的记忆；他没有陶渊明的倾心，但她有我的怀念。那就是真实的她，来自于我的昨天，我的心灵，我曾经拥有过她。&lt;/p&gt;
+&lt;p&gt;心，不经意间颤抖；泪，不经意间流下。&lt;/p&gt;
+&lt;p&gt;被喧闹唤醒，原来我还在这黑暗的城市，被孤独包围，被凄暗占领。我独自走在大街上，身后是霓虹，身前是嘈杂。匆匆流过，没带走什么，没留下什么，好像我并不存在。&lt;/p&gt;
+&lt;p&gt;到底哪个才是真实的世界，我疑惑；我应该走向何处，我不解。&lt;/p&gt;
+&lt;p&gt;又是八月，又是炎阳，却没了和风，没了淡香，没了甘甜，没了自在。&lt;/p&gt;
+&lt;p&gt;如果有一天，我将终止我的步伐，我会回到我的出生点，去重温那片荷塘，去找回失落的温暖。&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;
+&lt;p style="text-align: right;"&gt;                                                                                            ——记逝去的故乡&lt;/p&gt;
+&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;由于土地开发，我土生土长的故乡已经不复存在了，现在竖起的高楼，只能成为住处，而不是乡。故乡不只是一个出生点的代名词，他的背后还有很多含义。她是你精神的支柱，让你有归属感；她是你童年的摇篮，让你有存在感。现在，我就像个流浪的灵魂，没了家。&lt;/p&gt;</summary><category term="life"></category></entry></feed>
