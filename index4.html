@@ -84,6 +84,24 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html">Eclipse提示框颜色设置</a></h2>
+                <div class="summary"><hr />
+<p>以前在ubuntu下用Eclipse时一直很纳闷，为何提示框的背景是黑的，内容很难辨别。遍历完设置也没找到选项能改颜色。<br />
+后来发现改系统主题时提示框颜色倒变了，料想eclipse偷懒直接调用的系统颜色。<br />
+现在用arch了，在自己调配主题时倒找到的修改的办法：  </p>
+<p>Linux主题文件位于<em>/usr/share/themes/</em>下对应的主题文件夹下
+比如我正在用使用<strong>Gnome-Cupertino</strong>主题，就进入到<strong>/usr/share/themes/Gnome-Cupertino/</strong>目录下 <br />
+<code>cd /usr/share/themes/Gnome-Cupertino</code></p>
+<p>打开gtk-2.0/gtkrc文件<br />
+<code>sudo vim gtk-2.0/gtkrc</code></p>
+<p>修改的<strong>tooltip_fg_color</strong>和<strong>tooltip_bg_color</strong>两个属性的值，如果没有改属性，可以自行添加<br />
+<code>gtk-color-scheme = "tooltip_bg_color:#f2edbc\ntooltip_fg_color:#000000\nlink_color:#0033ff"</code>  </p>
+<p>然后保存退出 ...</p>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/eclipseti-shi-kuang-yan-se-she-zhi.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://smilehacker.com/xuan-ze.html">选择 一</a></h2>
                 <div class="summary"><hr />
 <p>最近在看《影响力》，书中提到了决策问题，这一直是我头疼的问题。<br />
@@ -179,33 +197,6 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://smilehacker.com/win32bian-cheng-ru-men.html">WIN32编程入门</a></h2>
-                <div class="summary"><hr />
-<p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
-<p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
-<!-- more --></p>
-<div class="highlight"><pre><span class="cp">#include</span>
-<span class="cp">#include</span>
-
-<span class="c1">// 窗口过程函数</span>
-<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span><span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">);</span>
-
-<span class="kt">int</span> <span class="n">WINAPI</span> <span class="nf">WinMain</span><span class="p">(</span>
-<span class="n">HINSTANCE</span> <span class="n">hInstance</span><span class="p">,</span> <span class="c1">// handle to current instance</span>
-<span class="n">HINSTANCE</span> <span class="n">hPrevInstance</span><span class="p">,</span> <span class="c1">// handle to previous instance</span>
-<span class="n">LPSTR</span> <span class="n">lpCmdLine</span><span class="p">,</span> <span class="c1">// command line</span>
-<span class="kt">int</span> <span class="n">nCmdShow</span> <span class="c1">// show state</span>
-<span class="p">)</span>
-
-<span class="p">{</span>
-<span class="c1">// 窗口类</span>
-<span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/win32bian-cheng-ru-men.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev"><a href="http://smilehacker.com/index3.html">&laquo;</a>
@@ -246,14 +237,14 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                         life
                     </a>
                 </li>
-                <li class="list-group-item tag-2">
+                <li class="list-group-item tag-1">
                     <a href="http://smilehacker.com/tag/douban.html">
                         douban
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
-                    <a href="http://smilehacker.com/tag/.html">
-                        
+                    <a href="http://smilehacker.com/tag/arch.html">
+                        arch
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
@@ -262,23 +253,8 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
-                    <a href="http://smilehacker.com/tag/arch.html">
-                        arch
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/windows.html">
-                        windows
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/coder.html">
-                        coder
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/virtual-box.html">
-                        virtual box
+                    <a href="http://smilehacker.com/tag/.html">
+                        
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
@@ -292,18 +268,13 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/eclipse.html">
-                        eclipse
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
                     <a href="http://smilehacker.com/tag/alg.html">
                         alg
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/vagrant.html">
-                        vagrant
+                    <a href="http://smilehacker.com/tag/android.html">
+                        android
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
@@ -312,8 +283,28 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/android.html">
-                        android
+                    <a href="http://smilehacker.com/tag/virtual-box.html">
+                        virtual box
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/coder.html">
+                        coder
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/windows.html">
+                        windows
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/vagrant.html">
+                        vagrant
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/eclipse.html">
+                        eclipse
                     </a>
                 </li>
         </ul>
