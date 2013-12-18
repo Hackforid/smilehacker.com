@@ -84,6 +84,22 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="http://smilehacker.com/zai-scrollviewzhong-shi-yong-viewpageryi-ji-viewpagershi-yong-wrap_content.html">在ScrollView中使用ViewPager以及ViewPager使用wrap_content</a></h2>
+                <div class="summary"><p>最近在做豆瓣电影Android App时遇到了这样一个问题，ViewPager在ScrollView中的滑动一直不正常，而且不能设置为wrap_content, 写死高度又让自由度降低了很多，为了应对PM经常改需求，我们还是不要用HardCode为好。<br />
+搞了两天，算是找出了一个比较好的解决方法。  </p>
+<h2>1. 实现wrap_content</h2>
+<p>首先是ViewPager无法设置wrap_content的问题，这个困扰我最久，尝试了各种方案，比如设置ScrollView <code>android:fillViewport="true"</code>，都是扯淡，最后看了下源码，恍然大悟：</p>
+<div class="highlight"><pre><span class="err">@</span><span class="n">Override</span>
+<span class="n">protected</span> <span class="kt">void</span> <span class="n">onMeasure</span><span class="p">(</span><span class="kt">int</span> <span class="n">widthMeasureSpec</span><span class="p">,</span> <span class="kt">int</span> <span class="n">heightMeasureSpec</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// For simple implementation, or internal size is always 0.</span>
+    <span class="c1">// We depend on the container to specify the layout size of</span>
+    <span class="c1">// our ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/zai-scrollviewzhong-shi-yong-viewpageryi-ji-viewpagershi-yong-wrap_content.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://smilehacker.com/gan-he-de-shui.html">干涸的水</a></h2>
                 <div class="summary"><hr />
 <p>五行中，我最讨厌水，太幽柔，太善变。一切对它的赞美都太女性化，以至于追逐Hard Boild的我永远都不希望她出现在我的属性栏中。<br />
@@ -142,22 +158,6 @@
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://smilehacker.com/virtualbox-in-arch.html">VirtualBox in arch</a></h2>
-                <div class="summary"><hr />
-<p>arch跑vbox时显示：  </p>
-<div class="highlight"><pre><span class="n">VirtualBox</span> <span class="n">is</span> <span class="n">complaining</span> <span class="n">that</span> <span class="n">the</span> <span class="n">kernel</span> <span class="n">module</span> <span class="n">is</span> <span class="n">not</span> <span class="n">loaded</span><span class="p">.</span> <span class="n">Please</span>
-<span class="n">run</span> <span class="err">`</span><span class="n">VBoxManage</span> <span class="o">--</span><span class="n">version</span><span class="err">`</span> <span class="n">or</span> <span class="n">open</span> <span class="n">the</span> <span class="n">VirtualBox</span> <span class="n">GUI</span> <span class="n">to</span> <span class="n">see</span> <span class="n">the</span> <span class="n">error</span>
-<span class="n">message</span> <span class="n">which</span> <span class="n">should</span> <span class="n">contain</span> <span class="n">instructions</span> <span class="n">on</span> <span class="n">how</span> <span class="n">to</span> <span class="n">fix</span> <span class="n">this</span> <span class="n">error</span><span class="p">.</span>
-</pre></div>
-
-
-<p>按提示输入<code>VBoxManage --version</code>:  </p>
-<div class="highlight"><pre><span class="n">WARNING</span><span class="o">:</span> <span class="n">The</span> <span class="n">vboxdrv</span> <span class="n">kernel</span> <span class="n">module</span> <span class="k">is</span> <span class="n">not</span> <span class="n">loaded</span><span class="o">.</span> <span class="n">Either</span> <span class="n">there</span> <span class="k">is</span> <span class="n">no ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/virtualbox-in-arch.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
 
         <ul class="pagination">
                 <li class="prev disabled"><a href="#">&laquo;</a></li>
@@ -173,6 +173,8 @@
                         href="http://smilehacker.com/index5.html">5</a></li>
                 <li class=""><a
                         href="http://smilehacker.com/index6.html">6</a></li>
+                <li class=""><a
+                        href="http://smilehacker.com/index7.html">7</a></li>
                 <li class="next"><a
                         href="http://smilehacker.com/index2.html">&raquo;</a></li>
         </ul>
@@ -203,6 +205,11 @@
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/arch.html">
+                        arch
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
                     <a href="http://smilehacker.com/tag/python.html">
                         Python
                     </a>
@@ -212,9 +219,39 @@
                         
                     </a>
                 </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://smilehacker.com/tag/arch.html">
-                        arch
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/windows.html">
+                        windows
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/virtual-box.html">
+                        virtual box
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/eclipse.html">
+                        eclipse
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/linux.html">
+                        linux
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/novel.html">
+                        novel
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/coder.html">
+                        coder
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/vagrant.html">
+                        vagrant
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
@@ -228,43 +265,8 @@
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/coder.html">
-                        coder
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/virtual-box.html">
-                        virtual box
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/linux.html">
-                        linux
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
                     <a href="http://smilehacker.com/tag/android.html">
                         android
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/vagrant.html">
-                        vagrant
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/eclipse.html">
-                        eclipse
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/windows.html">
-                        windows
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/novel.html">
-                        novel
                     </a>
                 </li>
         </ul>

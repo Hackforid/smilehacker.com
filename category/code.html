@@ -84,6 +84,22 @@
     <div class="row">
         <div class="col-lg-9">
             <article>
+                <h2><a href="http://smilehacker.com/zai-scrollviewzhong-shi-yong-viewpageryi-ji-viewpagershi-yong-wrap_content.html">在ScrollView中使用ViewPager以及ViewPager使用wrap_content</a></h2>
+                <div class="summary"><p>最近在做豆瓣电影Android App时遇到了这样一个问题，ViewPager在ScrollView中的滑动一直不正常，而且不能设置为wrap_content, 写死高度又让自由度降低了很多，为了应对PM经常改需求，我们还是不要用HardCode为好。<br />
+搞了两天，算是找出了一个比较好的解决方法。  </p>
+<h2>1. 实现wrap_content</h2>
+<p>首先是ViewPager无法设置wrap_content的问题，这个困扰我最久，尝试了各种方案，比如设置ScrollView <code>android:fillViewport="true"</code>，都是扯淡，最后看了下源码，恍然大悟：</p>
+<div class="highlight"><pre><span class="err">@</span><span class="n">Override</span>
+<span class="n">protected</span> <span class="kt">void</span> <span class="n">onMeasure</span><span class="p">(</span><span class="kt">int</span> <span class="n">widthMeasureSpec</span><span class="p">,</span> <span class="kt">int</span> <span class="n">heightMeasureSpec</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// For simple implementation, or internal size is always 0.</span>
+    <span class="c1">// We depend on the container to specify the layout size of</span>
+    <span class="c1">// our ...</span></pre></div>
+                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/zai-scrollviewzhong-shi-yong-viewpageryi-ji-viewpagershi-yong-wrap_content.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://smilehacker.com/permission-denied-causing-installation-failed-due-to-invalid-apk-file.html">Permission denied causing “Installation failed due to invalid APK file”</a></h2>
                 <div class="summary"><hr />
 <p>Google把MOTO收购后四处裁员，甚是伤感，特别是我等MOTO老用户，感情还在，手机还在呀。某MOTO前员工在离职后为我等可怜的Atrix2更新了最后一次ROM，也算是告别作吧。虽然Atrix2的官方版本停留在了4.0,但MOTO良心的非官方4.12更新还是打动了我，依旧支持你们。</p>
@@ -167,34 +183,16 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                 </div>
             </article>
             <hr/>
-            <article>
-                <h2><a href="http://smilehacker.com/win32bian-cheng-ru-men.html">WIN32编程入门</a></h2>
-                <div class="summary"><hr />
-<p>最近学校工程实训，非要我们用MFC编程，没办法，入门研究了一晚上的win32编程。</p>
-<p>学习各种东西，总是开头比较麻烦，自己总结了下win32编程的简单流程，直接上代码了。
-<!-- more --></p>
-<div class="highlight"><pre><span class="cp">#include</span>
-<span class="cp">#include</span>
 
-<span class="c1">// 窗口过程函数</span>
-<span class="n">LRESULT</span> <span class="n">CALLBACK</span> <span class="nf">WinSunProc</span><span class="p">(</span><span class="n">HWND</span> <span class="n">hwnd</span><span class="p">,</span> <span class="n">UINT</span> <span class="n">uMsg</span><span class="p">,</span> <span class="n">WPARAM</span> <span class="n">wParam</span><span class="p">,</span> <span class="n">LPARAM</span> <span class="n">lParam</span><span class="p">);</span>
-
-<span class="kt">int</span> <span class="n">WINAPI</span> <span class="nf">WinMain</span><span class="p">(</span>
-<span class="n">HINSTANCE</span> <span class="n">hInstance</span><span class="p">,</span> <span class="c1">// handle to current instance</span>
-<span class="n">HINSTANCE</span> <span class="n">hPrevInstance</span><span class="p">,</span> <span class="c1">// handle to previous instance</span>
-<span class="n">LPSTR</span> <span class="n">lpCmdLine</span><span class="p">,</span> <span class="c1">// command line</span>
-<span class="kt">int</span> <span class="n">nCmdShow</span> <span class="c1">// show state</span>
-<span class="p">)</span>
-
-<span class="p">{</span>
-<span class="c1">// 窗口类</span>
-<span class="n">WNDCLASS</span> <span class="n">wndcls</span><span class="p">;</span>
-<span class="n">wndcls</span><span class="p">.</span><span class="n">cbClsExtra ...</span></pre></div>
-                    <a class="btn btn-default btn-xs" href="http://smilehacker.com/win32bian-cheng-ru-men.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-
+        <ul class="pagination">
+                <li class="prev disabled"><a href="#">&laquo;</a></li>
+                <li class="active"><a
+                        href="http://smilehacker.com/category/code.html">1</a></li>
+                <li class=""><a
+                        href="http://smilehacker.com/category/code2.html">2</a></li>
+                <li class="next"><a
+                        href="http://smilehacker.com/category/code2.html">&raquo;</a></li>
+        </ul>
         </div>
         <div class="col-lg-3 well well-sm" id="sidebar">
 <aside>
@@ -222,6 +220,11 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                     </a>
                 </li>
                 <li class="list-group-item tag-2">
+                    <a href="http://smilehacker.com/tag/arch.html">
+                        arch
+                    </a>
+                </li>
+                <li class="list-group-item tag-2">
                     <a href="http://smilehacker.com/tag/python.html">
                         Python
                     </a>
@@ -231,9 +234,39 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                         
                     </a>
                 </li>
-                <li class="list-group-item tag-2">
-                    <a href="http://smilehacker.com/tag/arch.html">
-                        arch
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/windows.html">
+                        windows
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/virtual-box.html">
+                        virtual box
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/eclipse.html">
+                        eclipse
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/linux.html">
+                        linux
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/novel.html">
+                        novel
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/coder.html">
+                        coder
+                    </a>
+                </li>
+                <li class="list-group-item tag-4">
+                    <a href="http://smilehacker.com/tag/vagrant.html">
+                        vagrant
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
@@ -247,43 +280,8 @@ sublimetext上得sftp不支持中文 emacs干脆就只能ssh  </p>
                     </a>
                 </li>
                 <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/coder.html">
-                        coder
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/virtual-box.html">
-                        virtual box
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/linux.html">
-                        linux
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
                     <a href="http://smilehacker.com/tag/android.html">
                         android
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/vagrant.html">
-                        vagrant
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/eclipse.html">
-                        eclipse
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/windows.html">
-                        windows
-                    </a>
-                </li>
-                <li class="list-group-item tag-4">
-                    <a href="http://smilehacker.com/tag/novel.html">
-                        novel
                     </a>
                 </li>
         </ul>
